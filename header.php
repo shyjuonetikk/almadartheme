@@ -36,7 +36,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<?php if ( 'container' == $container ) : ?>
 			<div class="container" >
-				cehcking the working of file
 		<?php endif; ?>
 
 					<!-- Your site title as branding in the menu -->
