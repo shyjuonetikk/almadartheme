@@ -89,7 +89,7 @@ $container = get_theme_mod('understrap_container_type');
 					for quality and service.
 				</p>
 				<p class="lead">
-				   <a class="btn btn-header btn-lg" href="#" role="button">Learn mor</a>
+				   <a class="btn btn-header btn-lg" href="#" role="button">Learn more</a>
 				</p>
 			  </div>
 			</div>
