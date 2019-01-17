@@ -1,10 +1,9 @@
 <?php
 /**
- * Template Name: About Us Page
+ * Template Name: About Us
  *
  * Template for displaying the About Us page of Al Madar Holding.
  *
- * @package understrap
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
