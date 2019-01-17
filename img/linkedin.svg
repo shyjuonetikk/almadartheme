@@ -1,0 +1,24 @@
+<svg id="_031-linkedin" data-name="031-linkedin" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="Group_5" data-name="Group 5" transform="translate(0 8.549)">
+    <g id="Group_4" data-name="Group 4">
+      <rect id="Rectangle_5" data-name="Rectangle 5" class="cls-1" width="5.026" height="15.451"/>
+    </g>
+  </g>
+  <g id="Group_7" data-name="Group 7" transform="translate(8.549 8.549)">
+    <g id="Group_6" data-name="Group 6">
+      <path id="Path_21" data-name="Path 21" class="cls-1" d="M171.692,160.181c-.053-.017-.1-.035-.16-.051s-.135-.028-.2-.039a4.5,4.5,0,0,0-.9-.091,6.983,6.983,0,0,0-5.4,2.954V160H160v15.451h5.026v-8.428s3.8-5.29,5.4-1.4v9.832h5.024V165.024A5.011,5.011,0,0,0,171.692,160.181Z" transform="translate(-160 -160)"/>
+    </g>
+  </g>
+  <g id="Group_9" data-name="Group 9">
+    <g id="Group_8" data-name="Group 8">
+      <ellipse id="Ellipse_1" data-name="Ellipse 1" class="cls-1" cx="2.458" cy="2.458" rx="2.458" ry="2.458"/>
+    </g>
+  </g>
+</svg>

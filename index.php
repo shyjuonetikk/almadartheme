@@ -31,15 +31,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="row">
 
 			<!-- Do the left sidebar check and opens the primary div -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
+			<?php //get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
-			<main class="site-main" id="main">
+			<!-- <main class="site-main" id="main"> -->
 
-				<?php if ( have_posts() ) : ?>
+				<!-- <?php //if ( have_posts() ) : ?>
 
 					<?php /* Start the Loop */ ?>
 
-					<?php while ( have_posts() ) : the_post(); ?>
+					<?php //while ( have_posts() ) : the_post(); ?>
 
 						<?php
 
@@ -48,29 +48,142 @@ $container = get_theme_mod( 'understrap_container_type' );
 						 * If you want to override this in a child theme, then include a file
 						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 						 */
-						get_template_part( 'loop-templates/content', get_post_format() );
+						//get_template_part( 'loop-templates/content', get_post_format() );
 						?>
 
-					<?php endwhile; ?>
+					<?php //endwhile; ?>
 
-				<?php else : ?>
+				<?php //else : ?>
 
-					<?php get_template_part( 'loop-templates/content', 'none' ); ?>
+					<?php //get_template_part( 'loop-templates/content', 'none' ); ?>
 
-				<?php endif; ?>
-
-			</main><!-- #main -->
+				<?php //endif; ?> -->
+				<div class="col-12">
+					<h2 class="text-center purple-color">DIVISIONS</h2>
+					<div class="col-4 float-left mb-4">
+						<div class="thumbnail">
+						  <img src="<?php echo get_template_directory_uri();?>/img/Real Estate.png" />
+						  	<div class="title">
+						  		<h6 class="p-0">ALMADAR REAL ESTATE</h6>
+						    </div>
+						</div>
+					</div>
+					<div class="col-4 float-left mb-4">
+						<div class="thumbnail">
+						 <img src="<?php echo get_template_directory_uri();?>/img/AL MADAR INT’L. & INVESTMENT.png" />
+						  	<div class="title">
+						  		<h6 class="p-0">AL MADAR INT’L. & INVESTMENT</h6>
+						    </div>
+						</div>
+					</div>
+					<div class="col-4 float-left mb-4">
+						<div class="thumbnail">
+							<img src="<?php echo get_template_directory_uri();?>/img/Real-Estate-almadar.png">
+						  	<div class="title">
+						  		<h6 class="p-0">AL MADAR REAL ESTATE</h6>
+						    </div>
+						</div>
+					</div> <!-- row 1-->
+					<div class="col-4 float-left mb-4">
+						<div class="thumbnail">
+						  <img src="<?php echo get_template_directory_uri();?>/img/AL MADAR PROJECT MANAGEMENT.png" />
+						  	<div class="title">
+						  		<h6 class="p-0">AL MADAR PROJECT MANAGEMENT</h6>
+						    </div>
+						</div>
+					</div>
+					<div class="col-4 float-left mb-4">
+						<div class="thumbnail">
+						 <img src="<?php echo get_template_directory_uri();?>/img/NOBLES REAL ESTATE.png" />
+						  	<div class="title">
+						  		<h6 class="p-0">NOBLES REAL ESTATE</h6>
+						    </div>
+						</div>
+					</div>
+					<div class="col-4 float-left mb-4">
+						<div class="thumbnail">
+							<img src="<?php echo get_template_directory_uri();?>/img/AL MADAR CONTRACTING.png">
+						  	<div class="title">
+						  		<h6 class="p-0">AL MADAR CONTRACTING</h6>
+						    </div>
+						</div>
+					</div><!-- row2 -->
+					<div class="col-4 float-left mb-4">
+						<div class="thumbnail">
+						  <img src="<?php echo get_template_directory_uri();?>/img/AL MADAR CARPENTRY.png" />
+						  	<div class="title">
+						  		<h6 class="p-0">AL MADAR ENGINEERING & TRANSPORTATION</h6>
+						    </div>
+						</div>
+					</div>
+					<div class="col-4 float-left mb-4">
+						<div class="thumbnail">
+						 <img src="<?php echo get_template_directory_uri();?>/img/AL MADAR COMPUTER TRAINING CENTER.png" />
+						  	<div class="title">
+						  		<h6 class="p-0">SCALA ENGINEERING</h6>
+						    </div>
+						</div>
+					</div>
+					<div class="col-4 float-left mb-4">
+						<div class="thumbnail">
+							<img src="<?php echo get_template_directory_uri();?>/img/AL MADAR TOURISM.png">
+						  	<div class="title">
+						  		<h6 class="p-0">AL MADAR WROUGH IRON</h6>
+						    </div>
+						</div>
+					</div><!-- row 3-->
+					<div class="col-4 float-left mb-4">
+						<div class="thumbnail">
+						  <img src="<?php echo get_template_directory_uri();?>/img/AL MADAR CARPENTRY.png" />
+						  	<div class="title">
+						  		<h6 class="p-0">AL MADAR CARPENTRY</h6>
+						    </div>
+						</div>
+					</div>
+					<div class="col-4 float-left mb-4">
+						<div class="thumbnail">
+						 <img src="<?php echo get_template_directory_uri();?>/img/AL MADAR COMPUTER TRAINING CENTER.png" />
+						  	<div class="title">
+						  		<h6 class="p-0">AL MADAR COMPUTER TRAINING CENTER</h6>
+						    </div>
+						</div>
+					</div>
+					<div class="col-4 float-left mb-4">
+						<div class="thumbnail">
+							<img src="<?php echo get_template_directory_uri();?>/img/AL MADAR TOURISM.png">
+						  	<div class="title">
+						  		<h6 class="p-0">AL MADAR TOURISM</h6>
+						    </div>
+						</div>
+					</div><!-- row 4-->
+				</div>
+			<!-- </main> --><!-- #main -->
 
 			<!-- The pagination component -->
-			<?php understrap_pagination(); ?>
+			<?php //understrap_pagination(); ?>
 
 			<!-- Do the right sidebar check -->
-			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
-
+			<?php //get_template_part( 'global-templates/right-sidebar-check' ); ?>
+			
 		</div><!-- .row -->
 
 	</div><!-- #content -->
-
+	<div class="col-12 m-0 news-section">
+		<div class="container">
+			<div class="col-4 float-left">
+				<div class="head pl-5"> Latest News</div>
+				<div class="thumb-box"></div>
+			</div>
+			<div class="col-4 float-left">
+				<div class="head pl-5"> Completed Projects</div>
+				<div class="thumb-box"></div>
+			</div>
+			<div class="col-4 float-left">
+				<div class="head pl-5"> On-going projects</div>
+				<div class="thumb-box"></div>
+			</div>
+		</div>
+	</div>
 </div><!-- #index-wrapper -->
 
 <?php get_footer(); ?>

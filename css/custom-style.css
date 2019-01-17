@@ -1,14 +1,14 @@
 .header-back{
-	background: url('../img/HomeCover.png') no-repeat;
+	background: url('../img/Headerback.png') no-repeat;
 	background-size: 100%;
-	height: 700px;
+	height: 590px;
 	padding: 0;
 	margin: 0;
 }
 .menu-new a{
 	color: #fff !important;
 	font-family: 'Montserrat', sans-serif;
-	padding: 0 10px !important;
+	padding: 0 15px !important;
 }
 .menu-new a:hover{
 	opacity: .5;
@@ -22,4 +22,103 @@
     border-color: #6bc4e8 !important;
     border-radius: 0px !important;
     padding: 5px 15px !important;
+}
+.ml-10{
+	margin-left: 10% !important;
+}
+.social-media{
+	opacity: 1 !important;
+	padding: 10px !important;
+}
+.pa-5{
+	padding: 5px !important;
+}
+.sm-icon-fb:hover{
+	color: #22115c !important;
+}
+.sm-icon-tw{
+	border: 2px solid #5ec3e500;
+	border-radius: 50%;
+}
+.sm-icon-tw:hover{
+	color: #5ec3e5 !important;
+	border: 2px solid #5ec3e5;
+	border-radius: 50%;
+}
+.fs-22{
+	font-size: 22px;
+}
+.w-24{
+	width: 36px;
+	height: 36px;
+}
+.header-bar{
+	width: 100%;
+	background: url('../img/header-bar.png') no-repeat;
+	height: 24px;
+	background-size: contain;
+}
+.purple-color{
+	color: #22115c;
+	font-family: 'Montserrat', sans-serif;
+}
+.thumbnail {
+  position: relative;
+  width: 100%;
+}
+.thumbnail img{
+	width: 100%;
+    margin: 0 auto;
+}
+.title h6 {
+    margin: 10px;
+    text-align: right;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.67em !important;
+}
+.title {
+    position: absolute;
+    color: #FFF;
+    background: #000000;
+    bottom: 0;
+    z-index: 9;
+    right: 0;
+}
+.title:after {
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: #000000;
+    transform-origin: top left;
+    -ms-transform: skew(-30deg, 0deg);
+    -webkit-transform: skew(-30deg, 0deg);
+    transform: skew(-30deg, 0deg);
+}
+.title:hover,.title:hover:after{
+  background: #22115c;
+  cursor: pointer;
+}
+.news-section{
+	background: url('../img/HomeBlogCover.svg') no-repeat;
+	width: 100%;
+	height: 700px;
+	background-size: cover;
+	padding: 80px;
+}
+.head{
+	background: url('../img/BlogCover.svg') no-repeat;
+	width: 100%;
+	height: 45px;
+	background-size: cover;
+	color: #fff;
+	line-height: 45px;
+}
+.thumb-box{
+	height: 470px;
+	background: #fff;
 }
