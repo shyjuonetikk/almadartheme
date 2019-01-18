@@ -208,15 +208,15 @@ display:flex;
 	background-size: contain;
 }
 .btn-custom{
-	background: #5ec3e6;
+	background: url('../img/submitbutton.png') no-repeat;
 	color: #fff;
-	padding: 7px 15px;
 	border: none;
 	height: auto;
+	width: 130px;
+	height: 38px;
 }
 .btn-custom:hover{
 	cursor: pointer;
-	opacity: .5;
 }
 input[type="email"]{
 	border-radius: 0px !important;

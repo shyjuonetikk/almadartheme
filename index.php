@@ -378,7 +378,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<form>
 				  <div class="form-group row">
 				    <div class="col-12 m-auto">
-				    	<div class="col-10">
+				    	<div class="col-9">
 				      		<input type="email" class="form-control border-0 float-left" id="email" placeholder="YOUR EMAIL ADDRESS" />
 				      	</div>
 				      	<button type="submit" class="btn-custom float-left">SUBMIT</button>
