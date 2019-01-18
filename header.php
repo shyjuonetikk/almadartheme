@@ -51,7 +51,10 @@ $container = get_theme_mod('understrap_container_type');
 
 						<?php else: ?>
 
-							<a class="navbar-brand" rel="home" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" itemprop="url"><?php bloginfo('name');?></a>
+							<!-- <a class="navbar-brand" rel="home" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" itemprop="url"><?php bloginfo('name');?></a> -->
+							<a href="<?php echo esc_url(home_url('/')); ?>">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" />
+							</a>
 
 						<?php endif;?>
 
@@ -98,7 +101,7 @@ $container = get_theme_mod('understrap_container_type');
 		<div class="container">
 			<div class="jumbotron bg-none text-white">
 			  <div class="container ml-10">
-			    <h1 class="display-4 mb-5">AL MADAR HOLDING WLL</h1>
+			    <h1 class="display-4 mb-5 prmy-font fw-600">AL MADAR HOLDING WLL</h1>
 			    <p class="lead w-75">
 			    	Al Madar Holding W.L.L. is a Qatari based Property Development
 					Company with over 24 years’ experience and a formidable reputation

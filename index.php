@@ -171,7 +171,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<div class="col-12 m-0 news-section">
 		<div class="container">
 			<div class="col-4 float-left">
-				<div class="head pl-5"> Latest News</div>
+				<div class="head pl-3"> Latest News</div>
 				<div class="thumb-box">
 					<div class="thumb-list-box float-left">
 						<div class="col-sm-12 col-md-12 col-xs-12 mt-4 pb-3">
@@ -236,7 +236,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				</div>
 			</div> <!-- list 1 -->
 			<div class="col-4 float-left">
-				<div class="head pl-5"> Completed Projects</div>
+				<div class="head pl-3"> Completed Projects</div>
 				<div class="thumb-box">
 					<div class="thumb-list-box float-left">
 						<div class="col-sm-12 col-md-12 col-xs-12 mt-4 pb-3">
@@ -301,7 +301,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				</div>
 			</div><!-- list 2 -->
 			<div class="col-4 float-left">
-				<div class="head pl-5"> On-going projects</div>
+				<div class="head pl-3"> On-going projects</div>
 				<div class="thumb-box">
 					<div class="thumb-list-box float-left">
 						<div class="col-sm-12 col-md-12 col-xs-12 mt-4 pb-3">
@@ -369,15 +369,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 	</div><!-- newssection -->
 	<div class="newsletter-container p-5">
 		<div class="col-6 m-auto text-center">
-			<h3 class="text-light prmy-font">SUBSCRIBE TO OUR NEWSLETTERS</h3>
-			<p class="text-light fs-12 mt-4 prmy-font">
+			<h3 class="text-light prmy-font fw-600">SUBSCRIBE TO OUR NEWSLETTERS</h3>
+			<p class="text-light fs-16 mt-4 prmy-font">
 				Enter your E-mail address to receive latest news and updates. Morbi euismod
 				fermentum tempus. Mauris molestie facilisis eros id dictum.
 			</p>
 			<div class="col-12">
 				<form>
 				  <div class="form-group row">
-				    <div class="col-12 m-auto">
+				    <div class="col-10 m-auto">
 				    	<div class="col-9">
 				      		<input type="email" class="form-control border-0 float-left" id="email" placeholder="YOUR EMAIL ADDRESS" />
 				      	</div>
