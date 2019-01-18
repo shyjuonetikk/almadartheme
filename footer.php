@@ -65,7 +65,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			</div>
 		</div>
 	</div>
-	<div class="row w-100 copyright_bar float-left text-center footer-bar py-2">
+	<div class="row ml-0 mr-0 w-100 copyright_bar float-left text-center footer-bar py-2">
 		<p class="float-left text-white mx-auto mb-0 fs-12">Copyright © 2006-2019 Al Madar Holding WLL. All Rights Reserved</p>
 	</div>
 </footer>

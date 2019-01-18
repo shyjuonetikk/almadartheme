@@ -242,16 +242,18 @@ input[type="email"]{
 }
 footer{
 	background: url('../img/Body_BG.svg') no-repeat;
-	background-size: 100%;
+	background-size: 90%;
 }
 footer p{
 	color: #6c6c6c !important;
+	font-size: 14px;
 }
 footer ul li{
 	list-style: none;
 }
 footer ul li a{
 	color: #6c6c6c;
+	font-size: 14px;
 }
 footer ul li a:hover{
 	color: #5ec3e6;
