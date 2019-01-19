@@ -122,3 +122,31 @@
 	height: 470px;
 	background: #fff;
 }
+
+/*-- About Us Page --*/
+div.about-bg {
+    background: url(http://localhost/almadar/wp-content/themes/almadar/img/about/HeadingBg.png);
+    background-size: cover;
+}
+div#msg-chairman, div#msg-md {
+    border: 1px solid #9e9e9e;
+    border-bottom: 10px solid #22145e;
+    padding-bottom: 25px !important;
+}
+.footer_title {
+    color: #22145e;
+    font-size: 16px;
+    font-weight: 700;
+}
+img.img_eng {
+    padding: 20px 0;
+    width: 250px;
+}
+
+/*Newsletter portion copied from the home page*/
+/*.newsletter-container {
+    width: 100%;
+    height: 300px;
+    background: url(../img/newsletterback.png) no-repeat;
+    background-size: contain;
+}*/

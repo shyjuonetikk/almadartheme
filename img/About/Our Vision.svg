@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="356.881" height="318.077" viewBox="0 0 356.881 318.077">
+  <defs>
+    <style>
+      .cls-1, .cls-5, .cls-6 {
+        fill: #21145f;
+      }
+
+      .cls-1 {
+        font-size: 117px;
+        font-family: Montserrat-Light, Montserrat;
+        font-weight: 300;
+        letter-spacing: -0.04em;
+      }
+
+      .cls-2, .cls-3 {
+        font-family: SegoeUI, Segoe UI;
+        font-weight: 400;
+      }
+
+      .cls-3, .cls-4 {
+        fill: #6bc4e8;
+      }
+
+      .cls-4 {
+        opacity: 0.694;
+      }
+
+      .cls-6 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 0.25px;
+      }
+    </style>
+  </defs>
+  <g id="Symbol_1_1" data-name="Symbol 1 – 1" transform="translate(-473.119 -2014.923)">
+    <text id="OUR_VISION" data-name="OUR 
+VISION" class="cls-1" transform="translate(830 2184)"><tspan x="-287.577" y="0">OUR</tspan><tspan class="cls-2" y="0"> </tspan><tspan class="cls-3"><tspan x="-349.423" y="120">VISION</tspan></tspan></text>
+    <path id="Path_46" data-name="Path 46" class="cls-4" d="M89.192,108.6h46.635L84.61,174.194H35.1Z" transform="translate(460.9 1982.014)"/>
+    <path id="Path_47" data-name="Path 47" class="cls-5" d="M72.408,108.6h32.164L69.248,153.841H35.1Z" transform="translate(469.9 2028.367)"/>
+    <line id="Line_11" data-name="Line 11" class="cls-6" x1="155.782" y2="199.665" transform="translate(473.218 2015)"/>
+  </g>
+</svg>
