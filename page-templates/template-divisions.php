@@ -7,7 +7,7 @@ Description: Template for displaying all divisions.
 
 */
 
-get_header('new');
+get_header('division');
 ?>
 
 <div class="row p-0 m-0 float-left mt-5 mb-5 divi-main">
