@@ -67,6 +67,9 @@ letter-spacing: -2px;
 .sm-icon-tw{
 	color: #fff !important;
 	/*border: 2px solid #5ec3e5;*/
+	color: #5ec3e5 !important;
+	border: 2px solid #5ec3e5;
+	border-radius: 50%;
 	/*border: 2px solid #5ec3e500;*/
 	border-radius: 50%;
 }
