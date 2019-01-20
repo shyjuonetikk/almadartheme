@@ -31,6 +31,13 @@ body{
 	color: #6bc4e9;
 }
 
+.menu-custom{
+	background: #fff;
+	webkit-box-shadow: 0px 6px 23px -11px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 6px 23px -11px rgba(0,0,0,0.75);
+	box-shadow: 0px 6px 23px -11px rgba(0,0,0,0.75);
+}
+
 .menu-custom ul{
 	margin-left: 15px;
 }
@@ -79,7 +86,7 @@ body{
 	font-weight: 400px;
 }
 .letter-spc-2{
-letter-spacing: -2px;
+	letter-spacing: -2px;
 }
 .sm-icon-tw{
 	color: #fff !important;
@@ -109,6 +116,7 @@ letter-spacing: -2px;
 }
 .fs-12{
 	font-size: 12px;
+	line-height: 15px;
 }
 .fs-14 {
 	font-size: 14px;
@@ -351,7 +359,7 @@ footer ul li a:hover{
 	border-radius: 0px !important;
 	height: 500px;
 }
-.card-img-top{
+.divi-main .card-img-top{
 	border-radius: 0px !important;
 	width: 100% !important;
 	height: 350px !important;
@@ -360,11 +368,11 @@ footer ul li a:hover{
 	font-size: .85rem !important;
 	color: #21145f !important;
 }
-.card-body{
+.divi-main .card-body{
 	border: 1px solid #ccc !important;
 	border-top: 0px;
 }
-.card-body:nth-child(2){
+.divi-main .card-body:nth-child(2){
 	border: 1px solid #ccc !important;
 	border-left: 0px !important;
 	border-top: 0px;
@@ -383,4 +391,65 @@ footer ul li a:hover{
 .divi-box{
 	line-height: 1.4;
 	font-size: 13px;
+}
+.bread-cumb ul li:first-child{
+	border-right: 2px solid #21145f;
+	padding-right: 12px;
+}
+.line{
+	height: 1px;
+	width: 90px;
+	background: #5ec3e6;
+}
+.projects-ul{
+	line-height: 1.5rem;
+}
+.projects-ul li:hover{
+	cursor: pointer;
+}
+.projects-list .card{
+	background-color: #fff0 !important;
+}
+.projects-list .card-img-top{
+	border-radius: 0px !important;
+	border: 1px solid #22115c;
+}
+.projects-list h6{
+	font-size: .75rem;
+}
+.projects-list a{
+	color: #5ec3e6;
+}
+.projects-list a:hover{
+	cursor: pointer;
+}
+.projects-list .card-img-top{
+	position: relative;
+}
+.image-container {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #22115ca3;
+}
+.image-container:hover .overlay {
+  opacity: 1;
+  cursor: pointer;
 }
