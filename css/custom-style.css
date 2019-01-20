@@ -344,12 +344,12 @@ footer ul li a:hover{
 }
 .divisions_main{
 	background: url('../img/divisionmainbg.svg') no-repeat;
-	background-size: contain;
+	background-size: cover;
 	width: 100%;
 }
 .card-holder{
 	border-radius: 0px !important;
-	height: 498px;
+	height: 500px;
 }
 .card-img-top{
 	border-radius: 0px !important;
