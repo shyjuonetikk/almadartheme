@@ -453,3 +453,28 @@ footer ul li a:hover{
   opacity: 1;
   cursor: pointer;
 }
+.realestate-back{
+	background: url('../img/realestate.svg') no-repeat;
+	background-size: cover;
+	width: 100% !important;
+	height: 498px;
+}
+.realestate-back h1{
+	font-size: 2.75rem;
+}
+.realestate-back p{
+	font-size: 1.25rem;
+	font-family: 'Montserrat', sans-serif;
+}
+.real-left-overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  background-color: #000000ba;
+  z-index: 1;
+}
