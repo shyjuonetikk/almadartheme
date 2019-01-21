@@ -31,30 +31,6 @@ body{
 	color: #6bc4e9;
 }
 
-.menu-custom-pro{
-	background: #fff !important;
-	webkit-box-shadow: 0px 6px 23px -11px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 6px 23px -11px rgba(0,0,0,0.75);
-	box-shadow: 0px 6px 23px -11px rgba(0,0,0,0.75);
-}
-
-.menu-custom ul{
-	margin-left: 15px;
-}
-.menu-custom a{
-	color: #22115c;
-	margin: 0 15px !important;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 13px;
-    border-bottom: 5px solid #6bc4e900;
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-    padding-bottom: 5px !important;
-}
-.menu-custom li:hover a{
-	color: #6bc4e9;
-	border-bottom: 5px solid #6bc4e9;
-}
 .bg-none{
 	background: none !important;
 }
@@ -86,26 +62,15 @@ body{
 	font-weight: 400px;
 }
 .letter-spc-2{
-	letter-spacing: -2px;
+letter-spacing: -2px;
 }
 .sm-icon-tw{
-	color: #fff !important;
 	border: 2px solid #5ec3e500;
 	border-radius: 50%;
 }
 .sm-icon-tw:hover{
 	color: #5ec3e5 !important;
 	border: 2px solid #5ec3e5;
-	border-radius: 50%;
-}
-.sm-icon-tw-new{
-	color: #5ec3e6 !important;
-	border: 2px solid #5ec3e6;
-	border-radius: 50%;
-}
-.sm-icon-tw-new:hover{
-	color: #22115c !important;
-	border: 2px solid #22115c;
 	border-radius: 50%;
 }
 .fs-22{
@@ -116,7 +81,6 @@ body{
 }
 .fs-12{
 	font-size: 12px;
-	line-height: 15px;
 }
 .fs-14 {
 	font-size: 14px;
@@ -132,7 +96,7 @@ body{
 	width: 100%;
 	background: url('../img/header-bar.png') no-repeat;
 	height: 24px;
-	background-size: 100%;
+	background-size: contain;
 }
 .purple-color{
 	color: #22115c;
@@ -170,17 +134,30 @@ body{
 .h_division_title {
     position: absolute;
     color: #FFF;
-    background: rgba(0,0,0,0.7);
+    background: #000000;
     bottom: 0;
     z-index: 9;
     right: 0;
     height: 55px !important;
-    clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0% 100%);
-	padding: 0px 0px 0px 32px;
-}
 
-.h_division_title:hover{  
-  background-color: rgba(34, 17, 92, 0.74);
+}
+.h_division_title:after {
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: #000000;
+    transform-origin: top left;
+    -ms-transform: skew(-30deg, 0deg);
+    -webkit-transform: skew(-30deg, 0deg);
+    transform: skew(-30deg, 0deg);
+}
+.h_division_title:hover,.h_division_title:hover:after{
+  background: #22115c;
   cursor: pointer;
 }
 .news-section{
@@ -209,37 +186,9 @@ body{
 .thumb-box{
 	height: 470px;
 	background: #fff;
-<<<<<<< HEAD
+	overflow-y: scroll;
+	border-bottom: 5px solid #22115c;
 }
-
-/*-- About Us Page --*/
-div.about-bg {
-    background: url(http://localhost/almadar/wp-content/themes/almadar/img/about/HeadingBg.png);
-    background-size: cover;
-}
-div#msg-chairman, div#msg-md {
-    border: 1px solid #9e9e9e;
-    border-bottom: 10px solid #22145e;
-    padding-bottom: 25px !important;
-}
-.footer_title {
-    color: #22145e;
-    font-size: 16px;
-    font-weight: 700;
-}
-img.img_eng {
-    padding: 20px 0;
-    width: 250px;
-}
-
-/*Newsletter portion copied from the home page*/
-/*.newsletter-container {
-    width: 100%;
-    height: 300px;
-    background: url(../img/newsletterback.png) no-repeat;
-    background-size: contain;
-}*/
-
 /* width */
 .thumb-box::-webkit-scrollbar {
   width: 5px;
@@ -296,7 +245,7 @@ display:flex;
 	width: 100%;
 	height: 300px;
 	background: url('../img/newsletterback.png') no-repeat;
-	background-size: cover;
+	background-size: contain;
 }
 .newsletter-container h3{
 	font-weight: 500;
@@ -325,7 +274,6 @@ display:flex;
 .newsletter-txt-field .form-control:focus{
 	-webkit-box-shadow: none;
     box-shadow: none;
-    border: none;
 }
 .btn-custom{
 	background: url('../img/submitbutton.png') no-repeat;
@@ -342,10 +290,9 @@ input[type="email"]{
 	border-radius: 0px !important;
 }
 footer p{
-	color: #909090 !important;
-    font-size: 12px;
+	color: #6c6c6c !important;
+    font-size: 14px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
     line-height: 1.5;
 }
 footer ul li{
@@ -353,10 +300,8 @@ footer ul li{
 	line-height: 1.5;
 }
 footer ul li a{
-	font-family: 'Montserrat', sans-serif;
 	color: #6c6c6c;
-	font-size: 13px;
-	font-weight: 500;
+	font-size: 14px;
 }
 footer ul li a:hover{
 	color: #5ec3e6;
@@ -374,135 +319,4 @@ footer ul li a:hover{
 .footer_follow i{
 	font-size: 21px;
 	color:#24145c;
-}
-.divi-main{
-	height: 500px;
-}
-.divisions_main{
-	background: url('../img/divisionmainbg.svg') no-repeat;
-	background-size: cover;
-	width: 100%;
-}
-.card-holder{
-	border-radius: 0px !important;
-	height: 500px;
-}
-.divi-main .card-img-top{
-	border-radius: 0px !important;
-	width: 100% !important;
-	height: 350px !important;
-}
-.card-holder h5{
-	font-size: .85rem !important;
-	color: #21145f !important;
-}
-.divi-main .card-body{
-	border: 1px solid #ccc !important;
-	border-top: 0px;
-}
-.divi-main .card-body:nth-child(2){
-	border: 1px solid #ccc !important;
-	border-left: 0px !important;
-	border-top: 0px;
-}
-.card-holder a{
-	text-decoration: underline;
-}
-.card-holder a:hover{
-	text-decoration: underline;
-	color: #5ec3e6;
-}
-.right-arrow{
-	width: 30px !important;
-	height: 8px !important;
-}
-.divi-box{
-	line-height: 1.4;
-	font-size: 13px;
-}
-.bread-cumb ul li:first-child{
-	border-right: 2px solid #21145f;
-	padding-right: 12px;
-}
-.line{
-	height: 1px;
-	width: 90px;
-	background: #5ec3e6;
-}
-.projects-ul{
-	line-height: 1.5rem;
-}
-.projects-ul li:hover{
-	cursor: pointer;
-}
-.projects-list .card{
-	background-color: #fff0 !important;
-}
-.projects-list .card-img-top{
-	border-radius: 0px !important;
-	border: 1px solid #22115c;
-}
-.projects-list h6{
-	font-size: .75rem;
-}
-.projects-list a{
-	color: #5ec3e6;
-}
-.projects-list a:hover{
-	cursor: pointer;
-}
-.projects-list .card-img-top{
-	position: relative;
-}
-.image-container {
-  position: relative;
-  width: 100%;
-}
-
-.image {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #22115ca3;
-}
-.image-container:hover .overlay {
-  opacity: 1;
-  cursor: pointer;
-}
-.realestate-back{
-	background: url('../img/realestate.svg') no-repeat;
-	background-size: cover;
-	width: 100% !important;
-	height: 498px;
-}
-.realestate-back h1{
-	font-size: 2.75rem;
-}
-.realestate-back p{
-	font-size: 1.25rem;
-	font-family: 'Montserrat', sans-serif;
-}
-.real-left-overlay{
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 1;
-  background-color: #000000ba;
-  z-index: 1;
 }
