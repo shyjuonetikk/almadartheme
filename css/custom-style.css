@@ -213,14 +213,29 @@ body{
 }
 
 /*-- About Us Page --*/
+h1.slider-heading.display-4.mb-3.prmy-font.text-white {
+    font-family: "Roboto";
+    font-weight: 400;
+}
+.header-about {
+    background: url(../img/about/about-header.jpg) no-repeat;
+    min-height: 360px;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+}
 div.about-bg {
     background: url(http://localhost/almadar/wp-content/themes/almadar/img/about/HeadingBg.png);
     background-size: cover;
+}
+div#msg-chairman {
+    margin-top: -100px;
 }
 div#msg-chairman, div#msg-md {
     border: 1px solid #9e9e9e;
     border-bottom: 10px solid #22145e;
     padding-bottom: 25px !important;
+    background: #ffffff;
 }
 .footer_title {
     color: #22145e;
@@ -229,16 +244,28 @@ div#msg-chairman, div#msg-md {
 }
 img.img_eng {
     padding: 20px 0;
-    width: 250px;
+    width: 200px;
 }
-
-/*Newsletter portion copied from the home page*/
-/*.newsletter-container {
-    width: 100%;
-    height: 300px;
-    background: url(../img/newsletterback.png) no-repeat;
-    background-size: contain;
-}*/
+div#about-page {
+    color: #22115c;
+}
+p.msg-md {
+    font-size: 15px;
+    font-weight: 300;
+    color: #21145f;
+}
+div#msg-chairman > div > h4, div#msg-md > div > h4 {
+    font-family: 'Montserrat', sans-serif;
+}
+img.mission-img {
+    width: 260px;
+    padding: 15px 0 0px;
+}
+div.about-page {
+    max-width: 895px;
+    margin: 0 auto;
+}
+/*-- About Page Style ends --*/
 
 /* width */
 .thumb-box::-webkit-scrollbar {
@@ -505,4 +532,7 @@ footer ul li a:hover{
   opacity: 1;
   background-color: #000000ba;
   z-index: 1;
+}
+.pt-8 {
+    padding-top: 5rem!important;
 }
