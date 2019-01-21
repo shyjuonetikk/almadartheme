@@ -8,6 +8,7 @@
  */
 ?>
 
+<?php get_template_part('sidebar-templates/sidebar', 'footerfull');?>
 <footer class="col-sm-12 float-left p-0 m-0">
 	<div class="container">
 		<div class="footer_main">
