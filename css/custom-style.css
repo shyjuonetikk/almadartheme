@@ -209,7 +209,6 @@ body{
 .thumb-box{
 	height: 470px;
 	background: #fff;
-<<<<<<< HEAD
 }
 
 /*-- About Us Page --*/
@@ -218,14 +217,14 @@ h1.slider-heading.display-4.mb-3.prmy-font.text-white {
     font-weight: 400;
 }
 .header-about {
-    background: url(../img/about/about-header.jpg) no-repeat;
+    background: url(../img/About/about-header.jpg) no-repeat;
     min-height: 360px;
     background-size: cover;
     padding: 0;
     margin: 0;
 }
 div.about-bg {
-    background: url(http://localhost/almadar/wp-content/themes/almadar/img/about/HeadingBg.png);
+    background: url(../img/About/HeadingBg.png);
     background-size: cover;
 }
 div#msg-chairman {
