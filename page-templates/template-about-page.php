@@ -107,7 +107,7 @@ get_header('about');
 				<img src="<?php echo get_template_directory_uri(); ?>/img/about/Ukas_management.svg">
 			</div> -->
 			<div class="col-12 float-left">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/about/cert_grp.png">
+				<img src="<?php echo get_template_directory_uri(); ?>/img/About/cert_grp.png">
 			</div>
 		</div>
 	</div>
