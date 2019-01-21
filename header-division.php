@@ -21,14 +21,66 @@ $container = get_theme_mod('understrap_container_type');
 	<?php wp_head();?>
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/custom-style.css" >
+	<link rel="stylesheet" href="https://i.icomoon.io/public/temp/eb798d074c/UntitledProject/style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-	
+	<script type = "text/javascript" 
+         src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+      </script>
+		
+      <script type = "text/javascript" 
+         src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js">
+      </script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#click-contact").click(function(){
+            $("#contact-pop-up").show( "slide", { direction: "right"  }, 1000 );
+        });
+		$("#contact-left").click(function(){
+            $("#contact-pop-up").hide( "slide", {direction: "left" }, 1000 );
+        });
+	});
+</script>
 </head>
 
 <body <?php body_class();?>>
 
 <div class="site" id="page">
-
+<div class="contact-pop-up">
+	<div class="row m-0">
+		<div class="col m-0" id="contact-left"></div>
+		<div class="col m-0 contact-popup-back p-5">
+			<h1>GET IN TOUCH</h1>
+			<p class="fs-12 pb-3">For inquiries and feedback, please fill out the form below.</p>
+			<form class="w-75">
+			  <div class="form-row">
+			    <div class="form-group col-md-6">
+			      <label for="inputName">NAME</label>
+			      <input type="text" class="form-control border-0 rounded-0" id="inputName">
+			    </div>
+			    <div class="form-group col-md-6">
+			      <label for="inputCompany">COMPANY</label>
+			      <input type="text" class="form-control border-0 rounded-0" id="inputCompany">
+			    </div>
+			  </div>
+			  <div class="form-row">
+			    <div class="form-group col-md-6">
+			      <label for="inputEmail">EMAIL</label>
+			      <input type="email" class="form-control" id="inputEmail">
+			    </div>
+			    <div class="form-group col-md-6">
+			      <label for="inputSubject">SUBJECT</label>
+			      <input type="text" class="form-control border-0 rounded-0" id="inputSubject">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputAddress">YOUR MESSAGE</label>
+			    <textarea class="form-control border-0 rounded-0" id="inputAddress"></textarea>
+			  </div>
+			  <button type="submit" class="btn contact-btn float-right">SUBMIT</button>
+			</form>
+		</div>
+	</div>
+</div>
 	<!-- ******************* The Navbar Area ******************* -->
 	<div id="wrapper-navbar">
 
@@ -51,7 +103,7 @@ $container = get_theme_mod('understrap_container_type');
 						<?php else: ?>
 
 							<a href="<?php echo esc_url(home_url('/')); ?>">
-								<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" />
+								<img class="almadar_logo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" />
 							</a>
 
 						<?php endif;?>

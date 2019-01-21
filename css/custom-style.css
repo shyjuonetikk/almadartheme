@@ -23,12 +23,17 @@ body{
 }
 .menu-new a{
 	color: #fff;
-    padding: 0 15px !important;
+    margin: 0 15px !important;
     font-family: 'Montserrat', sans-serif;
     font-size: 13px;
+    border-bottom: 5px solid #6bc4e900;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-bottom: 5px !important;
 }
 .menu-new li:hover a{
 	color: #6bc4e9;
+	border-bottom: 5px solid #6bc4e9;
 }
 
 .menu-custom-pro{
@@ -67,7 +72,7 @@ body{
     font-size: 1.15rem !important;
 }
 .ml-10{
-	margin-left: 10% !important;
+	margin-left: 8% !important;
 }
 .social-media{
 	opacity: 1 !important;
@@ -175,11 +180,11 @@ body{
     z-index: 9;
     right: 0;
     height: 55px !important;
-    clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(40px 0, 100% 0%, 100% 100%, 0% 100%);
 	padding: 0px 0px 0px 32px;
 }
 
-.h_division_title:hover{  
+.h_division_title:hover{
   background-color: rgba(34, 17, 92, 0.74);
   cursor: pointer;
 }
@@ -209,12 +214,13 @@ body{
 .thumb-box{
 	height: 470px;
 	background: #fff;
-<<<<<<< HEAD
+	overflow-y: scroll;
+	border-bottom: 5px solid #22115c;
 }
 
 /*-- About Us Page --*/
 div.about-bg {
-    background: url(http://localhost/almadar/wp-content/themes/almadar/img/about/HeadingBg.png);
+    background: url(../img/about/HeadingBg.png);
     background-size: cover;
 }
 div#msg-chairman, div#msg-md {
@@ -285,9 +291,9 @@ img.img_eng {
 }
 
 .row-one{
-display:flex;
+display: flex;
 }
-.line{
+.h-line{
 	height: 1px;
 	width: 100%;
 	background: #22115c;
@@ -505,4 +511,146 @@ footer ul li a:hover{
   opacity: 1;
   background-color: #000000ba;
   z-index: 1;
+}
+.reallists li h5{
+	font-size: 1.85rem !important;
+	line-height: 3.25rem;
+	font-family: 'Montserrat', sans-serif;
+}
+.real-right-overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  background-color: #21145fcf;
+  z-index: 1;
+}
+.reallists li:hover{
+	background: #4538705e;
+	cursor: pointer;
+}
+.icon-plus2:before {
+  content: "\e901";
+  font-size: 1.85rem;
+  line-height: 3.25rem;
+}
+.pl-7{
+	padding-left: 5rem;
+}
+.real-image-container {
+  position: relative;
+  width: 100%;
+}
+
+.real-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.real-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  transition: .5s ease;
+  background-color: #22115ca3;
+}
+
+/*.real-image-container:hover .real-overlay {
+  opacity: 1;
+}*/
+
+.real-title {
+  color: white;
+  font-size: 1.75rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.lh-paragraph{
+	line-height: 1.5rem;
+	font-family: 'Montserrat', sans-serif;
+}
+.project-head{
+	width: 200px;
+}
+.real_division_title {
+    position: absolute;
+    color: #FFF;
+    background: rgba(0,0,0,0.7);
+    bottom: 0;
+    z-index: 9;
+    right: 0;
+    height: 80px !important;
+    clip-path: polygon(40px 0, 100% 0%, 100% 100%, 0% 100%);
+    padding: 0px 0px 0px 32px;
+}
+.real_division_title h6 {
+    margin: 10px;
+    text-align: right;
+    font-size: 18px!important;
+    line-height: 66px !important;
+    font-family: 'Montserrat', sans-serif;
+}
+.real_division_title:hover{
+  background-color: rgba(34, 17, 92, 0.74);
+  cursor: pointer;
+}
+.inner-container{
+	width: 72%;
+}
+.contact-list li{
+	color: #909090;
+}
+.contact-list a{
+	color: #5ec3e6;
+}
+.contact-list a:hover{
+	text-decoration: underline;
+}
+.contact-pop-up{
+	width: 100%;
+	height: 960px;
+	background: #21145f5e;
+	position: absolute;
+	z-index: 5;
+	display: none;
+}
+.contact-popup-back{
+	background: url('../img/contactus-popup.png') no-repeat;
+	width: 100%;
+	height: 960px;
+	background-size: contain;
+	color: #fff;
+}
+.contact-popup-back input[type="text"], .contact-popup-back input[type="email"]{
+	width: 95%;
+}
+.contact-popup-back textarea{
+	width: 97.5%;
+	height: 200px;
+	resize: none;
+}
+.contact-btn{
+	background: #6bc4e8;
+	border: none;
+	border-radius: 0px;
+	color: #fff;
+	font-size: 14px;
+	padding: 7px 25px;
+	font-weight: 600;
+	margin-right: 10px;
 }

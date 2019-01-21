@@ -54,7 +54,7 @@ $container = get_theme_mod('understrap_container_type');
 
 							<!-- <a class="navbar-brand" rel="home" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" itemprop="url"><?php bloginfo('name');?></a> -->
 							<a href="<?php echo esc_url(home_url('/')); ?>">
-								<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" />
+								<img class="almadar_logo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" />
 							</a>
 
 						<?php endif;?>

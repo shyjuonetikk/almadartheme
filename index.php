@@ -191,7 +191,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					          </div>
 						</div>
 						<div class="col-sm-12 col-md-12 col-xs-12 float-left mt-3">
-							<div class="line m-auto"></div>
+							<div class="h-line m-auto"></div>
 						</div>
 					</div>
 					<div class="thumb-list-box float-left">
@@ -212,7 +212,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					          </div>
 						</div>
 						<div class="col-sm-12 col-md-12 col-xs-12 float-left mt-3">
-							<div class="line m-auto"></div>
+							<div class="h-line m-auto"></div>
 						</div>
 					</div><!-- thumb 2 -->
 					<div class="thumb-list-box float-left">
@@ -256,7 +256,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					          </div>
 						</div>
 						<div class="col-sm-12 col-md-12 col-xs-12 float-left mt-3">
-							<div class="line m-auto"></div>
+							<div class="h-line m-auto"></div>
 						</div>
 					</div>
 					<div class="thumb-list-box float-left">
@@ -277,7 +277,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					          </div>
 						</div>
 						<div class="col-sm-12 col-md-12 col-xs-12 float-left mt-3">
-							<div class="line m-auto"></div>
+							<div class="h-line m-auto"></div>
 						</div>
 					</div><!-- thumb 2 -->
 					<div class="thumb-list-box float-left">
@@ -321,7 +321,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					          </div>
 						</div>
 						<div class="col-sm-12 col-md-12 col-xs-12 float-left mt-3">
-							<div class="line m-auto"></div>
+							<div class="h-line m-auto"></div>
 						</div>
 					</div>
 					<div class="thumb-list-box float-left">
@@ -342,7 +342,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					          </div>
 						</div>
 						<div class="col-sm-12 col-md-12 col-xs-12 float-left mt-3">
-							<div class="line m-auto"></div>
+							<div class="h-line m-auto"></div>
 						</div>
 					</div><!-- thumb 2 -->
 					<div class="thumb-list-box float-left">

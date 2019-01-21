@@ -12,7 +12,7 @@ get_header();
 			</div>
 			<div class="container">
 				<div class="col-lg-5 float-left text-center">
-					<img class="img_eng" src="http://localhost/almadar/wp-content/themes/almadar/img/About/Engineer. Ali Abdul Reda Mashhadi.png" alt="">
+					<img class="img_eng" src="<?php echo get_template_directory_uri(); ?>/img/About/Engineer. Ali Abdul Reda Mashhadi.png" alt="">
 				</div>
 				<div class="col-lg-1 float-left text-center">
 					<img src="<?php echo get_template_directory_uri(); ?>/img/About/Line_about.svg">
