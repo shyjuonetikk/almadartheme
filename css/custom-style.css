@@ -535,3 +535,46 @@ footer ul li a:hover{
 .pt-8 {
     padding-top: 5rem!important;
 }
+/*-- Career Page --*/
+.header-career {
+    background: url(../img/career-bg.png) no-repeat;
+    min-height: 360px;
+    background-size: cover;
+    padding: 0;	
+}
+table#careers-table {
+    background: #fff;
+}
+table#careers-table > thead {
+	color: #21145f;
+}
+p#send-cv > a {
+    text-decoration: underline;
+    color: #211560;
+}
+table#careers-table > tbody > tr {
+    border-bottom: 1px solid #21145f;
+}
+table#careers-table > tbody > tr > td {
+    padding: 12px 0 0;
+}
+#career-table-container {
+	border-bottom: 3px solid #21145f;
+    margin-bottom: 15px;
+}
+p.job-apply > a {
+    color: #6BC4E8;
+    text-decoration: underline;
+}
+p.job-apply > a > img {
+    width: 25px;
+    margin-left: 3px;
+}
+p#send-cv > a > img {
+    margin-left: 7px;
+}
+p.job-title {
+    font-weight: 500;
+}
+
+/*-- Caree Page ends here --*/
