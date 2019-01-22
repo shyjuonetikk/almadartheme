@@ -38,6 +38,7 @@ $args = array(
 	'flex-width'    => true,
 	'width'         => 1920,
 	'flex-height'    => true,
+	'height'        => 1058,
 	'default-image' => get_template_directory_uri() . '/img/Headerback.png',
 );
 add_theme_support( 'custom-header', $args );
