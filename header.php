@@ -26,11 +26,10 @@ $container = get_theme_mod('understrap_container_type');
 </head>
 
 <body <?php body_class();?>>
-
 <div class="site" id="page">
 
 	<!-- ******************* The Navbar Area ******************* -->
-	<div id="wrapper-navbar" class="header-back">
+	<div id="wrapper-navbar" class="header-back" style="background: url('<?php header_image(); ?>') no-repeat; background-size: 100% 100%;">
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e('Skip to content', 'understrap');?></a>
 
@@ -102,15 +101,14 @@ $container = get_theme_mod('understrap_container_type');
 		<div class="container">
 			<div class="jumbotron bg-none text-white">
 			  <div class="container ml-10">
-			    <h1 class="slider-heading display-4 mb-5 prmy-font">AL MADAR HOLDING WLL</h1>
+			    <h1 class="slider-heading display-4 mb-5 prmy-font"><?php echo get_post_meta(get_the_ID(), 'heading', true); ?></h1>
+			   
 			    <p class="slider-content w-75">
-			    	Al Madar Holding W.L.L. is a Qatari based Property Development<br/>
-					Company with over 24 years’ experience and a formidable reputation<br/>
-					for quality and service.
+			    	<?php echo get_post_meta(get_the_ID(), 'bannertext', true); ?>
 				</p>
 				<p class="lead mt-5">
 				<p class="lead">
-				   <a class="btn btn-header btn-lg" href="#" role="button">Learn more</a>
+				   <a class="btn btn-header btn-lg" href="<?php echo get_post_meta(get_the_ID(), 'buttonlink', true); ?>" role="button">Learn more</a>
 				</p>
 			  </div>
 			</div>

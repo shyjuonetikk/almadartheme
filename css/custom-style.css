@@ -12,9 +12,7 @@ body{
     overflow-x: hidden;
 }
 .header-back{
-	background: url(../img/Headerback.png) no-repeat;
     height: 100%;
-    background-size: cover;
     padding: 0;
     margin: 0;
 }
@@ -160,7 +158,8 @@ body{
   width: 100%;
 }
 .thumbnail img{
-	width: 100%;
+	width: 125px;
+  height: 127px;
     margin: 0 auto;
 }
 .thumb-list{
@@ -172,6 +171,7 @@ body{
     font-size: 12px!important;
     line-height: 40px !important;
     font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
 }
 .h_division_title {
     position: absolute;
@@ -221,7 +221,7 @@ body{
 
 /*-- About Us Page --*/
 h1.slider-heading.display-4.mb-3.prmy-font.text-white {
-    font-family: "Montserrat";
+    font-family: "Roboto";
     font-weight: 400;
 }
 .header-about {
@@ -786,6 +786,12 @@ div#career-cancel {
 }
 #career-resume + label * {
 	pointer-events: none;
+}
+.menu{
+  padding: 0px !important;
+}
+.understrap-read-more-link{
+  display: none;
 }
 /*-- Caree Page ends here --*/
 

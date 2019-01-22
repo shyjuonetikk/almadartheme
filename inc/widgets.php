@@ -168,5 +168,53 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 			)
 		);
 
+		register_sidebar(
+			array(
+				'name'          => __( 'Footer1', 'understrap' ),
+				'id'            => 'footer1',
+				'description'   => __( 'Full sized footer widget with dynamic grid', 'understrap' ),
+				'before_widget' => '<div id="%1$s" class="footer-widget %2$s dynamic-classes p-0">',
+				'after_widget'  => '</div><!-- .footer-widget -->',
+				'before_title'  => '<h3 class="widget-title">',
+				'after_title'   => '</h3>',
+			)
+		);
+
+		register_sidebar(
+			array(
+				'name'          => __( 'Footer2', 'understrap' ),
+				'id'            => 'footer2',
+				'description'   => __( 'Full sized footer widget with dynamic grid', 'understrap' ),
+				'before_widget' => '<div id="%1$s" class="col-sm-2 float-left mb-4 p-0">',
+				'after_widget'  => '</div><!-- .footer-widget -->',
+				'before_title'  => '<h3 class="footer_title mb-2">',
+				'after_title'   => '</h3>',
+			)
+		);
+
+		register_sidebar(
+			array(
+				'name'          => __( 'Footer3', 'understrap' ),
+				'id'            => 'footer3',
+				'description'   => __( 'Full sized footer widget with dynamic grid', 'understrap' ),
+				'before_widget' => '<div id="%1$s" class="col-sm-3 float-left mb-4 p-0">',
+				'after_widget'  => '</div><!-- .footer-widget -->',
+				'before_title'  => '<h3 class="footer_title mb-2">',
+				'after_title'   => '</h3>',
+			)
+		);
+
+		register_sidebar(
+			array(
+				'name'          => __( 'Footer4', 'understrap' ),
+				'id'            => 'footer4',
+				'description'   => __( 'Full sized footer widget with dynamic grid', 'understrap' ),
+				'before_widget' => '<div id="%1$s" class="col-sm-2 float-left mb-4 p-0">',
+				'after_widget'  => '</div><!-- .footer-widget -->',
+				'before_title'  => '<h3 class="footer_title mb-2">',
+				'after_title'   => '</h3>',
+			)
+		);
+
 	}
 } // endif function_exists( 'understrap_widgets_init' ).
