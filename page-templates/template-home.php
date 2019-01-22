@@ -86,7 +86,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					?>
 					<div class="thumb-list-box float-left">
 						<div class="col-sm-12 col-md-12 col-xs-12 mt-4 pb-3">
-				              <div class="thumbnail">
+				              <div class="thumbnail-news-section">
 					              <div class="col-sm-5 col-md-5 col-xs-5 float-left pl-0 mr-0 pr-0">
 					                <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/blog1.png" /> -->
 					              <?php echo the_post_thumbnail(); ?>

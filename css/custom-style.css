@@ -162,6 +162,15 @@ body{
 	width: 100%;
     margin: 0 auto;
 }
+.thumbnail-news-section {
+  position: relative;
+  width: 100%;
+}
+.thumbnail-news-section img{
+  width: 125px;
+  height: 127px;
+  margin: 0 auto;
+}
 .thumb-list{
 	border-bottom: 1px solid #22115c;
 }
