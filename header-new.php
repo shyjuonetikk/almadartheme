@@ -51,7 +51,7 @@ $container = get_theme_mod('understrap_container_type');
 						<?php else: ?>
 
 							<a href="<?php echo esc_url(home_url('/')); ?>">
-								<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" />
+								<img class="almadar_logo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" />
 							</a>
 
 						<?php endif;?>

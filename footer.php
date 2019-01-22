@@ -6,18 +6,9 @@
  *
  * @package understrap
  */
-
-if (!defined('ABSPATH')) {
-	exit; // Exit if accessed directly.
-}
-
-$container = get_theme_mod('understrap_container_type');
 ?>
 
 <?php get_template_part('sidebar-templates/sidebar', 'footerfull');?>
-
-
-
 <footer class="col-sm-12 float-left p-0 m-0">
 	<div class="container">
 		<div class="footer_main">
@@ -76,7 +67,7 @@ $container = get_theme_mod('understrap_container_type');
 </div><!-- #page we need this extra closing tag here -->
 
 <?php wp_footer();?>
-
+  
 </body>
 
 </html>
