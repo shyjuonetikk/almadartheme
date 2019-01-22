@@ -169,6 +169,7 @@ body{
     font-size: 12px!important;
     line-height: 40px !important;
     font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
 }
 .h_division_title {
     position: absolute;
