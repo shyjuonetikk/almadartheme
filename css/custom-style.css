@@ -213,7 +213,7 @@ body{
 
 /*-- About Us Page --*/
 h1.slider-heading.display-4.mb-3.prmy-font.text-white {
-    font-family: "Roboto";
+    font-family: "Montserrat";
     font-weight: 400;
 }
 .header-about {
@@ -576,5 +576,8 @@ p#send-cv > a > img {
 p.job-title {
     font-weight: 500;
 }
-
+/*-- Career Page popup --*/
+div#career-overlays {
+    background: #21145f5e;
+}
 /*-- Caree Page ends here --*/
