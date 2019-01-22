@@ -7,14 +7,14 @@
 
       .cls-1 {
         font-size: 117px;
-        font-family: Montserrat-Light, Montserrat;
-        font-weight: 300;
+        font-family: "Montserrat";
+        font-weight: 400;
         letter-spacing: -0.04em;
       }
 
       .cls-2, .cls-3 {
-        font-family: SegoeUI, Segoe UI;
-        font-weight: 400;
+        font-family: "Montserrat";
+        font-weight: 600;
       }
 
       .cls-3, .cls-4 {
