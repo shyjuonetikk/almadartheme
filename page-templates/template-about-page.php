@@ -53,10 +53,10 @@ get_header('about');
 	</div>
 	<div class="col-xl-12 float-left">
 		<div class="container">
-			<div id="our-mission" class="col-xl-12 mb-5 p-0 float-left">
+			<div id="our-mission" class="col-xl-12 mb-4 p-0 float-left">
 				<div class="container">
 					<div class="col-lg-6 float-left text-center">
-						<img class="mission-img" src="<?php echo get_template_directory_uri(); ?>/img/About/Our Mission.svg" alt="Our Mission">
+						<img class="mission-img pt-5 mb-4" src="<?php echo get_template_directory_uri(); ?>/img/About/Our Mission.png" alt="Our Mission">
 					</div>
 					<div class="col-lg-6 float-left">
 						<p class="msg-md">The heart and soul of our enterprise has always been our people within the organization. Nothing is more important than our integrity. This begins with insisting on absolute quality at every stage of our development.</p>
@@ -70,7 +70,7 @@ get_header('about');
 	</div>
 	<div class="col-xl-12 float-left">
 		<div class="container">
-			<div id="our-mission" class="col-xl-12 mb-5 p-0 float-left my-5">
+			<div id="our-mission" class="col-xl-12 mb-5 p-0 float-left my-3">
 				<div class="container">
 					<div class="col-lg-6 d-lg-block d-md-none float-left text-right">
 						<p class="msg-md">Al Madar Holding is seeking to be in a pole position in the construction and development through carrying out huge projects of unique architectural criteria.</p>
@@ -81,7 +81,7 @@ get_header('about');
 						technologies.</p>
 					</div>
 					<div class="col-lg-6 float-left text-center">
-						<img class="mission-img" src="<?php echo get_template_directory_uri(); ?>/img/About/Our Vision.svg" alt="Our Vision">
+						<img class="mission-img pt-5 mb-4" src="<?php echo get_template_directory_uri(); ?>/img/About/Our Vision.png" alt="Our Vision">
 					</div>
 					<div class="col-lg-6 d-lg-none d-md-block float-left text-left">
 						<p class="msg-md">Al Madar Holding is seeking to be in a pole position in the construction and development through carrying out huge projects of unique architectural criteria.</p>
@@ -95,23 +95,17 @@ get_header('about');
 			</div>
 		</div>
 	</div>
-</div>
-
-<div class="col-12">
+	<div class="col-12">
 	<div class="container">
 		<div id="about_cert" class="float-left text-center mb-5">
-			<!-- <div class="col-sm-5 float-left">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/about/Logo-ISO_9001.svg">
-			</div>
-			<div class="col-sm-2 float-left">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/about/Ukas_management.svg">
-			</div> -->
 			<div class="col-12 float-left">
 				<img src="<?php echo get_template_directory_uri(); ?>/img/About/cert_grp.png">
 			</div>
 		</div>
 	</div>
 </div>
+</div>
+
 
 <div class="newsletter-container p-5 float-left mb-5">
 	<div class="col-6 m-auto text-center">

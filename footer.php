@@ -35,7 +35,48 @@
 </div><!-- #page we need this extra closing tag here -->
 
 <?php wp_footer();?>
-  
+<script  src="https://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="  crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+	$( document ).ready(function(){
+		$("#resume-send").click(function(e){
+			e.preventDefault();
+			window.scrollTo("0", "0");
+			var popupHeight = $("#career-overlays").height();
+			popupHeight -= "50";
+			$(".site").css({"max-height":popupHeight, "overflow-y": "hidden"});
+			$("#career-overlays").animate({"right": "0", "top": "0"}, 1000);
+			$("#career-cancel").css({"min-height":popupHeight});
+		});
+		$("#career-cancel").click(function(e){
+			e.preventDefault();
+			$("#career-overlays").animate({"right": "-100%", "top": "0"}, 1000);
+			$(".site").css({"overflow-y": "visible"});
+		});
+	});
+</script>
+<script type="text/javascript">
+	var inputs = document.querySelectorAll( '.inputfile' );
+	Array.prototype.forEach.call( inputs, function( input )
+	{
+		var label	 = input.nextElementSibling,
+			labelVal = label.innerHTML;
+
+		input.addEventListener( 'change', function( e )
+		{
+			var fileName = '';
+			if( this.files && this.files.length > 1 )
+				fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+			else
+				fileName = e.target.value.split( '\\' ).pop();
+
+			if( fileName )
+				label.querySelector( 'span' ).innerHTML = fileName;
+			else
+				label.innerHTML = labelVal;
+		});
+	});
+</script>
 </body>
 
 </html>

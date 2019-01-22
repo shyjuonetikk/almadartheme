@@ -9,6 +9,7 @@ body{
     background-size: cover;
     background-position: center right;
     background-attachment: fixed;
+    overflow-x: hidden;
 }
 .header-back{
     height: 100%;
@@ -265,7 +266,7 @@ div#msg-chairman > div > h4, div#msg-md > div > h4 {
 }
 img.mission-img {
     width: 260px;
-    padding: 15px 0 0px;
+    padding: 30px 0 0px;
 }
 div.about-page {
     max-width: 895px;
@@ -725,6 +726,67 @@ p#send-cv > a > img {
 p.job-title {
     font-weight: 500;
 }
+/*-- Career Page popup --*/
+div#career-overlays {
+    background: #21145f5e;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    z-index: 1;
+}
+button#cv-button {
+    background: #1a12a3;
+    border-color: #1a12a2;
+    width: 120px;
+}
+span.career-links > a {
+    color: #000000;
+    text-decoration: underline;
+}
+form#career-form {
+    font-weight: 300;
+}
+.custom-control-label::before, .custom-control-label::after {
+    top: 0 !important;
+}
+.career-form > h2 {
+    margin-top: 10px;
+}
+div#career-cancel {
+    cursor: pointer;
+}
+/* career page file pload button */
+#career-resume {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+#career-resume + label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: #000000;
+    background-color: #ffffff;
+    display: inline-block;
+    box-shadow: 0 0.3rem 1rem rgba(0,0,0,.15)!important;
+    width: 160px;
+    text-align: center;
+}
+#career-resume:focus + label, #career-resume + label:hover {
+    background-color: #ffffff;
+}
+#career-resume + label {
+	cursor: pointer; /* "hand" cursor */
+}
+#career-resume:focus + label {
+	outline: 1px dotted #000;
+	outline: -webkit-focus-ring-color auto 5px;
+}
+#career-resume + label * {
+	pointer-events: none;
+}
 .menu{
   padding: 0px !important;
 }
@@ -732,3 +794,9 @@ p.job-title {
   display: none;
 }
 /*-- Caree Page ends here --*/
+
+/*-- menu color when it is active --*/
+.current_page_item.active > a {
+    color: #6bc4e9;
+    border-bottom: 5px solid #6bc4e9;
+}
