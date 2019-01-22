@@ -156,9 +156,9 @@ body{
   position: relative;
   width: 100%;
 }
+
 .thumbnail img{
-	width: 125px;
-  height: 127px;
+	width: 100%;
     margin: 0 auto;
 }
 .thumb-list{
