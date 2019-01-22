@@ -96,7 +96,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					                <h6 class="p-0 m-0 mb-2 purple-color"><?php echo $post_title; ?></h6>
 					                 <p class="mb-4 purple-color"><?php echo get_the_excerpt(); ?>
 									</p>
-					                 <span class="float-left purple-color fs-10 prmy-font"><?php echo get_the_date();?></span>
+					                 <span class="float-left purple-color fs-10 prmy-font"><?php echo get_the_date('M j, Y');?></span>
 					                 <a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
 					          </div>
 						</div>
