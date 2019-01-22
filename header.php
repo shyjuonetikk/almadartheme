@@ -101,20 +101,23 @@ $container = get_theme_mod('understrap_container_type');
 			<?php endif;?>
 
 		</nav><!-- .site-navigation -->
-		<div class="container">
-			<div class="jumbotron bg-none text-white">
-			  <div class="container ml-10">
-			    <h1 class="slider-heading display-4 mb-5 prmy-font">AL MADAR HOLDING WLL</h1>
-			    <p class="slider-content w-75">
-			    	Al Madar Holding W.L.L. is a Qatari based Property Development<br/>
-					Company with over 24 years’ experience and a formidable reputation<br/>
-					for quality and service.
-				</p>
-				<p class="lead mt-5">
-				<p class="lead">
-				   <a class="btn btn-header btn-lg" href="#" role="button">Learn more</a>
-				</p>
-			  </div>
+		<div class="row m-0 p-0 float-left">
+			<div class="container">
+				<div class="jumbotron bg-none text-white">
+				  <div class="container ml-10">
+				    <h1 class="slider-heading display-4 mb-5 prmy-font">AL MADAR HOLDING WLL</h1>
+				    <p class="slider-content w-75">
+				    	Al Madar Holding W.L.L. is a Qatari based Property Development<br/>
+						Company with over 24 years’ experience and a formidable reputation<br/>
+						for quality and service.
+					</p>
+					<p class="lead mt-5">
+					<p class="lead">
+					   <a class="btn btn-header btn-lg" href="#" role="button">Learn more</a>
+					</p>
+					</p>
+				  </div>
+				</div>
 			</div>
 		</div>
 	</div><!-- #wrapper-navbar end -->
