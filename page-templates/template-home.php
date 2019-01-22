@@ -71,20 +71,32 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="col-4 float-left">
 				<div class="head pl-3"> Latest News</div>
 				<div class="thumb-box">
+					<?php 
+						$query = new WP_Query(array(
+						    'post_type' => array('almadarnews'),
+						    'category_name' => 'latestnews',
+						    'post_status' => 'publish'
+						));
+
+
+						while ($query->have_posts()) {
+						    $query->the_post();
+						    $post_id = get_the_ID();
+						    $post_title = get_the_title();
+					?>
 					<div class="thumb-list-box float-left">
 						<div class="col-sm-12 col-md-12 col-xs-12 mt-4 pb-3">
 				              <div class="thumbnail">
 					              <div class="col-sm-5 col-md-5 col-xs-5 float-left pl-0 mr-0 pr-0">
-					                <img src="<?php echo get_template_directory_uri(); ?>/img/blog1.png" />
+					                <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/blog1.png" /> -->
+					              <?php echo the_post_thumbnail(); ?>
 					              </div>
 					          </div>
 					          <div class="col-sm-7 col-md-7 col-xs-7 float-left mr-0 pr-0">
-					                <h6 class="p-0 m-0 mb-2 purple-color">Dunes Hotel Tower</h6>
-					                 <p class="mb-4 purple-color">Construction of Five Stars Dunes
-										Hotel 2B G 21F in West Bay with
-										all complete finishing works…
+					                <h6 class="p-0 m-0 mb-2 purple-color"><?php echo $post_title; ?></h6>
+					                 <p class="mb-4 purple-color"><?php echo get_the_excerpt(); ?>
 									</p>
-					                 <span class="float-left purple-color fs-10 prmy-font">Oct 1, 2018</span>
+					                 <span class="float-left purple-color fs-10 prmy-font"><?php echo get_the_date();?></span>
 					                 <a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
 					          </div>
 						</div>
@@ -92,45 +104,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<div class="h-line m-auto"></div>
 						</div>
 					</div>
-					<div class="thumb-list-box float-left">
-						<div class="col-sm-12 col-md-12 col-xs-12 mt-4 pb-3">
-				              <div class="thumbnail">
-					              <div class="col-sm-5 col-md-5 col-xs-5 float-left pl-0 mr-0 pr-0">
-					                <img src="<?php echo get_template_directory_uri(); ?>/img/blog2.png" />
-					              </div>
-					          </div>
-					          <div class="col-sm-7 col-md-7 col-xs-7 float-left mr-0 pr-0">
-					                <h6 class="p-0 m-0 mb-2 purple-color">Dunes Hotel Tower</h6>
-					                 <p class="mb-4 purple-color">Construction of Five Stars Dunes
-										Hotel 2B G 21F in West Bay with
-										all complete finishing works…
-									</p>
-					                 <span class="float-left purple-color fs-10 prmy-font">Oct 1, 2018</span>
-					                 <a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
-					          </div>
-						</div>
-						<div class="col-sm-12 col-md-12 col-xs-12 float-left mt-3">
-							<div class="h-line m-auto"></div>
-						</div>
-					</div><!-- thumb 2 -->
-					<div class="thumb-list-box float-left">
-						<div class="col-sm-12 col-md-12 col-xs-12 mt-4 pb-3">
-				              <div class="thumbnail">
-					              <div class="col-sm-5 col-md-5 col-xs-5 float-left pl-0 mr-0 pr-0">
-					                <img src="<?php echo get_template_directory_uri(); ?>/img/blog3.png" />
-					              </div>
-					          </div>
-					          <div class="col-sm-7 col-md-7 col-xs-7 float-left mr-0 pr-0">
-					                <h6 class="p-0 m-0 mb-2 purple-color">Dunes Hotel Tower</h6>
-					                 <p class="mb-4 purple-color">Construction of Five Stars Dunes
-										Hotel 2B G 21F in West Bay with
-										all complete finishing works…
-									</p>
-					                 <span class="float-left purple-color fs-10 prmy-font">Oct 1, 2018</span>
-					                 <a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
-					          </div>
-						</div>
-					</div> <!-- thumb 3 -->
+					<?php
+						}
+
+						wp_reset_query();
+					?>
 				</div>
 			</div> <!-- list 1 -->
 			<div class="col-4 float-left">

@@ -157,7 +157,8 @@ body{
   width: 100%;
 }
 .thumbnail img{
-	width: 100%;
+	width: 125px;
+  height: 127px;
     margin: 0 auto;
 }
 .thumb-list{
@@ -727,5 +728,7 @@ p.job-title {
 .menu{
   padding: 0px !important;
 }
-
+.understrap-read-more-link{
+  display: none;
+}
 /*-- Caree Page ends here --*/
