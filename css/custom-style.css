@@ -723,5 +723,8 @@ p#send-cv > a > img {
 p.job-title {
     font-weight: 500;
 }
+.menu{
+  padding: 0px !important;
+}
 
 /*-- Caree Page ends here --*/
