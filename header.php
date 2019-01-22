@@ -30,9 +30,11 @@ $container = get_theme_mod('understrap_container_type');
 <div class="site" id="page">
 
 	<!-- ******************* The Navbar Area ******************* -->
-	<div id="wrapper-navbar" class="header-back">
-
-		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e('Skip to content', 'understrap');?></a>
+	<div id="wrapper-navbar">
+		<div class="row header-image m-0 p-0">
+			<img class="header-back" src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+			<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e('Skip to content', 'understrap');?></a>
+		</div>
 
 		<nav class="navbar navbar-expand-md menu-new">
 
