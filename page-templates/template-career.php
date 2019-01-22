@@ -108,5 +108,63 @@ get_header('career');
 	</div>
 </div>
 
+<div id="career-overlays" class="col-12 p-0 float-left">
+	<div class="career-form float-left w-100 px-5 py-2 bg-white col-lg-6 col-md-12 offset-lg-6">
+		<h2>Submit</h2>
+		<hr>
+		<form>
+			<div class="form-group">
+				<label for="first name">First Name<span class="text-danger">*</span></label>
+				<input type="text" class="form-control" id="career-first-name">
+			</div>
+			<div class="form-group">
+				<label for="last name">Last Name<span class="text-danger">*</span></label>
+				<input type="text" class="form-control" id="career-last-name">
+			</div>
+			<div class="form-group">
+				<label for="Email Address">Email address<span class="text-danger">*</span></label>
+				<input type="email" class="form-control" id="career-email">
+			</div>
+			<div class="form-group">
+				<label for="Phone Number">Phone Number</label>
+				<input type="email" class="form-control" id="career-phone">
+			</div>
+			<div class="form-group">
+				<label for="Location">Location<span class="text-danger">*</span></label>
+				<input type="text" class="form-control" id="career-location">
+			</div>
+			<div class="form-group">
+				<label for="Nationality">Nationality<span class="text-danger">*</span></label>
+				<select class="form-control" id="career-nationality">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="function">Function<span class="text-danger">*</span></label>
+				<select class="form-control" id="career-function">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="resume">Submit Your CV<span class="text-danger">*</span></label>
+				<input type="file" class="form-control-file" id="career-resume">
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+				<label class="form-check-label" for="defaultCheck1">I accept the Al Madar <span class="career-links">Privacy Policy</span> and <span class="career-links">Terms and conditions</span></label>
+			</div>
+			<button type="submit" class="btn btn-primary text-right">Submit</button>
+			<p>We value your privacy.</p>
+		</form>
+	</div>
+</div>
 
 <?php get_footer();?>
