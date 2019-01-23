@@ -809,3 +809,10 @@ div#career-cancel {
     color: #6bc4e9;
     border-bottom: 5px solid #6bc4e9;
 }
+.project-card-image,
+.news-card-image,
+{
+    width: 100%; /* You can set the dimensions to whatever you want */
+    height: 312px;
+    object-fit: cover;
+}

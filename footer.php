@@ -39,6 +39,31 @@
 
 <script type="text/javascript">
 	$( document ).ready(function(){
+
+	var ajaxUrl = "<?php echo admin_url('admin-ajax.php')?>";
+    var page = 1; // What page we are on.
+    var ppp = 1; // Post per page
+
+	$("#more_posts").on("click",function(){
+		 // When btn is pressed.			
+		var post_type = $(this).data('post-type');
+		var post_per_page = $(this).data('posts-per-page');
+		$("#loading-indicator").toggle();
+        $("#more_posts").attr("disabled",true); // Disable the button, temp.
+		$.post(ajaxUrl,{action:"more_post_ajax",
+            offset: (page * post_per_page) + 1,
+			ppp: post_per_page,
+			postype: post_type},
+			 function(data){
+				 page++;				 
+				 $(".projects-list").append(data); 
+				 $("#loading-indicator").toggle();
+				 $("#more_posts").attr("disabled",false);
+  });
+
+   });
+
+
 		$("#resume-send").click(function(e){
 			e.preventDefault();
 			window.scrollTo("0", "0");
@@ -53,6 +78,7 @@
 			$("#career-overlays").animate({"right": "-100%", "top": "0"}, 1000);
 			$(".site").css({"overflow-y": "visible"});
 		});
+		
 	});
 </script>
 <script type="text/javascript">

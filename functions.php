@@ -42,3 +42,50 @@ $args = array(
 	'default-image' => get_template_directory_uri() . '/img/Headerback.png',
 );
 add_theme_support( 'custom-header', $args );
+function more_post_ajax(){
+    $offset = $_POST["offset"];
+	$ppp = $_POST["ppp"];
+	$postype = $_POST["postype"];
+    header("Content-Type: text/html");
+
+    $query = new WP_Query(array(
+		'post_type' => array($postype),
+			'post_status' => 'publish',
+			'posts_per_page'=> $ppp,
+			'paged'=> $offset
+	));
+
+
+	while ($query->have_posts()) {
+		$query->the_post();
+		$post_id = get_the_ID();
+			$post_title = get_the_title();
+			$post_content = get_the_excerpt();
+			$post_url= get_the_permalink();
+
+			$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
+			?>
+			<div class="col-12 col-md-6 mb-3 pl-0">
+							<div class="card border-0 rounded-0 w-100">
+								<div class="image-container">								
+							  		<img class="card-img-top image" src="<?php echo $featured_img_url;?>" alt="<?php echo $post_title; ?>">
+							  		<div class="overlay"></div>
+							  	</div>
+							  <div class="card-body border-0 rounded-0 pl-0 ml-0">
+							    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
+							    <p class="card-text fs-12 purple-color"><?php echo $post_content; ?></p>
+							    <span class="purple-color float-left fs-12"><?php echo get_the_date();?> </span>
+							    <a href="<?php echo $post_url; ?>" class="float-right fs-12">Read More</a>
+							  </div>
+							</div>
+						</div>
+				<?php	}
+
+wp_reset_query();
+
+
+    exit; 
+}
+
+add_action('wp_ajax_nopriv_more_post_ajax', 'more_post_ajax'); 
+add_action('wp_ajax_more_post_ajax', 'more_post_ajax');

@@ -17,7 +17,7 @@
 				</ul>
 			</div>
 			<div class="col-12 float-left">
-				<div class="col-2 float-left">
+				<div class="ol-12 col-md-3 col-lg-2 float-left">
 					<h2 class="purple-color">PROJECTS</h2>
 					<div class="line"></div>
 					<ul class="list-inline mt-4 projects-ul">
@@ -26,95 +26,49 @@
 						<li class="purple-color">ALL PROJECTS</li>
 					</ul>
 				</div>
-				<div class="col-10 pl-4 pr-0 float-left">
+				<div class="col-12 col-md-9 col-lg-10 pl-4 pr-0 float-left">
+				
 					<div class="row m-0 projects-list">
+					<?php 
+						$query = new WP_Query(array(
+						    'post_type' => array('projects'),
+								'post_status' => 'publish',
+								'posts_per_page'=> 1
+						));
+
+
+						while ($query->have_posts()) {
+						    $query->the_post();
+						    $post_id = get_the_ID();
+								$post_title = get_the_title();
+								$post_content = get_the_excerpt();
+								$post_url= get_the_permalink();
+
+								$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
+					?>
 						<div class="col-6 mb-3 pl-0 float-left">
 							<div class="card border-0 rounded-0 w-100">
 								<div class="image-container">
-							  		<img class="card-img-top image" src="<?php echo get_template_directory_uri();?>/img/project1.png" alt="Card image cap">
+							  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url;?>" alt="<?php echo $post_title; ?>">
 							  		<div class="overlay"></div>
 							  	</div>
 							  <div class="card-body border-0 rounded-0 pl-0 ml-0">
-							    <h6 class="card-title purple-color">Dunes Hotel Tower</h6>
-							    <p class="card-text fs-12 purple-color">Construction of Five Stars Dunes Hotel 2B G 21F in West Bay with all complete finishing works…</p>
-							    <span class="purple-color float-left fs-12">Oct 1, 2018</span>
-							    <a href="#" class="float-right fs-12">Read More</a>
+							    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
+							    <p class="card-text fs-12 purple-color"><?php echo $post_content; ?></p>
+							    <span class="purple-color float-left fs-12"><?php echo get_the_date();?> </span>
+							    <a href="<?php echo $post_url; ?>" class="float-right fs-12">Read More</a>
 							  </div>
 							</div>
 						</div>
-						<div class="col-6 mb-3 pr-0 float-right">
-							<div class="card border-0 rounded-0 w-100">
-							  <div class="image-container">
-							  		<img class="card-img-top image" src="<?php echo get_template_directory_uri();?>/img/project2.png" alt="Card image cap">
-							  		<div class="overlay"></div>
-							  	</div>
-							  <div class="card-body border-0 rounded-0 pl-0 ml-0">
-							    <h6 class="card-title purple-color">Dunes Hotel Tower</h6>
-							    <p class="card-text fs-12 purple-color">Construction of Five Stars Dunes Hotel 2B G 21F in West Bay with all complete finishing works…</p>
-							    <span class="purple-color float-left fs-12">Oct 1, 2018</span>
-							    <a href="#" class="float-right fs-12">Read More</a>
-							  </div>
-							</div>
-						</div>
-						<div class="col-6 mb-3 pl-0 float-left">
-							<div class="card border-0 rounded-0 w-100">
-							  <div class="image-container">
-							  		<img class="card-img-top image" src="<?php echo get_template_directory_uri();?>/img/project3.png" alt="Card image cap">
-							  		<div class="overlay"></div>
-							  	</div>
-							  <div class="card-body border-0 rounded-0 pl-0 ml-0">
-							    <h6 class="card-title purple-color">Dunes Hotel Tower</h6>
-							    <p class="card-text fs-12 purple-color">Construction of Five Stars Dunes Hotel 2B G 21F in West Bay with all complete finishing works…</p>
-							    <span class="purple-color float-left fs-12">Oct 1, 2018</span>
-							    <a href="#" class="float-right fs-12">Read More</a>
-							  </div>
-							</div>
-						</div>
-						<div class="col-6 mb-3 pr-0 float-right">
-							<div class="card border-0 rounded-0 w-100">
-							  <div class="image-container">
-							  		<img class="card-img-top image" src="<?php echo get_template_directory_uri();?>/img/project4.png" alt="Card image cap">
-							  		<div class="overlay"></div>
-							  	</div>
-							  <div class="card-body border-0 rounded-0 pl-0 ml-0">
-							    <h6 class="card-title purple-color">Dunes Hotel Tower</h6>
-							    <p class="card-text fs-12 purple-color">Construction of Five Stars Dunes Hotel 2B G 21F in West Bay with all complete finishing works…</p>
-							    <span class="purple-color float-left fs-12">Oct 1, 2018</span>
-							    <a href="#" class="float-right fs-12">Read More</a>
-							  </div>
-							</div>
-						</div>
-						<div class="col-6 mb-3 pl-0 float-left">
-							<div class="card border-0 rounded-0 w-100">
-							  <div class="image-container">
-							  		<img class="card-img-top image" src="<?php echo get_template_directory_uri();?>/img/project5.png" alt="Card image cap">
-							  		<div class="overlay"></div>
-							  	</div>
-							  <div class="card-body border-0 rounded-0 pl-0 ml-0">
-							    <h6 class="card-title purple-color">Dunes Hotel Tower</h6>
-							    <p class="card-text fs-12 purple-color">Construction of Five Stars Dunes Hotel 2B G 21F in West Bay with all complete finishing works…</p>
-							    <span class="purple-color float-left fs-12">Oct 1, 2018</span>
-							    <a href="#" class="float-right fs-12">Read More</a>
-							  </div>
-							</div>
-						</div>
-						<div class="col-6 mb-3 pr-0 float-right">
-							<div class="card border-0 rounded-0 w-100">
-							  <div class="image-container">
-							  		<img class="card-img-top image" src="<?php echo get_template_directory_uri();?>/img/project6.png" alt="Card image cap">
-							  		<div class="overlay"></div>
-							  	</div>
-							  <div class="card-body border-0 rounded-0 pl-0 ml-0">
-							    <h6 class="card-title purple-color">Dunes Hotel Tower</h6>
-							    <p class="card-text fs-12 purple-color">Construction of Five Stars Dunes Hotel 2B G 21F in West Bay with all complete finishing works…</p>
-							    <span class="purple-color float-left fs-12">Oct 1, 2018</span>
-							    <a href="#" class="float-right fs-12">Read More</a>
-							  </div>
-							</div>
-						</div>
+						<?php	}
+
+wp_reset_query();
+?>
+					</div>
+					<div class="row">
 							<div class="col m-auto text-center">
 								<!-- <a href="#" class="float-left">More -->
-								<a href="#"><img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/more-button.png" /> </a>
+								<a href="#"  id="more_posts" data-post-type="projects" data-posts-per-page="1"><img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/more-button.png" /> </a>
 							</div>
 					</div>
 				</div>
