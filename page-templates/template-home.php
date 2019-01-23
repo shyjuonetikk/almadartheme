@@ -38,7 +38,7 @@ while ($query->have_posts()) {
 	$post_id = get_the_ID();
 	$post_title = get_the_title();
 	?>
-					<div class="col-lg-4 col-md-6 col-sm-6 col-12 float-left mb-4">
+					<div class="col-lg-4 col-md-6 col-sm-12 col-12 float-left mb-4">
 						<div class="thumbnail">
 						  <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/Real Estate.png" /> -->
 						  <?php echo the_post_thumbnail(); ?>
