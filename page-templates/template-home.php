@@ -241,8 +241,8 @@ wp_reset_query();
 			</div><!-- list 3 -->
 		</div>
 	</div><!-- newssection -->
-	<div class="col-xl-6 col-lg-8 col-md-8 col-12 m-auto text-center">
-		<div class="col-6 m-auto text-center">
+	<div class="newsletter-container p-5 float-left mb-5">
+		<div class="col-xl-6 col-lg-8 col-md-8 col-12 m-auto text-center">
 			<h3 class="text-light prmy-font">SUBSCRIBE TO OUR NEWSLETTERS</h3>
 			<p class="text-light fs-15 mt-4 prmy-font">
 				Enter your E-mail address to receive latest news and updates. Morbi euismod
