@@ -122,7 +122,7 @@ while ($query->have_posts()) {
 	$post_id = get_the_ID();
 	$post_title = get_the_title();
 	$field = get_field('status');
-	echo $field;
+	printr($field);
 	if ($field == 'completed: Complete') {
 		?>
 					<div class="thumb-list-box">
