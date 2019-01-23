@@ -201,7 +201,7 @@ body{
 .news-section{
 	background: url('../img/HomeBlogCover.svg') no-repeat;
 	width: 100%;
-	height: 700px;
+	min-height: 700px;
 	background-size: cover;
 	padding: 80px;
 }
