@@ -38,7 +38,7 @@ while ($query->have_posts()) {
 	$post_id = get_the_ID();
 	$post_title = get_the_title();
 	?>
-					<div class="col-lg-4 col-md-6 col-sm-12 col-12 float-left mb-4">
+					<div class="col-lg-4 col-md-6 col-sm-12 col-12 float-left mb-3 px-2">
 						<div class="thumbnail">
 						  <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/Real Estate.png" /> -->
 						  <?php echo the_post_thumbnail(); ?>
@@ -65,9 +65,9 @@ wp_reset_query();
 		</div><!-- .row -->
 
 	</div><!-- #content -->
-	<div class="col-12 m-0 news-section float-left">
+	<div class="col-12 m-0 news-section float-left p-5">
 		<div class="container">
-			<div class="col-lg-4 col-md-12 col-sm-12 float-left mb-4">
+			<div class="col-lg-4 col-md-12 col-sm-12 float-left my-4 px-1">
 				<div class="head pl-3 prmy-font"> Latest News</div>
 				<div class="thumb-box">
 					<?php
@@ -81,22 +81,21 @@ while ($query->have_posts()) {
 	$query->the_post();
 	$post_id = get_the_ID();
 	$post_title = get_the_title();
+	$featured_img_url = get_the_post_thumbnail_url($post_id, 'full');
 	?>
 					<div class="thumb-list-box float-left">
 						<div class="col-sm-12 col-md-12 col-xs-12 mt-4 pb-3">
-				              <div class="thumbnail-news-section">
-					              <div class="col-sm-5 col-md-5 col-xs-5 float-left pl-0 mr-0 pr-0">
-					                <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/blog1.png" /> -->
-					              <?php echo the_post_thumbnail(); ?>
+				            <div class="thumbnail-news-section text-center">
+								<div class="col-12 col-sm-4 col-md-5 float-left px-0 mr-0">
+									<img src="<?php echo $featured_img_url ?>" alt="<?php $post_title?>" />
 					              </div>
-					          </div>
-					          <div class="col-sm-7 col-md-7 col-xs-7 float-left mr-0 pr-0">
-					                <h6 class="p-0 m-0 mb-2 purple-color prmy-font"><?php echo $post_title; ?></h6>
-					                 <p class="mb-4 purple-color"><?php echo get_the_excerpt(); ?>
-									</p>
-					                 <span class="float-left purple-color fs-10 sc-font"><?php echo get_the_date('M j, Y'); ?></span>
-					                 <a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
-					          </div>
+							</div>
+							<div class="col-12 col-sm-8 col-md-7 float-left mr-0 text-center text-sm-left">
+								<h6 class="p-0 m-0 mb-2 purple-color prmy-font"><?php echo $post_title; ?></h6>
+								<p class="mb-4 purple-color"><?php echo get_the_excerpt(); ?></p>
+								<span class="float-left purple-color fs-10 sc-font"><?php echo get_the_date('M j, Y'); ?></span>
+								<a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
+							</div>
 						</div>
 						<div class="col-sm-12 col-md-12 col-xs-12 float-left mt-3">
 							<div class="h-line m-auto"></div>
@@ -109,7 +108,7 @@ wp_reset_query();
 ?>
 				</div>
 			</div> <!-- list 1 -->
-			<div class="col-lg-4 col-md-12 col-sm-12 float-left mb-4">
+			<div class="col-lg-4 col-md-12 col-sm-12 float-left my-4 px-1">
 				<div class="head pl-3 prmy-font"> Completed Projects</div>
 				<div class="thumb-box">
 					<div class="thumb-list-box float-left">
@@ -174,7 +173,7 @@ wp_reset_query();
 					</div> <!-- thumb 3 -->
 				</div>
 			</div><!-- list 2 -->
-			<div class="col-lg-4 col-md-12 col-sm-12 float-left mb-4">
+			<div class="col-lg-4 col-md-12 col-sm-12 float-left my-4 px-1">
 				<div class="head pl-3 prmy-font"> On-going projects</div>
 				<div class="thumb-box">
 					<div class="thumb-list-box float-left">
@@ -252,7 +251,7 @@ wp_reset_query();
 				<form>
 				  <div class="form-group row">
 				    <div class="col-9 m-auto">
-				      	<div class="input-group mb-3 newsletter-txt-field">
+				      	<div class="input-group mb-3 newsletter-txt-field prmy-font">
 						  <input type="text" class="form-control" placeholder="YOUR E-MAIL ADDRESS" aria-label="YOUR E-MAIL ADDRESS" aria-describedby="basic-addon2">
 						  <div class="input-group-append">
 						    <span class="input-group-text" id="basic-addon2">SUBMIT</span>
