@@ -114,36 +114,35 @@ wp_reset_query();
 <?php
 $query = new WP_Query(array(
 	'post_type' => array('projects'),
-	'post_status' => 'publish',
 ));
 
 while ($query->have_posts()) {
 	$query->the_post();
 	$post_id = get_the_ID();
 	$post_title = get_the_title();
-	$field = get_field('status');
-	printr($field);
-	if ($field == 'completed: Complete') {
+	$featured_img_url = get_the_post_thumbnail_url($post_id, 'full');
+	$value = get_field("status", $post_id);
+	if ($value == 'completed') {
 		?>
-					<div class="thumb-list-box">
-						<div class="col-sm-12 col-md-12 col-xs-12 mt-4 pb-3 float-left">
-				            <div class="thumbnail-news-section text-center">
-								<div class="col-12 col-sm-4 col-md-5 float-left px-0 mr-0">
-									<img src="<?php echo $featured_img_url ?>" class="img-fluid mb-2" alt="<?php echo $post_title ?>" />
-					              </div>
-							</div>
-							<div class="col-12 col-sm-8 col-md-7 float-left mr-0 text-center text-sm-left">
-								<h6 class="p-0 m-0 mb-2 purple-color prmy-font"><?php echo $post_title; ?></h6>
-								<p class="mb-4 purple-color"><?php echo get_the_excerpt(); ?></p>
-								<span class="float-left purple-color fs-10 sc-font"><?php echo get_the_date('M j, Y'); ?></span>
-								<a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
-							</div>
-						</div>
-						<div class="col-sm-12 col-md-12 col-xs-12 float-left mt-3">
-							<div class="h-line m-auto"></div>
-						</div>
-					</div>
-					<?php
+		<div class="thumb-list-box">
+			<div class="col-sm-12 col-md-12 col-xs-12 mt-4 pb-3 float-left">
+	            <div class="thumbnail-news-section text-center">
+					<div class="col-12 col-sm-4 col-md-5 float-left px-0 mr-0">
+						<img src="<?php echo $featured_img_url ?>" class="img-fluid mb-2" alt="<?php echo $post_title ?>" />
+		              </div>
+				</div>
+				<div class="col-12 col-sm-8 col-md-7 float-left mr-0 text-center text-sm-left">
+					<h6 class="p-0 m-0 mb-2 purple-color prmy-font"><?php echo $post_title; ?></h6>
+					<p class="mb-4 purple-color"><?php echo get_the_excerpt(); ?></p>
+					<span class="float-left purple-color fs-10 sc-font"><?php echo get_the_date('M j, Y'); ?></span>
+					<a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
+				</div>
+			</div>
+			<div class="col-sm-12 col-md-12 col-xs-12 float-left mt-3">
+				<div class="h-line m-auto"></div>
+			</div>
+		</div>
+		<?php
 }
 }
 
@@ -164,30 +163,30 @@ while ($query->have_posts()) {
 	$query->the_post();
 	$post_id = get_the_ID();
 	$post_title = get_the_title();
-	$field = get_field('status');
-	echo $field;
-	echo "<br>";
-	if ($field == 'completed : Completed') {
+	$featured_img_url = get_the_post_thumbnail_url($post_id, 'full');
+	get_field('status', $post_id);
+	$value = get_field("status", $post_id);
+	if ($value == 'ongoing') {
 		?>
-					<div class="thumb-list-box">
-						<div class="col-sm-12 col-md-12 col-xs-12 mt-4 pb-3 float-left">
-				            <div class="thumbnail-news-section text-center">
-								<div class="col-12 col-sm-4 col-md-5 float-left px-0 mr-0">
-									<img src="<?php echo $featured_img_url ?>" class="img-fluid mb-2" alt="<?php echo $post_title ?>" />
-					              </div>
-							</div>
-							<div class="col-12 col-sm-8 col-md-7 float-left mr-0 text-center text-sm-left">
-								<h6 class="p-0 m-0 mb-2 purple-color prmy-font"><?php echo $post_title; ?></h6>
-								<p class="mb-4 purple-color"><?php echo get_the_excerpt(); ?></p>
-								<span class="float-left purple-color fs-10 sc-font"><?php echo get_the_date('M j, Y'); ?></span>
-								<a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
-							</div>
-						</div>
-						<div class="col-sm-12 col-md-12 col-xs-12 float-left mt-3">
-							<div class="h-line m-auto"></div>
-						</div>
-					</div>
-					<?php
+		<div class="thumb-list-box">
+			<div class="col-sm-12 col-md-12 col-xs-12 mt-4 pb-3 float-left">
+	            <div class="thumbnail-news-section text-center">
+					<div class="col-12 col-sm-4 col-md-5 float-left px-0 mr-0">
+						<img src="<?php echo $featured_img_url ?>" class="img-fluid mb-2" alt="<?php echo $post_title ?>" />
+		              </div>
+				</div>
+				<div class="col-12 col-sm-8 col-md-7 float-left mr-0 text-center text-sm-left">
+					<h6 class="p-0 m-0 mb-2 purple-color prmy-font"><?php echo $post_title; ?></h6>
+					<p class="mb-4 purple-color"><?php echo get_the_excerpt(); ?></p>
+					<span class="float-left purple-color fs-10 sc-font"><?php echo get_the_date('M j, Y'); ?></span>
+					<a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
+				</div>
+			</div>
+			<div class="col-sm-12 col-md-12 col-xs-12 float-left mt-3">
+				<div class="h-line m-auto"></div>
+			</div>
+		</div>
+		<?php
 }
 }
 
