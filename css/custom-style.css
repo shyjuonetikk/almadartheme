@@ -32,7 +32,7 @@ body{
 }
 .menu-new li:hover a{
 	color: #6bc4e9;
-	border-bottom: 5px solid #6bc4e9;
+	border-bottom: 2px solid #6bc4e9;
 }
 
 .menu-custom-pro{
@@ -57,7 +57,7 @@ body{
 }
 .menu-custom li:hover a{
 	color: #6bc4e9;
-	border-bottom: 5px solid #6bc4e9;
+	border-bottom: 2px solid #6bc4e9;
 }
 .bg-none{
 	background: none !important;
@@ -221,13 +221,12 @@ body{
     font-weight: 300;
     font-size: 25px;
 }
-.thumb-box{
-	height: 470px;
-	background: #fff;
-	overflow-y: scroll;
-	border-bottom: 5px solid #22115c;
+.thumb-box {
+    height: 470px;
+    background: #fcfcfc;
+    overflow-y: scroll;
+    border-bottom: 5px solid #22115c;
 }
-
 /*-- About Us Page --*/
 h1.slider-heading {
     font-family: "Montserrat";
@@ -235,7 +234,7 @@ h1.slider-heading {
 }
 .header-about {
     background: url(../img/About/about-header.jpg) no-repeat;
-    min-height: 360px;
+    min-height: 350px;
     background-size: cover;
     padding: 0;
     margin: 0;
@@ -245,21 +244,18 @@ div.about-bg {
     background-size: cover;
 }
 div#msg-chairman {
-    margin-top: -100px;
+    margin-top: -110px;
+    margin-bottom: 2rem;
 }
 div#msg-chairman, div#msg-md {
     border-bottom: 5px solid #22145e;
-    padding-bottom: 25px !important;
+    padding-bottom: 10px !important;
     background: #fcfcfc;
 }
 .footer_title {
     color: #22145e;
     font-size: 16px;
     font-weight: 700;
-}
-img.img_eng {
-    padding: 20px 0;
-    width: 200px;
 }
 div#about-page {
     color: #22115c;
@@ -276,10 +272,6 @@ div#msg-chairman > div > h4, div#msg-md > div > h4 {
 img.mission-img {
     width: 260px;
     padding: 30px 0 0px;
-}
-div.about-page {
-    max-width: 895px;
-    margin: 0 auto;
 }
 /*-- About Page Style ends --*/
 
@@ -808,4 +800,31 @@ div#career-cancel {
 .current_page_item.active > a {
     color: #6bc4e9;
     border-bottom: 2px solid #6bc4e9;
+}
+div#about_cert {
+    margin: 0 0 9rem !important;
+}
+.mt-6 {
+    margin-top: 6rem;
+}
+div#our-mission {
+    margin-bottom: 6rem;
+}
+.thumb-list-box:hover {
+    background: #f0f0f0;
+}
+@media screen and (min-width: 1140px) {
+	img.line-chr {
+	    width: 1px;
+	    max-height: 300px;
+	    padding: 15px 0;
+	}
+	img.img_md {
+	    max-width: 260px;
+	}
+}
+@media screen and (max-width: 768px) {
+	div#our-mission {
+	    margin-bottom: 1rem;
+	}
 }

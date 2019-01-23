@@ -87,7 +87,7 @@ while ($query->have_posts()) {
 						<div class="col-sm-12 col-md-12 col-xs-12 mt-4 pb-3">
 				            <div class="thumbnail-news-section text-center">
 								<div class="col-12 col-sm-4 col-md-5 float-left px-0 mr-0">
-									<img src="<?php echo $featured_img_url ?>" alt="<?php $post_title?>" />
+									<img src="<?php echo $featured_img_url ?>" class="img-fluid mb-2" alt="<?php echo $post_title ?>" />
 					              </div>
 							</div>
 							<div class="col-12 col-sm-8 col-md-7 float-left mr-0 text-center text-sm-left">
