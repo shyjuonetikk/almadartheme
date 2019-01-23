@@ -124,7 +124,7 @@ while ($query->have_posts()) {
 	$value = get_field("status", $post_id);
 	if ($value == 'completed') {
 		?>
-		<div class="thumb-list-box">
+		<div class="thumb-list-box float-left">
 			<div class="col-sm-12 col-md-12 col-xs-12 mt-4 pb-3">
 	            <div class="thumbnail-news-section text-center">
 					<div class="col-12 col-sm-4 col-md-5 float-left px-0 mr-0">
@@ -168,7 +168,7 @@ while ($query->have_posts()) {
 	$value = get_field("status", $post_id);
 	if ($value == 'ongoing') {
 		?>
-		<div class="thumb-list-box">
+		<div class="thumb-list-box float-left">
 			<div class="col-sm-12 col-md-12 col-xs-12 mt-4 pb-3">
 	            <div class="thumbnail-news-section text-center">
 					<div class="col-12 col-sm-4 col-md-5 float-left px-0 mr-0">
