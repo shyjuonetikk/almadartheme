@@ -121,8 +121,9 @@ while ($query->have_posts()) {
 	$query->the_post();
 	$post_id = get_the_ID();
 	$post_title = get_the_title();
-	$field = get_field('status');
-	if ($field == 'Ongoing') {
+	$field = get_field('pr_status');
+	echo $field;
+	if ($field == 'completed: Complete') {
 		?>
 					<div class="thumb-list-box">
 						<div class="col-sm-12 col-md-12 col-xs-12 mt-4 pb-3 float-left">
@@ -163,8 +164,10 @@ while ($query->have_posts()) {
 	$query->the_post();
 	$post_id = get_the_ID();
 	$post_title = get_the_title();
-	$field = get_field('status');
-	if ($field == 'Completed') {
+	$field = get_field('pr_status');
+	echo $field;
+	echo "<br>";
+	if ($field == 'completed : Completed') {
 		?>
 					<div class="thumb-list-box">
 						<div class="col-sm-12 col-md-12 col-xs-12 mt-4 pb-3 float-left">
