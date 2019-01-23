@@ -121,7 +121,7 @@ while ($query->have_posts()) {
 	$query->the_post();
 	$post_id = get_the_ID();
 	$post_title = get_the_title();
-	$field = get_field('pr_status');
+	$field = get_field('status');
 	echo $field;
 	if ($field == 'completed: Complete') {
 		?>
@@ -164,7 +164,7 @@ while ($query->have_posts()) {
 	$query->the_post();
 	$post_id = get_the_ID();
 	$post_title = get_the_title();
-	$field = get_field('pr_status');
+	$field = get_field('status');
 	echo $field;
 	echo "<br>";
 	if ($field == 'completed : Completed') {
