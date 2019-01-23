@@ -229,8 +229,8 @@ body{
 }
 
 /*-- About Us Page --*/
-h1.slider-heading.display-4.mb-3.prmy-font.text-white {
-    font-family: "Roboto";
+h1.slider-heading {
+    font-family: "Montserrat";
     font-weight: 400;
 }
 .header-about {

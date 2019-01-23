@@ -68,7 +68,7 @@ wp_reset_query();
 	<div class="col-12 m-0 news-section float-left">
 		<div class="container">
 			<div class="col-lg-4 col-md-12 col-sm-12 float-left mb-4">
-				<div class="head pl-3"> Latest News</div>
+				<div class="head pl-3 prmy-font"> Latest News</div>
 				<div class="thumb-box">
 					<?php
 $query = new WP_Query(array(
@@ -91,10 +91,10 @@ while ($query->have_posts()) {
 					              </div>
 					          </div>
 					          <div class="col-sm-7 col-md-7 col-xs-7 float-left mr-0 pr-0">
-					                <h6 class="p-0 m-0 mb-2 purple-color"><?php echo $post_title; ?></h6>
+					                <h6 class="p-0 m-0 mb-2 purple-color prmy-font"><?php echo $post_title; ?></h6>
 					                 <p class="mb-4 purple-color"><?php echo get_the_excerpt(); ?>
 									</p>
-					                 <span class="float-left purple-color fs-10 prmy-font"><?php echo get_the_date('M j, Y'); ?></span>
+					                 <span class="float-left purple-color fs-10 sc-font"><?php echo get_the_date('M j, Y'); ?></span>
 					                 <a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
 					          </div>
 						</div>
@@ -110,7 +110,7 @@ wp_reset_query();
 				</div>
 			</div> <!-- list 1 -->
 			<div class="col-lg-4 col-md-12 col-sm-12 float-left mb-4">
-				<div class="head pl-3"> Completed Projects</div>
+				<div class="head pl-3 prmy-font"> Completed Projects</div>
 				<div class="thumb-box">
 					<div class="thumb-list-box float-left">
 						<div class="col-sm-12 col-md-12 col-xs-12 mt-4 pb-3">
@@ -120,12 +120,12 @@ wp_reset_query();
 					              </div>
 					          </div>
 					          <div class="col-sm-7 col-md-7 col-xs-7 float-left mr-0 pr-0">
-					                <h6 class="p-0 m-0 mb-2 purple-color">Dunes Hotel Tower</h6>
+					                <h6 class="p-0 m-0 mb-2 purple-color prmy-font">Dunes Hotel Tower</h6>
 					                 <p class="mb-4 purple-color">Construction of Five Stars Dunes
 										Hotel 2B G 21F in West Bay with
 										all complete finishing works…
 									</p>
-					                 <span class="float-left purple-color fs-10 prmy-font">Oct 1, 2018</span>
+					                 <span class="float-left purple-color fs-10 sc-font">Oct 1, 2018</span>
 					                 <a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
 					          </div>
 						</div>
@@ -141,12 +141,12 @@ wp_reset_query();
 					              </div>
 					          </div>
 					          <div class="col-sm-7 col-md-7 col-xs-7 float-left mr-0 pr-0">
-					                <h6 class="p-0 m-0 mb-2 purple-color">Dunes Hotel Tower</h6>
+					                <h6 class="p-0 m-0 mb-2 purple-color prmy-font">Dunes Hotel Tower</h6>
 					                 <p class="mb-4 purple-color">Construction of Five Stars Dunes
 										Hotel 2B G 21F in West Bay with
 										all complete finishing works…
 									</p>
-					                 <span class="float-left purple-color fs-10 prmy-font">Oct 1, 2018</span>
+					                 <span class="float-left purple-color fs-10 sc-font">Oct 1, 2018</span>
 					                 <a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
 					          </div>
 						</div>
@@ -162,12 +162,12 @@ wp_reset_query();
 					              </div>
 					          </div>
 					          <div class="col-sm-7 col-md-7 col-xs-7 float-left mr-0 pr-0">
-					                <h6 class="p-0 m-0 mb-2 purple-color">Dunes Hotel Tower</h6>
+					                <h6 class="p-0 m-0 mb-2 purple-color prmy-font">Dunes Hotel Tower</h6>
 					                 <p class="mb-4 purple-color">Construction of Five Stars Dunes
 										Hotel 2B G 21F in West Bay with
 										all complete finishing works…
 									</p>
-					                 <span class="float-left purple-color fs-10 prmy-font">Oct 1, 2018</span>
+					                 <span class="float-left purple-color fs-10 sc-font">Oct 1, 2018</span>
 					                 <a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
 					          </div>
 						</div>
@@ -175,7 +175,7 @@ wp_reset_query();
 				</div>
 			</div><!-- list 2 -->
 			<div class="col-lg-4 col-md-12 col-sm-12 float-left mb-4">
-				<div class="head pl-3"> On-going projects</div>
+				<div class="head pl-3 prmy-font"> On-going projects</div>
 				<div class="thumb-box">
 					<div class="thumb-list-box float-left">
 						<div class="col-sm-12 col-md-12 col-xs-12 mt-4 pb-3">
@@ -185,12 +185,12 @@ wp_reset_query();
 					              </div>
 					          </div>
 					          <div class="col-sm-7 col-md-7 col-xs-7 float-left mr-0 pr-0">
-					                <h6 class="p-0 m-0 mb-2 purple-color">Dunes Hotel Tower</h6>
+					                <h6 class="p-0 m-0 mb-2 purple-color prmy-font">Dunes Hotel Tower</h6>
 					                 <p class="mb-4 purple-color">Construction of Five Stars Dunes
 										Hotel 2B G 21F in West Bay with
 										all complete finishing works…
 									</p>
-					                 <span class="float-left purple-color fs-10 prmy-font">Oct 1, 2018</span>
+					                 <span class="float-left purple-color fs-10 sc-font">Oct 1, 2018</span>
 					                 <a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
 					          </div>
 						</div>
@@ -206,12 +206,12 @@ wp_reset_query();
 					              </div>
 					          </div>
 					          <div class="col-sm-7 col-md-7 col-xs-7 float-left mr-0 pr-0">
-					                <h6 class="p-0 m-0 mb-2 purple-color">Dunes Hotel Tower</h6>
+					                <h6 class="p-0 m-0 mb-2 purple-color prmy-font">Dunes Hotel Tower</h6>
 					                 <p class="mb-4 purple-color">Construction of Five Stars Dunes
 										Hotel 2B G 21F in West Bay with
 										all complete finishing works…
 									</p>
-					                 <span class="float-left purple-color fs-10 prmy-font">Oct 1, 2018</span>
+					                 <span class="float-left purple-color fs-10 sc-font">Oct 1, 2018</span>
 					                 <a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
 					          </div>
 						</div>
@@ -227,12 +227,12 @@ wp_reset_query();
 					              </div>
 					          </div>
 					          <div class="col-sm-7 col-md-7 col-xs-7 float-left mr-0 pr-0">
-					                <h6 class="p-0 m-0 mb-2 purple-color">Dunes Hotel Tower</h6>
+					                <h6 class="p-0 m-0 mb-2 purple-color prmy-font">Dunes Hotel Tower</h6>
 					                 <p class="mb-4 purple-color">Construction of Five Stars Dunes
 										Hotel 2B G 21F in West Bay with
 										all complete finishing works…
 									</p>
-					                 <span class="float-left purple-color fs-10 prmy-font">Oct 1, 2018</span>
+					                 <span class="float-left purple-color fs-10 sc-font">Oct 1, 2018</span>
 					                 <a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
 					          </div>
 						</div>
@@ -244,7 +244,7 @@ wp_reset_query();
 	<div class="newsletter-container p-5 float-left mb-5">
 		<div class="col-xl-6 col-lg-8 col-md-8 col-12 m-auto text-center">
 			<h3 class="text-light prmy-font">SUBSCRIBE TO OUR NEWSLETTERS</h3>
-			<p class="text-light fs-15 mt-4 prmy-font">
+			<p class="text-light fs-15 mt-4 sc-font">
 				Enter your E-mail address to receive latest news and updates. Morbi euismod
 				fermentum tempus. Mauris molestie facilisis eros id dictum.
 			</p>
