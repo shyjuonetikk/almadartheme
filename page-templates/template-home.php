@@ -111,131 +111,85 @@ wp_reset_query();
 			<div class="col-lg-4 col-md-12 col-sm-12 float-left my-4 px-1">
 				<div class="head pl-3 prmy-font"> Completed Projects</div>
 				<div class="thumb-box">
-					<div class="thumb-list-box float-left">
-						<div class="col-sm-12 col-md-12 col-xs-12 mt-4 pb-3">
-				              <div class="thumbnail">
-					              <div class="col-sm-5 col-md-5 col-xs-5 float-left pl-0 mr-0 pr-0">
-					                <img src="<?php echo get_template_directory_uri(); ?>/img/blog4.png" />
+<?php
+$query = new WP_Query(array(
+	'post_type' => array('projects'),
+	'post_status' => 'publish',
+));
+
+while ($query->have_posts()) {
+	$query->the_post();
+	$post_id = get_the_ID();
+	$post_title = get_the_title();
+	$field = get_field('status');
+	if ($field == 'Ongoing') {
+		?>
+					<div class="thumb-list-box">
+						<div class="col-sm-12 col-md-12 col-xs-12 mt-4 pb-3 float-left">
+				            <div class="thumbnail-news-section text-center">
+								<div class="col-12 col-sm-4 col-md-5 float-left px-0 mr-0">
+									<img src="<?php echo $featured_img_url ?>" class="img-fluid mb-2" alt="<?php echo $post_title ?>" />
 					              </div>
-					          </div>
-					          <div class="col-sm-7 col-md-7 col-xs-7 float-left mr-0 pr-0">
-					                <h6 class="p-0 m-0 mb-2 purple-color prmy-font">Dunes Hotel Tower</h6>
-					                 <p class="mb-4 purple-color">Construction of Five Stars Dunes
-										Hotel 2B G 21F in West Bay with
-										all complete finishing works…
-									</p>
-					                 <span class="float-left purple-color fs-10 sc-font">Oct 1, 2018</span>
-					                 <a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
-					          </div>
+							</div>
+							<div class="col-12 col-sm-8 col-md-7 float-left mr-0 text-center text-sm-left">
+								<h6 class="p-0 m-0 mb-2 purple-color prmy-font"><?php echo $post_title; ?></h6>
+								<p class="mb-4 purple-color"><?php echo get_the_excerpt(); ?></p>
+								<span class="float-left purple-color fs-10 sc-font"><?php echo get_the_date('M j, Y'); ?></span>
+								<a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
+							</div>
 						</div>
 						<div class="col-sm-12 col-md-12 col-xs-12 float-left mt-3">
 							<div class="h-line m-auto"></div>
 						</div>
 					</div>
-					<div class="thumb-list-box float-left">
-						<div class="col-sm-12 col-md-12 col-xs-12 mt-4 pb-3">
-				              <div class="thumbnail">
-					              <div class="col-sm-5 col-md-5 col-xs-5 float-left pl-0 mr-0 pr-0">
-					                <img src="<?php echo get_template_directory_uri(); ?>/img/blog5.png" />
-					              </div>
-					          </div>
-					          <div class="col-sm-7 col-md-7 col-xs-7 float-left mr-0 pr-0">
-					                <h6 class="p-0 m-0 mb-2 purple-color prmy-font">Dunes Hotel Tower</h6>
-					                 <p class="mb-4 purple-color">Construction of Five Stars Dunes
-										Hotel 2B G 21F in West Bay with
-										all complete finishing works…
-									</p>
-					                 <span class="float-left purple-color fs-10 sc-font">Oct 1, 2018</span>
-					                 <a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
-					          </div>
-						</div>
-						<div class="col-sm-12 col-md-12 col-xs-12 float-left mt-3">
-							<div class="h-line m-auto"></div>
-						</div>
-					</div><!-- thumb 2 -->
-					<div class="thumb-list-box float-left">
-						<div class="col-sm-12 col-md-12 col-xs-12 mt-4 pb-3">
-				              <div class="thumbnail">
-					              <div class="col-sm-5 col-md-5 col-xs-5 float-left pl-0 mr-0 pr-0">
-					                <img src="<?php echo get_template_directory_uri(); ?>/img/blog6.png" />
-					              </div>
-					          </div>
-					          <div class="col-sm-7 col-md-7 col-xs-7 float-left mr-0 pr-0">
-					                <h6 class="p-0 m-0 mb-2 purple-color prmy-font">Dunes Hotel Tower</h6>
-					                 <p class="mb-4 purple-color">Construction of Five Stars Dunes
-										Hotel 2B G 21F in West Bay with
-										all complete finishing works…
-									</p>
-					                 <span class="float-left purple-color fs-10 sc-font">Oct 1, 2018</span>
-					                 <a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
-					          </div>
-						</div>
-					</div> <!-- thumb 3 -->
+					<?php
+}
+}
+
+wp_reset_query();
+?>
 				</div>
 			</div><!-- list 2 -->
 			<div class="col-lg-4 col-md-12 col-sm-12 float-left my-4 px-1">
 				<div class="head pl-3 prmy-font"> On-going projects</div>
 				<div class="thumb-box">
-					<div class="thumb-list-box float-left">
-						<div class="col-sm-12 col-md-12 col-xs-12 mt-4 pb-3">
-				              <div class="thumbnail">
-					              <div class="col-sm-5 col-md-5 col-xs-5 float-left pl-0 mr-0 pr-0">
-					                <img src="<?php echo get_template_directory_uri(); ?>/img/blog7.png" />
+<?php
+$query = new WP_Query(array(
+	'post_type' => array('projects'),
+	'post_status' => 'publish',
+));
+
+while ($query->have_posts()) {
+	$query->the_post();
+	$post_id = get_the_ID();
+	$post_title = get_the_title();
+	$field = get_field('status');
+	if ($field == 'Completed') {
+		?>
+					<div class="thumb-list-box">
+						<div class="col-sm-12 col-md-12 col-xs-12 mt-4 pb-3 float-left">
+				            <div class="thumbnail-news-section text-center">
+								<div class="col-12 col-sm-4 col-md-5 float-left px-0 mr-0">
+									<img src="<?php echo $featured_img_url ?>" class="img-fluid mb-2" alt="<?php echo $post_title ?>" />
 					              </div>
-					          </div>
-					          <div class="col-sm-7 col-md-7 col-xs-7 float-left mr-0 pr-0">
-					                <h6 class="p-0 m-0 mb-2 purple-color prmy-font">Dunes Hotel Tower</h6>
-					                 <p class="mb-4 purple-color">Construction of Five Stars Dunes
-										Hotel 2B G 21F in West Bay with
-										all complete finishing works…
-									</p>
-					                 <span class="float-left purple-color fs-10 sc-font">Oct 1, 2018</span>
-					                 <a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
-					          </div>
+							</div>
+							<div class="col-12 col-sm-8 col-md-7 float-left mr-0 text-center text-sm-left">
+								<h6 class="p-0 m-0 mb-2 purple-color prmy-font"><?php echo $post_title; ?></h6>
+								<p class="mb-4 purple-color"><?php echo get_the_excerpt(); ?></p>
+								<span class="float-left purple-color fs-10 sc-font"><?php echo get_the_date('M j, Y'); ?></span>
+								<a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
+							</div>
 						</div>
 						<div class="col-sm-12 col-md-12 col-xs-12 float-left mt-3">
 							<div class="h-line m-auto"></div>
 						</div>
 					</div>
-					<div class="thumb-list-box float-left">
-						<div class="col-sm-12 col-md-12 col-xs-12 mt-4 pb-3">
-				              <div class="thumbnail">
-					              <div class="col-sm-5 col-md-5 col-xs-5 float-left pl-0 mr-0 pr-0">
-					                <img src="<?php echo get_template_directory_uri(); ?>/img/blog8.png" />
-					              </div>
-					          </div>
-					          <div class="col-sm-7 col-md-7 col-xs-7 float-left mr-0 pr-0">
-					                <h6 class="p-0 m-0 mb-2 purple-color prmy-font">Dunes Hotel Tower</h6>
-					                 <p class="mb-4 purple-color">Construction of Five Stars Dunes
-										Hotel 2B G 21F in West Bay with
-										all complete finishing works…
-									</p>
-					                 <span class="float-left purple-color fs-10 sc-font">Oct 1, 2018</span>
-					                 <a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
-					          </div>
-						</div>
-						<div class="col-sm-12 col-md-12 col-xs-12 float-left mt-3">
-							<div class="h-line m-auto"></div>
-						</div>
-					</div><!-- thumb 2 -->
-					<div class="thumb-list-box float-left">
-						<div class="col-sm-12 col-md-12 col-xs-12 mt-4 pb-3">
-				              <div class="thumbnail">
-					              <div class="col-sm-5 col-md-5 col-xs-5 float-left pl-0 mr-0 pr-0">
-					                <img src="<?php echo get_template_directory_uri(); ?>/img/blog9.png" />
-					              </div>
-					          </div>
-					          <div class="col-sm-7 col-md-7 col-xs-7 float-left mr-0 pr-0">
-					                <h6 class="p-0 m-0 mb-2 purple-color prmy-font">Dunes Hotel Tower</h6>
-					                 <p class="mb-4 purple-color">Construction of Five Stars Dunes
-										Hotel 2B G 21F in West Bay with
-										all complete finishing works…
-									</p>
-					                 <span class="float-left purple-color fs-10 sc-font">Oct 1, 2018</span>
-					                 <a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
-					          </div>
-						</div>
-					</div> <!-- thumb 3 -->
+					<?php
+}
+}
+
+wp_reset_query();
+?>
 				</div>
 			</div><!-- list 3 -->
 		</div>
