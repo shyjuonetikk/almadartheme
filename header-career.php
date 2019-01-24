@@ -30,9 +30,9 @@ $container = get_theme_mod('understrap_container_type');
 <div id="career-overlays" class="col-12 p-0 float-left">
 	<div id="career-cancel" class="col-lg-6 col-md-1 col-sm-1 col-1 float-left"></div>
 	<div class="career-form float-right w-100 px-5 py-2 bg-white col-lg-6 col-md-10 col-sm-10 col-10">
-		<h2>Submit Your CV</h2>
+		<h2 class="purple-color prmy-font">Submit Your CV</h2>
 		<hr>
-		<p class="text-right text-danger">* indicates required field</p>
+		<p class="text-right text-danger font-weight-light">* indicates required field</p>
 		<form id="career-form">
 			<div class="form-group row">
 				<label for="first name" class="col-sm-4 col-form-label">First Name<span class="text-danger">*</span></label>
@@ -92,7 +92,7 @@ $container = get_theme_mod('understrap_container_type');
 				<label for="resume" class="col-sm-4 col-form-label">Submit Your CV<span class="text-danger">*</span></label>
 				<div class="col-sm-8">
 					<input type="file" name="file" id="career-resume" class="form-control-file" data-multiple-caption="{count} files selected" multiple />
-					<label for="file" class="shadow p-2">Choose a file</label>
+					<label for="file" class="shadow p-2 sc-font font-weight-normal">Choose a file</label>
 				</div>
 			</div>
 			<div class="form-check mb-4">
