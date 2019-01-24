@@ -799,7 +799,6 @@ div#career-cancel {
 /*-- menu color when it is active --*/
 .current_page_item.active > a {
     color: #6bc4e9;
-<<<<<<< HEAD
     border-bottom: 5px solid #6bc4e9;
 }
 .project-card-image,
@@ -808,7 +807,6 @@ div#career-cancel {
     width: 100%; /* You can set the dimensions to whatever you want */
     height: 312px;
     object-fit: cover;
-=======
     border-bottom: 2px solid #6bc4e9;
 }
 div#about_cert {
@@ -837,5 +835,4 @@ div#our-mission {
 	div#our-mission {
 	    margin-bottom: 1rem;
 	}
->>>>>>> 45c6fbc411a0e67d9bb64a1d2dccf8840cc4666d
 }
