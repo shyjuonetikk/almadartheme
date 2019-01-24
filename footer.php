@@ -39,15 +39,15 @@
 
 <script type="text/javascript">
 	$( document ).ready(function(){
-
 	var ajaxUrl = "<?php echo admin_url('admin-ajax.php') ?>";
     var page = 1; // What page we are on.
-    var ppp = 1; // Post per page
 
 	$("#more_posts").on("click",function(){
 		 // When btn is pressed.
+		var place = $("#place").val();
 		var post_type = $(this).data('post-type');
 		var post_per_page = $(this).data('posts-per-page');
+		var status_project = $(this).data('status-project');
 		$("#loading-indicator").toggle();
         $("#more_posts").attr("disabled",true); // Disable the button, temp.
 		$.post(ajaxUrl,{action:"more_post_ajax",
@@ -60,9 +60,52 @@
 				 $("#loading-indicator").toggle();
 				 $("#more_posts").attr("disabled",false);
   });
+			postype: post_type,
+			status: status_project,
+			place: place
+		},
+		 function(data){
+			 page++;
+			 $(".projects-list").append(data);
+			 $("#loading-indicator").toggle();
+			 $("#more_posts").attr("disabled",false);
+			});
 
    });
 
+	$("#status-list li").on("click",function(){
+			var post_type = $(this).data('post_type');
+			var post_per_page = $(this).data('posts_per_page');
+			var status = $(this).data('status_list');
+			var place = $("#place").val();
+			$("#loading-indicator").toggle();
+			$(this).toggleClass('font-weight-bold').siblings().removeClass('font-weight-bold');
+			$.post(ajaxUrl,{action:"load_projects_status",
+				ppp: post_per_page,
+				posttype: post_type,
+				status: status,
+				place: place
+			},
+			 function(data){
+				 $("#projects-list").html(data);
+				 $("#loading-indicator").toggle();
+				 //$("#more_posts").attr("disabled",false);
+				});
+	   });
+
+	$("#place-filter li").on("click",function(){
+		var place = $(this).data('place');
+		$(this).toggleClass('font-weight-bold').siblings().removeClass('font-weight-bold');
+		//alert(place);
+		$.post(ajaxUrl,{action:"filter_country",
+				place: place
+			},
+			 function(data){
+				 $("#projects-container").html(data);
+				 $("#loading-indicator").toggle();
+				 //$("#more_posts").attr("disabled",false);
+				});
+	 });
 
 		$("#resume-send").click(function(e){
 			e.preventDefault();
@@ -78,8 +121,8 @@
 			$("#career-overlays").animate({"right": "-100%", "top": "0"}, 1000);
 			$(".site").css({"overflow-y": "visible"});
 		});
-
 	});
+
 </script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/custom.js"></script>
 <script type="text/javascript">

@@ -36,10 +36,10 @@ body{
 }
 
 .menu-custom-pro{
-	background: #fff !important;
+	/*background: #fff !important;
 	webkit-box-shadow: 0px 6px 23px -11px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 6px 23px -11px rgba(0,0,0,0.75);
-	box-shadow: 0px 6px 23px -11px rgba(0,0,0,0.75);
+	box-shadow: 0px 6px 23px -11px rgba(0,0,0,0.75);*/
 }
 
 .menu-custom ul{
@@ -193,7 +193,16 @@ body{
     clip-path: polygon(40px 0, 100% 0%, 100% 100%, 0% 100%);
 	padding: 0px 0px 0px 32px;
 }
-
+.navbar-toggler {
+  background: url('../img/menu-toggle.png') no-repeat !important;
+  height: 50px !important;
+  width: 50px !important;
+}
+.navbar-toggler:hover {
+  background: url('../img/menu-toggle-hover.png') no-repeat !important;
+  height: 50px !important;
+  width: 50px !important;
+}
 .h_division_title:hover{
   background-color: rgba(34, 17, 92, 0.74);
   cursor: pointer;
@@ -498,7 +507,7 @@ footer ul li a:hover{
 .image {
   display: block;
   width: 100%;
-  height: auto;
+  height: 325px;
 }
 
 .overlay {
@@ -921,4 +930,10 @@ div#ent-banner {
   background-size: cover;
   width: 100% !important;
   height: 498px;
+}
+#more_posts:hover{
+  cursor: pointer;
+}
+#place-filter li:hover{
+  cursor: pointer;
 }
