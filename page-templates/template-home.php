@@ -203,7 +203,7 @@ wp_reset_query();
 				Enter your E-mail address to receive latest news and updates. Morbi euismod
 				fermentum tempus. Mauris molestie facilisis eros id dictum.
 			</p>
-			<div class="col-12">
+			<div class="col-12 mt-4 pt-2">
 				<form>
 				  <div class="form-group row">
 				    <div class="col-9 m-auto">

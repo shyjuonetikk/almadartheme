@@ -42,50 +42,191 @@ $args = array(
 	'default-image' => get_template_directory_uri() . '/img/Headerback.png',
 );
 add_theme_support( 'custom-header', $args );
+function trim_excerpt($text)
+{
+return str_replace(' [...]', '', $text);
+}
+add_filter('get_the_excerpt', 'trim_excerpt');
 function more_post_ajax(){
     $offset = $_POST["offset"];
-	$ppp = $_POST["ppp"];
+	$ppp = 2;
 	$postype = $_POST["postype"];
-    header("Content-Type: text/html");
-
-    $query = new WP_Query(array(
-		'post_type' => array($postype),
-			'post_status' => 'publish',
-			'posts_per_page'=> $ppp,
-			'paged'=> $offset
-	));
-
-
+	$status = $_POST["status"];
+	$place = $_POST["place"];
+		if($status == 'all'){
+			$query = new WP_Query(array(
+			    'post_type' => $postype,
+				'post_status' => 'publish',
+				'posts_per_page'=> $ppp,
+				'meta_key'		=> 'place',
+				'meta_value'	=> $place,
+				'paged'=> $offset
+			));
+		}
+		else{
+			$query = new WP_Query(array(
+			    'post_type' => $postype,
+				'post_status' => 'publish',
+				'meta_query' => array(
+			        'relation' => 'AND', //**** Use AND or OR as per your required Where Clause
+			        array(
+			            'key'     => 'status',
+			            'value'   => $status,
+			        ),
+			        array(
+			            'key'     => 'place',
+			            'value'   => $place,
+			        ),
+			    ),
+				'posts_per_page'=> $ppp,
+				'paged'=> $offset
+			));
+		}
 	while ($query->have_posts()) {
 		$query->the_post();
 		$post_id = get_the_ID();
-			$post_title = get_the_title();
-			$post_content = get_the_excerpt();
-			$post_url= get_the_permalink();
-
-			$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
-			?>
+		$post_title = get_the_title();
+		$post_content = get_the_excerpt();
+		$post_url= get_the_permalink();
+		$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
+	?>
 			<div class="col-12 col-md-6 mb-3 pl-0">
-							<div class="card border-0 rounded-0 w-100">
-								<div class="image-container">								
-							  		<img class="card-img-top image" src="<?php echo $featured_img_url;?>" alt="<?php echo $post_title; ?>">
-							  		<div class="overlay"></div>
-							  	</div>
-							  <div class="card-body border-0 rounded-0 pl-0 ml-0">
-							    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
-							    <p class="card-text fs-12 purple-color"><?php echo $post_content; ?></p>
-							    <span class="purple-color float-left fs-12"><?php echo get_the_date();?> </span>
-							    <a href="<?php echo $post_url; ?>" class="float-right fs-12">Read More</a>
-							  </div>
-							</div>
-						</div>
+				<div class="card border-0 rounded-0 w-100">
+					<div class="image-container">
+				  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url;?>" alt="<?php echo $post_title; ?>">
+				  		<div class="overlay"></div>
+				  	</div>
+				  <div class="card-body border-0 rounded-0 pl-0 ml-0">
+				    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
+				    <p class="card-text fs-12 purple-color"><?php echo $post_content; ?></p>
+				    <span class="purple-color float-left fs-12"><?php echo get_the_date();?> </span>
+				    <a href="<?php echo $post_url; ?>" class="float-right fs-12">Read More</a>
+				  </div>
+				</div>
+			</div>
 				<?php	}
+						wp_reset_query();
+						    exit; 
+						}
+add_action('wp_ajax_nopriv_more_post_ajax', 'more_post_ajax');
+add_action('wp_ajax_more_post_ajax', 'more_post_ajax');
 
-wp_reset_query();
+// filter projects as per status
 
+function load_projects_status(){
+    $ppp = 2;
+	$posttype = $_POST["posttype"];
+	$status = $_POST["status"];
+	$place = $_POST["place"];
+?>
 
-    exit; 
+	<div class="row m-0 projects-list">
+		<?php 
+		if($status == 'all'){
+			$query = new WP_Query(array(
+			    'post_type' => $posttype,
+				'post_status' => 'publish',
+				'posts_per_page'=> $ppp,
+				'meta_key'		=> 'place',
+				'meta_value'	=> $place
+			));
+		}
+		else{
+			$query = new WP_Query(array(
+			    'post_type' => $posttype,
+				'post_status' => 'publish',
+				 'meta_query' => array(
+			        'relation' => 'AND', //**** Use AND or OR as per your required Where Clause
+			        array(
+			            'key'     => 'status',
+			            'value'   => $status,
+			        ),
+			        array(
+			            'key'     => 'place',
+			            'value'   => $place,
+			        ),
+			    ),
+				'posts_per_page'=> $ppp
+			));
+		}
+			while ($query->have_posts()) {
+			    $query->the_post();
+			    $post_id = get_the_ID();
+				$post_title = get_the_title();
+				$post_content = get_the_excerpt();
+				$post_url= get_the_permalink();
+				$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
+		?>
+		<input type="hidden" value="<?php echo $place; ?>" id="place">
+		<div class="col-12 col-md-6 mb-3 pl-0">
+			<div class="card border-0 rounded-0 w-100">
+				<div class="image-container">
+			  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url;?>" alt="<?php echo $post_title; ?>">
+			  		<div class="overlay"></div>
+			  	</div>
+			  <div class="card-body border-0 rounded-0 pl-0 ml-0">
+			    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
+			    <p class="card-text fs-12 purple-color"><?php echo $post_content; ?></p>
+			    <span class="purple-color float-left fs-12"><?php echo get_the_date(); ?> </span>
+			    <a href="<?php echo $post_url; ?>" class="float-right fs-12">Read More</a>
+			  </div>
+			</div>
+		</div>
+		<?php	}
+			wp_reset_query();
+		?>
+	</div>
+	<div class="row">
+		<div class="col m-auto text-center">
+			<a id="more_posts" data-post-type="projects" data-posts-per-page="1" data-status-project="<?php echo $status; ?>"><img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/more-button.png" /> </a>
+		</div>
+	</div>
+<script type="text/javascript">
+	$( document ).ready(function(){
+	var ajaxUrl = "<?php echo admin_url('admin-ajax.php')?>";
+    var page = 1; // What page we are on.
+
+	$("#more_posts").on("click",function(){
+		 // When btn is pressed.
+		 var place = $("#place").val();
+		var post_type = $(this).data('post-type');
+		var post_per_page = $(this).data('posts-per-page');
+		var status_project = $(this).data('status-project');
+		$("#loading-indicator").toggle();
+        $("#more_posts").attr("disabled",true); // Disable the button, temp.
+		$.post(ajaxUrl,{action:"more_post_ajax",
+            offset: (page * post_per_page) + 1,
+			ppp: post_per_page,
+			postype: post_type,
+			status: status_project,
+			place: place
+		},
+		 function(data){
+			 page++;
+			 $(".projects-list").append(data); 
+			 $("#loading-indicator").toggle();
+			 $("#more_posts").attr("disabled",false);
+			});
+
+   });
+});
+</script>
+<?php
+exit;
+}
+add_action('wp_ajax_nopriv_load_projects_status', 'load_projects_status');
+add_action('wp_ajax_load_projects_status', 'load_projects_status');
+
+// Country filtering
+
+function country_filtering_posts(){
+	$ppp = 2;
+	$posttype = $_POST["posttype"];
+	$status = $_POST["status"];
+	$place = $_POST["place"];
+
+	echo $posttype .'<br>' . $status . '<br>' . $place;
 }
 
-add_action('wp_ajax_nopriv_more_post_ajax', 'more_post_ajax'); 
-add_action('wp_ajax_more_post_ajax', 'more_post_ajax');
+add_action('wp_ajax_nopriv_country_filtering_posts', 'country_filtering_posts');
+add_action('wp_ajax_load_country_filtering_posts', 'country_filtering_posts');
