@@ -62,13 +62,13 @@ body{
 .bg-none{
 	background: none !important;
 }
-.btn-header{
-	color: #fff !important;
+.btn-header {
+    color: #ffffff !important;
     background-color: #6bc4e8 !important;
     border-color: #6bc4e8 !important;
     border-radius: 0px !important;
     padding: 5px 15px !important;
-    font-size: 1.15rem !important;
+    font-size: 15px !important;
 }
 .ml-10{
 	margin-left: 8% !important;
@@ -411,7 +411,7 @@ footer ul li a:hover{
 	color:#24145c;
 }
 .divi-main{
-	height: 500px;
+	/*height: 500px;*/
 }
 .divisions_main{
 	background: url('../img/divisionmainbg.svg') no-repeat;
@@ -435,10 +435,11 @@ footer ul li a:hover{
 	border: 1px solid #ccc !important;
 	border-top: 0px;
 }
-.divi-main .card-body:nth-child(2){
-	border: 1px solid #ccc !important;
-	border-left: 0px !important;
-	border-top: 0px;
+.divi-main .card-body:nth-child(2) {
+    border: 1px solid #ccc !important;
+    border-left: 0px !important;
+    border-top: 0px;
+    padding: 2rem 2rem 1rem !important;
 }
 .card-holder a{
 	text-decoration: underline;
@@ -797,8 +798,8 @@ div#career-cancel {
 
 /*-- menu color when it is active --*/
 .current_page_item.active > a {
-    color: #6bc4e9;
-    border-bottom: 2px solid #6bc4e9;
+    color: #6bc4e8;
+    border-bottom: 2px solid #6bc4e8;
 }
 .project-card-image,
 .news-card-image,
@@ -827,10 +828,9 @@ p.card-text {
     margin-bottom: 0;
 }
 div#estate-overlays {
-    background: url(../img/Realestatedivison.png) no-repeat;
+    background: url(../img/divisions_real_estate.png) no-repeat;
     background-size: cover;
     background-position: center;
-    min-height: 500px;
 }
 @media screen and (min-width: 1140px) {
 	img.line-chr {
@@ -846,12 +846,6 @@ div#estate-overlays {
 	div#our-mission {
 	    margin-bottom: 1rem;
 	}
-}
-div#estate-left {
-    background: #00000090;
-}
-div#estate-right {
-    background: #21145f90;
 }
 table#careers-table > thead > tr > th {
     font-family: "Montserrat";
@@ -890,4 +884,41 @@ form#career-form > div > div > input:focus, form#career-form > div > div > selec
 }
 input#career-email {
     border-radius: 0.25rem !important;
+}
+table#careers-table > tbody > tr > td:nth-child(2) {
+    vertical-align: top;
+}
+div#career-table-container {
+    margin-bottom: 6rem;
+}
+.shadow {
+    -webkit-box-shadow: 1px 2px 8px #d0d0d0cc!important;
+    box-shadow: 1px 2px 8px #d0d0d0cc!important;
+}
+div#realestate-banner {
+    right: -200%;
+    position: absolute;
+    margin-top: 48px !important;
+}
+div#contruct-banner {
+    right: -200%;
+    position: absolute;
+    margin-top: 48px !important;
+}
+div#ent-banner {
+    right: -200%;
+    position: absolute;
+    margin-top: 48px !important;
+}
+.construct-back{
+  background: url('../img/division_construction.png') no-repeat;
+  background-size: cover;
+  width: 100% !important;
+  height: 498px;
+}
+.enter-back{
+  background: url('../img/division_construction.png') no-repeat;
+  background-size: cover;
+  width: 100% !important;
+  height: 498px;
 }

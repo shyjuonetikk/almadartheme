@@ -12,18 +12,18 @@
 <footer class="col-sm-12 float-left p-0 m-0">
 	<div class="container">
 		<div class="footer_main">
-			<?php if (is_active_sidebar( 'Footer1')): ?>
-	         <?php dynamic_sidebar( 'Footer1'); ?>
-	        <?php endif; ?>
-			<?php if (is_active_sidebar( 'Footer2')): ?>
-	         <?php dynamic_sidebar( 'Footer2'); ?>
-	        <?php endif; ?>
-			<?php if (is_active_sidebar( 'Footer3')): ?>
-	         <?php dynamic_sidebar( 'Footer3'); ?>
-	        <?php endif; ?>
-			<?php if (is_active_sidebar( 'Footer4')): ?>
-	         <?php dynamic_sidebar( 'Footer4'); ?>
-	        <?php endif; ?>
+			<?php if (is_active_sidebar('Footer1')): ?>
+	         <?php dynamic_sidebar('Footer1');?>
+	        <?php endif;?>
+			<?php if (is_active_sidebar('Footer2')): ?>
+	         <?php dynamic_sidebar('Footer2');?>
+	        <?php endif;?>
+			<?php if (is_active_sidebar('Footer3')): ?>
+	         <?php dynamic_sidebar('Footer3');?>
+	        <?php endif;?>
+			<?php if (is_active_sidebar('Footer4')): ?>
+	         <?php dynamic_sidebar('Footer4');?>
+	        <?php endif;?>
 		</div>
 	</div>
 	<div class="row ml-0 mr-0 w-100 copyright_bar float-left text-center footer-bar py-2">
@@ -40,12 +40,12 @@
 <script type="text/javascript">
 	$( document ).ready(function(){
 
-	var ajaxUrl = "<?php echo admin_url('admin-ajax.php')?>";
+	var ajaxUrl = "<?php echo admin_url('admin-ajax.php') ?>";
     var page = 1; // What page we are on.
     var ppp = 1; // Post per page
 
 	$("#more_posts").on("click",function(){
-		 // When btn is pressed.			
+		 // When btn is pressed.
 		var post_type = $(this).data('post-type');
 		var post_per_page = $(this).data('posts-per-page');
 		$("#loading-indicator").toggle();
@@ -55,8 +55,8 @@
 			ppp: post_per_page,
 			postype: post_type},
 			 function(data){
-				 page++;				 
-				 $(".projects-list").append(data); 
+				 page++;
+				 $(".projects-list").append(data);
 				 $("#loading-indicator").toggle();
 				 $("#more_posts").attr("disabled",false);
   });
@@ -78,9 +78,10 @@
 			$("#career-overlays").animate({"right": "-100%", "top": "0"}, 1000);
 			$(".site").css({"overflow-y": "visible"});
 		});
-		
+
 	});
 </script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/custom.js"></script>
 <script type="text/javascript">
 	var inputs = document.querySelectorAll( '.inputfile' );
 	Array.prototype.forEach.call( inputs, function( input )
