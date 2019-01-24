@@ -425,7 +425,7 @@ footer ul li a:hover{
 .divi-main .card-img-top{
 	border-radius: 0px !important;
 	width: 100% !important;
-	height: 350px !important;
+	min-height: 300px !important;
 }
 .card-holder h5{
 	font-size: .85rem !important;
@@ -702,20 +702,19 @@ table#careers-table > thead {
 p#send-cv > a {
     text-decoration: underline;
     color: #211560;
+    font-family: "Montserrat";
+    font-weight: 500;
 }
 table#careers-table > tbody > tr {
-    border-bottom: 1px solid #21145f;
+    border-bottom: 1px solid #e8e8e8;
 }
 table#careers-table > tbody > tr > td {
     padding: 12px 0 0;
 }
-#career-table-container {
-	border-bottom: 3px solid #21145f;
-    margin-bottom: 15px;
-}
 p.job-apply > a {
     color: #6BC4E8;
     text-decoration: underline;
+    font-family: "Montserrat";
 }
 p.job-apply > a > img {
     width: 25px;
@@ -736,8 +735,8 @@ div#career-overlays {
     z-index: 1;
 }
 button#cv-button {
-    background: #1a12a3;
-    border-color: #1a12a2;
+    background: #21145f;
+    border-color: #21145f;
     width: 120px;
 }
 span.career-links > a {
@@ -766,10 +765,10 @@ div#career-cancel {
 	z-index: -1;
 }
 #career-resume + label {
-    font-size: 1.25em;
-    font-weight: 700;
+    font-size: 1em;
+    font-weight: 400;
     color: #000000;
-    background-color: #ffffff;
+    background-color: #fafafa;
     display: inline-block;
     box-shadow: 0 0.3rem 1rem rgba(0,0,0,.15)!important;
     width: 160px;
@@ -799,7 +798,7 @@ div#career-cancel {
 /*-- menu color when it is active --*/
 .current_page_item.active > a {
     color: #6bc4e9;
-    border-bottom: 5px solid #6bc4e9;
+    border-bottom: 2px solid #6bc4e9;
 }
 .project-card-image,
 .news-card-image,
@@ -821,6 +820,18 @@ div#our-mission {
 .thumb-list-box:hover {
     background: #f0f0f0;
 }
+p.card-text {
+    min-height: 64px;
+    font-family: "Roboto";
+    font-weight: 300;
+    margin-bottom: 0;
+}
+div#estate-overlays {
+    background: url(../img/Realestatedivison.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+}
 @media screen and (min-width: 1140px) {
 	img.line-chr {
 	    width: 1px;
@@ -835,4 +846,48 @@ div#our-mission {
 	div#our-mission {
 	    margin-bottom: 1rem;
 	}
+}
+div#estate-left {
+    background: #00000090;
+}
+div#estate-right {
+    background: #21145f90;
+}
+table#careers-table > thead > tr > th {
+    font-family: "Montserrat";
+}
+p.job-location {
+    font-family: "Roboto";
+    font-weight: 300;
+}
+p.msg-career {
+    font-size: 13px;
+    font-weight: 300;
+    color: #21145f;
+    line-height: 1.4;
+    font-family: "Montserrat";
+}
+p.job-close-date {
+    font-weight: 300;
+}
+p.job-cat {
+    font-weight: 300;
+}
+.b-btm {
+    border-bottom: 2px solid #21145e;
+}
+.career-form > hr {
+    border-top-width: 2px;
+    border-color: #7070707;
+}
+form#career-form > div > div > input, form#career-form > div > div > select {
+    border-color: #707070;
+    border-radius: 0.25rem !important;
+}
+form#career-form > div > div > input:focus, form#career-form > div > div > select:focus {
+    border-color: #000 !important;
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.08);
+}
+input#career-email {
+    border-radius: 0.25rem !important;
 }
