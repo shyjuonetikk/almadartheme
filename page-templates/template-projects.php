@@ -18,7 +18,7 @@
 				</ul>
 			</div>
 			<div class="col-12 float-left" id="projects-container">
-				<div class="ol-12 col-md-3 col-lg-2 float-left">
+				<div class="col-12 col-md-3 col-lg-2 float-left">
 					<h2 class="purple-color">PROJECTS</h2>
 					<div class="line"></div>
 					<ul class="list-inline mt-4 projects-ul" id="status-list">
@@ -81,7 +81,7 @@
 							</div>
 					</div>
 				</div>
-			</div>
+			</div> <!-- projects-container -->
 	</div>
 </div>
 

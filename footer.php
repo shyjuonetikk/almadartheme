@@ -72,9 +72,7 @@
 			var status = $(this).data('status_list');
 			var place = $("#place").val();
 			$("#loading-indicator").toggle();
-			//$(this).addClass('font-weight-bold');
 			$(this).toggleClass('font-weight-bold').siblings().removeClass('font-weight-bold');
-	        //$("#more_posts").attr("disabled",true); // Disable the button, temp.
 			$.post(ajaxUrl,{action:"load_projects_status",
 				ppp: post_per_page,
 				posttype: post_type,
@@ -90,18 +88,9 @@
 
 	$("#place-filter li").on("click",function(){
 		var place = $(this).data('place');
-		var post_type = $(this).data('post_type');
-		var post_per_page = $(this).data('posts_per_page');
-		var status = $(this).data('status_list');
-		
-		$("#loading-indicator").toggle();
-			//$(this).addClass('font-weight-bold');
-			$(this).toggleClass('font-weight-bold').siblings().removeClass('font-weight-bold');
-	        //$("#more_posts").attr("disabled",true); // Disable the button, temp.
-			$.post(ajaxUrl,{action:"country_filtering_posts",
-				ppp: post_per_page,
-				posttype: post_type,
-				status: status,
+		$(this).toggleClass('font-weight-bold').siblings().removeClass('font-weight-bold');
+		//alert(place);
+		$.post(ajaxUrl,{action:"filter_country",
 				place: place
 			},
 			 function(data){
@@ -110,7 +99,6 @@
 				 //$("#more_posts").attr("disabled",false);
 				});
 	 });
-
 
 		$("#resume-send").click(function(e){
 			e.preventDefault();
