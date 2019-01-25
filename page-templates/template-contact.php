@@ -13,9 +13,6 @@ get_header('division');
 	<div class="container">
 		<div class="row pl-5 pr-5 prmy-font">
 			<div class="col-lg-5">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/contactus.png" />
-		<div class="row pl-5 pr-5">
-			<div class="col">
 				<?php the_field('map_iframe');?>
 			</div>
 			<div class="col-lg-7 px-4">
