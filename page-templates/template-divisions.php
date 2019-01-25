@@ -78,25 +78,42 @@ get_header('division');
 		<div class="real-right-overlay">
 				<ul class="list-inline text-white reallists mt-5 pt-5">
 				  <li class="media pl-7">
+<<<<<<< HEAD
 					<i class="fas fa-plus"></i>
+=======
+				    <!-- <img class="plus-sign" src="<?php echo get_template_directory_uri();?>/img/plus-sign.png" /> -->
+				    <img class="plus-sign" src="<?php echo get_template_directory_uri();?>/img/plus-sign.png" />
+>>>>>>> ed1b2466fd2e7299fa5ad128ca6ec0b0fd4958ed
 				    <div class="media-body">
 				      <h5 class="mt-0 mb-1">Al Madar Real Estate</h5>
 				    </div>
 				  </li>
 				  <li class="media pl-7">
+<<<<<<< HEAD
 					<i class="fas fa-plus"></i>
+=======
+				    <img class="plus-sign" src="<?php echo get_template_directory_uri();?>/img/plus-sign.png" />
+>>>>>>> ed1b2466fd2e7299fa5ad128ca6ec0b0fd4958ed
 				    <div class="media-body">
 				      <h5 class="mt-0 mb-1">Al Madar Int’l / Investment (Dubai/Germany)</h5>
 				    </div>
 				  </li>
 				  <li class="media pl-7">
+<<<<<<< HEAD
 					<i class="fas fa-plus"></i>
+=======
+				    <img class="plus-sign" src="<?php echo get_template_directory_uri();?>/img/plus-sign.png" />
+>>>>>>> ed1b2466fd2e7299fa5ad128ca6ec0b0fd4958ed
 				    <div class="media-body">
 				      <h5 class="mt-0 mb-1">Al Madar Project Mgmt.</h5>
 				    </div>
 				  </li>
 				  <li class="media pl-7">
+<<<<<<< HEAD
 					<i class="fas fa-plus"></i>
+=======
+				    <img class="plus-sign" src="<?php echo get_template_directory_uri();?>/img/plus-sign.png" />
+>>>>>>> ed1b2466fd2e7299fa5ad128ca6ec0b0fd4958ed
 				    <div class="media-body">
 				      <h5 class="mt-0 mb-1">Nobles Real Estate</h5>
 				    </div>
@@ -123,31 +140,51 @@ get_header('division');
 		<div class="real-right-overlay">
 				<ul class="list-inline text-white reallists mt-5 pt-5">
 				  <li class="media pl-7">
+<<<<<<< HEAD
 					<i class="fas fa-plus"></i>
+=======
+				    <img class="plus-sign" src="<?php echo get_template_directory_uri();?>/img/plus-sign.png" />
+>>>>>>> ed1b2466fd2e7299fa5ad128ca6ec0b0fd4958ed
 				    <div class="media-body">
 				      <h5 class="mt-0 mb-1">Al Madar Contracting</h5>
 				    </div>
 				  </li>
 				  <li class="media pl-7">
+<<<<<<< HEAD
 					<i class="fas fa-plus"></i>
+=======
+				    <img class="plus-sign" src="<?php echo get_template_directory_uri();?>/img/plus-sign.png" />
+>>>>>>> ed1b2466fd2e7299fa5ad128ca6ec0b0fd4958ed
 				    <div class="media-body">
 				      <h5 class="mt-0 mb-1">Al Madar Engineering & Transportation</h5>
 				    </div>
 				  </li>
 				  <li class="media pl-7">
+<<<<<<< HEAD
 					<i class="fas fa-plus"></i>
+=======
+				    <img class="plus-sign" src="<?php echo get_template_directory_uri();?>/img/plus-sign.png" />
+>>>>>>> ed1b2466fd2e7299fa5ad128ca6ec0b0fd4958ed
 				    <div class="media-body">
 				      <h5 class="mt-0 mb-1">Al Madar Scala Engineering</h5>
 				    </div>
 				  </li>
 				  <li class="media pl-7">
+<<<<<<< HEAD
 					<i class="fas fa-plus"></i>
+=======
+				    <img class="plus-sign" src="<?php echo get_template_directory_uri();?>/img/plus-sign.png" />
+>>>>>>> ed1b2466fd2e7299fa5ad128ca6ec0b0fd4958ed
 				    <div class="media-body">
 				      <h5 class="mt-0 mb-1">Al Madar Wrough Iron</h5>
 				    </div>
 				  </li>
 				  <li class="media pl-7">
+<<<<<<< HEAD
 					<i class="fas fa-plus"></i>
+=======
+				    <img class="plus-sign" src="<?php echo get_template_directory_uri();?>/img/plus-sign.png" />
+>>>>>>> ed1b2466fd2e7299fa5ad128ca6ec0b0fd4958ed
 				    <div class="media-body">
 				      <h5 class="mt-0 mb-1">Al Madar Carpentry</h5>
 				    </div>
@@ -173,19 +210,31 @@ get_header('division');
 		<div class="real-right-overlay">
 				<ul class="list-inline text-white reallists mt-5 pt-5">
 					<li class="media pl-7">
+<<<<<<< HEAD
 						<i class="fas fa-plus"></i>
+=======
+						<img class="plus-sign" src="<?php echo get_template_directory_uri();?>/img/plus-sign.png" />
+>>>>>>> ed1b2466fd2e7299fa5ad128ca6ec0b0fd4958ed
 						<div class="media-body">
 							<h5 class="mt-0 mb-1">Al Madar Scala Entertainment</h5>
 						</div>
 					</li>
 					<li class="media pl-7">
+<<<<<<< HEAD
 						<i class="fas fa-plus"></i>
+=======
+						<img class="plus-sign" src="<?php echo get_template_directory_uri();?>/img/plus-sign.png" />
+>>>>>>> ed1b2466fd2e7299fa5ad128ca6ec0b0fd4958ed
 						<div class="media-body">
 							<h5 class="mt-0 mb-1">Al Madar Computer Training Center</h5>
 						</div>
 					</li>
 					<li class="media pl-7">
+<<<<<<< HEAD
 						<i class="fas fa-plus"></i>
+=======
+						<img class="plus-sign" src="<?php echo get_template_directory_uri();?>/img/plus-sign.png" />
+>>>>>>> ed1b2466fd2e7299fa5ad128ca6ec0b0fd4958ed
 						<div class="media-body">
 							<h5 class="mt-0 mb-1">Al Madar Tourism</h5>
 						</div>

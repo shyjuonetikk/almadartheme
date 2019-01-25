@@ -33,10 +33,10 @@ $container = get_theme_mod('understrap_container_type');
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e('Skip to content', 'understrap');?></a>
 
-		<nav class="navbar navbar-expand-md menu-new">
+		<nav class="navbar navbar-expand-md menu-new" id="myHeader">
 
 		<?php if ('container' == $container): ?>
-			<div class="container mt-5" >
+			<div class="container">
 		<?php endif;?>
 
 					<!-- Your site title as branding in the menu -->
@@ -84,15 +84,12 @@ $container = get_theme_mod('understrap_container_type');
 			<?php if ('container' == $container): ?>
 				<div class="d-md-block d-sm-none d-none">
 					<a href="#" class="social-media">
-					<!-- <img src="<?php echo get_template_directory_uri(); ?>/img/facebook.svg" class="social-media" /> -->
 						<i class="fab fa-facebook-square fs-22 sm-icon-fb"></i>
 					</a>
 					<a href="#" class="social-media">
-						<!-- <img src="<?php echo get_template_directory_uri(); ?>/img/iconfinder-icon.svg" /> -->
 						<i class="fab fa-twitter fs-22 sm-icon-tw pa-5 w-24"></i>
 					</a>
 					<a href="#" class="social-media">
-						<!-- <img src="<?php echo get_template_directory_uri(); ?>/img/linkedin_blue.svg" class="social-media" />  -->
 						<i class="fab fa-linkedin-in fs-22 sm-icon-fb"></i>
 					</a>
 				</div>
