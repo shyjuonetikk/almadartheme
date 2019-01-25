@@ -112,11 +112,11 @@ $container = get_theme_mod('understrap_container_type');
 <div class="site" id="page">
 
 	<!-- ******************* The Navbar Area ******************* -->
-	<div id="wrapper-navbar" class="header-career" style="background: url('<?php header_image(); ?>') no-repeat; background-size: 100% 100%;">
+	<div id="wrapper-navbar" class="header-career" style="background: url('<?php the_field('header_image'); ?>') no-repeat; background-size: 100% 100%;">
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e('Skip to content', 'understrap');?></a>
 
-		<nav class="navbar navbar-expand-md menu-new">
+		<nav class="navbar navbar-expand-md menu-new" id="myHeader">
 
 		<?php if ('container' == $container): ?>
 			<div class="container mt-3" >

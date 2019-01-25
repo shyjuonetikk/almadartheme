@@ -14,6 +14,9 @@ get_header('division');
 		<div class="row pl-5 pr-5 prmy-font">
 			<div class="col-lg-5">
 				<img src="<?php echo get_template_directory_uri(); ?>/img/contactus.png" />
+		<div class="row pl-5 pr-5">
+			<div class="col">
+				<?php the_field('map_iframe');?>
 			</div>
 			<div class="col-lg-7 px-4">
 				<h2 class="purple-color prmy-font font-weight-bold my-3">CONTACT US</h2>
@@ -22,20 +25,20 @@ get_header('division');
 					<div class="col-lg-6">
 						<h6 class="purple-color">AL MADAR HOLDINGS W.L.L.</h6>
 						<ul class="list-inline contact-list lh-paragraph fs-12">
-							<li>P.O.Box: 2329, Doha - Qatar</li>
-							<li>Tel.: +974 4455 4809</li>
-							<li>Fax: +974 4467 3019</li>
-							<li class="contact-links">almadar@almadar-holding.com</li>
+							<li>P.O.Box: <?php the_field('almadar_address');?></li>
+							<li>Tel.: <?php the_field('almadar_telephone');?></li>
+							<li>Fax: <?php the_field('almadar_fax');?></li>
+							<li class="contact-links"><?php the_field('almadar_email');?></li>
 						</ul>
 					</div>
 					<div class="col-lg-6">
 						<h6 class="purple-color">REAL ESTATE - QATAR</h6>
 						<ul class="list-inline contact-list lh-paragraph fs-12">
-							<li>Tel.: +974 4467 5405</li>
-							<li>Tel.: +974 4455 4809</li>
-							<li>Fax: +974 4467 3019</li>
-							<li class="contact-links">almadar.real@almadar-holding.com</li>
-							<li class="contact-links">realestate@almadar-holding.com</li>
+							<li>Tel.: <?php the_field('re_primary_telephone');?></li>
+							<li>Tel.: <?php the_field('re_secondary_telephone');?></li>
+							<li>Fax: <?php the_field('re_fax');?></li>
+							<li class="contact-links"><?php the_field('re_primary_email');?></li>
+							<li class="contact-links"><?php the_field('re_secondary_email');?></li>
 						</ul>
 					</div>
 				</div>
@@ -43,10 +46,10 @@ get_header('division');
 					<div class="col">
 						<h6 class="purple-color">HUMAN RESOURCE</h6>
 						<ul class="list-inline contact-list lh-paragraph fs-12">
-							<li>P.O.Box: 2329, Doha - Qatar</li>
-							<li>Tel.: +974 4455 4809</li>
-							<li>Fax: +974 4467 3019</li>
-							<li class="contact-links">careers@almadar-holding.com</li>
+							<li>P.O.Box: <?php the_field('hr_address');?></li>
+							<li>Tel.: <?php the_field('hr_telephone');?></li>
+							<li>Fax: <?php the_field('hr_fax');?></li>
+							<li class="contact-links"><?php the_field('hr_email');?></li>
 						</ul>
 					</div>
 					<div class="col contact-list">

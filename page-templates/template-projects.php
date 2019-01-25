@@ -3,9 +3,8 @@
 
 Template Name: Projects Page
 Description: Template for displaying projects.
-
  */
-get_header('new');
+get_header('division');
 ?>
 
 <div class="row m-0 p-0 mt-3 mb-5">
