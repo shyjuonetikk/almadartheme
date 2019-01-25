@@ -53,24 +53,16 @@
 		$.post(ajaxUrl,{action:"more_post_ajax",
             offset: (page * post_per_page) + 1,
 			ppp: post_per_page,
-			postype: post_type},
+			postype: post_type,
+			status: status_project,
+			place: place 
+		},
 			 function(data){
 				 page++;
 				 $(".projects-list").append(data);
 				 $("#loading-indicator").toggle();
 				 $("#more_posts").attr("disabled",false);
-  });
-			postype: post_type,
-			status: status_project,
-			place: place
-		},
-		 function(data){
-			 page++;
-			 $(".projects-list").append(data);
-			 $("#loading-indicator").toggle();
-			 $("#more_posts").attr("disabled",false);
-			});
-
+  			});
    });
 
 	$("#status-list li").on("click",function(){
@@ -96,7 +88,7 @@
 	$("#place-filter li").on("click",function(){
 		var place = $(this).data('place');
 		$(this).toggleClass('font-weight-bold').siblings().removeClass('font-weight-bold');
-		//alert(place);
+		$("#place").val(place);
 		$.post(ajaxUrl,{action:"filter_country",
 				place: place
 			},

@@ -937,3 +937,7 @@ div#ent-banner {
 #place-filter li:hover{
   cursor: pointer;
 }
+.plus-sign{
+  padding-top: 10px;
+  padding-right: 10px;
+}
