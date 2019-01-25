@@ -4,7 +4,7 @@
  */
 get_header('career');
 ?>
-<div class="col-md-8 mx-auto">
+<div class="col-lg-8 mx-auto">
 	<div class="col-xl-12 float-left">
 		<div class="container">
 			<div id="msg-chairman" class="col-xl-12 mb-5 p-0 float-left shadow">

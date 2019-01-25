@@ -63,12 +63,13 @@ get_header('division');
 		<div class="real-left-overlay">
 			<div class="row">
 				<div class="col mt-5 ml-5 pt-5">
-					<h1 class="text-white pb-3 pt-5 pl-5 pr-5">Real Estate</h1>
-					<p class="text-white  pl-5 pr-5 pb-3 w-75">Proin congue purus at metus laoreet,
+					<h1 class="text-white pt-5 pl-5 pr-5 prmy-font font-weight-bold">Real Estate</h1>
+					<p class="text-white  pl-5 pr-5 pb-3 w-75 my-4 divi-content">Proin congue purus at metus laoreet,
 						vitae tempor dui pulvinar. Mauris eu
 						ante facilisis, hendrerit enim ut, ornare
 						sem.</p>
-					<a id="real-back" class="second-color pl-5 pr-5 pb-3" href="#">back</a>
+					<!-- <a id="real-back" class="second-color pl-5 pr-5 pb-3" href="#">back</a> -->
+					<a id="real-back" class="second-color pl-5 pr-5 pb-3" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/left-arrow.png">Back</a>
 				</div>
 			</div>
 		</div>
@@ -77,26 +78,26 @@ get_header('division');
 		<div class="real-right-overlay">
 				<ul class="list-inline text-white reallists mt-5 pt-5">
 				  <li class="media pl-7">
-				    <!-- <img class="plus-sign" src="<?php echo get_template_directory_uri();?>/img/plus-sign.png" /> -->
-				    <img class="plus-sign" src="<?php echo get_template_directory_uri();?>/img/plus-sign.png" />
+				    <!-- <img class="plus-sign" src="<?php echo get_template_directory_uri(); ?>/img/plus-sign.png" /> -->
+				    <img class="plus-sign" src="<?php echo get_template_directory_uri(); ?>/img/plus-sign.png" />
 				    <div class="media-body">
 				      <h5 class="mt-0 mb-1">Al Madar Real Estate</h5>
 				    </div>
 				  </li>
 				  <li class="media pl-7">
-				    <img class="plus-sign" src="<?php echo get_template_directory_uri();?>/img/plus-sign.png" />
+				    <img class="plus-sign" src="<?php echo get_template_directory_uri(); ?>/img/plus-sign.png" />
 				    <div class="media-body">
 				      <h5 class="mt-0 mb-1">Al Madar Int’l / Investment (Dubai/Germany)</h5>
 				    </div>
 				  </li>
 				  <li class="media pl-7">
-				    <img class="plus-sign" src="<?php echo get_template_directory_uri();?>/img/plus-sign.png" />
+				    <img class="plus-sign" src="<?php echo get_template_directory_uri(); ?>/img/plus-sign.png" />
 				    <div class="media-body">
 				      <h5 class="mt-0 mb-1">Al Madar Project Mgmt.</h5>
 				    </div>
 				  </li>
 				  <li class="media pl-7">
-				    <img class="plus-sign" src="<?php echo get_template_directory_uri();?>/img/plus-sign.png" />
+				    <img class="plus-sign" src="<?php echo get_template_directory_uri(); ?>/img/plus-sign.png" />
 				    <div class="media-body">
 				      <h5 class="mt-0 mb-1">Nobles Real Estate</h5>
 				    </div>
@@ -112,9 +113,9 @@ get_header('division');
 		<div class="real-left-overlay">
 			<div class="row">
 				<div class="col mt-5 ml-5 pt-5">
-					<h1 class="text-white pb-3 pt-5 pl-5 pr-5">Construction</h1>
-					<p class="text-white  pl-5 pr-5 pb-3 w-75">Proin congue purus at metus laoreet,	vitae tempor dui pulvinar. Mauris eu ante facilisis, hendrerit enim ut, ornare sem.</p>
-					<a id="const-back" class="second-color pl-5 pr-5 pb-3" href="#">back</a>
+					<h1 class="text-white pt-5 pl-5 pr-5">Construction</h1>
+					<p class="text-white pl-5 pr-5 pb-3 w-75 divi-content">Proin congue purus at metus laoreet,	vitae tempor dui pulvinar. Mauris eu ante facilisis, hendrerit enim ut, ornare sem.</p>
+					<a id="const-back" class="second-color pl-5 pr-5 pb-3" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/left-arrow.png">Back</a>
 				</div>
 			</div>
 		</div>
@@ -123,31 +124,31 @@ get_header('division');
 		<div class="real-right-overlay">
 				<ul class="list-inline text-white reallists mt-5 pt-5">
 				  <li class="media pl-7">
-				    <img class="plus-sign" src="<?php echo get_template_directory_uri();?>/img/plus-sign.png" />
+				    <img class="plus-sign" src="<?php echo get_template_directory_uri(); ?>/img/plus-sign.png" />
 				    <div class="media-body">
 				      <h5 class="mt-0 mb-1">Al Madar Contracting</h5>
 				    </div>
 				  </li>
 				  <li class="media pl-7">
-				    <img class="plus-sign" src="<?php echo get_template_directory_uri();?>/img/plus-sign.png" />
+				    <img class="plus-sign" src="<?php echo get_template_directory_uri(); ?>/img/plus-sign.png" />
 				    <div class="media-body">
 				      <h5 class="mt-0 mb-1">Al Madar Engineering & Transportation</h5>
 				    </div>
 				  </li>
 				  <li class="media pl-7">
-				    <img class="plus-sign" src="<?php echo get_template_directory_uri();?>/img/plus-sign.png" />
+				    <img class="plus-sign" src="<?php echo get_template_directory_uri(); ?>/img/plus-sign.png" />
 				    <div class="media-body">
 				      <h5 class="mt-0 mb-1">Al Madar Scala Engineering</h5>
 				    </div>
 				  </li>
 				  <li class="media pl-7">
-				    <img class="plus-sign" src="<?php echo get_template_directory_uri();?>/img/plus-sign.png" />
+				    <img class="plus-sign" src="<?php echo get_template_directory_uri(); ?>/img/plus-sign.png" />
 				    <div class="media-body">
 				      <h5 class="mt-0 mb-1">Al Madar Wrough Iron</h5>
 				    </div>
 				  </li>
 				  <li class="media pl-7">
-				    <img class="plus-sign" src="<?php echo get_template_directory_uri();?>/img/plus-sign.png" />
+				    <img class="plus-sign" src="<?php echo get_template_directory_uri(); ?>/img/plus-sign.png" />
 				    <div class="media-body">
 				      <h5 class="mt-0 mb-1">Al Madar Carpentry</h5>
 				    </div>
@@ -162,9 +163,9 @@ get_header('division');
 		<div class="real-left-overlay">
 			<div class="row">
 				<div class="col mt-5 ml-5 pt-5">
-					<h1 class="text-white pb-3 pt-5 pl-5 pr-5">Entertainment</h1>
-					<p class="text-white  pl-5 pr-5 pb-3 w-75">Proin congue purus at metus laoreet,	vitae tempor dui pulvinar. Mauris eu ante facilisis, hendrerit enim ut, ornare sem.</p>
-					<a id="ent-back" class="second-color pl-5 pr-5 pb-3" href="#">back</a>
+					<h1 class="text-white pt-5 pl-5 pr-5">Entertainment</h1>
+					<p class="text-white  pl-5 pr-5 pb-3 w-75 my-4 divi-content">Proin congue purus at metus laoreet,	vitae tempor dui pulvinar. Mauris eu ante facilisis, hendrerit enim ut, ornare sem.</p>
+					<a id="ent-back" class="second-color pl-5 pr-5 pb-3" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/left-arrow.png">Back</a>
 				</div>
 			</div>
 		</div>
@@ -173,19 +174,19 @@ get_header('division');
 		<div class="real-right-overlay">
 				<ul class="list-inline text-white reallists mt-5 pt-5">
 					<li class="media pl-7">
-						<img class="plus-sign" src="<?php echo get_template_directory_uri();?>/img/plus-sign.png" />
+						<img class="plus-sign" src="<?php echo get_template_directory_uri(); ?>/img/plus-sign.png" />
 						<div class="media-body">
 							<h5 class="mt-0 mb-1">Al Madar Scala Entertainment</h5>
 						</div>
 					</li>
 					<li class="media pl-7">
-						<img class="plus-sign" src="<?php echo get_template_directory_uri();?>/img/plus-sign.png" />
+						<img class="plus-sign" src="<?php echo get_template_directory_uri(); ?>/img/plus-sign.png" />
 						<div class="media-body">
 							<h5 class="mt-0 mb-1">Al Madar Computer Training Center</h5>
 						</div>
 					</li>
 					<li class="media pl-7">
-						<img class="plus-sign" src="<?php echo get_template_directory_uri();?>/img/plus-sign.png" />
+						<img class="plus-sign" src="<?php echo get_template_directory_uri(); ?>/img/plus-sign.png" />
 						<div class="media-body">
 							<h5 class="mt-0 mb-1">Al Madar Tourism</h5>
 						</div>
@@ -195,26 +196,4 @@ get_header('division');
 	</div>
 </div>
 
-
-<!-- <div id="estate-overlays" class="col-12 p-0 float-left text-white">
-	<div id="estate-left" class="float-left col-lg-6">
-		<div class="container">
-			<div class="estate-content">
-				<h1>Real Estate</h1>
-				<p>Proin congue purus at metus laoreet, vitae tempor dui pulvinar. Mauris eu ante facilisis, hendrerit enim ut, ornare sem.</p>
-				<p><a id="real-back" href="#">Back</a></p>
-			</div>
-		</div>
-	</div>
-	<div id="estate-right" class="float-left col-lg-6">
-		<div class="real-option col-12 p-0 m-0">
-			<ul class="col-12">
-				<li>Al Madar Real Estate</li>
-				<li>Al Madar Int’l / Investment (Dubai/Germany)</li>
-				<li>Al Madar Project Mgmt.</li>
-				<li>Nobles Real Estate</li>
-			</ul>
-		</div>
-	</div>
-</div> -->
 <?php get_footer();?>

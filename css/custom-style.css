@@ -558,9 +558,10 @@ footer ul li a:hover{
   z-index: 1;
 }
 .reallists li h5{
-	font-size: 1.85rem !important;
+	font-size: 2rem !important;
 	line-height: 3.25rem;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Roboto', sans-serif;
+  font-weight: 300;
 }
 .real-right-overlay{
   position: absolute;
@@ -918,7 +919,7 @@ div#contruct-banner {
     position: absolute;
     margin-top: 48px !important;
 }
-div#ent-banner {
+div#enter-banner {
     right: -200%;
     position: absolute;
     margin-top: 48px !important;
@@ -940,6 +941,31 @@ div#ent-banner {
 }
 #place-filter li:hover{
   cursor: pointer;
+}
+#real-back, #const-back, #ent-back {
+  text-decoration: underline;
+}
+#real-back:hover, #const-back:hover, #ent-back:hover {
+  text-decoration: underline;
+  color: #5ec3e695;
+}
+#real-back > img, #const-back > img, #ent-back > img {
+    width: 23px;
+    margin: 0 5px;
+}
+.divi-content {
+    font-family: "Roboto";
+    font-weight: 100;
+}
+ul.reallists > li > i {
+    padding: 10px 25px;
+    font-size: 2rem;
+}
+.thumb-list-box {
+    width: 100%;
+}
+.btn-header:focus {
+    box-shadow: none;
 }
 .plus-sign{
   padding-top: 10px;
