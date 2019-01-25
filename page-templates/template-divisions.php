@@ -23,7 +23,7 @@ get_header('division');
 				<h5 class="card-title prmy-font font-weight-bold">Real Estate</h5>
 				<p class="card-text">Proin congue purus at metus laoreet, vitae tempor dui pulvinar. Mauris eu ante facilisis, hendrerit enim ut, ornare sem.</p>
 				<p class="mt-3">
-					<a id="real-more" href="" class="second-color pr-2">Learn More</a>
+					<a id="real-more" href="" class="second-color pr-2 prmy-font">Learn More</a>
 					<img class="right-arrow" src="<?php echo get_template_directory_uri(); ?>/img/right-arrow.png" />
 				</p>
 			</div>
@@ -36,7 +36,7 @@ get_header('division');
 				<h5 class="card-title prmy-font font-weight-bold">Construction</h5>
 				<p class="card-text">Proin congue purus at metus laoreet, vitae tempor dui pulvinar.</p>
 				<p class="mt-3">
-					<a id="const-more" href="" class="second-color pr-2">Learn More</a>
+					<a id="const-more" href="" class="second-color pr-2 prmy-font">Learn More</a>
 					<img class="right-arrow" src="<?php echo get_template_directory_uri(); ?>/img/right-arrow.png" />
 				</p>
 			</div>
@@ -49,7 +49,7 @@ get_header('division');
 				<h5 class="card-title prmy-font font-weight-bold">Entertainment</h5>
 				<p class="card-text">Proin congue purus at metus laoreet, vitae tempor dui pulvinar. Mauris eu ante facilisis, hendrerit enim ut.</p>
 				<p class="mt-3">
-					<a id="ent-more" href="" class="second-color pr-2">Learn More </a>
+					<a id="ent-more" href="" class="second-color pr-2 prmy-font">Learn More </a>
 					<img class="right-arrow" src="<?php echo get_template_directory_uri(); ?>/img/right-arrow.png" />
 				</p>
 			</div>

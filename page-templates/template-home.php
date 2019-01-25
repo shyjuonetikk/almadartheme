@@ -37,6 +37,11 @@ while ($query->have_posts()) {
 	$query->the_post();
 	$post_id = get_the_ID();
 	$post_title = get_the_title();
+	$post_title_len = strlen($post_title);
+	if ($post_title_len > '17') {
+		$post_title = substr($post_title, 0, 17) . "...";
+	}
+
 	$title_length = strlen($post_title);
 	if ($title_length > "30") {
 		$post_title = substr($post_title, 0, 40) . "...";
@@ -86,6 +91,10 @@ while ($query->have_posts()) {
 	$query->the_post();
 	$post_id = get_the_ID();
 	$post_title = get_the_title();
+	$post_title_len = strlen($post_title);
+	if ($post_title_len > '17') {
+		$post_title = substr($post_title, 0, 17) . "...";
+	}
 	$content = get_the_excerpt();
 	$content_len = strlen($content);
 
@@ -95,7 +104,12 @@ while ($query->have_posts()) {
 		$content = substr($content, 0, 93) . "...";
 	}
 
-	$featured_img_url = get_the_post_thumbnail_url($post_id, 'full');
+	if (has_post_thumbnail()) {
+		$featured_img_url = get_the_post_thumbnail_url($post_id, 'full');
+	} else {
+		$featured_img_url = get_template_directory_uri() . "/img/No_image.png";
+	}
+
 	?>
 					<div class="thumb-list-box float-left">
 						<div class="col-sm-12 col-md-12 col-xs-12 mt-4 pb-3">
@@ -107,8 +121,10 @@ while ($query->have_posts()) {
 							<div class="col-12 col-sm-8 col-md-7 float-left mr-0 text-center text-sm-left">
 								<h6 class="p-0 m-0 mb-2 purple-color prmy-font"><?php echo $post_title; ?></h6>
 								<p class="mb-4 purple-color"><?php echo $content ?></p>
-								<span class="float-left purple-color fs-10 sc-font"><?php echo get_the_date('M j, Y'); ?></span>
-								<a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
+								<p>
+									<span class="float-left purple-color fs-10 sc-font"><?php echo get_the_date('M j, Y'); ?></span>
+									<a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
+								</p>
 							</div>
 						</div>
 						<div class="col-sm-12 col-md-12 col-xs-12 float-left mt-3">
@@ -134,7 +150,17 @@ while ($query->have_posts()) {
 	$query->the_post();
 	$post_id = get_the_ID();
 	$post_title = get_the_title();
-	$featured_img_url = get_the_post_thumbnail_url($post_id, 'full');
+
+	$post_title_len = strlen($post_title);
+	if ($post_title_len > '17') {
+		$post_title = substr($post_title, 0, 17) . "...";
+	}
+
+	if (has_post_thumbnail()) {
+		$featured_img_url = get_the_post_thumbnail_url($post_id, 'full');
+	} else {
+		$featured_img_url = get_template_directory_uri() . "/img/No_image.png";
+	}
 	$value = get_field("status", $post_id);
 	$content = get_the_excerpt();
 	$content_len = strlen(get_the_excerpt());
@@ -148,13 +174,15 @@ while ($query->have_posts()) {
 	            <div class="thumbnail-news-section text-center">
 					<div class="col-12 col-sm-4 col-md-5 float-left px-0 mr-0">
 						<img src="<?php echo $featured_img_url ?>" class="img-fluid mb-2" alt="<?php echo $post_title ?>" />
-		              </div>
+					</div>
 				</div>
 				<div class="col-12 col-sm-8 col-md-7 float-left mr-0 text-center text-sm-left">
 					<h6 class="p-0 m-0 mb-2 purple-color prmy-font"><?php echo $post_title; ?></h6>
 					<p class="mb-4 purple-color"><?php echo $content ?></p>
-					<span class="float-left purple-color fs-10 sc-font"><?php echo get_the_date('M j, Y'); ?></span>
-					<a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
+					<p>
+						<span class="float-left purple-color fs-10 sc-font"><?php echo get_the_date('M j, Y'); ?></span>
+						<a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
+					</p>
 				</div>
 			</div>
 			<div class="col-sm-12 col-md-12 col-xs-12 float-left mt-3">
@@ -170,7 +198,7 @@ wp_reset_query();
 				</div>
 			</div><!-- list 2 -->
 			<div class="col-lg-4 col-md-12 col-sm-12 float-left my-4 px-1">
-				<div class="head pl-3 prmy-font"> On-going projects</div>
+				<div class="head pl-3 prmy-font"> On-going Projects</div>
 				<div class="thumb-box">
 <?php
 $query = new WP_Query(array(
@@ -182,7 +210,16 @@ while ($query->have_posts()) {
 	$query->the_post();
 	$post_id = get_the_ID();
 	$post_title = get_the_title();
-	$featured_img_url = get_the_post_thumbnail_url($post_id, 'full');
+	$post_title_len = strlen($post_title);
+	if ($post_title_len > '17') {
+		$post_title = substr($post_title, 0, 17) . "...";
+	}
+
+	if (has_post_thumbnail()) {
+		$featured_img_url = get_the_post_thumbnail_url($post_id, 'full');
+	} else {
+		$featured_img_url = get_template_directory_uri() . "/img/No_image.png";
+	}
 	get_field('status', $post_id);
 	$value = get_field("status", $post_id);
 	$content = get_the_excerpt();
@@ -203,8 +240,10 @@ while ($query->have_posts()) {
 				<div class="col-12 col-sm-8 col-md-7 float-left mr-0 text-center text-sm-left">
 					<h6 class="p-0 m-0 mb-2 purple-color prmy-font"><?php echo $post_title; ?></h6>
 					<p class="mb-4 purple-color"><?php echo $content; ?></p>
-					<span class="float-left purple-color fs-10 sc-font"><?php echo get_the_date('M j, Y'); ?></span>
-					<a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
+					<p>
+						<span class="float-left purple-color fs-10 sc-font"><?php echo get_the_date('M j, Y'); ?></span>
+						<a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
+					</p>
 				</div>
 			</div>
 			<div class="col-sm-12 col-md-12 col-xs-12 float-left mt-3">

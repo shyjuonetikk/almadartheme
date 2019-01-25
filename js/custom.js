@@ -45,4 +45,20 @@ $( document ).ready(function(){
 		$("#career-overlays").animate({"right": "-100%", "top": "0"}, 1000);
 		$(".site").css({"overflow-y": "visible"});
 	});
+
+	// Contact Page Popup
+	$("#click-contact").click(function(e){
+			e.preventDefault();
+			window.scrollTo("0", "0");
+			var popupHeight = $(".contact-pop-up").height();
+			popupHeight -= "50";
+			$(".site").css({"max-height":popupHeight, "overflow-y": "hidden"});
+			$(".contact-pop-up").animate({"right": "0", "top": "0"}, 1000);
+			$("#career-cancel").css({"min-height":popupHeight});
+		});
+	$("#contact-left").click(function(e){
+		e.preventDefault();
+		$(".contact-pop-up").animate({"right": "-100%", "top": "0"}, 1000);
+		$(".site").css({"overflow-y": "visible"});
+	});
 });

@@ -146,11 +146,11 @@ body{
 	height: 24px;
 	background-size: 100%;
 }
-.purple-color{
-	color: #22115c;
+.purple-color {
+    color: #21145f;
 }
 .second-color{
-	color: #5ec3e6;
+	color: #6bc4e8;
 }
 .prmy-font{
 	font-family: 'Montserrat', sans-serif;
@@ -446,14 +446,7 @@ footer ul li a:hover{
 	font-size: .85rem !important;
 	color: #21145f !important;
 }
-.divi-main .card-body{
-	border: 1px solid #ccc !important;
-	border-top: 0px;
-}
 .divi-main .card-body:nth-child(2) {
-    border: 1px solid #ccc !important;
-    border-left: 0px !important;
-    border-top: 0px;
     padding: 2rem 2rem 1rem !important;
 }
 .card-holder a{
@@ -475,10 +468,10 @@ footer ul li a:hover{
 	border-right: 2px solid #21145f;
 	padding-right: 12px;
 }
-.line{
-	height: 1px;
-	width: 90px;
-	background: #5ec3e6;
+.line {
+    height: 1px;
+    width: 52px;
+    background: #6bc4e8;
 }
 .projects-ul{
 	line-height: 1.5rem;
@@ -493,11 +486,14 @@ footer ul li a:hover{
 	border-radius: 0px !important;
 	border: 1px solid #22115c;
 }
-.projects-list h6{
-	font-size: .75rem;
+.projects-list h6 {
+    font-size: .75rem;
+    font-family: "Montserrat";
+    font-weight: 500;
 }
-.projects-list a{
-	color: #5ec3e6;
+.projects-list a {
+    color: #5ec3e6;
+    text-decoration: underline;
 }
 .projects-list a:hover{
 	cursor: pointer;
@@ -662,24 +658,22 @@ footer ul li a:hover{
 	color: #909090;
 }
 .contact-list a{
-	color: #5ec3e6;
+	color: #6bc4e8;
 }
 .contact-list a:hover{
 	text-decoration: underline;
 }
-.contact-pop-up{
-	width: 100%;
-	height: 960px;
-	background: #21145f5e;
-	position: absolute;
-	z-index: 5;
-	display: none;
+.contact-pop-up {
+    width: 100%;
+    background: #21145f5e;
+    position: absolute;
+    z-index: 5;
+    right: -200%;
 }
 .contact-popup-back{
 	background: url('../img/contactus-popup.png') no-repeat;
 	width: 100%;
-	height: 960px;
-	background-size: contain;
+	background-size: cover;
 	color: #fff;
 }
 .contact-popup-back input[type="text"], .contact-popup-back input[type="email"]{
@@ -752,7 +746,8 @@ div#career-overlays {
 button#cv-button {
     background: #21145f;
     border-color: #21145f;
-    width: 120px;
+    width: 135px;
+    padding: 3px !important;
 }
 span.career-links > a {
     color: #000000;
@@ -877,6 +872,7 @@ p.msg-career {
 }
 p.job-close-date {
     font-weight: 300;
+    font-size: .8rem;
 }
 p.job-cat {
     font-weight: 300;
@@ -1005,4 +1001,24 @@ ul.reallists > li > i {
 }
 .sticky a:hover{
   text-decoration: none !important;
+}
+form#contact-form > div > div > label {
+    font-size: .75rem;
+    font-weight: 500;
+}
+li.contact-links {
+    color: #6bc4e8;
+}
+table#careers-table > tbody > tr > td:first-child {
+    width: 41%;
+}
+table#careers-table > tbody > tr > td:nth-child(2) {
+    width: 37%;
+}
+p.job-close-date {
+    font-weight: 300;
+    font-size: .8rem;
+}
+ul#status-list > li {
+    font-weight: 300;
 }

@@ -7,7 +7,7 @@ get_header('career');
 <div class="col-lg-8 mx-auto">
 	<div class="col-xl-12 float-left">
 		<div class="container">
-			<div id="msg-chairman" class="col-xl-12 mb-5 p-0 float-left shadow">
+			<div id="msg-chairman" class="col-xl-12 mb-5 p-0 float-left shadow-sm">
 				<div class="col-12 m-0 p-0 text-center text-white about-bg mb-4">
 					<h4 class="px-5 py-3 font-weight-normal">Human Resources</h4>
 				</div>
@@ -25,7 +25,7 @@ get_header('career');
 		<a href="#" id="resume-send">SEND US YOUR CV<img src="<?php echo get_template_directory_uri(); ?>/img/arrow-dblue.png"></a>
 	</p>
 
-	<div id="career-table-container" class="col-12 float-left mb-5">
+	<div id="career-table-container" class="col-12 float-left">
 		<div class="container">
 			<div class="px-3 pt-3 bg-white b-btm">
 				<table id="careers-table" class="col-12 text-left msg-md mb-5">
