@@ -138,7 +138,12 @@
 				label.innerHTML = labelVal;
 		});
 	});
+</script>
+<?php
 
+if(is_page(['home','about-us','careers'])){ ?>
+
+<script type="text/javascript">
 	window.onscroll = function() { stickyFunction() };
 	var header = document.getElementById("myHeader");
 	var sticky = header.offsetTop;
@@ -153,6 +158,23 @@
 	  }
 	}
 </script>
+<?php } else { ?>
+<script type="text/javascript">
+	window.onscroll = function() { stickyFunction() };
+	var header = document.getElementById("divisionHeader");
+	var sticky = header.offsetTop;
+
+	function stickyFunction() {
+	  if (window.pageYOffset > sticky) {
+	    header.classList.add("sticky");
+	    header.classList.remove("menu-custom");
+	  } else {
+	    header.classList.remove("sticky");
+	    header.classList.add("menu-custom");
+	  }
+	}
+</script>
+<?php } ?>
 </body>
 
 </html>
