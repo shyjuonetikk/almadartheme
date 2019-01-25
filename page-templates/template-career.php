@@ -62,7 +62,7 @@ get_header('career');
 							</td>
 						</tr>
 						<?php }
-							wp_reset_query(); exit;?>
+							wp_reset_query(); ?>
 					</tbody>
 				</table>
 			</div>
