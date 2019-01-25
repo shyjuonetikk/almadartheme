@@ -13,8 +13,7 @@ get_header('career');
 				</div>
 				<div class="container">
 					<div class="col-lg-12 float-left">
-						<p class="msg-career mt-2">At Al Madar Holding, we are rapidly expanding and continually seeking dynamic and motivated individuals to join our organization at all levels. You have a Future with us and we want to hear from you today.</p>
-						<p class="msg-career">Al Madar Holding takes pride in its Human Resources and currently employs a number of top regional and international professional and business executives. If you are a professional who has the right core skills, enthusiastic, proactive, self empowered and focused, then come join our team and be part of a driving visionary force.</p>
+						<?php the_field('career_message'); ?>
 					</div>
 				</div>
 			</div>
@@ -35,76 +34,35 @@ get_header('career');
 						<th>DIVISION</th>
 					</thead>
 					<tbody>
+						<?php 
+							$query = new WP_Query(array(
+							    'post_type' => array('alcareers'),
+								'post_status' => 'publish',
+								'order' => 'ASC'
+							));
+
+
+						while ($query->have_posts()) {
+						    $query->the_post();
+						    $post_id = get_the_ID();
+							$post_url= get_the_permalink();
+						?>
 						<tr>
 							<td>
-								<p class="job-title">MEP Engineer</p>
-								<p class="job-close-date">CLOSING DATE: 12 / 12 / 2018</p>
+								<p class="job-title"><?php the_field('role'); ?></p>
+								<p class="job-close-date">CLOSING DATE: <?php the_field('closing_date'); ?></p>
 							</td>
 							<td>
-								<p class="job-location">Doha, Qatar</p>
+								<p class="job-location"><?php the_field('location'); ?></p>
 								<p></p>
 							</td>
 							<td>
-								<p class="job-cat">Al Madar Real Estate</p>
+								<p class="job-cat"><?php the_field('divisions'); ?></p>
 								<p class="job-apply"><a href="#">Apply<img src="<?php echo get_template_directory_uri(); ?>/img/right-arrow-small.png"></a></p>
 							</td>
 						</tr>
-						<tr>
-							<td>
-								<p class="job-title">Civil Engineer</p>
-								<p class="job-close-date">CLOSING DATE: 12 / 12 / 2018</p>
-							</td>
-							<td>
-								<p class="job-location">Doha, Qatar</p>
-								<p></p>
-							</td>
-							<td>
-								<p class="job-cat">Al Madar Real Estate</p>
-								<p class="job-apply"><a href="#">Apply<img src="<?php echo get_template_directory_uri(); ?>/img/right-arrow-small.png"></a></p>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<p class="job-title">Architect</p>
-								<p class="job-close-date">CLOSING DATE: 12 / 12 / 2018</p>
-							</td>
-							<td>
-								<p class="job-location">Doha, Qatar</p>
-								<p></p>
-							</td>
-							<td>
-								<p class="job-cat">Al Madar Real Estate</p>
-								<p class="job-apply"><a href="#">Apply<img src="<?php echo get_template_directory_uri(); ?>/img/right-arrow-small.png"></a></p>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<p class="job-title">Civil Foreman</p>
-								<p class="job-close-date">CLOSING DATE: 12 / 12 / 2018</p>
-							</td>
-							<td>
-								<p class="job-location">Doha, Qatar</p>
-								<p></p>
-							</td>
-							<td>
-								<p class="job-cat">Al Madar Real Estate</p>
-								<p class="job-apply"><a href="#">Apply<img src="<?php echo get_template_directory_uri(); ?>/img/right-arrow-small.png"></a></p>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<p class="job-title">Draftsman</p>
-								<p class="job-close-date">CLOSING DATE: 12 / 12 / 2018</p>
-							</td>
-							<td>
-								<p class="job-location">Doha, Qatar</p>
-								<p></p>
-							</td>
-							<td>
-								<p class="job-cat">Al Madar Real Estate</p>
-								<p class="job-apply"><a href="#">Apply<img src="<?php echo get_template_directory_uri(); ?>/img/right-arrow-small.png"></a></p>
-							</td>
-						</tr>
+						<?php }
+							wp_reset_query(); exit;?>
 					</tbody>
 				</table>
 			</div>

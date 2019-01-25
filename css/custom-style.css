@@ -22,7 +22,7 @@ body{
 }
 .menu-new{
   padding-top: 1rem;
-  transition: .5s;
+  transition: .7s;
 }
 .menu-new a{
 	color: #fff;
@@ -954,7 +954,7 @@ div#ent-banner {
   webkit-box-shadow: 0px 6px 23px -11px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 6px 23px -11px rgba(0,0,0,0.75);
   box-shadow: 0px 6px 23px -11px rgba(0,0,0,0.75);
-  transition: .5s;
+  transition: .7s;
 }
 .sticky a{
   color: #21145f;
