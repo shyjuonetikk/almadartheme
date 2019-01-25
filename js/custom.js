@@ -29,4 +29,20 @@ $( document ).ready(function(){
 		e.preventDefault();
 		$("#enter-banner").animate({"right": "-200%", "height": "auto"}, 500);
 	});
+
+	// Career page popup
+	$("#resume-send").click(function(e){
+		e.preventDefault();
+		window.scrollTo("0", "0");
+		var popupHeight = $("#career-overlays").height();
+		popupHeight -= "50";
+		$(".site").css({"max-height":popupHeight, "overflow-y": "hidden"});
+		$("#career-overlays").animate({"right": "0", "top": "0"}, 1000);
+		$("#career-cancel").css({"min-height":popupHeight});
+	});
+	$("#career-cancel").click(function(e){
+		e.preventDefault();
+		$("#career-overlays").animate({"right": "-100%", "top": "0"}, 1000);
+		$(".site").css({"overflow-y": "visible"});
+	});
 });

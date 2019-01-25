@@ -37,6 +37,11 @@ while ($query->have_posts()) {
 	$query->the_post();
 	$post_id = get_the_ID();
 	$post_title = get_the_title();
+	$title_length = strlen($post_title);
+	if ($title_length > "30") {
+		$post_title = substr($post_title, 0, 40) . "...";
+	}
+
 	?>
 					<div class="col-lg-4 col-md-6 col-sm-12 col-12 float-left mb-3 px-2">
 						<div class="thumbnail">
@@ -81,6 +86,15 @@ while ($query->have_posts()) {
 	$query->the_post();
 	$post_id = get_the_ID();
 	$post_title = get_the_title();
+	$content = get_the_excerpt();
+	$content_len = strlen($content);
+
+	$content = get_the_excerpt();
+	$content_len = strlen(get_the_excerpt());
+	if ($content_len > "93") {
+		$content = substr($content, 0, 93) . "...";
+	}
+
 	$featured_img_url = get_the_post_thumbnail_url($post_id, 'full');
 	?>
 					<div class="thumb-list-box float-left">
@@ -92,7 +106,7 @@ while ($query->have_posts()) {
 							</div>
 							<div class="col-12 col-sm-8 col-md-7 float-left mr-0 text-center text-sm-left">
 								<h6 class="p-0 m-0 mb-2 purple-color prmy-font"><?php echo $post_title; ?></h6>
-								<p class="mb-4 purple-color"><?php echo get_the_excerpt(); ?></p>
+								<p class="mb-4 purple-color"><?php echo $content ?></p>
 								<span class="float-left purple-color fs-10 sc-font"><?php echo get_the_date('M j, Y'); ?></span>
 								<a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
 							</div>
@@ -122,6 +136,11 @@ while ($query->have_posts()) {
 	$post_title = get_the_title();
 	$featured_img_url = get_the_post_thumbnail_url($post_id, 'full');
 	$value = get_field("status", $post_id);
+	$content = get_the_excerpt();
+	$content_len = strlen(get_the_excerpt());
+	if ($content_len > "93") {
+		$content = substr($content, 0, 93) . "...";
+	}
 	if ($value == 'completed') {
 		?>
 		<div class="thumb-list-box float-left">
@@ -133,7 +152,7 @@ while ($query->have_posts()) {
 				</div>
 				<div class="col-12 col-sm-8 col-md-7 float-left mr-0 text-center text-sm-left">
 					<h6 class="p-0 m-0 mb-2 purple-color prmy-font"><?php echo $post_title; ?></h6>
-					<p class="mb-4 purple-color"><?php echo get_the_excerpt(); ?></p>
+					<p class="mb-4 purple-color"><?php echo $content ?></p>
 					<span class="float-left purple-color fs-10 sc-font"><?php echo get_the_date('M j, Y'); ?></span>
 					<a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
 				</div>
@@ -166,6 +185,12 @@ while ($query->have_posts()) {
 	$featured_img_url = get_the_post_thumbnail_url($post_id, 'full');
 	get_field('status', $post_id);
 	$value = get_field("status", $post_id);
+	$content = get_the_excerpt();
+	$content_len = strlen(get_the_excerpt());
+	if ($content_len > "93") {
+		$content = substr($content, 0, 93) . "...";
+	}
+
 	if ($value == 'ongoing') {
 		?>
 		<div class="thumb-list-box float-left">
@@ -177,7 +202,7 @@ while ($query->have_posts()) {
 				</div>
 				<div class="col-12 col-sm-8 col-md-7 float-left mr-0 text-center text-sm-left">
 					<h6 class="p-0 m-0 mb-2 purple-color prmy-font"><?php echo $post_title; ?></h6>
-					<p class="mb-4 purple-color"><?php echo get_the_excerpt(); ?></p>
+					<p class="mb-4 purple-color"><?php echo $content; ?></p>
 					<span class="float-left purple-color fs-10 sc-font"><?php echo get_the_date('M j, Y'); ?></span>
 					<a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
 				</div>
