@@ -22,7 +22,7 @@ $container = get_theme_mod('understrap_container_type');
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/custom-style.css" >
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-	
+
 </head>
 
 <body <?php body_class();?>>
@@ -67,18 +67,18 @@ $container = get_theme_mod('understrap_container_type');
 
 				<!-- The WordPress Menu goes here -->
 				<?php wp_nav_menu(
-					array(
-						'theme_location' => 'primary',
-						'container_class' => 'collapse navbar-collapse',
-						'container_id' => 'navbarNavDropdown',
-						'menu_class' => 'navbar-nav',
-						'fallback_cb' => '',
-						'menu_id' => 'main-menu',
-						'depth' => 2,
-						'walker' => new Understrap_WP_Bootstrap_Navwalker(),
-					)
-					);
-				?>
+	array(
+		'theme_location' => 'primary',
+		'container_class' => 'collapse navbar-collapse',
+		'container_id' => 'navbarNavDropdown',
+		'menu_class' => 'navbar-nav',
+		'fallback_cb' => '',
+		'menu_id' => 'main-menu',
+		'depth' => 2,
+		'walker' => new Understrap_WP_Bootstrap_Navwalker(),
+	)
+);
+?>
 			<?php if ('container' == $container): ?>
 				<a href="#" class="social-media">
 					<!-- <img src="<?php echo get_template_directory_uri(); ?>/img/facebook.svg" class="social-media" /> -->

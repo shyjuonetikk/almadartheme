@@ -3,29 +3,34 @@ $( document ).ready(function(){
 	$('#real-more').click(function(e){
 		e.preventDefault();
 		var popupHeight = $(".divi-main").height();
+		// $('body').animate({scrollTop:0}, 5000, 'swing');
+		$("#realestate-banner").show();
 		window.scrollTo("0", "0");
-		// $("#realestate-banner").show();
 		$("#realestate-banner").animate({"right": "0", "height":popupHeight}, 500);
 	});
 	$('#real-back').click(function(e){
 		e.preventDefault();
 		$("#realestate-banner").animate({"right": "-200%", "height": "auto"}, 500);
+		$("#realestate-banner").fadeOut();
 		// $("#realestate-banner").fadeOut()l
 	});
 	// Construction popup
 	$('#const-more').click(function(e){
 		e.preventDefault(e);
 		var popupHeight = $(".divi-main").height();
+		$("#contruct-banner").show();
 		$("#contruct-banner").animate({"right": "0", "height":popupHeight}, 500);
 	});
 	$('#const-back').click(function(e){
 		e.preventDefault();
 		$("#contruct-banner").animate({"right": "-200%", "height": "auto"}, 500);
+		$("#contruct-banner").fadeOut();
 	});
 	// Entertainment popup
 	$('#ent-more').click(function(e){
 		e.preventDefault(e);
 		var popupHeight = $(".divi-main").height();
+		
 		$("#enter-banner").animate({"right": "0", "height":popupHeight}, 500);
 	});
 	$('#ent-back').click(function(e){
