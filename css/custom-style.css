@@ -556,6 +556,13 @@ footer ul li a:hover{
   background-color: #000000ba;
   z-index: 1;
 }
+.reallists a {
+  color: #fff !important;
+}
+.reallists a:hover {
+  color: #fff !important;
+  text-decoration: none;
+}
 .reallists li h5{
 	font-size: 2rem !important;
 	line-height: 3.25rem;

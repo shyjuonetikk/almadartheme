@@ -178,7 +178,7 @@
 </script>
 <?php
 
-if(is_page(['home','about-us','careers'])){ ?>
+if(is_page(['home','about-us','careers']) || is_single()){ ?>
 
 <script type="text/javascript">
 	window.onscroll = function() { stickyFunction() };
