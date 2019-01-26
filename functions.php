@@ -91,16 +91,16 @@ function more_post_ajax(){
 		$post_url= get_the_permalink();
 		$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
 	?>
-			<div class="col-12 col-md-6 mb-3 pl-0">
+			<div class="col-12 col-md-6 mb-3 px-4">
 				<div class="card border-0 rounded-0 w-100">
 					<div class="image-container">
-				  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url;?>" alt="<?php echo $post_title; ?>">
+				  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url; ?>" alt="<?php echo $post_title; ?>">
 				  		<div class="overlay"></div>
 				  	</div>
 				  <div class="card-body border-0 rounded-0 pl-0 ml-0">
 				    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
 				    <p class="card-text fs-12 purple-color"><?php echo $post_content; ?></p>
-				    <span class="purple-color float-left fs-12"><?php echo get_the_date();?> </span>
+				    <span class="purple-color float-left fs-12"><?php echo get_the_date(); ?> </span>
 				    <a href="<?php echo $post_url; ?>" class="float-right fs-12">Read More</a>
 				  </div>
 				</div>
@@ -159,10 +159,10 @@ function load_projects_status(){
 				$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
 		?>
 		<input type="hidden" value="<?php echo $place; ?>" id="place">
-		<div class="col-12 col-md-6 mb-3 pl-0">
+		<div class="col-12 col-md-6 mb-3 px-4">
 			<div class="card border-0 rounded-0 w-100">
 				<div class="image-container">
-			  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url;?>" alt="<?php echo $post_title; ?>">
+			  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url; ?>" alt="<?php echo $post_title; ?>">
 			  		<div class="overlay"></div>
 			  	</div>
 			  <div class="card-body border-0 rounded-0 pl-0 ml-0">
@@ -259,16 +259,16 @@ function filter_country()
 				$post_url= get_the_permalink();
 				$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
 		?>
-			<div class="col-12 col-md-6 mb-3 pl-0">
+			<div class="col-12 col-md-6 mb-3 px-4">
 				<div class="card border-0 rounded-0 w-100">
 					<div class="image-container">
-				  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url;?>" alt="<?php echo $post_title; ?>">
+				  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url; ?>" alt="<?php echo $post_title; ?>">
 				  		<div class="overlay"></div>
 				  	</div>
 				  <div class="card-body border-0 rounded-0 pl-0 ml-0">
 				    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
 				    <p class="card-text fs-12 purple-color"><?php echo $post_content; ?></p>
-				    <span class="purple-color float-left fs-12"><?php echo get_the_date();?> </span>
+				    <span class="purple-color float-left fs-12"><?php echo get_the_date(); ?> </span>
 				    <a href="<?php echo $post_url; ?>" class="float-right fs-12">Read More</a>
 				  </div>
 				</div>
@@ -382,16 +382,16 @@ while ($query->have_posts()) {
 	$post_url= get_the_permalink();
 	$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
 ?>
-<div class="col-12 col-md-6 mb-3 pl-0">
+<div class="col-12 col-md-6 mb-3 px-4">
 	<div class="card border-0 rounded-0 w-100">
 		<div class="image-container">
-	  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url;?>" alt="<?php echo $post_title; ?>">
+	  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url; ?>" alt="<?php echo $post_title; ?>">
 	  		<div class="overlay"></div>
 	  	</div>
 	  <div class="card-body border-0 rounded-0 pl-0 ml-0">
 	    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
 	    <p class="card-text fs-12 purple-color"><?php echo $post_content; ?></p>
-	    <span class="purple-color float-left fs-12"><?php echo get_the_date();?> </span>
+	    <span class="purple-color float-left fs-12"><?php echo get_the_date(); ?> </span>
 	    <a href="<?php echo $post_url; ?>" class="float-right fs-12">Read More</a>
 	  </div>
 	</div>
@@ -444,10 +444,10 @@ function load_news_by_type(){
 		$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
 ?>
 <input type="hidden" value="<?php echo $place; ?>" id="place" />
-<div class="col-12 col-md-6 mb-3 pl-0">
+<div class="col-12 col-md-6 mb-3 px-4">
 	<div class="card border-0 rounded-0 w-100">
 		<div class="image-container">
-	  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url;?>" alt="<?php echo $post_title; ?>">
+	  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url; ?>" alt="<?php echo $post_title; ?>">
 	  		<div class="overlay"></div>
 	  	</div>
 	  <div class="card-body border-0 rounded-0 pl-0 ml-0">
@@ -542,16 +542,16 @@ function news_filter_country()
 			$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
 ?>
 
-<div class="col-12 col-md-6 mb-3 pl-0">
+<div class="col-12 col-md-6 mb-3 px-4">
 	<div class="card border-0 rounded-0 w-100">
 		<div class="image-container">
-	  		<img class="card-img-top image news-card-image" src="<?php echo $featured_img_url;?>" alt="<?php echo $post_title; ?>">
+	  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url; ?>" alt="<?php echo $post_title; ?>">
 	  		<div class="overlay"></div>
 	  	</div>
 	  <div class="card-body border-0 rounded-0 pl-0 ml-0">
 	    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
 	    <p class="card-text fs-12 purple-color"><?php echo $post_content; ?></p>
-	    <span class="purple-color float-left fs-12"><?php echo get_the_date();?> </span>
+	    <span class="purple-color float-left fs-12"><?php echo get_the_date(); ?> </span>
 	    <a href="<?php echo $post_url; ?>" class="float-right fs-12">Read More</a>
 	  </div>
 	</div>
