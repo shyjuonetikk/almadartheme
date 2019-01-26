@@ -38,13 +38,10 @@ while ($query->have_posts()) {
 	$post_id = get_the_ID();
 	$post_title = get_the_title();
 	$post_title_len = strlen($post_title);
-	if ($post_title_len > '17') {
-		$post_title = substr($post_title, 0, 17) . "...";
-	}
 
 	$title_length = strlen($post_title);
-	if ($title_length > "30") {
-		$post_title = substr($post_title, 0, 40) . "...";
+	if ($title_length > "43") {
+		$post_title = substr($post_title, 0, 43) . "...";
 	}
 
 	?>
@@ -65,12 +62,6 @@ wp_reset_query();
 
 				</div>
 			<!-- </main> --><!-- #main -->
-
-			<!-- The pagination component -->
-			<?php //understrap_pagination(); ?>
-
-			<!-- Do the right sidebar check -->
-			<?php //get_template_part( 'global-templates/right-sidebar-check' ); ?>
 
 		</div><!-- .row -->
 
@@ -109,6 +100,7 @@ while ($query->have_posts()) {
 	} else {
 		$featured_img_url = get_template_directory_uri() . "/img/No_image.png";
 	}
+	$post_date = get_the_date('M j, Y');
 
 	?>
 					<div class="thumb-list-box float-left">
@@ -122,7 +114,7 @@ while ($query->have_posts()) {
 								<h6 class="p-0 m-0 mb-2 purple-color prmy-font"><?php echo $post_title; ?></h6>
 								<p class="mb-4 purple-color para-limit"><?php echo $content ?></p>
 								<p>
-									<span class="float-left purple-color fs-10 sc-font"><?php echo get_the_date('M j, Y'); ?></span>
+									<span class="float-left purple-color fs-10 sc-font"><?php echo $post_date; ?></span>
 									<a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
 								</p>
 							</div>
@@ -167,6 +159,7 @@ while ($query->have_posts()) {
 	if ($content_len > "94") {
 		$content = substr($content, 0, 93) . "...";
 	}
+	$post_date = get_the_date('M j, Y');
 	if ($value == 'completed') {
 		?>
 		<div class="thumb-list-box float-left">
@@ -180,7 +173,7 @@ while ($query->have_posts()) {
 					<h6 class="p-0 m-0 mb-2 purple-color prmy-font"><?php echo $post_title; ?></h6>
 					<p class="mb-4 purple-color para-limit"><?php echo $content ?></p>
 					<p>
-						<span class="float-left purple-color fs-10 sc-font"><?php echo get_the_date('M j, Y'); ?></span>
+						<span class="float-left purple-color fs-10 sc-font"><?php echo $post_date; ?></span>
 						<a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
 					</p>
 				</div>
@@ -227,6 +220,7 @@ while ($query->have_posts()) {
 	if ($content_len > "94") {
 		$content = substr($content, 0, 93) . "...";
 	}
+	$post_date = get_the_date('M j, Y');
 
 	if ($value == 'ongoing') {
 		?>
@@ -241,7 +235,7 @@ while ($query->have_posts()) {
 					<h6 class="p-0 m-0 mb-2 purple-color prmy-font"><?php echo $post_title; ?></h6>
 					<p class="mb-4 purple-color para-limit"><?php echo $content; ?></p>
 					<p>
-						<span class="float-left purple-color fs-10 sc-font"><?php echo get_the_date('M j, Y'); ?></span>
+						<span class="float-left purple-color fs-10 sc-font"><?php echo $post_date; ?></span>
 						<a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
 					</p>
 				</div>

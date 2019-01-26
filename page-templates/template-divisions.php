@@ -78,7 +78,7 @@ get_header('division');
 		<div class="real-right-overlay">
 				<ul class="list-inline text-white reallists mt-5 pt-5">
 				  <li class="media pl-7">
-				    <!-- <img class="plus-sign" src="<?php echo get_template_directory_uri(); ?>/img/plus-sign.png" /> -->
+				    <!-- <img class="plus-sign" src="<?php // echo get_template_directory_uri(); ?>/img/plus-sign.png" /> -->
 				    <img class="plus-sign" src="<?php echo get_template_directory_uri(); ?>/img/plus-sign.png" />
 				    <div class="media-body">
 				      <h5 class="mt-0 mb-1">Al Madar Real Estate</h5>

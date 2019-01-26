@@ -26,13 +26,13 @@ body{
 }
 .menu-new a{
 	color: #fff;
-    margin: 0 15px !important;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 13px;
-    border-bottom: 5px solid #6bc4e900;
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-    padding-bottom: 5px !important;
+  margin: 0 15px !important;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  border-bottom: 5px solid #6bc4e900;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  padding-bottom: 5px !important;
 }
 .menu-new a:hover{
   text-decoration: none !important;
@@ -191,6 +191,7 @@ body{
     line-height: 40px !important;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
+    font-weight: 400
 }
 .h_division_title {
     position: absolute;
@@ -231,6 +232,7 @@ body{
 	background-size: cover;
 	color: #fff;
 	line-height: 55px;
+  font-weight: 500;
 }
 .slider-heading{
 	font-size: 52px;
@@ -249,7 +251,7 @@ body{
 /*-- About Us Page --*/
 h1.slider-heading {
     font-family: "Montserrat";
-    font-weight: 400;
+    font-weight: 500;
 }
 .header-about {
     min-height: 350px;
@@ -312,7 +314,8 @@ img.mission-img {
 }
 .thumb-box p{
 	font-size: 12px;
-	color: #22115c;
+	color: #21145f;
+  font-weight: 300;
 }
 .thumb-box h6 {
     font-size: 15px;
@@ -320,6 +323,7 @@ img.mission-img {
 }
 .thumb-box a{
 	text-decoration: underline;
+  font-weight: 500;
 }
 .thumb-box a:hover{
 	text-decoration: underline;
@@ -369,10 +373,11 @@ display: flex;
 }
 .newsletter-txt-field input{
 	border-right: none;
-    border-radius: 0;
-    font-size: 14px;
-    color: #A0A0A0;
-    border: 1px solid #ffffff;
+  border-radius: 0;
+  font-size: 14px;
+  color: #A0A0A0;
+  border: 1px solid #ffffff;
+  font-weight: 500;
 }
 .newsletter-txt-field .form-control:focus{
 	-webkit-box-shadow: none;
@@ -542,6 +547,7 @@ footer ul li a:hover{
 .realestate-back p{
 	font-size: 1.25rem;
 	font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
 }
 .real-left-overlay{
   position: absolute;
@@ -671,6 +677,7 @@ footer ul li a:hover{
     position: absolute;
     z-index: 5;
     right: -200%;
+    display: none;
 }
 .contact-popup-back{
 	background: url('../img/contactus-popup.png') no-repeat;
@@ -1054,4 +1061,18 @@ a#more_posts > img {
     display: block;
     margin: 8px auto;
     height: 1.5rem;
+}
+.para-limit {
+    height: 3.5rem;
+    overflow: hidden;
+}
+div#enter-banner, div#contruct-banner, div#realestate-banner {
+    display: none;
+}
+a#real-back {
+  font-family: "Montserrat";
+  font-weight: 500;
+}
+ul#news-place-filter > li {
+    cursor: pointer;
 }

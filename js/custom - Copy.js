@@ -3,32 +3,26 @@ $( document ).ready(function(){
 	$('#real-more').click(function(e){
 		e.preventDefault();
 		var popupHeight = $(".divi-main").height();
-		// $('body').animate({scrollTop:0}, 5000, 'swing');
-		$("#realestate-banner").show();
 		$("#realestate-banner").animate({"right": "0", "height":popupHeight}, 500);
 	});
 	$('#real-back').click(function(e){
 		e.preventDefault();
 		$("#realestate-banner").animate({"right": "-200%", "height": "auto"}, 500);
-		$("#realestate-banner").fadeOut();
 	});
 	// Construction popup
 	$('#const-more').click(function(e){
 		e.preventDefault(e);
 		var popupHeight = $(".divi-main").height();
-		$("#contruct-banner").show();
 		$("#contruct-banner").animate({"right": "0", "height":popupHeight}, 500);
 	});
 	$('#const-back').click(function(e){
 		e.preventDefault();
 		$("#contruct-banner").animate({"right": "-200%", "height": "auto"}, 500);
-		$("#contruct-banner").fadeOut();
 	});
 	// Entertainment popup
 	$('#ent-more').click(function(e){
 		e.preventDefault(e);
 		var popupHeight = $(".divi-main").height();
-		
 		$("#enter-banner").animate({"right": "0", "height":popupHeight}, 500);
 	});
 	$('#ent-back').click(function(e){
@@ -54,23 +48,18 @@ $( document ).ready(function(){
 
 	// Contact Page Popup
 	$("#click-contact").click(function(e){
-		e.preventDefault();
-		window.scrollTo("0", "0");
-		var popupHeight = $(".contact-pop-up").height();
-		var docHeight = $(document).height()
-		$(".contact-pop-up").show();
-		$(".site").css({"max-height":docHeight, "overflow-y": "hidden"});
-		$('body').css({"background-attachment": "scroll"});
-		$(".contact-popup-back").css({"height" : docHeight });
-		$(".contact-pop-up").animate({"right": "0", "top": "0"}, 1000);
-		$("#career-cancel").css({"min-height":popupHeight});
-	});
+			e.preventDefault();
+			window.scrollTo("0", "0");
+			var popupHeight = $(".contact-pop-up").height();
+			popupHeight -= "50";
+			$(".site").css({"max-height":popupHeight, "overflow-y": "hidden"});
+			$(".contact-pop-up").animate({"right": "0", "top": "0"}, 1000);
+			$("#career-cancel").css({"min-height":popupHeight});
+		});
 	$("#contact-left").click(function(e){
 		e.preventDefault();
-		$(".contact-pop-up").animate({"right": "-200%", "top": "0"}, 1000);
-		$(".contact-pop-up").fadeOut();
-		$(".site").css({"overflow-y": "visible", "max-height":"100%"});
-		$('body').css({"background-attachment": "fixed"});
+		$(".contact-pop-up").animate({"right": "-100%", "top": "0"}, 1000);
+		$(".site").css({"overflow-y": "visible"});
 	});
 
 	// Disclaimer Page

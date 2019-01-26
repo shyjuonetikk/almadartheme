@@ -13,14 +13,14 @@ get_header('about');
 				</div>
 				<div class="container">
 					<div class="offset-lg-1 col-lg-4 col-md-5 col-sm-12 float-left text-center">
-						<img class="img_eng img-fluid" src="<?php the_field('chairman_image'); ?>" alt="">
-						<p class="text-center purple-color mt-4"><?php the_field('name'); ?></p>
+						<img class="img_eng img-fluid" src="<?php the_field('chairman_image');?>" alt="">
+						<p class="text-center purple-color mt-4 font-weight-light"><?php the_field('name');?></p>
 					</div>
 					<div class="col-lg-1 col-md-1 d-md-block d-sm-none d-none float-left text-center">
 						<img class="img-fluid line-chr" src="<?php echo get_template_directory_uri(); ?>/img/About/Line_about.svg">
 					</div>
 					<div class="col-lg-6 col-md-6 col-sm-12 float-left">
-						<p class="msg-md"><?php the_field('message'); ?>
+						<p class="msg-md"><?php the_field('message');?>
 						</p>
 					</div>
 				</div>
@@ -35,17 +35,17 @@ get_header('about');
 				</div>
 				<div class="container">
 					<div class="col-lg-6 col-md-6 d-md-block d-sm-none d-none float-left">
-						<p class="msg-md"><?php the_field('md_message'); ?></p>
+						<p class="msg-md"><?php the_field('md_message');?></p>
 					</div>
 					<div class="col-lg-1 col-md-1 d-md-block d-sm-none d-none float-left text-center pt-5">
 						<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/About/Line_about.svg">
 					</div>
 					<div class="col-lg-4 col-md-5 col-md-5 col-sm-12 float-left text-center">
-						<img class="img_md img-fluid" src="<?php the_field('md_image'); ?>" alt="">
-						<p class="text-center purple-color mt-4"><?php the_field('md_name'); ?></p>
+						<img class="img_md img-fluid" src="<?php the_field('md_image');?>" alt="">
+						<p class="text-center purple-color mt-4 font-weight-light"><?php the_field('md_name');?></p>
 					</div>
 					<div class="col-lg-6 col-md-6 d-md-none d-sm-block d-block float-left">
-						<p class="msg-md"><?php the_field('md_message'); ?></p>
+						<p class="msg-md"><?php the_field('md_message');?></p>
 					</div>
 				</div>
 			</div>
@@ -60,7 +60,7 @@ get_header('about');
 					</div>
 					<div class="col-lg-6 float-left px-0">
 						<p class="msg-md">
-							<?php the_field('our_mission'); ?>
+							<?php the_field('our_mission');?>
 						</p>
 					</div>
 				</div>
@@ -72,13 +72,13 @@ get_header('about');
 			<div id="our-mission" class="col-xl-12 p-0 float-left">
 				<div class="container">
 					<div class="col-lg-6 d-lg-block d-md-none d-sm-none d-none float-left text-right px-0">
-						<p class="msg-md"><?php the_field('our_vision'); ?></p>
+						<p class="msg-md"><?php the_field('our_vision');?></p>
 					</div>
 					<div class="col-lg-6 float-left text-center">
 						<img class="mission-img pt-5 mb-4" src="<?php echo get_template_directory_uri(); ?>/img/About/Our Vision.png" alt="Our Vision">
 					</div>
 					<div class="col-lg-6 d-lg-none d-md-block d-sm-block d-block float-left text-right px-0">
-						<p class="msg-md"><?php the_field('our_vision'); ?></p>
+						<p class="msg-md"><?php the_field('our_vision');?></p>
 					</div>
 				</div>
 			</div>
