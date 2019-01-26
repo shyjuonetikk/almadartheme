@@ -13,14 +13,14 @@ get_header('division');
 <div class="row p-0 m-0 float-left mt-5 mb-5 divi-main">
 	<div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 divisions_main p-0 m-0 pt-5 shadow">
 		<h4 class="text-white text-center mt-3 pt-3 prmy-font">DIVISIONS</h4>
-		<?php the_field('divisions_intro'); ?>
+		<?php the_field('divisions_intro');?>
 	</div>
 	<div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 p-0 m-0 shadow">
 		<div class="card card-holder border-0">
-			<img class="card-img-top img-fluid" src="<?php the_field('real_estate_image'); ?>" alt="Card image cap">
+			<img class="card-img-top img-fluid" src="<?php the_field('real_estate_image');?>" alt="Card image cap">
 			<div class="card-body">
 				<h5 class="card-title prmy-font font-weight-bold">Real Estate</h5>
-				<p class="card-text"><?php the_field('real_estate_intro'); ?></p>
+				<p class="card-text"><?php the_field('real_estate_intro');?></p>
 				<p class="mt-3">
 					<a id="real-more" href="" class="second-color pr-2 prmy-font">Learn More</a>
 					<img class="right-arrow" src="<?php echo get_template_directory_uri(); ?>/img/right-arrow.png" />
@@ -30,10 +30,10 @@ get_header('division');
 	</div>
 	<div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 p-0 m-0 shadow">
 		<div class="card card-holder border-0">
-			<img class="card-img-top" src="<?php the_field('construction_image'); ?>" alt="Card image cap">
+			<img class="card-img-top" src="<?php the_field('construction_image');?>" alt="Card image cap">
 			<div class="card-body">
 				<h5 class="card-title prmy-font font-weight-bold">Construction</h5>
-				<p class="card-text"><?php the_field('construction_intro'); ?></p>
+				<p class="card-text"><?php the_field('construction_intro');?></p>
 				<p class="mt-3">
 					<a id="const-more" href="" class="second-color pr-2 prmy-font">Learn More</a>
 					<img class="right-arrow" src="<?php echo get_template_directory_uri(); ?>/img/right-arrow.png" />
@@ -43,10 +43,10 @@ get_header('division');
 	</div>
 	<div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 p-0 m-0 shadow">
 		<div class="card card-holder border-0">
-			<img class="card-img-top" src="<?php the_field('entertainment_image'); ?>" alt="Card image cap">
+			<img class="card-img-top" src="<?php the_field('entertainment_image');?>" alt="Card image cap">
 			<div class="card-body">
 				<h5 class="card-title prmy-font font-weight-bold">Entertainment</h5>
-				<p class="card-text"><?php the_field('entertainment_intro'); ?></p>
+				<p class="card-text"><?php the_field('entertainment_intro');?></p>
 				<p class="mt-3">
 					<a id="ent-more" href="" class="second-color pr-2 prmy-font">Learn More </a>
 					<img class="right-arrow" src="<?php echo get_template_directory_uri(); ?>/img/right-arrow.png" />
@@ -76,53 +76,30 @@ get_header('division');
 	<div class="col-lg-6 col-md-12 p-5 reallists-box">
 		<div class="real-right-overlay">
 				<ul class="list-inline text-white reallists mt-5 pt-5">
-<<<<<<< HEAD
-				  <li class="media pl-7">
-				    <!-- <img class="plus-sign" src="<?php // echo get_template_directory_uri(); ?>/img/plus-sign.png" /> -->
-=======
-					<?php 
-						$query = new WP_Query(array(
-							'post_type' => array('realestate'),
-							'post_status' => 'publish',
-							'order' => 'ASC'
-						));
-						while ($query->have_posts()) {
-							$query->the_post();
-							$post_id = get_the_ID();
-							$post_title = get_the_title();
-							$post_content = get_the_excerpt();
-							$post_url = get_the_permalink();
-							$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
-							?>
+					<?php
+$query = new WP_Query(array(
+	'post_type' => array('realestate'),
+	'post_status' => 'publish',
+	'order' => 'ASC',
+));
+while ($query->have_posts()) {
+	$query->the_post();
+	$post_id = get_the_ID();
+	$post_title = get_the_title();
+	$post_content = get_the_excerpt();
+	$post_url = get_the_permalink();
+	$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
+	?>
 				  <a href="<?php echo $post_url; ?>"><li class="media pl-7">
 				    <!-- <img class="plus-sign" src="<?php echo get_template_directory_uri(); ?>/img/plus-sign.png" /> -->
->>>>>>> 4fa36138d6f3976c889ae8e5c2c1ca82f5cea28b
 				    <img class="plus-sign" src="<?php echo get_template_directory_uri(); ?>/img/plus-sign.png" />
 				    <div class="media-body">
 				      <h5 class="mt-0 mb-1"><?php echo $post_title; ?></h5>
 				    </div>
 				  </li>
 				</a>
-				<?php	} wp_reset_query(); ?>
-				  <!-- 
-				  <li class="media pl-7">
-				    <img class="plus-sign" src="<?php echo get_template_directory_uri(); ?>/img/plus-sign.png" />
-				    <div class="media-body">
-				      <h5 class="mt-0 mb-1">Al Madar Int’l / Investment (Dubai/Germany)</h5>
-				    </div>
-				  </li>
-				  <li class="media pl-7">
-				    <img class="plus-sign" src="<?php echo get_template_directory_uri(); ?>/img/plus-sign.png" />
-				    <div class="media-body">
-				      <h5 class="mt-0 mb-1">Al Madar Project Mgmt.</h5>
-				    </div>
-				  </li>
-				  <li class="media pl-7">
-				    <img class="plus-sign" src="<?php echo get_template_directory_uri(); ?>/img/plus-sign.png" />
-				    <div class="media-body">
-				      <h5 class="mt-0 mb-1">Nobles Real Estate</h5>
-				    </div>
-				  </li> -->
+				<?php	}
+wp_reset_query();?>
 				</ul>
 		</div>
 	</div>
