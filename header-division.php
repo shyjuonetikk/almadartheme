@@ -48,7 +48,7 @@ $container = get_theme_mod('understrap_container_type');
 <div class="contact-pop-up">
 	<div class="row m-0">
 		<div class="col-lg-6 col-md-1 col-sm-1 col-1 m-0" id="contact-left"></div>
-		<div class="col-lg-6 col-md-10 col-sm-10 col-10 m-0 contact-popup-back p-5">
+		<div class="col-lg-6 col-md-11 col-sm-11 col-11 m-0 contact-popup-back p-5">
 			<h1 class="prmy-font font-weight-bold mb-4">GET IN TOUCH</h1>
 			<p class="fs-12 pb-3">For inquiries and feedback, please fill out the form below.</p>
 			<form class="w-75" id="contact-form">

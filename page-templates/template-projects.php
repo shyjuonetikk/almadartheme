@@ -75,7 +75,7 @@ wp_reset_query();
 					<div class="row">
 							<div class="col m-auto text-center">
 								<!-- <a href="#" class="float-left">More -->
-								<a id="more_posts" data-post-type="projects" data-posts-per-page="1" data-status-project="ongoing"><img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/more-button.png" /> </a>
+								<a id="more_posts" data-post-type="projects" data-posts-per-page="1" data-status-project="ongoing">More<img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/arrow-down.png" /> </a>
 							</div>
 					</div>
 				</div>

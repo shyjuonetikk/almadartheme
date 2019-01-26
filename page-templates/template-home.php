@@ -92,7 +92,7 @@ while ($query->have_posts()) {
 	$post_id = get_the_ID();
 	$post_title = get_the_title();
 	$post_title_len = strlen($post_title);
-	if ($post_title_len > '17') {
+	if ($post_title_len > '18') {
 		$post_title = substr($post_title, 0, 17) . "...";
 	}
 	$content = get_the_excerpt();
@@ -100,7 +100,7 @@ while ($query->have_posts()) {
 
 	$content = get_the_excerpt();
 	$content_len = strlen(get_the_excerpt());
-	if ($content_len > "93") {
+	if ($content_len > "94") {
 		$content = substr($content, 0, 93) . "...";
 	}
 
@@ -120,7 +120,7 @@ while ($query->have_posts()) {
 							</div>
 							<div class="col-12 col-sm-8 col-md-7 float-left mr-0 text-center text-sm-left">
 								<h6 class="p-0 m-0 mb-2 purple-color prmy-font"><?php echo $post_title; ?></h6>
-								<p class="mb-4 purple-color"><?php echo $content ?></p>
+								<p class="mb-4 purple-color para-limit"><?php echo $content ?></p>
 								<p>
 									<span class="float-left purple-color fs-10 sc-font"><?php echo get_the_date('M j, Y'); ?></span>
 									<a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
@@ -152,7 +152,7 @@ while ($query->have_posts()) {
 	$post_title = get_the_title();
 
 	$post_title_len = strlen($post_title);
-	if ($post_title_len > '17') {
+	if ($post_title_len > '18') {
 		$post_title = substr($post_title, 0, 17) . "...";
 	}
 
@@ -164,7 +164,7 @@ while ($query->have_posts()) {
 	$value = get_field("status", $post_id);
 	$content = get_the_excerpt();
 	$content_len = strlen(get_the_excerpt());
-	if ($content_len > "93") {
+	if ($content_len > "94") {
 		$content = substr($content, 0, 93) . "...";
 	}
 	if ($value == 'completed') {
@@ -178,7 +178,7 @@ while ($query->have_posts()) {
 				</div>
 				<div class="col-12 col-sm-8 col-md-7 float-left mr-0 text-center text-sm-left">
 					<h6 class="p-0 m-0 mb-2 purple-color prmy-font"><?php echo $post_title; ?></h6>
-					<p class="mb-4 purple-color"><?php echo $content ?></p>
+					<p class="mb-4 purple-color para-limit"><?php echo $content ?></p>
 					<p>
 						<span class="float-left purple-color fs-10 sc-font"><?php echo get_the_date('M j, Y'); ?></span>
 						<a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
@@ -211,7 +211,7 @@ while ($query->have_posts()) {
 	$post_id = get_the_ID();
 	$post_title = get_the_title();
 	$post_title_len = strlen($post_title);
-	if ($post_title_len > '17') {
+	if ($post_title_len > '18') {
 		$post_title = substr($post_title, 0, 17) . "...";
 	}
 
@@ -224,7 +224,7 @@ while ($query->have_posts()) {
 	$value = get_field("status", $post_id);
 	$content = get_the_excerpt();
 	$content_len = strlen(get_the_excerpt());
-	if ($content_len > "93") {
+	if ($content_len > "94") {
 		$content = substr($content, 0, 93) . "...";
 	}
 
@@ -239,7 +239,7 @@ while ($query->have_posts()) {
 				</div>
 				<div class="col-12 col-sm-8 col-md-7 float-left mr-0 text-center text-sm-left">
 					<h6 class="p-0 m-0 mb-2 purple-color prmy-font"><?php echo $post_title; ?></h6>
-					<p class="mb-4 purple-color"><?php echo $content; ?></p>
+					<p class="mb-4 purple-color para-limit"><?php echo $content; ?></p>
 					<p>
 						<span class="float-left purple-color fs-10 sc-font"><?php echo get_the_date('M j, Y'); ?></span>
 						<a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
