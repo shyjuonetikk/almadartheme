@@ -42,6 +42,10 @@
 
 	var ajaxUrl = "<?php echo admin_url('admin-ajax.php') ?>";
     var page = 1; // What page we are on.
+
+
+    // Projects ajax start
+
 	$("#more_posts").on("click",function(){
 		 // When btn is pressed.
 		var place = $("#place").val();
@@ -64,6 +68,7 @@
 				 $("#more_posts").attr("disabled",false);
   			});
    });
+
 	$("#status-list li").on("click",function(){
 			var post_type = $(this).data('post_type');
 			var post_per_page = $(this).data('posts_per_page');
@@ -94,8 +99,13 @@
 			 function(data){
 				 $("#projects-container").html(data);
 				 $("#loading-indicator").toggle();
+				 //$("#more_posts").attr("disabled",false);
 				});
 	 });
+
+	// Projects ajax ends
+
+	//News ajax starts
 
 	$("#more_news").on("click",function(){
 		 // When btn is pressed.
@@ -119,23 +129,28 @@
 				 $("#more_news").attr("disabled",false);
   			});
     });
+
+    // filter by news type
+
     $("#news-type li").on("click",function(){
 			var post_type = $(this).data('post_type');
 			var post_per_page = $(this).data('posts_per_page');
 			var news_type = $(this).data('news_type');
 			var place = $("#place").val();
 			$(this).toggleClass('font-weight-bold').siblings().removeClass('font-weight-bold');
-			
-			$.post(ajaxUrl,{action:"load_news_by_type",
+			$.post(ajaxUrl,{action: "load_news_by_type",
 				ppp: post_per_page,
 				posttype: post_type,
 				news_type: news_type,
 				place: place
 			},
-			function(data){
-				$("#projects-list").html(data);
-			});
+			 function(data){
+				 $("#projects-list").html(data);
+				});
 	   });
+
+    //news filter by country
+
     $("#news-place-filter li").on("click",function(){
 		var place = $(this).data('place');
 		$(this).toggleClass('font-weight-bold').siblings().removeClass('font-weight-bold');
@@ -178,7 +193,7 @@
 </script>
 <?php
 
-if(is_page(['home','about-us','careers']) || is_single()){ ?>
+if(is_page(['home','about-us','careers'])){ ?>
 
 <script type="text/javascript">
 	window.onscroll = function() { stickyFunction() };

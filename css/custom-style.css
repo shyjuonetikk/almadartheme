@@ -41,7 +41,7 @@ body{
 	color: #6bc4e9;
 	border-bottom: 2px solid #6bc4e9;
 }
-
+.menu
 .menu-custom-pro{
 	/*background: #fff !important;
 	webkit-box-shadow: 0px 6px 23px -11px rgba(0,0,0,0.75);
@@ -53,7 +53,7 @@ body{
   transition: .2s;
 }
 .menu-custom ul{
-	margin-left: 15px;
+	/*margin-left: 15px;*/
 }
 .menu-custom a{
 	color: #22115c;
@@ -180,6 +180,7 @@ body{
   width: 114px;
   height: 116px;
   margin: 0 auto;
+  border: 1px solid #22115c;
 }
 .thumb-list{
 	border-bottom: 1px solid #22115c;
@@ -560,6 +561,13 @@ footer ul li a:hover{
   opacity: 1;
   background-color: #000000ba;
   z-index: 1;
+}
+.reallists a {
+  color: #fff !important;
+}
+.reallists a:hover {
+  color: #fff !important;
+  text-decoration: none;
 }
 .reallists li h5{
 	font-size: 2rem !important;

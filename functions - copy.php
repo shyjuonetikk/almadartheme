@@ -173,7 +173,9 @@ function load_projects_status(){
 			  </div>
 			</div>
 		</div>
-<?php } wp_reset_query(); ?>
+		<?php	}
+			wp_reset_query();
+		?>
 	</div>
 	<div class="row">
 		<div class="col m-auto text-center">
@@ -210,11 +212,15 @@ function load_projects_status(){
    });
 });
 </script>
-<?php exit; }
-
+<?php
+exit;
+}
 add_action('wp_ajax_nopriv_load_projects_status', 'load_projects_status');
 add_action('wp_ajax_load_projects_status', 'load_projects_status');
+?>
 
+<!-- filter projects by location -->
+<?php 
 function filter_country()
 {
  $place = $_POST['place'];
@@ -231,7 +237,7 @@ function filter_country()
 	</div>
 	<div class="col-12 col-md-9 col-lg-10 pl-4 pr-0 float-left" id="projects-list">
 		<div class="row m-0 projects-list">
-		<?php
+		<?php 
 			$query = new WP_Query(array(
 			    'post_type' => array('projects'),
 				'post_status' => 'publish',
@@ -302,7 +308,7 @@ function filter_country()
 			ppp: post_per_page,
 			postype: post_type,
 			status: status_project,
-			place: place
+			place: place 
 		},
 			 function(data){
 				 page++;
@@ -331,12 +337,17 @@ function filter_country()
 				 //$("#more_posts").attr("disabled",false);
 				});
 	});
+	
 });
 </script>
-<?php exit; }
+<?php
+exit;
+}
 
 add_action('wp_ajax_nopriv_filter_country', 'filter_country');
 add_action('wp_ajax_filter_country', 'filter_country');
+
+// more news
 
 function more_news_ajax(){
     $offset = $_POST["offset"];
@@ -344,79 +355,84 @@ function more_news_ajax(){
 	$postype = $_POST["postype"];
 	$news_type = $_POST["news_type"];
 	$place = $_POST["place"];
-	if($news_type == 'all'){
-		$query = new WP_Query(array(
-		    'post_type' => $postype,
-			'post_status' => 'publish',
-			'posts_per_page'=> $ppp,
-			'meta_key'		=> 'news_location',
-			'meta_value'	=> $place,
-			'paged'=> $offset
-		));
-	}
-	else{
-		$query = new WP_Query(array(
-		    'post_type' => $postype,
-			'post_status' => 'publish',
-			'meta_query' => array(
-		        'relation' => 'AND', //**** Use AND or OR as per your required Where Clause
-		        array(
-		            'key'     => 'news_type',
-		            'value'   => $news_type,
-		        ),
-		        array(
-		            'key'     => 'news_location',
-		            'value'   => $place,
-		        ),
-		    ),
-			'posts_per_page'=> $ppp,
-			'paged'=> $offset
-		));
-	}
-while ($query->have_posts()) {
-	$query->the_post();
-	$post_id = get_the_ID();
-	$post_title = get_the_title();
-	$post_content = get_the_excerpt();
-	$post_url= get_the_permalink();
-	$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
-?>
-<div class="col-12 col-md-6 mb-3 pl-0">
-	<div class="card border-0 rounded-0 w-100">
-		<div class="image-container">
-	  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url;?>" alt="<?php echo $post_title; ?>">
-	  		<div class="overlay"></div>
-	  	</div>
-	  <div class="card-body border-0 rounded-0 pl-0 ml-0">
-	    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
-	    <p class="card-text fs-12 purple-color"><?php echo $post_content; ?></p>
-	    <span class="purple-color float-left fs-12"><?php echo get_the_date();?> </span>
-	    <a href="<?php echo $post_url; ?>" class="float-right fs-12">Read More</a>
-	  </div>
-	</div>
-</div>
-
-<?php	} wp_reset_query(); exit; }
-
+		if($news_type == 'all'){
+			$query = new WP_Query(array(
+			    'post_type' => $postype,
+				'post_status' => 'publish',
+				'posts_per_page'=> $ppp,
+				'meta_key'		=> 'news_location',
+				'meta_value'	=> $place,
+				'paged'=> $offset
+			));
+		}
+		else{
+			$query = new WP_Query(array(
+			    'post_type' => $postype,
+				'post_status' => 'publish',
+				'meta_query' => array(
+			        'relation' => 'AND', //**** Use AND or OR as per your required Where Clause
+			        array(
+			            'key'     => 'news_type',
+			            'value'   => $news_type,
+			        ),
+			        array(
+			            'key'     => 'news_location',
+			            'value'   => $place,
+			        ),
+			    ),
+				'posts_per_page'=> $ppp,
+				'paged'=> $offset
+			));
+		}
+	while ($query->have_posts()) {
+		$query->the_post();
+		$post_id = get_the_ID();
+		$post_title = get_the_title();
+		$post_content = get_the_excerpt();
+		$post_url= get_the_permalink();
+		$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
+	?>
+			<div class="col-12 col-md-6 mb-3 pl-0">
+				<div class="card border-0 rounded-0 w-100">
+					<div class="image-container">
+				  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url;?>" alt="<?php echo $post_title; ?>">
+				  		<div class="overlay"></div>
+				  	</div>
+				  <div class="card-body border-0 rounded-0 pl-0 ml-0">
+				    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
+				    <p class="card-text fs-12 purple-color"><?php echo $post_content; ?></p>
+				    <span class="purple-color float-left fs-12"><?php echo get_the_date();?> </span>
+				    <a href="<?php echo $post_url; ?>" class="float-right fs-12">Read More</a>
+				  </div>
+				</div>
+			</div>
+				<?php	}
+						wp_reset_query();
+						    exit; 
+						}
 add_action('wp_ajax_nopriv_more_news_ajax', 'more_news_ajax');
 add_action('wp_ajax_more_news_ajax', 'more_news_ajax');
 
-function load_news_by_type(){
+// news filtration by type
+
+function load_news_by_type() {
     $ppp = 2;
 	$posttype = $_POST["posttype"];
 	$news_type = $_POST["news_type"];
 	$place = $_POST["place"];
-	echo '<div class="row m-0 projects-list">';
-	if($news_type == 'all'){
-		$query = new WP_Query(array(
-		    'post_type' => $posttype,
-			'post_status' => 'publish',
-			'posts_per_page'=> $ppp,
-			'meta_key'		=> 'news_location',
-			'meta_value'	=> $place
-		));
-	}
-	else{
+?>
+<div class="row m-0 projects-list">
+		<?php 
+		if($news_type == 'all'){
+			$query = new WP_Query(array(
+			    'post_type' => $posttype,
+				'post_status' => 'publish',
+				'posts_per_page'=> $ppp,
+				'meta_key'		=> 'news_location',
+				'meta_value'	=> $place
+			));
+		}
+		else{
 			$query = new WP_Query(array(
 			    'post_type' => $posttype,
 				'post_status' => 'publish',
@@ -434,37 +450,39 @@ function load_news_by_type(){
 				'posts_per_page'=> $ppp
 			));
 		}
-		while ($query->have_posts()) {
-	    $query->the_post();
-	    $post_id = get_the_ID();
-		$post_title = get_the_title();
-		$post_content = get_the_excerpt();
-		$post_url = get_the_permalink();
-		$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
-?>
-<input type="hidden" value="<?php echo $place; ?>" id="place" />
-<div class="col-12 col-md-6 mb-3 pl-0">
-	<div class="card border-0 rounded-0 w-100">
-		<div class="image-container">
-	  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url;?>" alt="<?php echo $post_title; ?>">
-	  		<div class="overlay"></div>
-	  	</div>
-	  <div class="card-body border-0 rounded-0 pl-0 ml-0">
-	    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
-	    <p class="card-text fs-12 purple-color"><?php echo $post_content; ?></p>
-	    <span class="purple-color float-left fs-12"><?php echo get_the_date(); ?> </span>
-	    <a href="<?php echo $post_url; ?>" class="float-right fs-12">Read More</a>
-	  </div>
+			while ($query->have_posts()) {
+			    $query->the_post();
+			    $post_id = get_the_ID();
+				$post_title = get_the_title();
+				$post_content = get_the_excerpt();
+				$post_url= get_the_permalink();
+				$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
+		?>
+		<input type="hidden" value="<?php echo $place; ?>" id="place">
+		<div class="col-12 col-md-6 mb-3 pl-0">
+			<div class="card border-0 rounded-0 w-100">
+				<div class="image-container">
+			  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url;?>" alt="<?php echo $post_title; ?>">
+			  		<div class="overlay"></div>
+			  	</div>
+			  <div class="card-body border-0 rounded-0 pl-0 ml-0">
+			    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
+			    <p class="card-text fs-12 purple-color"><?php echo $post_content; ?></p>
+			    <span class="purple-color float-left fs-12"><?php echo get_the_date(); ?> </span>
+			    <a href="<?php echo $post_url; ?>" class="float-right fs-12">Read More</a>
+			  </div>
+			</div>
+		</div>
+		<?php	}
+			wp_reset_query();
+		?>
 	</div>
-</div>
-<?php	} wp_reset_query(); ?>
-</div>
-<div class="row">
-	<div class="col m-auto text-center">
-		<i class="fas fa-spinner fa-spin" id="loading-indicator" style="display:none;"></i>
-		<a id="more_news" data-post-type="almadarnews" data-posts-per-page="1" data-news_type="<?php echo $news_type; ?>"><img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/more-button.png" /> </a>
+	<div class="row">
+		<div class="col m-auto text-center">
+			<i class="fas fa-spinner fa-spin" id="loading-indicator" style="display:none;"></i>
+			<a id="more_news" data-post-type="almadarnews" data-posts-per-page="1" data-news_type="<?php echo $news_type; ?>"><img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/more-button.png" /> </a>
+		</div>
 	</div>
-</div>
 <script type="text/javascript">
 	$( document ).ready(function(){
 	var ajaxUrl = "<?php echo admin_url('admin-ajax.php')?>";
@@ -494,16 +512,18 @@ function load_news_by_type(){
     });
 });
 </script>
-
-<?php  exit; }
-
+<?php
+exit;
+}
 add_action('wp_ajax_nopriv_load_news_by_type', 'load_news_by_type');
 add_action('wp_ajax_load_load_news_by_type', 'load_news_by_type');
+
+// news filter location
 
 function news_filter_country()
 {
  $place = $_POST['place'];
- echo '
+?>
 	<div class="col-12 col-md-3 col-lg-2 float-left">
 		<h2 class="purple-color">News</h2>
 		<div class="line"></div>
@@ -515,7 +535,8 @@ function news_filter_country()
 		</ul>
 	</div>
 	<div class="col-12 col-md-9 col-lg-10  pl-4 pr-0 float-left" id="projects-list">
-		<div class="row m-0 projects-list">';
+		<div class="row m-0 projects-list">
+		<?php 
 			$query = new WP_Query(array(
 			    'post_type' => array('almadarnews'),
 				'post_status' => 'publish',
@@ -532,37 +553,39 @@ function news_filter_country()
 				),
 				'posts_per_page'=> 2
 			));
-			while ($query->have_posts()) {
-		    $query->the_post();
-		    $post_id = get_the_ID();
-			$post_title = get_the_title();
-			$post_content = get_the_excerpt();
-			$post_url = get_the_permalink();
-			$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
-?>
 
-<div class="col-12 col-md-6 mb-3 pl-0">
-	<div class="card border-0 rounded-0 w-100">
-		<div class="image-container">
-	  		<img class="card-img-top image news-card-image" src="<?php echo $featured_img_url;?>" alt="<?php echo $post_title; ?>">
-	  		<div class="overlay"></div>
-	  	</div>
-	  <div class="card-body border-0 rounded-0 pl-0 ml-0">
-	    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
-	    <p class="card-text fs-12 purple-color"><?php echo $post_content; ?></p>
-	    <span class="purple-color float-left fs-12"><?php echo get_the_date();?> </span>
-	    <a href="<?php echo $post_url; ?>" class="float-right fs-12">Read More</a>
-	  </div>
-	</div>
-</div>
-<?php } wp_reset_query(); ?>
-</div>
-<div class="col m-auto text-center">
-	<!-- <a href="#" class="float-left">More -->
-	<i class="fas fa-spinner fa-spin" id="loading-indicator" style="display:none;"></i>
-	<a id="more_news" data-post-type="almadarnews" data-posts-per-page="1" data-news-type="realestate"><img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/more-button.png" /> </a>
-</div>
-</div>
+
+			while ($query->have_posts()) {
+			    $query->the_post();
+			    $post_id = get_the_ID();
+				$post_title = get_the_title();
+				$post_content = get_the_excerpt();
+				$post_url = get_the_permalink();
+				$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
+		?>
+
+			<div class="col-12 col-md-6 mb-3 pl-0">
+				<div class="card border-0 rounded-0 w-100">
+					<div class="image-container">
+				  		<img class="card-img-top image news-card-image" src="<?php echo $featured_img_url;?>" alt="<?php echo $post_title; ?>">
+				  		<div class="overlay"></div>
+				  	</div>
+				  <div class="card-body border-0 rounded-0 pl-0 ml-0">
+				    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
+				    <p class="card-text fs-12 purple-color"><?php echo $post_content; ?></p>
+				    <span class="purple-color float-left fs-12"><?php echo get_the_date();?> </span>
+				    <a href="<?php echo $post_url; ?>" class="float-right fs-12">Read More</a>
+				  </div>
+				</div>
+			</div>
+			<?php } wp_reset_query(); ?>
+		</div>
+				<div class="col m-auto text-center">
+					<!-- <a href="#" class="float-left">More -->
+					<i class="fas fa-spinner fa-spin" id="loading-indicator" style="display:none;"></i>
+					<a id="more_news" data-post-type="almadarnews" data-posts-per-page="1" data-news-type="realestate"><img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/more-button.png" /> </a>
+				</div>
+		</div>
 <script type="text/javascript">
 	$( document ).ready(function(){
 	var ajaxUrl = "<?php echo admin_url('admin-ajax.php') ?>";
@@ -611,7 +634,8 @@ function news_filter_country()
    });
 });
 </script>
-<?php exit; }
-
+<?php
+exit;
+}
 add_action('wp_ajax_nopriv_news_filter_country', 'news_filter_country');
 add_action('wp_ajax_news_filter_country', 'news_filter_country');

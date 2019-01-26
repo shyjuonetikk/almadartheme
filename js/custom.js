@@ -5,12 +5,14 @@ $( document ).ready(function(){
 		var popupHeight = $(".divi-main").height();
 		// $('body').animate({scrollTop:0}, 5000, 'swing');
 		$("#realestate-banner").show();
+		window.scrollTo("0", "0");
 		$("#realestate-banner").animate({"right": "0", "height":popupHeight}, 500);
 	});
 	$('#real-back').click(function(e){
 		e.preventDefault();
 		$("#realestate-banner").animate({"right": "-200%", "height": "auto"}, 500);
 		$("#realestate-banner").fadeOut();
+		// $("#realestate-banner").fadeOut()l
 	});
 	// Construction popup
 	$('#const-more').click(function(e){

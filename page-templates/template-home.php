@@ -49,9 +49,11 @@ while ($query->have_posts()) {
 						<div class="thumbnail">
 						  <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/Real Estate.png" /> -->
 						  <?php echo the_post_thumbnail(); ?>
-						  	<div class="h_division_title">
-						  		<h6 class="p-0"><?php echo $post_title; ?></h6>
-						    </div>
+						  	<a href="<?php echo get_permalink(); ?>">
+						  		<div class="h_division_title">
+							  		<h6 class="p-0"><?php echo $post_title; ?></h6>
+							    </div>
+							</a>
 						</div>
 					</div>
 					<?php
@@ -74,7 +76,6 @@ wp_reset_query();
 					<?php
 $query = new WP_Query(array(
 	'post_type' => array('almadarnews'),
-	'category_name' => 'latestnews',
 	'post_status' => 'publish',
 ));
 
