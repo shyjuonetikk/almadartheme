@@ -83,7 +83,6 @@ wp_reset_query();
 					<?php
 $query = new WP_Query(array(
 	'post_type' => array('almadarnews'),
-	'category_name' => 'latestnews',
 	'post_status' => 'publish',
 ));
 
