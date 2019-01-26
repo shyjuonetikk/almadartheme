@@ -61,4 +61,27 @@ $( document ).ready(function(){
 		$(".contact-pop-up").animate({"right": "-100%", "top": "0"}, 1000);
 		$(".site").css({"overflow-y": "visible"});
 	});
+
+	// Disclaimer Page
+	$("#disclaimer-tab").click(function(e){
+		e.preventDefault();
+		$(this).addClass('disc-active');
+		$("#terms-tab, #privacy-tab").removeClass('disc-active');
+		$('#terms, #privacy').hide();
+		$('#disclaimer').show();
+	});
+	$("#terms-tab").click(function(e){
+		e.preventDefault();
+		$(this).addClass('disc-active');
+		$("#disclaimer-tab, #privacy-tab").removeClass('disc-active');
+		$('#disclaimer, #privacy').hide();
+		$('#terms').show();
+	});
+	$("#privacy-tab").click(function(e){
+		e.preventDefault();
+		$(this).addClass('disc-active');
+		$("#terms-tab, #disclaimer-tab").removeClass('disc-active');
+		$('#terms, #disclaimer').hide();
+		$('#privacy').show();
+	});
 });

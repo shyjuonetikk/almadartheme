@@ -19,7 +19,7 @@ get_header('division');
 				<h2 class="purple-color prmy-font font-weight-bold my-3">CONTACT US</h2>
 				<div class="line mb-5"></div>
 				<div class="row">
-					<div class="col-lg-6">
+					<div class="col-md-6">
 						<h6 class="purple-color">AL MADAR HOLDINGS W.L.L.</h6>
 						<ul class="list-inline contact-list lh-paragraph fs-12">
 							<li>P.O.Box: <?php the_field('almadar_address');?></li>
@@ -28,7 +28,7 @@ get_header('division');
 							<li class="contact-links"><?php the_field('almadar_email');?></li>
 						</ul>
 					</div>
-					<div class="col-lg-6">
+					<div class="col-md-6">
 						<h6 class="purple-color">REAL ESTATE - QATAR</h6>
 						<ul class="list-inline contact-list lh-paragraph fs-12">
 							<li>Tel.: <?php the_field('re_primary_telephone');?></li>
@@ -40,7 +40,7 @@ get_header('division');
 					</div>
 				</div>
 				<div class="row">
-					<div class="col">
+					<div class="col-md-6">
 						<h6 class="purple-color">HUMAN RESOURCE</h6>
 						<ul class="list-inline contact-list lh-paragraph fs-12">
 							<li>P.O.Box: <?php the_field('hr_address');?></li>
@@ -49,7 +49,7 @@ get_header('division');
 							<li class="contact-links"><?php the_field('hr_email');?></li>
 						</ul>
 					</div>
-					<div class="col contact-list">
+					<div class="col-md-6 contact-list">
 						<h6 class="purple-color">SUGGESTIONS? INQUIRIES?</h6>
 						<a href="#" class="font-weight-bold pr-2" id="click-contact">CLICK HERE</a><img src="<?php echo get_template_directory_uri(); ?>/img/right-arrow.png" />
 					</div>

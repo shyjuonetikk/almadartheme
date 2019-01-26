@@ -1024,3 +1024,34 @@ p.job-close-date {
 ul#status-list > li {
     font-weight: 300;
 }
+.disc-active {
+    font-weight: 600;
+}
+#terms, #privacy {
+  display: none;
+}
+.disc-ul {
+    line-height: 1.5rem;
+}
+.disc-ul:hover {
+    cursor: pointer;
+}
+h3.disclaimer-head {
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #21145f;
+}
+p.disclaimer-para {
+    color: #21145f;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+a#more_posts {
+    color: #6bc4e8;
+    text-decoration: underline;
+}
+a#more_posts > img {
+    display: block;
+    margin: 8px auto;
+    height: 1.5rem;
+}

@@ -1,0 +1,47 @@
+<?php
+/*
+
+	Template Name: Disclaimer Page
+	Description: Template for displaying Disclaimer.
+
+*/
+	get_header('new');
+?>
+
+<div class="row m-0 p-0 mt-3 mb-5">
+	<div class="container m-auto p-0">
+		<div class="col-12 float-left">
+			<div class="col-2 float-left">
+				<!-- <h2 class="purple-color"></h2> -->
+				<div class="line"></div>
+				<ul class="nav nav-tabs list-inline mt-4 projects-ul" role="tablist">
+					<li class="nav-item">
+						<a class="nav-link active" href="#profile" role="tab" data-toggle="tab">DISCLAIMER</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#buzz" role="tab" data-toggle="tab">TERMS & CONDITIONS</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#references" role="tab" data-toggle="tab">PRIVACY POLICY</a>
+					</li>
+				</ul>
+				<ul class="list-inline mt-4 projects-ul">
+					<li class="font-weight-bold purple-color">DISCLAIMER</li>
+					<li class="purple-color">TERMS & CONDITIONS</li>
+					<li class="purple-color">PRIVACY POLICY</li>
+				</ul>
+			</div>
+			<div class="col-10 pl-4 pr-0 float-left">
+				<div class="row m-0 projects-list">
+					<div class="tab-content">
+						<div role="tabpanel" class="tab-pane fade in active" id="profile">...</div>
+						<div role="tabpanel" class="tab-pane fade" id="buzz">bbb</div>
+						<div role="tabpanel" class="tab-pane fade" id="references">ccc</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<?php get_footer();?>
