@@ -255,17 +255,17 @@ wp_reset_query();
 			</div><!-- list 3 -->
 		</div>
 	</div><!-- newssection -->
-	<div class="newsletter-container p-5 float-left mb-5">
-		<div class="col-xl-6 col-lg-8 col-md-8 col-12 m-auto text-center">
+	<div class="newsletter-container py-5 float-left mb-5">
+		<div class="col-xl-5 col-lg-8 col-md-8 col-12 m-auto text-center">
 			<h3 class="text-light prmy-font">SUBSCRIBE TO OUR NEWSLETTERS</h3>
-			<p class="text-light fs-15 mt-4 sc-font">
+			<p class="text-light font-weight-light fs-15 mt-4 sc-font">
 				Enter your E-mail address to receive latest news and updates. Morbi euismod
 				fermentum tempus. Mauris molestie facilisis eros id dictum.
 			</p>
 			<div class="col-12 mt-4 pt-2">
 				<form>
 				  <div class="form-group row">
-				    <div class="col-9 m-auto">
+				    <div class="col-12 col-sm-9 m-auto">
 				      	<div class="input-group mb-3 newsletter-txt-field prmy-font">
 						  <input type="text" class="form-control" placeholder="YOUR E-MAIL ADDRESS" aria-label="YOUR E-MAIL ADDRESS" aria-describedby="basic-addon2">
 						  <div class="input-group-append">

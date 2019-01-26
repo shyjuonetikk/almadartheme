@@ -4,7 +4,7 @@ $( document ).ready(function(){
 		e.preventDefault();
 		var popupHeight = $(".divi-main").height();
 		// $('body').animate({scrollTop:0}, 5000, 'swing');
-		$("#realestate-banner").show();
+		$("#realestate-banner").css({"display" : "flex"});
 		window.scrollTo("0", "0");
 		$("#realestate-banner").animate({"right": "0", "height":popupHeight}, 500);
 	});
@@ -18,7 +18,7 @@ $( document ).ready(function(){
 	$('#const-more').click(function(e){
 		e.preventDefault(e);
 		var popupHeight = $(".divi-main").height();
-		$("#contruct-banner").show();
+		$("#contruct-banner").css({"display" : "flex"});
 		$("#contruct-banner").animate({"right": "0", "height":popupHeight}, 500);
 	});
 	$('#const-back').click(function(e){
@@ -30,12 +30,13 @@ $( document ).ready(function(){
 	$('#ent-more').click(function(e){
 		e.preventDefault(e);
 		var popupHeight = $(".divi-main").height();
-		
+		$("#enter-banner").css({"display" : "flex"});
 		$("#enter-banner").animate({"right": "0", "height":popupHeight}, 500);
 	});
 	$('#ent-back').click(function(e){
-		e.preventDefault();
+		e.preventDefault();		
 		$("#enter-banner").animate({"right": "-200%", "height": "auto"}, 500);
+		$("#enter-banner").fadeOut();
 	});
 
 	// Career page popup
