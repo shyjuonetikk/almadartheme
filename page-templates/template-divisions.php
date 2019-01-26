@@ -10,7 +10,7 @@ Description: Template for displaying all divisions.
 get_header('division');
 ?>
 
-<div class="row p-0 m-0 float-left mt-5 mb-5 divi-main">
+<div class="row p-0 m-0 float-left mt-0 mb-5 divi-main">
 	<div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 divisions_main p-0 m-0 pt-5 shadow">
 		<h4 class="text-white text-center mt-3 pt-3 prmy-font">DIVISIONS</h4>
 		<?php the_field('divisions_intro'); ?>

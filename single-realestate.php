@@ -87,11 +87,11 @@ get_header('posts');
 						</div>
 						<?php	} wp_reset_query(); ?>
 					</div>
-					<div class="row">
+					<!-- <div class="row">
 							<div class="col m-auto text-center">
 								<a id="estate_posts"><img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/more-button.png" /> </a>
 							</div>
-					</div>
+					</div> -->
 				</div>
 		</div>
 	</div>
