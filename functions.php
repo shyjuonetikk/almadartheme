@@ -637,6 +637,5 @@ function news_filter_country()
 <?php
 exit;
 }
-
 add_action('wp_ajax_nopriv_news_filter_country', 'news_filter_country');
 add_action('wp_ajax_news_filter_country', 'news_filter_country');
