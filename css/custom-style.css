@@ -180,6 +180,7 @@ body{
   width: 114px;
   height: 116px;
   margin: 0 auto;
+  border: 1px solid #22115c;
 }
 .thumb-list{
 	border-bottom: 1px solid #22115c;
