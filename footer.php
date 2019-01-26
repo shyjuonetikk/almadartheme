@@ -69,7 +69,7 @@
 			var post_per_page = $(this).data('posts_per_page');
 			var status = $(this).data('status_list');
 			var place = $("#place").val();
-			$("#loading-indicator").toggle();
+			// $("#loading-indicator").toggle();
 			$(this).toggleClass('font-weight-bold').siblings().removeClass('font-weight-bold');
 			$.post(ajaxUrl,{action:"load_projects_status",
 				ppp: post_per_page,
@@ -79,7 +79,7 @@
 			},
 			 function(data){
 				 $("#projects-list").html(data);
-				 $("#loading-indicator").toggle();
+				 // $("#loading-indicator").toggle();
 				 //$("#more_posts").attr("disabled",false);
 				});
 	   });
@@ -103,8 +103,8 @@
 		var post_type = $(this).data('post-type');
 		var post_per_page = $(this).data('posts-per-page');
 		var news_type = $(this).data('news-type');
-		$("#loading-indicator").toggle();
-        $("#more_news").attr("disabled",true); // Disable the button, temp.
+		// $("#loading-indicator").toggle();
+        // $("#more_news").attr("disabled",true); // Disable the button, temp.
 		$.post(ajaxUrl,{action:"more_news_ajax",
             offset: (page * post_per_page) + 1,
 			ppp: post_per_page,
@@ -115,8 +115,8 @@
 			 function(data){
 				 page++;
 				 $(".projects-list").append(data);
-				 $("#loading-indicator").toggle();
-				 $("#more_news").attr("disabled",false);
+				 // $("#loading-indicator").toggle();
+				 // $("#more_news").attr("disabled",false);
   			});
     });
     $("#news-type li").on("click",function(){
@@ -145,7 +145,7 @@
 			},
 			 function(data){
 				 $("#projects-container").html(data);
-				 $("#loading-indicator").toggle();
+				 // $("#loading-indicator").toggle();
 				 //$("#more_posts").attr("disabled",false);
 				});
 	 });

@@ -7,7 +7,7 @@ Description: Template for displaying projects.
 get_header('division');
 ?>
 
-<div class="row m-0 p-0 mt-3 mb-5">
+<div class="row m-0 p-0 mt-0 mb-5">
 	<div class="container m-auto p-0">
 			<div class="col-2 float-right bread-cumb mb-1">
 				<ul class="list-inline float-right" id="place-filter">
@@ -75,6 +75,7 @@ wp_reset_query();
 					<div class="row">
 							<div class="col m-auto text-center">
 								<!-- <a href="#" class="float-left">More -->
+									<i class="fas fa-spinner fa-spin" id="loading-indicator" style="display:none;"></i>
 								<a id="more_posts" data-post-type="projects" data-posts-per-page="1" data-status-project="ongoing">More<img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/arrow-down.png" /> </a>
 							</div>
 					</div>

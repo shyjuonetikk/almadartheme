@@ -8,7 +8,7 @@
 	get_header('division');
 ?>
 
-<div class="row m-0 p-0 mt-3 mb-5">
+<div class="row m-0 p-0 mt-0 mb-5">
 	<div class="container m-auto p-0">
 			<div class="col-4 float-right bread-cumb mb-1">
 				<ul class="list-inline float-right" id="news-place-filter">
@@ -58,26 +58,28 @@
 							$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
 					?>
 
-						<div class="col-12 col-md-6 mb-3 pl-0">
+						<div class="col-12 col-md-6 mb-3 px-4">
 							<div class="card border-0 rounded-0 w-100">
 								<div class="image-container">
-							  		<img class="card-img-top image news-card-image" src="<?php echo $featured_img_url;?>" alt="<?php echo $post_title; ?>">
+							  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url; ?>" alt="<?php echo $post_title; ?>">
 							  		<div class="overlay"></div>
 							  	</div>
 							  <div class="card-body border-0 rounded-0 pl-0 ml-0">
 							    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
 							    <p class="card-text fs-12 purple-color"><?php echo $post_content; ?></p>
-							    <span class="purple-color float-left fs-12"><?php echo get_the_date();?> </span>
+							    <span class="purple-color float-left fs-12"><?php echo get_the_date(); ?> </span>
 							    <a href="<?php echo $post_url; ?>" class="float-right fs-12">Read More</a>
 							  </div>
 							</div>
 						</div>
 						<?php } wp_reset_query(); ?>
 					</div>
-							<div class="col m-auto text-center">
+							<div class="row">
+								<div class="col m-auto text-center">
 								<!-- <a href="#" class="float-left">More -->
-								<i class="fas fa-spinner fa-spin" id="loading-indicator" style="display:none;"></i>
-								<a id="more_news" data-post-type="almadarnews" data-posts-per-page="1" data-news-type="realestate"><img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/more-button.png" /> </a>
+									<i class="fas fa-spinner fa-spin" id="loading-indicator" style="display:none;"></i>
+									<a id="more_news" data-post-type="almadarnews" data-posts-per-page="1" data-news-type="realestate">More<img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/arrow-down.png" /> </a>
+								</div>
 							</div>
 					</div>
 				</div>

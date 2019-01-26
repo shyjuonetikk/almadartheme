@@ -1070,6 +1070,15 @@ a#more_posts > img {
     margin: 8px auto;
     height: 1.5rem;
 }
+a#more_news {
+    color: #6bc4e8;
+    text-decoration: underline;
+}
+a#more_news > img {
+    display: block;
+    margin: 8px auto;
+    height: 1.5rem;
+}
 .para-limit {
     height: 3.5rem;
     overflow: hidden;
