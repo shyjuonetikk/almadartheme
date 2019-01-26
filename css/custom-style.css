@@ -41,7 +41,7 @@ body{
 	color: #6bc4e9;
 	border-bottom: 2px solid #6bc4e9;
 }
-
+.menu
 .menu-custom-pro{
 	/*background: #fff !important;
 	webkit-box-shadow: 0px 6px 23px -11px rgba(0,0,0,0.75);
@@ -53,7 +53,7 @@ body{
   transition: .2s;
 }
 .menu-custom ul{
-	margin-left: 15px;
+	/*margin-left: 15px;*/
 }
 .menu-custom a{
 	color: #22115c;

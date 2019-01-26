@@ -22,54 +22,18 @@ $container = get_theme_mod('understrap_container_type');
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/custom-style.css" >
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
 </head>
 
 <body <?php body_class();?>>
 
 <div class="site" id="page">
-<div class="contact-pop-up">
-	<div class="row m-0">
-		<div class="col-lg-6 col-md-1 col-sm-1 col-1 m-0" id="contact-left"></div>
-		<div class="col-lg-6 col-md-10 col-sm-10 col-10 m-0 contact-popup-back p-5">
-			<h1 class="prmy-font font-weight-bold mb-4">GET IN TOUCH</h1>
-			<p class="fs-12 pb-3">For inquiries and feedback, please fill out the form below.</p>
-			<form class="w-75" id="contact-form">
-			  <div class="form-row">
-			    <div class="form-group col-md-6">
-			      <label for="inputName" class="prmy-font">NAME</label>
-			      <input type="text" class="form-control border-0 rounded-0" id="inputName">
-			    </div>
-			    <div class="form-group col-md-6">
-			      <label for="inputCompany">COMPANY</label>
-			      <input type="text" class="form-control border-0 rounded-0" id="inputCompany">
-			    </div>
-			  </div>
-			  <div class="form-row">
-			    <div class="form-group col-md-6">
-			      <label for="inputEmail" class="prmy-font">EMAIL</label>
-			      <input type="email" class="form-control" id="inputEmail">
-			    </div>
-			    <div class="form-group col-md-6">
-			      <label for="inputSubject" class="prmy-font">SUBJECT</label>
-			      <input type="text" class="form-control border-0 rounded-0" id="inputSubject">
-			    </div>
-			  </div>
-			  <div class="form-group">
-			    <label for="inputAddress" class="prmy-font">YOUR MESSAGE</label>
-			    <textarea class="form-control border-0 rounded-0" id="inputAddress"></textarea>
-			  </div>
-			  <button type="submit" class="btn contact-btn float-right">SUBMIT</button>
-			</form>
-		</div>
-	</div>
-</div>
+
 	<!-- ******************* The Navbar Area ******************* -->
-
-	<div id="wrapper-navbar">
-
+	<div id="wrapper-navbar" class="header-about" style="background: url('<?php the_field('divisions_header_image'); ?>') no-repeat; background-size: cover;">
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e('Skip to content', 'understrap');?></a>
 
-		<nav class="navbar navbar-expand-md menu-custom" id="divisionHeader">
+		<nav class="navbar navbar-expand-md menu-new" id="myHeader">
 
 		<?php if ('container' == $container): ?>
 			<div class="container" >
@@ -84,7 +48,6 @@ $container = get_theme_mod('understrap_container_type');
 							</a>
 
 						<?php else: ?>
-
 							<a href="<?php echo esc_url(home_url('/')); ?>">
 								<img class="almadar_logo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" />
 							</a>
@@ -121,7 +84,7 @@ $container = get_theme_mod('understrap_container_type');
 				</a>
 				<a href="#" class="social-media">
 					<!-- <img src="<?php echo get_template_directory_uri(); ?>/img/iconfinder-icon.svg" /> -->
-					<i class="fab fa-twitter fs-22 sm-icon-tw-new pa-5 w-24"></i>
+					<i class="fab fa-twitter fs-22 sm-icon-tw pa-5 w-24"></i>
 				</a>
 				<a href="#" class="social-media">
 					<!-- <img src="<?php echo get_template_directory_uri(); ?>/img/linkedin_blue.svg" class="social-media" />  -->
@@ -131,4 +94,12 @@ $container = get_theme_mod('understrap_container_type');
 			<?php endif;?>
 
 		</nav><!-- .site-navigation -->
+		<div class="col-md-8 mx-auto">
+			<div class="about-page">
+				<div class="container">
+					<h1 class="slider-heading display-4 mb-3 px-3 prmy-font text-white"><?php the_title(); ?></h1>
+				</div>
+			</div>
+		</div>
 	</div><!-- #wrapper-navbar end -->
+
