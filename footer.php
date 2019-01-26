@@ -42,10 +42,6 @@
 
 	var ajaxUrl = "<?php echo admin_url('admin-ajax.php') ?>";
     var page = 1; // What page we are on.
-
-
-    // Projects ajax start
-
 	$("#more_posts").on("click",function(){
 		 // When btn is pressed.
 		var place = $("#place").val();
@@ -68,7 +64,6 @@
 				 $("#more_posts").attr("disabled",false);
   			});
    });
-
 	$("#status-list li").on("click",function(){
 			var post_type = $(this).data('post_type');
 			var post_per_page = $(this).data('posts_per_page');
@@ -99,12 +94,62 @@
 			 function(data){
 				 $("#projects-container").html(data);
 				 $("#loading-indicator").toggle();
+				});
+	 });
+
+	$("#more_news").on("click",function(){
+		 // When btn is pressed.
+		var place = $("#place").val();
+		var post_type = $(this).data('post-type');
+		var post_per_page = $(this).data('posts-per-page');
+		var news_type = $(this).data('news-type');
+		$("#loading-indicator").toggle();
+        $("#more_news").attr("disabled",true); // Disable the button, temp.
+		$.post(ajaxUrl,{action:"more_news_ajax",
+            offset: (page * post_per_page) + 1,
+			ppp: post_per_page,
+			postype: post_type,
+			news_type: news_type,
+			place: place
+		},
+			 function(data){
+				 page++;
+				 $(".projects-list").append(data);
+				 $("#loading-indicator").toggle();
+				 $("#more_news").attr("disabled",false);
+  			});
+    });
+    $("#news-type li").on("click",function(){
+			var post_type = $(this).data('post_type');
+			var post_per_page = $(this).data('posts_per_page');
+			var news_type = $(this).data('news_type');
+			var place = $("#place").val();
+			$(this).toggleClass('font-weight-bold').siblings().removeClass('font-weight-bold');
+			
+			$.post(ajaxUrl,{action:"load_news_by_type",
+				ppp: post_per_page,
+				posttype: post_type,
+				news_type: news_type,
+				place: place
+			},
+			function(data){
+				$("#projects-list").html(data);
+			});
+	   });
+    $("#news-place-filter li").on("click",function(){
+		var place = $(this).data('place');
+		$(this).toggleClass('font-weight-bold').siblings().removeClass('font-weight-bold');
+		$("#place").val(place);
+		$.post(ajaxUrl,{action:"news_filter_country",
+				place: place
+			},
+			 function(data){
+				 $("#projects-container").html(data);
+				 $("#loading-indicator").toggle();
 				 //$("#more_posts").attr("disabled",false);
 				});
 	 });
 
-	// Projects ajax ends
-	
 	});
 
 </script>
