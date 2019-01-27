@@ -678,6 +678,7 @@ footer ul li a:hover{
 }
 .contact-list li{
 	color: #909090;
+  font-weight: 500 !important;
 }
 .contact-list li a.telephone{
   color: #909090;
