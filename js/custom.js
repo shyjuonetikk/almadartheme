@@ -104,7 +104,7 @@ $( document ).ready(function(){
 	});
 	$("#terms-tab").click(function(e){
 		e.preventDefault();
-		$(this).addClass('disc-active');
+		showTerms();
 		
 	});
 	$("#privacy-tab").click(function(e){
