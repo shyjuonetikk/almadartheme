@@ -454,7 +454,7 @@ footer ul li a:hover{
 .divi-main .card-img-top{
 	border-radius: 0px !important;
 	width: 100% !important;
-	min-height: 300px !important;
+	height: 300px !important;
 }
 .card-holder h5{
 	font-size: .85rem !important;
