@@ -33,7 +33,7 @@ $container = get_theme_mod('understrap_container_type');
 	<div id="wrapper-navbar">
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e('Skip to content', 'understrap');?></a>
-
+	<div id="header-box">
 		<nav class="navbar navbar-expand-md menu-custom-pro menu-custom" id="divisionHeader">
 
 		<?php if ('container' == $container): ?>
@@ -96,4 +96,5 @@ $container = get_theme_mod('understrap_container_type');
 			<?php endif;?>
 
 		</nav><!-- .site-navigation -->
+	</div>
 	</div><!-- #wrapper-navbar end -->
