@@ -174,7 +174,7 @@ while ($query->have_posts()) {
 				</div>
 				<div class="col-12 col-sm-8 col-md-7 float-left mr-0 text-center text-sm-left">
 					<h6 class="p-0 m-0 mb-2 purple-color prmy-font"><?php echo $post_title; ?></h6>
-					<p class="mb-4 purple-color para-limit"><?php echo $content ?></p>
+					<p class="mb-4 purple-color para-limit"><?php echo $content; ?></p>
 					<p>
 						<span class="float-left purple-color fs-10 sc-font"><?php echo $post_date; ?></span>
 						<a href="<?php echo get_the_permalink(); ?>" class="float-right fs-10 second-color prmy-font">Read More</a>
