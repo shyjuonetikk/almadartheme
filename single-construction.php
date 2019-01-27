@@ -2,10 +2,10 @@
 
 /**
 
-Template Name: Al Madar Real Estate Page
-Description: Template for Real Estate page
+Template Name: Al Madar construction Page
+Description: Template for construction page
 
- */
+*/
 get_header('posts');
 ?>
 <div class="col-lg-9 mx-auto px-3 mb-5">
