@@ -58,8 +58,8 @@
 		var post_type = $(this).data('post-type');
 		var post_per_page = $(this).data('posts-per-page');
 		var status_project = $(this).data('status-project');
+		$("#more_posts").hide();
 		$("#loading-indicator").toggle();
-        $("#more_posts").attr("disabled",true); // Disable the button, temp.
 		$.post(ajaxUrl,{action:"more_post_ajax",
             offset: (page * post_per_page) + 1,
 			ppp: post_per_page,
@@ -68,10 +68,16 @@
 			place: place
 		},
 			 function(data){
-				 page++;
-				 $(".projects-list").append(data);
-				 $("#loading-indicator").toggle();
-				 $("#more_posts").attr("disabled",false);
+			 	if(data == ''){
+			 		$("#loading-indicator").toggle();
+			 		$("#more_posts").hide();
+			 	}
+			 	else{
+				 	 page++;
+					 $(".projects-list").append(data);
+					 $("#loading-indicator").toggle();
+					 $("#more_posts").show();
+			 	}
   			});
    });
 	$("#status-list li").on("click",function(){
@@ -103,7 +109,7 @@
 			},
 			 function(data){
 				 $("#projects-container").html(data);
-				 $("#loading-indicator").toggle();
+				 $("#loading-indicator").hide();
 				});
 	 });
 

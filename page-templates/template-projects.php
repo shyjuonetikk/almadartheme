@@ -45,7 +45,7 @@ get_header('division');
 							),
 							'posts_per_page' => 2,
 						));
-
+						if($query->have_posts()){
 						while ($query->have_posts()) {
 							$query->the_post();
 							$post_id = get_the_ID();
@@ -68,9 +68,7 @@ get_header('division');
 							  </div>
 							</div>
 						</div>
-						<?php	}
-wp_reset_query();
-?>
+						<?php	} wp_reset_query(); } else { echo "Projects will add soon.."; } ?>
 					</div>
 					<div class="row">
 							<div class="col m-auto text-center">
