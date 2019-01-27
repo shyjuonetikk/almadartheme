@@ -68,7 +68,7 @@ get_header('division');
 							  </div>
 							</div>
 						</div>
-						<?php	} wp_reset_query(); } else { echo "Projects will add soon.."; } ?>
+						<?php	} wp_reset_query(); } else { echo "<div class='row w-100 pt-4'><h4 class='purple-color m-auto'> No projects found.. </h4></div>"; } ?>
 					</div>
 					<div class="row">
 							<div class="col m-auto text-center">
