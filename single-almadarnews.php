@@ -1,14 +1,11 @@
 <?php
+
 /**
- * The template for displaying all single posts.
- *
- * @package understrap
+
+Template Name: Al Madar Real Estate Page
+Description: Template for Real Estate page
+
  */
-
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
-
 get_header('posts');
 ?>
 <div class="col-lg-9 mx-auto px-3 mb-5">
@@ -22,6 +19,7 @@ get_header('posts');
 						$post_id = get_the_ID();
 						$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
 				?>
+				
 			</div>
 			<div class="col-lg-6 col-md-12 col-sm-12 col-12">
 				<img class="img-fluid float-left float-md-left float-lg-right w-75" src="<?php echo $featured_img_url; ?>" />
@@ -29,14 +27,14 @@ get_header('posts');
 		<?php endwhile; ?>
 		</div>
 		<div class="container text-center">
-			<img class="img-fluid project-head mb-5" src="<?php echo get_template_directory_uri(); ?>/img/projectsheading.png" />
+			<h2 class="text-center purple-color mb-3"> Latest News</h2>
 		</div>
 		<div class="container pl-5 pr-5">
 			<div class="col-12 col-lg-12 pl-4 pr-0 mx-auto" id="projects-list">
 					<div class="row m-0 projects-list">
 					<?php
 						$query = new WP_Query(array(
-							'post_type' => array('projects'),
+							'post_type' => array('almadarnews'),
 							'post_status' => 'publish',
 							'posts_per_page' => 2,
 						));

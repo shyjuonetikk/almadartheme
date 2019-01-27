@@ -94,7 +94,7 @@ $container = get_theme_mod('understrap_container_type');
 			<?php endif;?>
 
 		</nav><!-- .site-navigation -->
-		<div class="col-md-8 mx-auto">
+		<div class="col-md-9 mx-auto">
 			<div class="about-page">
 				<div class="container">
 					<h1 class="slider-heading display-4 mb-3 p-4 prmy-font text-white text-center"><?php the_title(); ?></h1>

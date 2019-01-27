@@ -116,7 +116,7 @@ while ($query->have_posts()) {
 								<p class="mb-4 purple-color para-limit"><?php echo $content ?></p>
 								<p>
 									<span class="float-left purple-color fs-10 sc-font"><?php echo $post_date; ?></span>
-									<a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
+									<a href="<?php echo get_the_permalink(); ?>" class="float-right fs-10 second-color prmy-font">Read More</a>
 								</p>
 							</div>
 						</div>
@@ -137,6 +137,8 @@ wp_reset_query();
 <?php
 $query = new WP_Query(array(
 	'post_type' => array('projects'),
+	'meta_key' => 'status',
+	'meta_value' => 'completed',
 ));
 
 while ($query->have_posts()) {
@@ -175,7 +177,7 @@ while ($query->have_posts()) {
 					<p class="mb-4 purple-color para-limit"><?php echo $content ?></p>
 					<p>
 						<span class="float-left purple-color fs-10 sc-font"><?php echo $post_date; ?></span>
-						<a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
+						<a href="<?php echo get_the_permalink(); ?>" class="float-right fs-10 second-color prmy-font">Read More</a>
 					</p>
 				</div>
 			</div>
@@ -198,6 +200,8 @@ wp_reset_query();
 $query = new WP_Query(array(
 	'post_type' => array('projects'),
 	'post_status' => 'publish',
+	'meta_key' => 'status',
+	'meta_value' => 'ongoing',
 ));
 
 while ($query->have_posts()) {
@@ -237,7 +241,7 @@ while ($query->have_posts()) {
 					<p class="mb-4 purple-color para-limit"><?php echo $content; ?></p>
 					<p>
 						<span class="float-left purple-color fs-10 sc-font"><?php echo $post_date; ?></span>
-						<a href="#" class="float-right fs-10 second-color prmy-font">Read More</a>
+						<a href="<?php echo get_the_permalink(); ?>" class="float-right fs-10 second-color prmy-font">Read More</a>
 					</p>
 				</div>
 			</div>

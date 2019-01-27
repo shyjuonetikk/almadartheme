@@ -16,6 +16,7 @@ get_header('posts');
 		<div class="row p-5">
 			<div class="col-lg-6 col-md-12 col-sm-12 col-12 purple-color fs-12 lh-paragraph">
 				<?php
+					$status = get_field('status');
 					while ( have_posts() ) : the_post();
 						the_content();
 						$title = get_the_title();
@@ -38,6 +39,8 @@ get_header('posts');
 						$query = new WP_Query(array(
 							'post_type' => array('projects'),
 							'post_status' => 'publish',
+							'meta_key' => 'status',
+							'meta_value' => $status,
 							'posts_per_page' => 2,
 						));
 
