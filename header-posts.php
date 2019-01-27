@@ -28,7 +28,6 @@ $container = get_theme_mod('understrap_container_type');
 <body <?php body_class();?>>
 
 <div class="site" id="page">
-
 	<!-- ******************* The Navbar Area ******************* -->
 	<div id="wrapper-navbar" class="header-about" style="background: url('<?php the_field('divisions_header_image'); ?>') no-repeat; background-size: cover;">
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e('Skip to content', 'understrap');?></a>
@@ -94,7 +93,7 @@ $container = get_theme_mod('understrap_container_type');
 			<?php endif;?>
 
 		</nav><!-- .site-navigation -->
-		<div class="col-md-8 mx-auto">
+		<div class="col-md-9 mx-auto">
 			<div class="about-page">
 				<div class="container">
 					<h1 class="slider-heading display-4 mb-3 p-4 prmy-font text-white text-center"><?php the_title(); ?></h1>

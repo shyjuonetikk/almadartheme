@@ -615,3 +615,10 @@ function news_filter_country()
 
 add_action('wp_ajax_nopriv_news_filter_country', 'news_filter_country');
 add_action('wp_ajax_news_filter_country', 'news_filter_country');
+function menu_id_page($item, $args)
+{
+  $page = get_post($args->object_id);
+  $item = $page->post_name;
+  return $item;
+}
+add_filter('nav_menu_item_id', 'menu_id_page', 10, 2);

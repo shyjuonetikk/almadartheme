@@ -36,10 +36,20 @@
 
 <?php wp_footer();?>
 <script  src="https://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="  crossorigin="anonymous"></script>
-
+<?php
+	if (is_singular(['realestate','construction','entertainment'])) {
+		echo "
+			<script type='text/javascript'>
+				$( document ).ready(function(){
+					$('#divisions').addClass('current_page_item active');
+				});
+			</script>
+			";
+	}
+?>
 <script type="text/javascript">
 	$( document ).ready(function(){
-
+	$('a').removeAttr('title');
 	var ajaxUrl = "<?php echo admin_url('admin-ajax.php') ?>";
     var page = 1; // What page we are on.
 	$("#more_posts").on("click",function(){

@@ -63,10 +63,7 @@ get_header('division');
 			<div class="row">
 				<div class="col mt-5 ml-5 pt-5">
 					<h1 class="text-white pt-5 pl-5 pr-5 prmy-font font-weight-bold">Real Estate</h1>
-					<p class="text-white  pl-5 pr-5 pb-3 w-75 my-4 divi-content">Proin congue purus at metus laoreet,
-						vitae tempor dui pulvinar. Mauris eu
-						ante facilisis, hendrerit enim ut, ornare
-						sem.</p>
+					<p class="text-white  pl-5 pr-5 pb-3 w-75 my-4 divi-content"><?php the_field('real_estate_intro');?></p>
 					<!-- <a id="real-back" class="second-color pl-5 pr-5 pb-3" href="#">back</a> -->
 					<a id="real-back" class="second-color pl-5 pr-5 pb-3" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/left-arrow.png">Back</a>
 				</div>
@@ -77,29 +74,29 @@ get_header('division');
 		<div class="real-right-overlay">
 				<ul class="list-inline text-white reallists mt-5 pt-5">
 					<?php
-$query = new WP_Query(array(
-	'post_type' => array('realestate'),
-	'post_status' => 'publish',
-	'order' => 'ASC',
-));
-while ($query->have_posts()) {
-	$query->the_post();
-	$post_id = get_the_ID();
-	$post_title = get_the_title();
-	$post_content = get_the_excerpt();
-	$post_url = get_the_permalink();
-	$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
-	?>
-				  <a href="<?php echo $post_url; ?>"><li class="media pl-7">
-				    <!-- <img class="plus-sign" src="<?php echo get_template_directory_uri(); ?>/img/plus-sign.png" /> -->
-				    <img class="plus-sign" src="<?php echo get_template_directory_uri(); ?>/img/plus-sign.png" />
-				    <div class="media-body">
-				      <h5 class="mt-0 mb-1"><?php echo $post_title; ?></h5>
-				    </div>
-				  </li>
-				</a>
+						$query = new WP_Query(array(
+							'post_type' => array('realestate'),
+							'post_status' => 'publish',
+							'order' => 'ASC',
+						));
+						while ($query->have_posts()) {
+							$query->the_post();
+							$post_id = get_the_ID();
+							$post_title = get_the_title();
+							$post_content = get_the_excerpt();
+							$post_url = get_the_permalink();
+							$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
+					?>
+				  <a href="<?php echo $post_url; ?>">
+				  	<li class="media pl-7">
+					    <img class="plus-sign" src="<?php echo get_template_directory_uri(); ?>/img/plus-sign.png" />
+					    <div class="media-body">
+					      <h5 class="mt-0 mb-1"><?php echo $post_title; ?></h5>
+					    </div>
+				  	</li>
+				  </a>
 				<?php	}
-wp_reset_query();?>
+					wp_reset_query();?>
 				</ul>
 		</div>
 	</div>
@@ -111,8 +108,8 @@ wp_reset_query();?>
 		<div class="real-left-overlay">
 			<div class="row">
 				<div class="col mt-5 ml-5 pt-5">
-					<h1 class="text-white pt-5 pl-5 pr-5">Construction</h1>
-					<p class="text-white pl-5 pr-5 pb-3 w-75 divi-content">Proin congue purus at metus laoreet,	vitae tempor dui pulvinar. Mauris eu ante facilisis, hendrerit enim ut, ornare sem.</p>
+					<h1 class="text-white pt-5 pl-5 pr-5 prmy-font font-weight-bold">Construction</h1>
+					<p class="text-white  pl-5 pr-5 pb-3 w-75 my-4 divi-content"><?php the_field('construction_intro');?></p>
 					<a id="const-back" class="second-color pl-5 pr-5 pb-3" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/left-arrow.png">Back</a>
 				</div>
 			</div>
@@ -121,36 +118,29 @@ wp_reset_query();?>
 	<div class="col-lg-6 col-md-12 p-5 reallists-box">
 		<div class="real-right-overlay">
 				<ul class="list-inline text-white reallists mt-5 pt-5">
-				  <li class="media pl-7">
-				    <img class="plus-sign" src="<?php echo get_template_directory_uri(); ?>/img/plus-sign.png" />
-				    <div class="media-body">
-				      <h5 class="mt-0 mb-1">Al Madar Contracting</h5>
-				    </div>
-				  </li>
-				  <li class="media pl-7">
-				    <img class="plus-sign" src="<?php echo get_template_directory_uri(); ?>/img/plus-sign.png" />
-				    <div class="media-body">
-				      <h5 class="mt-0 mb-1">Al Madar Engineering & Transportation</h5>
-				    </div>
-				  </li>
-				  <li class="media pl-7">
-				    <img class="plus-sign" src="<?php echo get_template_directory_uri(); ?>/img/plus-sign.png" />
-				    <div class="media-body">
-				      <h5 class="mt-0 mb-1">Al Madar Scala Engineering</h5>
-				    </div>
-				  </li>
-				  <li class="media pl-7">
-				    <img class="plus-sign" src="<?php echo get_template_directory_uri(); ?>/img/plus-sign.png" />
-				    <div class="media-body">
-				      <h5 class="mt-0 mb-1">Al Madar Wrough Iron</h5>
-				    </div>
-				  </li>
-				  <li class="media pl-7">
-				    <img class="plus-sign" src="<?php echo get_template_directory_uri(); ?>/img/plus-sign.png" />
-				    <div class="media-body">
-				      <h5 class="mt-0 mb-1">Al Madar Carpentry</h5>
-				    </div>
-				  </li>
+					<?php
+						$query = new WP_Query(array(
+							'post_type' => array('construction'),
+							'post_status' => 'publish',
+							'order' => 'ASC',
+						));
+						while ($query->have_posts()) {
+							$query->the_post();
+							$post_id = get_the_ID();
+							$post_title = get_the_title();
+							$post_content = get_the_excerpt();
+							$post_url = get_the_permalink();
+							$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
+					?>
+						<a href="<?php echo $post_url; ?>">
+						  	<li class="media pl-7">
+							    <img class="plus-sign" src="<?php echo get_template_directory_uri(); ?>/img/plus-sign.png" />
+							    <div class="media-body">
+							      <h5 class="mt-0 mb-1"><?php echo $post_title; ?></h5>
+							    </div>
+						  	</li>
+					    </a>
+					<?php	} wp_reset_query();?>
 				</ul>
 		</div>
 	</div>
@@ -162,7 +152,7 @@ wp_reset_query();?>
 			<div class="row">
 				<div class="col mt-5 ml-5 pt-5">
 					<h1 class="text-white pt-5 pl-5 pr-5">Entertainment</h1>
-					<p class="text-white  pl-5 pr-5 pb-3 w-75 my-4 divi-content">Proin congue purus at metus laoreet,	vitae tempor dui pulvinar. Mauris eu ante facilisis, hendrerit enim ut, ornare sem.</p>
+					<p class="text-white  pl-5 pr-5 pb-3 w-75 my-4 divi-content"><?php the_field('entertainment_intro');?></p>
 					<a id="ent-back" class="second-color pl-5 pr-5 pb-3" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/left-arrow.png">Back</a>
 				</div>
 			</div>
@@ -171,24 +161,29 @@ wp_reset_query();?>
 	<div class="col-lg-6 col-md-12 p-5 reallists-box">
 		<div class="real-right-overlay">
 				<ul class="list-inline text-white reallists mt-5 pt-5">
-					<li class="media pl-7">
-						<img class="plus-sign" src="<?php echo get_template_directory_uri(); ?>/img/plus-sign.png" />
-						<div class="media-body">
-							<h5 class="mt-0 mb-1">Al Madar Scala Entertainment</h5>
-						</div>
-					</li>
-					<li class="media pl-7">
-						<img class="plus-sign" src="<?php echo get_template_directory_uri(); ?>/img/plus-sign.png" />
-						<div class="media-body">
-							<h5 class="mt-0 mb-1">Al Madar Computer Training Center</h5>
-						</div>
-					</li>
-					<li class="media pl-7">
-						<img class="plus-sign" src="<?php echo get_template_directory_uri(); ?>/img/plus-sign.png" />
-						<div class="media-body">
-							<h5 class="mt-0 mb-1">Al Madar Tourism</h5>
-						</div>
-					</li>
+					<?php
+						$query = new WP_Query(array(
+							'post_type' => array('entertainment'),
+							'post_status' => 'publish',
+							'order' => 'ASC',
+						));
+						while ($query->have_posts()) {
+							$query->the_post();
+							$post_id = get_the_ID();
+							$post_title = get_the_title();
+							$post_content = get_the_excerpt();
+							$post_url = get_the_permalink();
+							$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
+					?>
+						<a href="<?php echo $post_url; ?>">
+						  	<li class="media pl-7">
+							    <img class="plus-sign" src="<?php echo get_template_directory_uri(); ?>/img/plus-sign.png" />
+							    <div class="media-body">
+							      <h5 class="mt-0 mb-1"><?php echo $post_title; ?></h5>
+							    </div>
+						  	</li>
+					    </a>
+					<?php	} wp_reset_query();?>
 				</ul>
 		</div>
 	</div>
