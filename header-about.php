@@ -65,18 +65,18 @@ $container = get_theme_mod('understrap_container_type');
 
 				<!-- The WordPress Menu goes here -->
 				<?php wp_nav_menu(
-	array(
-		'theme_location' => 'primary',
-		'container_class' => 'collapse navbar-collapse',
-		'container_id' => 'navbarNavDropdown',
-		'menu_class' => 'navbar-nav',
-		'fallback_cb' => '',
-		'menu_id' => 'main-menu',
-		'depth' => 2,
-		'walker' => new Understrap_WP_Bootstrap_Navwalker(),
-	)
-);
-?>
+					array(
+						'theme_location' => 'primary',
+						'container_class' => 'collapse navbar-collapse',
+						'container_id' => 'navbarNavDropdown',
+						'menu_class' => 'navbar-nav',
+						'fallback_cb' => '',
+						'menu_id' => 'main-menu',
+						'depth' => 2,
+						'walker' => new Understrap_WP_Bootstrap_Navwalker(),
+					)
+				);
+				?>
 			<?php if ('container' == $container): ?>
 				<a href="#" class="social-media">
 					<!-- <img src="<?php echo get_template_directory_uri(); ?>/img/facebook.svg" class="social-media" /> -->
@@ -97,7 +97,7 @@ $container = get_theme_mod('understrap_container_type');
 		<div class="col-md-8 mx-auto">
 			<div class="about-page">
 				<div class="container">
-					<h1 class="slider-heading display-4 mb-3 px-3 prmy-font text-white"><?php the_title(); ?></h1>
+					<h1 class="slider-heading display-4 mb-3  prmy-font text-white"><?php the_title(); ?></h1>
 				</div>
 			</div>
 		</div>

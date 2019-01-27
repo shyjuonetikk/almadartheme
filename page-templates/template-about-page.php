@@ -5,7 +5,7 @@
 get_header('about');
 ?>
 <div class="about-page col-lg-8 mx-auto">
-	<div class="col-xl-12 float-left">
+	<div class="col-xl-12 float-left m-0 p-0">
 		<div class="container">
 			<div id="msg-chairman" class="col-xl-12 p-0 float-left shadow">
 				<div class="col-12 m-0 p-0 text-center text-white about-bg mb-4">
