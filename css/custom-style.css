@@ -47,7 +47,7 @@ body{
 	color: #6bc4e9;
 	border-bottom: 2px solid #6bc4e9;
 }
-.menu
+
 .menu-custom-pro{
 	/*background: #fff !important;
 	webkit-box-shadow: 0px 6px 23px -11px rgba(0,0,0,0.75);
@@ -454,7 +454,7 @@ footer ul li a:hover{
 .divi-main .card-img-top{
 	border-radius: 0px !important;
 	width: 100% !important;
-	min-height: 300px !important;
+	height: 300px !important;
 }
 .card-holder h5{
 	font-size: .85rem !important;
@@ -678,6 +678,7 @@ footer ul li a:hover{
 }
 .contact-list li{
 	color: #909090;
+  font-weight: 500 !important;
 }
 .contact-list li a.telephone{
   color: #909090;

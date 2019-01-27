@@ -13,7 +13,29 @@ get_header('posts');
 ?>
 <div class="col-lg-9 mx-auto px-3 mb-5">
 	<div class="container">
-		<div class="row p-5">
+		<div class="row m-0 p-0">
+			<div class="col-lg-6 col-md-6 col-sm-12 col-12 my-2">
+				<div class="real-image-container">
+					<img class="real-image" src="<?php echo get_template_directory_uri(); ?>/img/almadarrealestate2.png" />
+					<div class="real-overlay">
+						<div class="real-title prmy-font">WHAT WE DO<div class="clear-fix"></div>
+							<img class="pt-3" src="<?php echo get_template_directory_uri(); ?>/img/down-arrow-white.png" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-12 col-12 my-2">
+				<div class="real-image-container prmy-font">
+					<img class="real-image" src="<?php echo get_template_directory_uri(); ?>/img/almadarrealestate1.png" />
+					<div class="real-overlay">
+						<div class="real-title">OUR PROJECTS<div class="clear-fix"></div>
+						<img class="pt-3" src="<?php echo get_template_directory_uri(); ?>/img/down-arrow-white.png" />
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row mt-5 p-5">
 			<div class="col-lg-6 col-md-12 col-sm-12 col-12 purple-color fs-12 lh-paragraph">
 				<?php
 					$status = get_field('status');
