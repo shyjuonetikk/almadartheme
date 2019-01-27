@@ -120,7 +120,7 @@ $container = get_theme_mod('understrap_container_type');
 	<div id="wrapper-navbar" class="header-career" style="background: url('<?php the_field('header_image');?>') no-repeat; background-size: 100% 100%;">
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e('Skip to content', 'understrap');?></a>
-
+	<div id="header-box">
 		<nav class="navbar navbar-expand-md menu-new" id="myHeader">
 
 		<?php if ('container' == $container): ?>
@@ -185,6 +185,7 @@ $container = get_theme_mod('understrap_container_type');
 			<?php endif;?>
 
 		</nav><!-- .site-navigation -->
+	</div>
 		<div class="col-lg-8 mx-auto">
 			<div class="about-page">
 				<div class="container">

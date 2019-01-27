@@ -58,8 +58,8 @@
 		var post_type = $(this).data('post-type');
 		var post_per_page = $(this).data('posts-per-page');
 		var status_project = $(this).data('status-project');
+		$("#more_posts").hide();
 		$("#loading-indicator").toggle();
-        $("#more_posts").attr("disabled",true); // Disable the button, temp.
 		$.post(ajaxUrl,{action:"more_post_ajax",
             offset: (page * post_per_page) + 1,
 			ppp: post_per_page,
@@ -68,10 +68,16 @@
 			place: place
 		},
 			 function(data){
-				 page++;
-				 $(".projects-list").append(data);
-				 $("#loading-indicator").toggle();
-				 $("#more_posts").attr("disabled",false);
+			 	if(data == ''){
+			 		$("#loading-indicator").toggle();
+			 		$("#more_posts").hide();
+			 	}
+			 	else{
+				 	 page++;
+					 $(".projects-list").append(data);
+					 $("#loading-indicator").toggle();
+					 $("#more_posts").show();
+			 	}
   			});
    });
 	$("#status-list li").on("click",function(){
@@ -79,7 +85,6 @@
 			var post_per_page = $(this).data('posts_per_page');
 			var status = $(this).data('status_list');
 			var place = $("#place").val();
-			// $("#loading-indicator").toggle();
 			$(this).toggleClass('font-weight-bold').siblings().removeClass('font-weight-bold');
 			$.post(ajaxUrl,{action:"load_projects_status",
 				ppp: post_per_page,
@@ -89,8 +94,6 @@
 			},
 			 function(data){
 				 $("#projects-list").html(data);
-				 // $("#loading-indicator").toggle();
-				 //$("#more_posts").attr("disabled",false);
 				});
 	   });
 
@@ -103,7 +106,7 @@
 			},
 			 function(data){
 				 $("#projects-container").html(data);
-				 $("#loading-indicator").toggle();
+				 $("#loading-indicator").hide();
 				});
 	 });
 
@@ -113,8 +116,8 @@
 		var post_type = $(this).data('post-type');
 		var post_per_page = $(this).data('posts-per-page');
 		var news_type = $(this).data('news-type');
-		// $("#loading-indicator").toggle();
-        // $("#more_news").attr("disabled",true); // Disable the button, temp.
+		$("#more_news").hide();
+		$("#loading-indicator").toggle();
 		$.post(ajaxUrl,{action:"more_news_ajax",
             offset: (page * post_per_page) + 1,
 			ppp: post_per_page,
@@ -123,10 +126,16 @@
 			place: place
 		},
 			 function(data){
-				 page++;
-				 $(".projects-list").append(data);
-				 // $("#loading-indicator").toggle();
-				 // $("#more_news").attr("disabled",false);
+				 if(data == ''){
+			 		$("#loading-indicator").toggle();
+			 		$("#more_news").hide();
+			 	}
+			 	else{
+				 	 page++;
+					 $(".projects-list").append(data);
+					 $("#loading-indicator").toggle();
+					 $("#more_news").show();
+			 	}
   			});
     });
     $("#news-type li").on("click",function(){
@@ -135,7 +144,6 @@
 			var news_type = $(this).data('news_type');
 			var place = $("#place").val();
 			$(this).toggleClass('font-weight-bold').siblings().removeClass('font-weight-bold');
-			
 			$.post(ajaxUrl,{action:"load_news_by_type",
 				ppp: post_per_page,
 				posttype: post_type,
@@ -155,8 +163,7 @@
 			},
 			 function(data){
 				 $("#projects-container").html(data);
-				 // $("#loading-indicator").toggle();
-				 //$("#more_posts").attr("disabled",false);
+				 $("#loading-indicator").hide();
 				});
 	 });
 

@@ -15,17 +15,21 @@ get_header('posts');
 			<div class="col float-left mb-4">
 				<div class="thumbnail">
 				  <img src="<?php echo get_template_directory_uri();?>/img/almadarrealestate2.png" />
-				  	<div class="real_division_title pl-5 w-50">
-				  		<h6 class="p-0">DUBAI</h6>
-				    </div>
+				  	<a href="<?php the_field('dubai_link');?>" target="_blank">
+					  	<div class="real_division_title pl-5 w-50">
+					  		<h6 class="p-0">DUBAI</h6>
+					    </div>
+					</a>
 				</div>
 			</div>
 			<div class="col float-left mb-4">
 				<div class="thumbnail">
 				  <img src="<?php echo get_template_directory_uri();?>/img/almadarrealestate1.png" />
-				  	<div class="real_division_title pl-5 w-50">
-				  		<h6 class="p-0">GERMANY</h6>
-				    </div>
+				  	<a href="#">
+					  	<div class="real_division_title pl-5 w-50">
+					  		<h6 class="p-0">GERMANY</h6>
+					    </div>
+					</a>
 				</div>
 			</div>
 		</div>

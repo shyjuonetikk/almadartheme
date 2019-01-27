@@ -83,6 +83,8 @@ function more_post_ajax(){
 				'paged'=> $offset
 			));
 		}
+	if($query->have_posts()){
+
 	while ($query->have_posts()) {
 		$query->the_post();
 		$post_id = get_the_ID();
@@ -107,7 +109,10 @@ function more_post_ajax(){
 			</div>
 				<?php	}
 						wp_reset_query();
-						    exit; 
+						  }
+						  else{
+						  }
+						  exit;
 						}
 add_action('wp_ajax_nopriv_more_post_ajax', 'more_post_ajax');
 add_action('wp_ajax_more_post_ajax', 'more_post_ajax');
@@ -150,6 +155,7 @@ function load_projects_status(){
 				'posts_per_page'=> $ppp
 			));
 		}
+			if($query->have_posts()){
 			while ($query->have_posts()) {
 			    $query->the_post();
 			    $post_id = get_the_ID();
@@ -178,9 +184,10 @@ function load_projects_status(){
 	<div class="row">
 		<div class="col m-auto text-center">
 			<i class="fas fa-spinner fa-spin" id="loading-indicator" style="display:none;"></i>
-			<a id="more_posts" data-post-type="projects" data-posts-per-page="1" data-status-project="ongoing">More<img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/arrow-down.png" /> </a>
+			<a id="more_posts" data-post-type="projects" data-posts-per-page="1" data-status-project="<?php echo $status; ?>">More<img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/arrow-down.png" /> </a>
 		</div>
 	</div>
+<?php } else { echo "<div class='row w-100 pt-4'><h4 class='purple-color m-auto'> No projects found.. </h4></div>"; } ?>
 <script type="text/javascript">
 	$( document ).ready(function(){
 	var ajaxUrl = "<?php echo admin_url('admin-ajax.php')?>";
@@ -192,7 +199,8 @@ function load_projects_status(){
 		var post_type = $(this).data('post-type');
 		var post_per_page = $(this).data('posts-per-page');
 		var status_project = $(this).data('status-project');
-		// $("#loading-indicator").toggle();
+		$("#more_posts").hide();
+		$("#loading-indicator").toggle();
         // $("#more_posts").attr("disabled",true); // Disable the button, temp.
 		$.post(ajaxUrl,{action:"more_post_ajax",
             offset: (page * post_per_page) + 1,
@@ -202,10 +210,16 @@ function load_projects_status(){
 			place: place
 		},
 		 function(data){
-			 page++;
-			 $(".projects-list").append(data); 
-			 // $("#loading-indicator").toggle();
-			 // $("#more_posts").attr("disabled",false);
+			 if(data == ''){
+			 		$("#loading-indicator").toggle();
+			 		$("#more_posts").hide();
+			 	}
+			 	else{
+				 	 page++;
+					 $(".projects-list").append(data);
+					 $("#loading-indicator").toggle();
+					 $("#more_posts").show();
+			 	}
 			});
 
    });
@@ -250,7 +264,7 @@ function filter_country()
 				'posts_per_page'=> 2
 			));
 
-
+			if($query->have_posts()){
 			while ($query->have_posts()) {
 			    $query->the_post();
 			    $post_id = get_the_ID();
@@ -274,7 +288,7 @@ function filter_country()
 				</div>
 			</div>
 			<?php	}
-				wp_reset_query();
+				wp_reset_query(); 
 			?>
 		</div>
 		<div class="row">
@@ -283,6 +297,7 @@ function filter_country()
 				<a id="more_posts" data-post-type="projects" data-posts-per-page="1" data-status-project="ongoing">More<img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/arrow-down.png" /> </a>
 			</div>
 		</div>
+	<?php } else { echo "<div class='row w-100 pt-4'><h4 class='purple-color m-auto'> No projects found.. </h4></div>"; } ?>
 	</div>
 <script type="text/javascript">
 	$( document ).ready(function(){
@@ -290,14 +305,12 @@ function filter_country()
     var page = 1; // What page we are on.
 
 	$("#more_posts").on("click",function(){
-		 // When btn is pressed.
 		var place = $("#place").val();
 		var post_type = $(this).data('post-type');
 		var post_per_page = $(this).data('posts-per-page');
 		var status_project = $(this).data('status-project');
-		//alert(status_project);
-		// $("#loading-indicator").toggle();
-        $("#more_posts").attr("disabled",true); // Disable the button, temp.
+        $("#more_posts").hide();
+		$("#loading-indicator").toggle();
 		$.post(ajaxUrl,{action:"more_post_ajax",
             offset: (page * post_per_page) + 1,
 			ppp: post_per_page,
@@ -306,10 +319,16 @@ function filter_country()
 			place: place
 		},
 			 function(data){
-				 page++;
-				 $(".projects-list").append(data);
-				 $("#loading-indicator").toggle();
-				 $("#more_posts").attr("disabled",false);
+				 if(data == ''){
+			 		$("#loading-indicator").toggle();
+			 		$("#more_posts").hide();
+			 	}
+			 	else{
+				 	 page++;
+					 $(".projects-list").append(data);
+					 $("#loading-indicator").toggle();
+					 $("#more_posts").show();
+			 	}
   			});
    });
 
@@ -318,7 +337,6 @@ function filter_country()
 			var post_per_page = $(this).data('posts_per_page');
 			var status = $(this).data('status_list');
 			var place = $("#place").val();
-			// $("#loading-indicator").toggle();
 			$(this).toggleClass('font-weight-bold').siblings().removeClass('font-weight-bold');
 			$.post(ajaxUrl,{action:"load_projects_status",
 				ppp: post_per_page,
@@ -328,8 +346,6 @@ function filter_country()
 			},
 			 function(data){
 				 $("#projects-list").html(data);
-				 // $("#loading-indicator").toggle();
-				 //$("#more_posts").attr("disabled",false);
 				});
 	});
 });
@@ -374,6 +390,7 @@ function more_news_ajax(){
 			'paged'=> $offset
 		));
 	}
+if($query->have_posts()){
 while ($query->have_posts()) {
 	$query->the_post();
 	$post_id = get_the_ID();
@@ -397,7 +414,7 @@ while ($query->have_posts()) {
 	</div>
 </div>
 
-<?php	} wp_reset_query(); exit; }
+<?php	} wp_reset_query();} else{ } exit; }
 
 add_action('wp_ajax_nopriv_more_news_ajax', 'more_news_ajax');
 add_action('wp_ajax_more_news_ajax', 'more_news_ajax');
@@ -435,6 +452,7 @@ function load_news_by_type(){
 				'posts_per_page'=> $ppp
 			));
 		}
+		if($query->have_posts()){
 		while ($query->have_posts()) {
 	    $query->the_post();
 	    $post_id = get_the_ID();
@@ -463,9 +481,10 @@ function load_news_by_type(){
 <div class="row">
 	<div class="col m-auto text-center">
 		<i class="fas fa-spinner fa-spin" id="loading-indicator" style="display:none;"></i>
-		<a id="more_news" data-post-type="almadarnews" data-posts-per-page="1" data-news-type="realestate">More<img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/arrow-down.png" /> </a>
+		<a id="more_news" data-post-type="almadarnews" data-posts-per-page="1" data-news_type="<?php echo $news_type; ?>">More<img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/arrow-down.png" /> </a>
 	</div>
 </div>
+<?php } else { echo "<div class='row w-100 pt-4'><h4 class='purple-color m-auto'> No news found.. </h4></div>"; } ?>
 <script type="text/javascript">
 	$( document ).ready(function(){
 	var ajaxUrl = "<?php echo admin_url('admin-ajax.php')?>";
@@ -477,8 +496,8 @@ function load_news_by_type(){
 		var post_type = $(this).data('post-type');
 		var post_per_page = $(this).data('posts-per-page');
 		var news_type = $(this).data('news_type');
-		// $("#loading-indicator").toggle();
-        // $("#more_news").attr("disabled",true); // Disable the button, temp.
+        $("#more_news").hide();
+		$("#loading-indicator").toggle();
 		$.post(ajaxUrl,{action:"more_news_ajax",
             offset: (page * post_per_page) + 1,
 			ppp: post_per_page,
@@ -487,10 +506,16 @@ function load_news_by_type(){
 			place: place
 		},
 			 function(data){
-				 page++;
-				 $(".projects-list").append(data);
-				 // $("#loading-indicator").toggle();
-				 // $("#more_news").attr("disabled",false);
+				 if(data == ''){
+			 		$("#loading-indicator").toggle();
+			 		$("#more_news").hide();
+			 	}
+			 	else{
+				 	 page++;
+					 $(".projects-list").append(data);
+					 $("#loading-indicator").toggle();
+					 $("#more_news").show();
+			 	}
   			});
     });
 });
@@ -533,6 +558,7 @@ function news_filter_country()
 				),
 				'posts_per_page'=> 2
 			));
+			if($query->have_posts()){
 			while ($query->have_posts()) {
 		    $query->the_post();
 		    $post_id = get_the_ID();
@@ -560,8 +586,9 @@ function news_filter_country()
 </div>
 <div class="col m-auto text-center">
 	<i class="fas fa-spinner fa-spin" id="loading-indicator" style="display:none;"></i>
-	<a id="more_news" data-post-type="almadarnews" data-posts-per-page="1" data-news-type="realestate">More<img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/arrow-down.png" /> </a>
+	<a id="more_news" data-post-type="almadarnews" data-posts-per-page="1" data-news_type="realestate">More<img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/arrow-down.png" /> </a>
 </div>
+<?php } else { echo "<div class='row w-100 pt-4'><h4 class='purple-color m-auto'> No news found.. </h4></div>"; } ?>
 </div>
 <script type="text/javascript">
 	$( document ).ready(function(){
@@ -574,8 +601,8 @@ function news_filter_country()
 		var post_type = $(this).data('post-type');
 		var post_per_page = $(this).data('posts-per-page');
 		var news_type = $(this).data('news-type');
-		// $("#loading-indicator").toggle();
-        // $("#more_news").attr("disabled",true); // Disable the button, temp.
+        $("#more_news").hide(); // Disable the button, temp.
+		$("#loading-indicator").toggle();
 		$.post(ajaxUrl,{action:"more_news_ajax",
             offset: (page * post_per_page) + 1,
 			ppp: post_per_page,
@@ -584,10 +611,16 @@ function news_filter_country()
 			place: place
 		},
 			 function(data){
-				 page++;
-				 $(".projects-list").append(data);
-				 $("#loading-indicator").toggle();
-				 $("#more_news").attr("disabled",false);
+				 if(data == ''){
+			 		$("#loading-indicator").toggle();
+			 		$("#more_news").hide();
+			 	}
+			 	else{
+				 	 page++;
+					 $(".projects-list").append(data);
+					 $("#loading-indicator").toggle();
+					 $("#more_news").show();
+			 	}
   			});
     });
 
