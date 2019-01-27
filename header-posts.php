@@ -28,7 +28,6 @@ $container = get_theme_mod('understrap_container_type');
 <body <?php body_class();?>>
 
 <div class="site" id="page">
-
 	<!-- ******************* The Navbar Area ******************* -->
 	<div id="wrapper-navbar" class="header-about" style="background: url('<?php the_field('divisions_header_image'); ?>') no-repeat; background-size: cover;">
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e('Skip to content', 'understrap');?></a>
