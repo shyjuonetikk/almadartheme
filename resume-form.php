@@ -21,8 +21,6 @@ if ($_POST) {
 	$message_body .= "Name:";
 	$message_body .= $sender_name;
 	$message_body .= "\nEmail:";
-	$message_body .= $sender_email;
-	$message_body .= "\nPhone: " . $phone . "\n";
 
 	if ($file_count > 0) {
 		//if attachment exists

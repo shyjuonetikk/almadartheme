@@ -80,18 +80,17 @@ $container = get_theme_mod('understrap_container_type');
 );
 ?>
 			<?php if ('container' == $container): ?>
-				<a href="#" class="social-media">
-					<!-- <img src="<?php echo get_template_directory_uri(); ?>/img/facebook.svg" class="social-media" /> -->
-					<i class="fab fa-facebook-square fs-22 sm-icon-fb"></i>
-				</a>
-				<a href="#" class="social-media">
-					<!-- <img src="<?php echo get_template_directory_uri(); ?>/img/iconfinder-icon.svg" /> -->
-					<i class="fab fa-twitter fs-22 sm-icon-tw-new pa-5 w-24"></i>
-				</a>
-				<a href="#" class="social-media">
-					<!-- <img src="<?php echo get_template_directory_uri(); ?>/img/linkedin_blue.svg" class="social-media" />  -->
-					<i class="fab fa-linkedin-in fs-22 sm-icon-fb"></i>
-				</a>
+				<div class="d-xl-block d-lg-none d-md-none d-sm-none d-none">
+					<a href="#" class="social-media">
+						<i class="fab fa-facebook-square fs-22 sm-icon-fb"></i>
+					</a>
+					<a href="#" class="social-media">
+						<i class="fab fa-twitter fs-22 sm-icon-tw pa-5 w-24"></i>
+					</a>
+					<a href="#" class="social-media">
+						<i class="fab fa-linkedin-in fs-22 sm-icon-fb"></i>
+					</a>
+				</div>
 			</div><!-- .container -->
 			<?php endif;?>
 

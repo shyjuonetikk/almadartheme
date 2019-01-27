@@ -759,6 +759,7 @@ div#career-overlays {
     top: 0;
     right: -100%;
     z-index: 999999999;
+    display: none;
 }
 button#cv-button {
     background: #21145f;
@@ -919,8 +920,8 @@ div#career-table-container {
     margin-bottom: 6rem;
 }
 .shadow {
-    -webkit-box-shadow: 1px 2px 8px #d0d0d0cc!important;
-    box-shadow: 1px 2px 8px #d0d0d0cc!important;
+    -webkit-box-shadow: 0px 1px 4px #01010166!important;
+    box-shadow: 0px 1px 4px #01010166!important;
 }
 div#realestate-banner, div#enter-banner, div#contruct-banner {
     right: -200%;
@@ -966,7 +967,7 @@ ul.reallists > li > i {
 .thumb-list-box {
     width: 100%;
 }
-.btn-header:focus {
+.btn-header:focus, button#cv-button:focus {
     box-shadow: none;
 }
 .plus-sign{

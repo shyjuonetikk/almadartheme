@@ -27,7 +27,7 @@ $container = get_theme_mod('understrap_container_type');
 
 <body <?php body_class();?>>
 
-<div id="career-overlays" class="col-12 p-0 float-left"  method="post" action="<?php echo get_template_directory_uri(); ?>/resume-form.php.php">
+<div id="career-overlays" class="col-12 p-0 float-left"  method="post" action="<?php echo get_template_directory_uri(); ?>/resume-form.php">
 	<div id="career-cancel" class="col-lg-6 col-md-1 col-sm-1 col-1 float-left"></div>
 	<div class="career-form float-right w-100 px-5 py-2 bg-white col-lg-6 col-md-10 col-sm-10 col-10">
 		<h2 class="purple-color prmy-font">Submit Your CV</h2>
@@ -98,12 +98,12 @@ $container = get_theme_mod('understrap_container_type');
 			<div class="form-check mb-4">
 				<div class="custom-control custom-checkbox mb-3">
 					<input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
-					<label class="custom-control-label mt-1" for="customCheck">I accept the Al Madar <span class="career-links"><a href="#">Privacy Policy</a></span> and <span class="career-links"><a href="#">Terms and conditions*</a></span></label>
+					<label class="custom-control-label mt-1" for="customCheck">I accept the Al Madar <span class="career-links"><a href="<?php echo site_url(); ?>/disclaimer/?#priv" target="_blank">Privacy Policy</a></span> and <span class="career-links"><a href="<?php echo site_url(); ?>/disclaimer/?#term" target="_blank">">Terms and conditions*</a></span></label>
 			    </div>
 			</div>
-			<div class="col-sm-12 text-right">
-				<div class="col-lg-6 float-left">
-					<p>We value your privacy.</p>
+			<div class="col-sm-12 text-right p-0 m-0">
+				<div class="col-lg-6 float-left px-0 pt-2">
+					<p class="text-left">We value your privacy.</p>
 				</div>
 				<div class="col-lg-6 float-right">
 					<button id="cv-button" type="submit" class="btn btn-primary text-center">Send</button>
@@ -170,18 +170,17 @@ $container = get_theme_mod('understrap_container_type');
 );
 ?>
 			<?php if ('container' == $container): ?>
-				<a href="#" class="social-media">
-					<!-- <img src="<?php echo get_template_directory_uri(); ?>/img/facebook.svg" class="social-media" /> -->
-					<i class="fab fa-facebook-square fs-22 sm-icon-fb"></i>
-				</a>
-				<a href="#" class="social-media">
-					<!-- <img src="<?php echo get_template_directory_uri(); ?>/img/iconfinder-icon.svg" /> -->
-					<i class="fab fa-twitter fs-22 sm-icon-tw pa-5 w-24"></i>
-				</a>
-				<a href="#" class="social-media">
-					<!-- <img src="<?php echo get_template_directory_uri(); ?>/img/linkedin_blue.svg" class="social-media" />  -->
-					<i class="fab fa-linkedin-in fs-22 sm-icon-fb"></i>
-				</a>
+				<div class="d-xl-block d-lg-none d-md-none d-sm-none d-none">
+					<a href="#" class="social-media">
+						<i class="fab fa-facebook-square fs-22 sm-icon-fb"></i>
+					</a>
+					<a href="#" class="social-media">
+						<i class="fab fa-twitter fs-22 sm-icon-tw pa-5 w-24"></i>
+					</a>
+					<a href="#" class="social-media">
+						<i class="fab fa-linkedin-in fs-22 sm-icon-fb"></i>
+					</a>
+				</div>
 			</div><!-- .container -->
 			<?php endif;?>
 
