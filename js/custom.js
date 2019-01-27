@@ -1,3 +1,14 @@
+// var activeTab = document.location.href.split('?')[1];
+// if (activeTab == "#term") {
+// 	$("#terms-tab").addClass('disc-active');
+// } 
+// else if (activeTab == "#priv") {
+// 	$("#privacy-tab").addClass('disc-active');
+// }
+// else {
+// 	$("#disclaimer-tab").addClass('disc-active');
+// }
+
 $( document ).ready(function(){
 	//  Real Estate Popup
 	$('#real-more').click(function(e){
@@ -51,7 +62,7 @@ $( document ).ready(function(){
 	});
 	$("#career-cancel").click(function(e){
 		e.preventDefault();
-		$("#career-overlays").animate({"right": "-100%", "top": "0"}, 1000);
+		$("#career-overlays").animate({"right": "-200%", "top": "0"}, 1000);
 		$(".site").css({"overflow-y": "visible"});
 	});
 
@@ -77,25 +88,46 @@ $( document ).ready(function(){
 	});
 
 	// Disclaimer Page
+	var activeTab = document.location.href.split('?')[1];
+	if (activeTab == "#term") {
+		showTerms();
+	} 
+	else if (activeTab == "#priv") {
+		showPrivacy();
+	}
+	else {
+		showDisclaimer();
+	}
 	$("#disclaimer-tab").click(function(e){
 		e.preventDefault();
-		$(this).addClass('disc-active');
-		$("#terms-tab, #privacy-tab").removeClass('disc-active');
-		$('#terms, #privacy').hide();
-		$('#disclaimer').show();
+		showDisclaimer();
 	});
 	$("#terms-tab").click(function(e){
 		e.preventDefault();
 		$(this).addClass('disc-active');
-		$("#disclaimer-tab, #privacy-tab").removeClass('disc-active');
-		$('#disclaimer, #privacy').hide();
-		$('#terms').show();
+		
 	});
 	$("#privacy-tab").click(function(e){
 		e.preventDefault();
-		$(this).addClass('disc-active');
-		$("#terms-tab, #disclaimer-tab").removeClass('disc-active');
-		$('#terms, #disclaimer').hide();
-		$('#privacy').show();
+		showPrivacy();		
 	});
 });
+
+function showDisclaimer(){
+	$("#disclaimer-tab").addClass('disc-active');
+	$("#terms-tab, #privacy-tab").removeClass('disc-active');
+	$('#terms, #privacy').hide();
+	$('#disclaimer').show();
+}
+function showPrivacy(){
+	$("#privacy-tab").addClass('disc-active');
+	$("#terms-tab, #disclaimer-tab").removeClass('disc-active');
+	$('#terms, #disclaimer').hide();
+	$('#privacy').show();
+}
+function showTerms(){
+	$("#terms-tab").addClass('disc-active');
+	$("#disclaimer-tab, #privacy-tab").removeClass('disc-active');
+	$('#disclaimer, #privacy').hide();
+	$('#terms').show();
+}

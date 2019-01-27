@@ -683,7 +683,7 @@ footer ul li a:hover{
     width: 100%;
     background: #21145f5e;
     position: absolute;
-    z-index: 5;
+    z-index: 99999999;
     right: -200%;
     display: none;
 }
@@ -758,7 +758,7 @@ div#career-overlays {
     position: absolute;
     top: 0;
     right: -100%;
-    z-index: 1;
+    z-index: 999999999;
 }
 button#cv-button {
     background: #21145f;
@@ -922,20 +922,9 @@ div#career-table-container {
     -webkit-box-shadow: 1px 2px 8px #d0d0d0cc!important;
     box-shadow: 1px 2px 8px #d0d0d0cc!important;
 }
-div#realestate-banner {
+div#realestate-banner, div#enter-banner, div#contruct-banner {
     right: -200%;
     position: absolute;
-    margin-top: 48px !important;
-}
-div#contruct-banner {
-    right: -200%;
-    position: absolute;
-    margin-top: 48px !important;
-}
-div#enter-banner {
-    right: -200%;
-    position: absolute;
-    margin-top: 48px !important;
 }
 .construct-back{
   background: url('../img/division_construction.png') no-repeat;
@@ -1040,7 +1029,7 @@ ul#status-list > li {
     font-weight: 300;
 }
 .disc-active {
-    font-weight: 600;
+    font-weight: 600 !important;
 }
 #terms, #privacy {
   display: none;
@@ -1092,4 +1081,14 @@ a#real-back {
 }
 ul#news-place-filter > li {
     cursor: pointer;
+}
+.custom-control-input:checked~.custom-control-label::before {
+    border-color: #21145e;
+    background-color: #21145e;
+}
+div#disclaimer > p, div#terms > p, div#privacy > p {
+    font-family: "Roboto";
+    font-weight: 300;
+    color: #21145f;
+    font-size: 1rem;
 }

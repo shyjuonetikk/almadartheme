@@ -27,7 +27,7 @@ $container = get_theme_mod('understrap_container_type');
 
 <body <?php body_class();?>>
 
-<div id="career-overlays" class="col-12 p-0 float-left">
+<div id="career-overlays" class="col-12 p-0 float-left"  method="post" action="<?php echo get_template_directory_uri(); ?>/resume-form.php.php">
 	<div id="career-cancel" class="col-lg-6 col-md-1 col-sm-1 col-1 float-left"></div>
 	<div class="career-form float-right w-100 px-5 py-2 bg-white col-lg-6 col-md-10 col-sm-10 col-10">
 		<h2 class="purple-color prmy-font">Submit Your CV</h2>
@@ -68,7 +68,7 @@ $container = get_theme_mod('understrap_container_type');
 				<label for="Nationality" class="col-sm-4 col-form-label">Nationality<span class="text-danger">*</span></label>
 				<div class="col-sm-8">
 					<select class="form-control" id="career-nationality">
-						<option>1</option>
+						<option></option>
 						<option>2</option>
 						<option>3</option>
 						<option>4</option>
@@ -80,7 +80,7 @@ $container = get_theme_mod('understrap_container_type');
 				<label for="function" class="col-sm-4 col-form-label">Function<span class="text-danger">*</span></label>
 				<div class="col-sm-8">
 					<select class="form-control" id="career-function">
-						<option>1</option>
+						<option></option>
 						<option>2</option>
 						<option>3</option>
 						<option>4</option>
@@ -91,8 +91,8 @@ $container = get_theme_mod('understrap_container_type');
 			<div class="form-group row">
 				<label for="resume" class="col-sm-4 col-form-label">Submit Your CV<span class="text-danger">*</span></label>
 				<div class="col-sm-8">
-					<input type="file" name="file" id="career-resume" class="form-control-file" data-multiple-caption="{count} files selected" multiple />
-					<label for="file" class="shadow p-2 sc-font font-weight-normal">Choose a file</label>
+					<input type="file" name="file" id="career-resume" class="form-control-file" />
+					<label for="career-resume" class="shadow p-2 sc-font font-weight-normal">Choose a file</label>
 				</div>
 			</div>
 			<div class="form-check mb-4">
@@ -102,9 +102,14 @@ $container = get_theme_mod('understrap_container_type');
 			    </div>
 			</div>
 			<div class="col-sm-12 text-right">
-				<button id="cv-button" type="submit" class="btn btn-primary text-center">Send</button>
+				<div class="col-lg-6 float-left">
+					<p>We value your privacy.</p>
+				</div>
+				<div class="col-lg-6 float-right">
+					<button id="cv-button" type="submit" class="btn btn-primary text-center">Send</button>
+				</div>
 			</div>
-			<p>We value your privacy.</p>
+			<div id="resume_result" class="col-12"></div>
 		</form>
 	</div>
 </div>
@@ -112,7 +117,7 @@ $container = get_theme_mod('understrap_container_type');
 <div class="site" id="page">
 
 	<!-- ******************* The Navbar Area ******************* -->
-	<div id="wrapper-navbar" class="header-career" style="background: url('<?php the_field('header_image'); ?>') no-repeat; background-size: 100% 100%;">
+	<div id="wrapper-navbar" class="header-career" style="background: url('<?php the_field('header_image');?>') no-repeat; background-size: 100% 100%;">
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e('Skip to content', 'understrap');?></a>
 
