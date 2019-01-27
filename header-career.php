@@ -27,13 +27,13 @@ $container = get_theme_mod('understrap_container_type');
 
 <body <?php body_class();?>>
 
-<div id="career-overlays" class="col-12 p-0 float-left"  method="post" action="<?php echo get_template_directory_uri(); ?>/resume-form.php">
+<div id="career-overlays" class="col-12 p-0 float-left">
 	<div id="career-cancel" class="col-lg-6 col-md-1 col-sm-1 col-1 float-left"></div>
 	<div class="career-form float-right w-100 px-5 py-2 bg-white col-lg-6 col-md-10 col-sm-10 col-10">
 		<h2 class="purple-color prmy-font">Submit Your CV</h2>
 		<hr>
 		<p class="text-right text-danger font-weight-light">* Indicates required field</p>
-		<form id="career-form">
+		<form id="career-form" method="post" action="<?php echo get_template_directory_uri(); ?>/resume-form.php">
 			<div class="form-group row">
 				<label for="first name" class="col-sm-4 col-form-label">First Name<span class="text-danger">*</span></label>
 				<div class="col-sm-8">
@@ -91,14 +91,14 @@ $container = get_theme_mod('understrap_container_type');
 			<div class="form-group row">
 				<label for="resume" class="col-sm-4 col-form-label">Submit Your CV<span class="text-danger">*</span></label>
 				<div class="col-sm-8">
-					<input type="file" name="file" id="career-resume" class="form-control-file" />
+					<input type="file" name="file_attach[]" id="career-resume" class="form-control-file" />
 					<label for="career-resume" class="shadow p-2 sc-font font-weight-normal">Choose a file</label>
 				</div>
 			</div>
 			<div class="form-check mb-4">
 				<div class="custom-control custom-checkbox mb-3">
 					<input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
-					<label class="custom-control-label mt-1" for="customCheck">I accept the Al Madar <span class="career-links"><a href="<?php echo site_url(); ?>/disclaimer/?#priv" target="_blank">Privacy Policy</a></span> and <span class="career-links"><a href="<?php echo site_url(); ?>/disclaimer/?#term" target="_blank">">Terms and conditions*</a></span></label>
+					<label class="custom-control-label mt-1" for="customCheck">I accept the Al Madar <span class="career-links"><a href="<?php echo site_url(); ?>/disclaimer/?#priv" target="_blank">Privacy Policy</a></span> and <span class="career-links"><a href="<?php echo site_url(); ?>/disclaimer/?#term" target="_blank">Terms and conditions*</a></span></label>
 			    </div>
 			</div>
 			<div class="col-sm-12 text-right p-0 m-0">

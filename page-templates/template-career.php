@@ -75,7 +75,7 @@ wp_reset_query();?>
 var allowed_file_size 	= "20971520"; //20 MB allowed file size
 var allowed_file_types 	= ['image/png', 'image/gif', 'image/jpeg', 'image/pjpeg', 'application/x-zip-compressed', 'application/pdf']; //Allowed file types
 var border_color 		= "#C2C2C2"; //initial input border color
-var maximum_files 		= 10; //Maximum number of files allowed
+var maximum_files 		= 1; //Maximum number of files allowed
 
 $("#career-form").submit(function(e){
     e.preventDefault(); //prevent default action
@@ -124,7 +124,7 @@ $("#career-form").submit(function(e){
 		var post_url = $(this).attr("action"); //get form action url
 		var request_method = $(this).attr("method"); //get form GET/POST method
 		var form_data = new FormData(this); //Creates new FormData object
-
+		alert("proceed Working");
 		$.ajax({ //ajax form submit
 			url : post_url,
 			type: request_method,

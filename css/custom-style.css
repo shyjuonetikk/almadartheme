@@ -1114,3 +1114,48 @@ div#disclaimer > p, div#terms > p, div#privacy > p {
     color: #21145f;
     font-size: 1rem;
 }
+/* Very Large Screens */
+@media only screen (min-width: 1200px) {
+  .thumbnail {
+    position: relative;
+    width: 100%;
+    height: 141px;
+    overflow: hidden;
+  }
+}
+/* Medium Screens*/
+@media only screen (min-width: 960px) and (max-width: 1199px) {
+  .thumbnail {
+    position: relative;
+    width: 100%;
+    height: 117px;
+    overflow: hidden;
+  }
+}
+/* Medium Screens*/
+@media only screen (min-width: 768px) and (max-width: 959px) {
+  .thumbnail {
+    position: relative;
+    width: 100%;
+    height: 129px;
+    overflow: hidden;
+  }
+}
+/* Medium Screens*/
+@media only screen (min-width: 576px) and (max-width: 767px) {
+  .thumbnail {
+    position: relative;
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+  }
+}
+/* xs screens */
+@media only screen and (max-width: 575px) {
+  .thumbnail {
+    position: relative;
+    width: 100%;
+    height: 109px;
+    overflow: hidden;
+  }
+}

@@ -14,7 +14,6 @@ $( document ).ready(function(){
 	$('#real-more').click(function(e){
 		e.preventDefault();
 		var popupHeight = $(".divi-main").height();
-		// $('body').animate({scrollTop:0}, 5000, 'swing');
 		$("#realestate-banner").css({"display" : "flex"});
 		window.scrollTo("0", "0");
 		$("#realestate-banner").animate({"right": "0", "height":popupHeight}, 500);
@@ -51,7 +50,7 @@ $( document ).ready(function(){
 	});
 
 	// Career page popup
-	$("#resume-send").click(function(e){
+	$("#resume-send, .job-apply > a").click(function(e){
 		e.preventDefault();
 		window.scrollTo("0", "0");
 		var popupHeight = $("#career-overlays").height();
