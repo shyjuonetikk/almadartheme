@@ -29,7 +29,7 @@ $container = get_theme_mod('understrap_container_type');
 
 <div class="site" id="page">
 	<!-- ******************* The Navbar Area ******************* -->
-	<div id="wrapper-navbar" class="header-about" style="background: url('<?php the_field('divisions_header_image'); ?>') no-repeat; background-size: cover;">
+	<div id="wrapper-navbar" class="header-about" style="background: url('<?php the_field('divisions_header_image');?>') no-repeat; background-size: cover;">
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e('Skip to content', 'understrap');?></a>
 	<div id="header-box">
 		<nav class="navbar navbar-expand-md menu-new" id="myHeader">
@@ -77,18 +77,17 @@ $container = get_theme_mod('understrap_container_type');
 );
 ?>
 			<?php if ('container' == $container): ?>
-				<a href="#" class="social-media">
-					<!-- <img src="<?php echo get_template_directory_uri(); ?>/img/facebook.svg" class="social-media" /> -->
-					<i class="fab fa-facebook-square fs-22 sm-icon-fb"></i>
-				</a>
-				<a href="#" class="social-media">
-					<!-- <img src="<?php echo get_template_directory_uri(); ?>/img/iconfinder-icon.svg" /> -->
-					<i class="fab fa-twitter fs-22 sm-icon-tw pa-5 w-24"></i>
-				</a>
-				<a href="#" class="social-media">
-					<!-- <img src="<?php echo get_template_directory_uri(); ?>/img/linkedin_blue.svg" class="social-media" />  -->
-					<i class="fab fa-linkedin-in fs-22 sm-icon-fb"></i>
-				</a>
+				<div class="d-xl-block d-lg-none d-md-none d-sm-none d-none">
+					<a href="#" class="social-media">
+						<i class="fab fa-facebook-square fs-22 sm-icon-fb"></i>
+					</a>
+					<a href="#" class="social-media">
+						<i class="fab fa-twitter fs-22 sm-icon-tw pa-5 w-24"></i>
+					</a>
+					<a href="#" class="social-media">
+						<i class="fab fa-linkedin-in fs-22 sm-icon-fb"></i>
+					</a>
+				</div>
 			</div><!-- .container -->
 			<?php endif;?>
 
@@ -97,7 +96,7 @@ $container = get_theme_mod('understrap_container_type');
 		<div class="col-md-9 mx-auto">
 			<div class="about-page">
 				<div class="container">
-					<h1 class="slider-heading display-4 mb-3 p-4 prmy-font text-white text-center"><?php the_title(); ?></h1>
+					<h1 class="slider-heading display-4 mb-3 p-4 prmy-font text-white text-center"><?php the_title();?></h1>
 				</div>
 			</div>
 		</div>

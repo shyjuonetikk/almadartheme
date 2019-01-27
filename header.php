@@ -22,14 +22,14 @@ $container = get_theme_mod('understrap_container_type');
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/custom-style.css" >
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-	
+
 </head>
 
 <body <?php body_class();?>>
 <div class="site" id="page">
 
 	<!-- ******************* The Navbar Area ******************* -->
-	<div id="wrapper-navbar" class="header-back" style="background: url('<?php header_image(); ?>') no-repeat; background-size: 100% 100%;">
+	<div id="wrapper-navbar" class="header-back" style="background: url('<?php header_image();?>') no-repeat; background-size: 100% 100%;">
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e('Skip to content', 'understrap');?></a>
 	<div id="header-box">
@@ -69,20 +69,20 @@ $container = get_theme_mod('understrap_container_type');
 
 				<!-- The WordPress Menu goes here -->
 				<?php wp_nav_menu(
-					array(
-						'theme_location' => 'primary',
-						'container_class' => 'collapse navbar-collapse',
-						'container_id' => 'navbarNavDropdown',
-						'menu_class' => 'navbar-nav',
-						'fallback_cb' => '',
-						'menu_id' => 'main-menu',
-						'depth' => 2,
-						'walker' => new Understrap_WP_Bootstrap_Navwalker(),
-					)
-					);
-				?>
+	array(
+		'theme_location' => 'primary',
+		'container_class' => 'collapse navbar-collapse',
+		'container_id' => 'navbarNavDropdown',
+		'menu_class' => 'navbar-nav',
+		'fallback_cb' => '',
+		'menu_id' => 'main-menu',
+		'depth' => 2,
+		'walker' => new Understrap_WP_Bootstrap_Navwalker(),
+	)
+);
+?>
 			<?php if ('container' == $container): ?>
-				<div class="d-md-block d-sm-none d-none">
+				<div class="d-xl-block d-lg-none d-md-none d-sm-none d-none">
 					<a href="#" class="social-media">
 						<i class="fab fa-facebook-square fs-22 sm-icon-fb"></i>
 					</a>
@@ -102,7 +102,7 @@ $container = get_theme_mod('understrap_container_type');
 			<div class="jumbotron bg-none text-white">
 			  <div class="container ml-10">
 			    <h1 class="slider-heading display-4 mb-5 prmy-font"><?php echo get_post_meta(get_the_ID(), 'heading', true); ?></h1>
-			   
+
 			    <p class="slider-content w-75">
 			    	<?php echo get_post_meta(get_the_ID(), 'bannertext', true); ?>
 				</p>

@@ -55,15 +55,20 @@ $( document ).ready(function(){
 		e.preventDefault();
 		window.scrollTo("0", "0");
 		var popupHeight = $("#career-overlays").height();
-		popupHeight -= "50";
-		$(".site").css({"max-height":popupHeight, "overflow-y": "hidden"});
+		var docHeight = $(document).height();
+		// popupHeight -= "50";
+		$("#career-overlays").show();
+		$(".site").css({"max-height":docHeight, "overflow-y": "hidden"});
+		$(".career-form").css({"height" : docHeight });
 		$("#career-overlays").animate({"right": "0", "top": "0"}, 1000);
 		$("#career-cancel").css({"min-height":popupHeight});
 	});
 	$("#career-cancel").click(function(e){
 		e.preventDefault();
 		$("#career-overlays").animate({"right": "-200%", "top": "0"}, 1000);
-		$(".site").css({"overflow-y": "visible"});
+		$("#career-overlays").fadeOut();
+		$(".site").css({"overflow-y": "visible", "max-height":"100%"});
+		$('body').css({"background-attachment": "fixed"});		
 	});
 
 	// Contact Page Popup
@@ -71,7 +76,7 @@ $( document ).ready(function(){
 		e.preventDefault();
 		window.scrollTo("0", "0");
 		var popupHeight = $(".contact-pop-up").height();
-		var docHeight = $(document).height()
+		var docHeight = $(document).height();
 		$(".contact-pop-up").show();
 		$(".site").css({"max-height":docHeight, "overflow-y": "hidden"});
 		$('body').css({"background-attachment": "scroll"});
