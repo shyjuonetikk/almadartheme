@@ -673,12 +673,15 @@ footer ul li a:hover{
 .contact-list li{
 	color: #909090;
 }
-.contact-list a{
+.contact-list li a.telephone{
+  color: #909090;
+}
+/*.contact-list a{
 	color: #6bc4e8;
 }
 .contact-list a:hover{
 	text-decoration: underline;
-}
+}*/
 .contact-pop-up {
     width: 100%;
     background: #21145f5e;
@@ -1012,8 +1015,12 @@ form#contact-form > div > div > label {
     font-size: .75rem;
     font-weight: 500;
 }
-li.contact-links {
-    color: #6bc4e8;
+li a.contact-links {
+    color: #6bc4e8 !important;
+}
+a.second-color:hover{
+  text-decoration: underline;
+  color: #6bc4e8 !important;
 }
 table#careers-table > tbody > tr > td:first-child {
     width: 41%;
@@ -1054,6 +1061,10 @@ a#more_posts {
     color: #6bc4e8;
     text-decoration: underline;
 }
+a#more_posts:hover {
+    cursor: pointer;
+    opacity: .8;
+}
 a#more_posts > img {
     display: block;
     margin: 8px auto;
@@ -1062,6 +1073,10 @@ a#more_posts > img {
 a#more_news {
     color: #6bc4e8;
     text-decoration: underline;
+}
+a#more_news:hover {
+    cursor: pointer;
+    opacity: .8;
 }
 a#more_news > img {
     display: block;
