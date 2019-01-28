@@ -144,6 +144,9 @@ $("#career-form").submit(function(e){
 				$("#resume_result").html('<div class="success">'+ res.text +"</div>");
 				$("#resume_result").delay(4000).hide();
 			}
+			$("#resume_result").show();
+			$("#resume_result").html('<div class="success">'+ res.text +"</div>");
+			$("#resume_result").delay(4000).hide();
             $("#cv-button").prop('disabled', true);
 		});
 	}

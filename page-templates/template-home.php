@@ -47,7 +47,7 @@ while ($query->have_posts()) {
 	?>
 					<div class="col-lg-4 col-md-6 col-sm-12 col-12 float-left mb-3 px-2">
 						<div class="thumbnail">
-						  <img src="<?php the_field('divisions_home_image'); ?>" /> 
+						  <img src="<?php the_field('divisions_home_image');?>" />
 						  <?php //echo the_post_thumbnail(); ?>
 						  	<a href="<?php echo get_permalink(); ?>">
 						  		<div class="h_division_title">
@@ -271,7 +271,7 @@ wp_reset_query();
 				  <div class="form-group row">
 				    <div class="col-12 col-sm-9 m-auto">
 				      	<div class="input-group mb-3 newsletter-txt-field prmy-font">
-						  <input id="newslettter-mail" type="text" class="form-control" placeholder="YOUR E-MAIL ADDRESS" aria-label="YOUR E-MAIL ADDRESS" aria-describedby="basic-addon2" data-required="true">
+						  <input id="newslettter-mail" name="newslettter-mail" type="text" class="form-control" placeholder="YOUR E-MAIL ADDRESS" aria-label="YOUR E-MAIL ADDRESS" aria-describedby="basic-addon2" data-required="true">
 						  <div class="input-group-append">
 						    <span class="input-group-text" id="basic-addon2">SUBMIT</span>
 						  </div>
