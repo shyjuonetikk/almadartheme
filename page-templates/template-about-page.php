@@ -132,19 +132,15 @@ $("#newsletter-form").submit(function(e){
 	var ajaxUrl = "<?php echo admin_url('admin-ajax.php') ?>";
 	var email = $("#newslettter-mail").val();
 
-	if (email == "") {
-		alert("Please enter a valid email address");
-	}
-	else {
-		$.post(ajaxUrl,{action: "ajax_mail",
-				email: email
-		},
-		function(data){
-			$("#newsletter-response").html(data);
-			$("#newsletter-form").reset();
-		});
-		$("#newslettter-mail").val(null);
-	}
+	$.post(ajaxUrl,{action: "ajax_mail",
+			email: email
+	},
+	function(data){
+		$("#newsletter-response").html(data);
+		$("#newsletter-form").reset();
+	});
+	$("#newslettter-mail").val(null);
+
 });
 
 

@@ -28,7 +28,7 @@ if ($_POST) {
 	$sentMail = mail($recipient_email, "Al Madar Holding WLL - Contact Form", $body, $headers);
 	if ($sentMail) //output success or failure messages
 	{
-		print json_encode(array('type' => 'done', 'text' => 'We will get back to you soon'));
+		print json_encode(array('type' => 'done', 'text' => 'We will get in touch with you soon'));
 		exit;
 	} else {
 		print json_encode(array('type' => 'error', 'text' => 'Could not send mail! Please check your network connections'));

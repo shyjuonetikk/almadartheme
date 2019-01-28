@@ -657,6 +657,7 @@ function menu_id_page($item, $args) {
 add_filter('nav_menu_item_id', 'menu_id_page', 10, 2);
 
 function ajax_mail() {
+	$email = null;
 	$email = $_POST['email'];
 	$recipient_email = "jithinvjayaprakash@gmail.com";
 	$from_email = "hr@almadar.com"; //from email using site domain.
@@ -668,13 +669,18 @@ function ajax_mail() {
 	"X-Mailer: PHP/" . phpversion();
 	$body = $message_body;
 
-	$sentMail = mail($recipient_email, "Al Madar Holding WLL - Newsletter", $body, $headers);
-	if ($sentMail) //output success or failure messages
-	{
-		echo 'You have been successfully subscribed to our Newsletter';
-		exit;
+	if ($email == "") {
+		$sentMail = mail($recipient_email, "Al Madar Holding WLL - Newsletter", $body, $headers);
+		if ($sentMail) //output success or failure messages
+		{
+			echo 'You have been successfully subscribed to our Newsletter';
+			exit;
+		} else {
+			echo 'Could not send mail! Please check your network connections';
+			exit;
+		}
 	} else {
-		echo 'Could not send mail! Please check your network connections';
+		echo "Please enter a valid Email ID to subscribe our Newsletter";
 		exit;
 	}
 }
