@@ -48,14 +48,8 @@ body{
 	border-bottom: 2px solid #6bc4e9;
 }
 
-.menu-custom-pro{
-	/*background: #fff !important;
-	webkit-box-shadow: 0px 6px 23px -11px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 6px 23px -11px rgba(0,0,0,0.75);
-	box-shadow: 0px 6px 23px -11px rgba(0,0,0,0.75);*/
-}
 .menu-custom{
-  padding-top: 0.5rem;
+  padding: 0.5rem;
   transition: .2s;
 }
 .menu-custom ul{
