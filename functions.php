@@ -337,7 +337,7 @@ function filter_country()
 			var post_per_page = $(this).data('posts_per_page');
 			var status = $(this).data('status_list');
 			var place = $("#place").val();
-			$(this).toggleClass('font-weight-bold').siblings().removeClass('font-weight-bold');
+			$(this).addClass('font-weight-bold').siblings().removeClass('font-weight-bold');
 			$.post(ajaxUrl,{action:"load_projects_status",
 				ppp: post_per_page,
 				posttype: post_type,
@@ -631,7 +631,7 @@ function news_filter_country()
 		var post_per_page = $(this).data('posts_per_page');
 		var news_type = $(this).data('news_type');
 		var place = $("#place").val();
-		$(this).toggleClass('font-weight-bold').siblings().removeClass('font-weight-bold');
+		$(this).addClass('font-weight-bold').siblings().removeClass('font-weight-bold');
 		$.post(ajaxUrl,{action: "load_news_by_type",
 			ppp: post_per_page,
 			posttype: post_type,
