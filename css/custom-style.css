@@ -6,10 +6,10 @@ body{
 	font-size: 14px;
 	line-height: 1.2;
 	background: url(../img/Body_BG.svg) no-repeat;
-    background-size: cover;
-    background-position: center right;
-    background-attachment: fixed;
-    overflow-x: hidden;
+  background-size: cover;
+  background-position: center right;
+  background-attachment: fixed;
+  overflow-x: hidden;
 }
 .header-back{
     height: 100%;
@@ -48,28 +48,19 @@ body{
 	border-bottom: 2px solid #6bc4e9;
 }
 
-.menu-custom-pro{
-	/*background: #fff !important;
-	webkit-box-shadow: 0px 6px 23px -11px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 6px 23px -11px rgba(0,0,0,0.75);
-	box-shadow: 0px 6px 23px -11px rgba(0,0,0,0.75);*/
-}
 .menu-custom{
-  padding-top: 1rem;
+  padding: 0.5rem;
   transition: .2s;
-}
-.menu-custom ul{
-	/*margin-left: 15px;*/
 }
 .menu-custom a{
 	color: #22115c;
 	margin: 0 15px !important;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 13px;
-    border-bottom: 5px solid #6bc4e900;
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-    padding-bottom: 5px !important;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  border-bottom: 5px solid #6bc4e900;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  padding-bottom: 5px !important;
 }
 .menu-custom li:hover a{
 	color: #6bc4e9;
@@ -79,12 +70,12 @@ body{
 	background: none !important;
 }
 .btn-header {
-    color: #ffffff !important;
-    background-color: #6bc4e8 !important;
-    border-color: #6bc4e8 !important;
-    border-radius: 0px !important;
-    padding: 5px 15px !important;
-    font-size: 15px !important;
+  color: #ffffff !important;
+  background-color: #6bc4e8 !important;
+  border-color: #6bc4e8 !important;
+  border-radius: 0px !important;
+  padding: 5px 15px !important;
+  font-size: 15px !important;
 }
 .ml-10{
 	margin-left: 8% !important;
@@ -1163,5 +1154,14 @@ div#disclaimer > p, div#terms > p, div#privacy > p {
 @media (min-width: 1400px){
     .container {
         max-width: 1248px;
+    }
+}
+
+@media (min-width: 1600px){
+    .container {
+        max-width: 1486px;
+    }
+    .ml-10{
+      margin-left: 6% !important;
     }
 }
