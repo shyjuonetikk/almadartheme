@@ -267,17 +267,18 @@ wp_reset_query();
 				fermentum tempus. Mauris molestie facilisis eros id dictum.
 			</p>
 			<div class="col-12 mt-4 pt-2">
-				<form>
+				<form id="newsletter-form" method="post" action="<?php echo get_template_directory_uri(); ?>/newsletter.php">
 				  <div class="form-group row">
 				    <div class="col-12 col-sm-9 m-auto">
 				      	<div class="input-group mb-3 newsletter-txt-field prmy-font">
-						  <input type="text" class="form-control" placeholder="YOUR E-MAIL ADDRESS" aria-label="YOUR E-MAIL ADDRESS" aria-describedby="basic-addon2">
+						  <input id="newslettter-mail" type="text" class="form-control" placeholder="YOUR E-MAIL ADDRESS" aria-label="YOUR E-MAIL ADDRESS" aria-describedby="basic-addon2" data-required="true">
 						  <div class="input-group-append">
 						    <span class="input-group-text" id="basic-addon2">SUBMIT</span>
 						  </div>
 						</div>
 				     </div>
 				  </div>
+				  <div id="newsletter-response"></div>
 				</form>
 			</div>
 		</div>
@@ -285,3 +286,58 @@ wp_reset_query();
 </div><!-- #index-wrapper -->
 
 <?php get_footer();?>
+
+
+<script type="text/javascript">
+
+$(".input-group-append").click(function(e){
+    e.preventDefault(); //prevent default action
+	proceed = true;
+
+	//simple input validation
+	$($(this).find("input[data-required=true], select[data-required=true]")).each(function(){
+            if(!$.trim($(this).val())){ //if this field is empty
+                $(this).css('border-color','red'); //change border color to red
+                proceed = false; //set do not proceed flag
+            }
+            //check invalid email
+            var email_reg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+            if($(this).attr("type")=="email" && !email_reg.test($.trim($(this).val()))){
+                $(this).css('border-color','red'); //change border color to red
+                proceed = false; //set do not proceed flag
+            }
+	})
+	.on("input", function(){ //change border color to original
+		 $(this).css('border-color', border_color);
+	});
+
+
+	//if everything's ok, continue with Ajax form submit
+
+	if(proceed){
+		var post_url = $(this).attr("action"); //get form action url
+		var request_method = $(this).attr("method"); //get form GET/POST method
+		var form_data = new FormData(this); //Creates new FormData object
+		$.ajax({ //ajax form submit
+			url : post_url,
+			type: request_method,
+			data : form_data,
+			dataType : "json",
+			contentType: false,
+			cache: false,
+			processData:false
+		}).done(function(res){ //fetch server "json" messages when done
+			if(res.type == "error"){
+				$("#newsletter-response").show();
+				$("#newsletter-response").html('<div class="error">'+ res.text +"</div>");
+			}
+			if(res.type == "done"){
+				$("#newsletter-response").show();
+				$("#newsletter-response").html('<div class="success">'+ res.text +"</div>");
+				$("#newsletter-response").delay(4000).hide();
+			}
+            $("#cv-button").prop('disabled', true);
+		});
+	}
+});
+</script>

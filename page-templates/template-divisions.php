@@ -74,19 +74,19 @@ get_header('division');
 		<div class="real-right-overlay">
 				<ul class="list-inline text-white reallists mt-5 pt-5">
 					<?php
-						$query = new WP_Query(array(
-							'post_type' => array('realestate'),
-							'post_status' => 'publish',
-							'order' => 'ASC',
-						));
-						while ($query->have_posts()) {
-							$query->the_post();
-							$post_id = get_the_ID();
-							$post_title = get_the_title();
-							$post_content = get_the_excerpt();
-							$post_url = get_the_permalink();
-							$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
-					?>
+$query = new WP_Query(array(
+	'post_type' => array('realestate'),
+	'post_status' => 'publish',
+	'order' => 'ASC',
+));
+while ($query->have_posts()) {
+	$query->the_post();
+	$post_id = get_the_ID();
+	$post_title = get_the_title();
+	$post_content = get_the_excerpt();
+	$post_url = get_the_permalink();
+	$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
+	?>
 				  <a href="<?php echo $post_url; ?>">
 				  	<li class="media pl-7">
 					    <img class="plus-sign" src="<?php echo get_template_directory_uri(); ?>/img/plus-sign.png" />
@@ -96,7 +96,7 @@ get_header('division');
 				  	</li>
 				  </a>
 				<?php	}
-					wp_reset_query();?>
+wp_reset_query();?>
 				</ul>
 		</div>
 	</div>
@@ -119,19 +119,19 @@ get_header('division');
 		<div class="real-right-overlay">
 				<ul class="list-inline text-white reallists mt-5 pt-5">
 					<?php
-						$query = new WP_Query(array(
-							'post_type' => array('construction'),
-							'post_status' => 'publish',
-							'order' => 'ASC',
-						));
-						while ($query->have_posts()) {
-							$query->the_post();
-							$post_id = get_the_ID();
-							$post_title = get_the_title();
-							$post_content = get_the_excerpt();
-							$post_url = get_the_permalink();
-							$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
-					?>
+$query = new WP_Query(array(
+	'post_type' => array('construction'),
+	'post_status' => 'publish',
+	'order' => 'ASC',
+));
+while ($query->have_posts()) {
+	$query->the_post();
+	$post_id = get_the_ID();
+	$post_title = get_the_title();
+	$post_content = get_the_excerpt();
+	$post_url = get_the_permalink();
+	$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
+	?>
 						<a href="<?php echo $post_url; ?>">
 						  	<li class="media pl-7">
 							    <img class="plus-sign" src="<?php echo get_template_directory_uri(); ?>/img/plus-sign.png" />
@@ -140,7 +140,8 @@ get_header('division');
 							    </div>
 						  	</li>
 					    </a>
-					<?php	} wp_reset_query();?>
+					<?php	}
+wp_reset_query();?>
 				</ul>
 		</div>
 	</div>
@@ -151,8 +152,8 @@ get_header('division');
 		<div class="real-left-overlay">
 			<div class="row">
 				<div class="col mt-5 ml-5 pt-5">
-					<h1 class="text-white pt-5 pl-5 pr-5">Entertainment</h1>
-					<p class="text-white  pl-5 pr-5 pb-3 w-75 my-4 divi-content"><?php the_field('entertainment_intro');?></p>
+					<h1 class="text-white pt-5 px-5 prmy-font font-weight-bold">Entertainment</h1>
+					<p class="text-white  px-5 pb-3 w-75 my-4 divi-content"><?php the_field('entertainment_intro');?></p>
 					<a id="ent-back" class="second-color pl-5 pr-5 pb-3" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/left-arrow.png">Back</a>
 				</div>
 			</div>
@@ -162,19 +163,19 @@ get_header('division');
 		<div class="real-right-overlay">
 				<ul class="list-inline text-white reallists mt-5 pt-5">
 					<?php
-						$query = new WP_Query(array(
-							'post_type' => array('entertainment'),
-							'post_status' => 'publish',
-							'order' => 'ASC',
-						));
-						while ($query->have_posts()) {
-							$query->the_post();
-							$post_id = get_the_ID();
-							$post_title = get_the_title();
-							$post_content = get_the_excerpt();
-							$post_url = get_the_permalink();
-							$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
-					?>
+$query = new WP_Query(array(
+	'post_type' => array('entertainment'),
+	'post_status' => 'publish',
+	'order' => 'ASC',
+));
+while ($query->have_posts()) {
+	$query->the_post();
+	$post_id = get_the_ID();
+	$post_title = get_the_title();
+	$post_content = get_the_excerpt();
+	$post_url = get_the_permalink();
+	$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
+	?>
 						<a href="<?php echo $post_url; ?>">
 						  	<li class="media pl-7">
 							    <img class="plus-sign" src="<?php echo get_template_directory_uri(); ?>/img/plus-sign.png" />
@@ -183,7 +184,8 @@ get_header('division');
 							    </div>
 						  	</li>
 					    </a>
-					<?php	} wp_reset_query();?>
+					<?php	}
+wp_reset_query();?>
 				</ul>
 		</div>
 	</div>

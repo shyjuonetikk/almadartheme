@@ -1165,3 +1165,16 @@ div#disclaimer > p, div#terms > p, div#privacy > p {
       margin-left: 6% !important;
     }
 }
+div#resume_result {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 22%;
+    background: #21145ee8;
+    padding: 10px 5px;
+    text-align: center;
+    box-shadow: 1px 1px 2px 2px #0000002b;
+    width: 60%;
+    font-weight: 400;
+    color: #fff;
+}

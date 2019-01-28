@@ -13,40 +13,40 @@ get_header('posts');
 		<div class="row p-5">
 			<div class="col-lg-6 col-md-12 col-sm-12 col-12 purple-color fs-12 lh-paragraph">
 				<?php
-					while ( have_posts() ) : the_post();
-						the_content();
-						$title = get_the_title();
-						$post_id = get_the_ID();
-						$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
-				?>
-				
-			</div>
-			<div class="col-lg-6 col-md-12 col-sm-12 col-12">
-				<img class="img-fluid float-left float-md-left float-lg-right w-75" src="<?php echo $featured_img_url; ?>" />
-			</div>
-		<?php endwhile; ?>
+while (have_posts()): the_post();
+	the_content();
+	$title = get_the_title();
+	$post_id = get_the_ID();
+	$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
+	?>
+
+					</div>
+					<div class="col-lg-6 col-md-12 col-sm-12 col-12">
+						<img class="img-fluid float-left float-md-left float-lg-right w-75" src="<?php echo $featured_img_url; ?>" />
+					</div>
+				<?php endwhile;?>
 		</div>
 		<div class="container text-center">
-			<h2 class="text-center purple-color mb-3"> Latest News</h2>
+			<h2 class="text-center purple-color mb-4"> Latest News</h2>
 		</div>
 		<div class="container pl-5 pr-5">
 			<div class="col-12 col-lg-12 pl-4 pr-0 mx-auto" id="projects-list">
 					<div class="row m-0 projects-list">
 					<?php
-						$query = new WP_Query(array(
-							'post_type' => array('almadarnews'),
-							'post_status' => 'publish',
-							'posts_per_page' => 2,
-						));
+$query = new WP_Query(array(
+	'post_type' => array('almadarnews'),
+	'post_status' => 'publish',
+	'posts_per_page' => 2,
+));
 
-						while ($query->have_posts()) {
-							$query->the_post();
-							$post_id = get_the_ID();
-							$post_title = get_the_title();
-							$post_content = get_the_excerpt();
-							$post_url = get_the_permalink();
-							$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
-							?>
+while ($query->have_posts()) {
+	$query->the_post();
+	$post_id = get_the_ID();
+	$post_title = get_the_title();
+	$post_content = get_the_excerpt();
+	$post_url = get_the_permalink();
+	$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
+	?>
 						<div class="col-12 col-md-6 mb-3 pl-0">
 							<div class="card border-0 rounded-0 w-100">
 								<div class="image-container">
@@ -61,7 +61,8 @@ get_header('posts');
 							  </div>
 							</div>
 						</div>
-						<?php	} wp_reset_query(); ?>
+						<?php	}
+wp_reset_query();?>
 					</div>
 				</div>
 		</div>
