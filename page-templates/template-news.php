@@ -41,10 +41,10 @@ get_header('division');
 					<h2 class="purple-color prmy-font font-weight-bold">News</h2>
 					<div class="line"></div>
 					<ul class="list-inline mt-4 projects-ul row" id="news-type">
-						<li class="font-weight-light col-6 col-md-12 col-sm-3 purple-color font-weight-bold" data-news_type="realestate" data-post_type="almadarnews" data-max-pages="<?php echo $maxpages; ?>" data-posts_per_page="1">REAL ESTATE</li>
-						<li class="font-weight-light purple-color col-6 col-md-12 col-sm-3" data-news_type="construction" data-post_type="almadarnews" data-max-pages="<?php echo $maxpages; ?>" data-posts_per_page="1">CONSTRUCTION</li>
-						<li class="font-weight-light purple-color col-6 col-md-12 col-sm-3" data-news_type="entertainment" data-post_type="almadarnews" data-max-pages="<?php echo $maxpages; ?>" data-posts_per_page="1">ENTERTAINMENT</li>
-						<li class="font-weight-light purple-color col-6 col-md-12 col-sm-3" data-news_type="all" data-post_type="almadarnews" data-max-pages="<?php echo $maxpages; ?>" data-posts_per_page="1">ALL UPDATES</li>
+						<li class="projects-active projects-normal col-6 col-md-12 col-sm-3" data-news_type="realestate" data-post_type="almadarnews" data-max-pages="<?php echo $maxpages; ?>" data-posts_per_page="1">REAL ESTATE</li>
+						<li class="projects-normal col-6 col-md-12 col-sm-3" data-news_type="construction" data-post_type="almadarnews" data-max-pages="<?php echo $maxpages; ?>" data-posts_per_page="1">CONSTRUCTION</li>
+						<li class="projects-normal col-6 col-md-12 col-sm-3" data-news_type="entertainment" data-post_type="almadarnews" data-max-pages="<?php echo $maxpages; ?>" data-posts_per_page="1">ENTERTAINMENT</li>
+						<li class="projects-normal col-6 col-md-12 col-sm-3" data-news_type="all" data-post_type="almadarnews" data-max-pages="<?php echo $maxpages; ?>" data-posts_per_page="1">ALL UPDATES</li>
 					</ul>
 				</div>
 				<div class="col-12 col-md-9 col-lg-10  pl-4 pr-0 float-left" id="projects-list">

@@ -28,7 +28,6 @@ body{
 }
 .menu-new{
   padding: 0.5rem;
-  transition: .2s;
 }
 .menu-new a{
 	color: #fff;
@@ -50,7 +49,6 @@ body{
 
 .menu-custom{
   padding: 0.5rem;
-  transition: .2s;
 }
 .menu-custom a{
 	color: #22115c;
@@ -985,7 +983,6 @@ ul.reallists > li > i {
   webkit-box-shadow: 0px 6px 23px -11px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 6px 23px -11px rgba(0,0,0,0.75);
   box-shadow: 0px 6px 23px -11px rgba(0,0,0,0.75);
-  transition: .2s;
 }
 .sticky a{
   color: #21145f;
@@ -1182,4 +1179,11 @@ div#resume_result {
 }
 button#contactus-button:hover {
     color: #e2e2e2;
+}
+.projects-normal{
+  color: #000;
+}
+.projects-active{
+  color: #21145f !important;
+  font-weight: 600 !important;
 }
