@@ -27,7 +27,7 @@ get_header('about');
 			</div>
 		</div>
 	</div>
-	<div class="col-xl-12 float-left">
+	<div class="col-xl-12 float-left m-0 p-0">
 		<div class="container">
 			<div id="msg-md" class="col-xl-12 mb-5 p-0 float-left shadow">
 				<div class="col-12 m-0 p-0 text-center text-white about-bg mb-4">
