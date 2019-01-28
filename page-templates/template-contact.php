@@ -71,19 +71,19 @@ $("#contact-form").submit(function(e){
     e.preventDefault(); //prevent default action
 	proceed = true;
 
-	//simple input validation
-	// $($(this).find("input[data-required=true], select[data-required=true]")).each(function(){
- //        if(!$.trim($(this).val())){ //if this field is empty
- //            $(this).css('border-color','red'); //change border color to red
- //            proceed = false; //set do not proceed flag
- //        }
-	// })
-	// .on("input", function(){ //change border color to original
-	// 	 $(this).css('border-color', border_color);
-	// });
+	// simple input validation
+	$($(this).find("input[data-required=true]")).each(function(){
+        if(!$.trim($(this).val())){ //if this field is empty
+            $(this).css('border-color','red'); //change border color to red
+            proceed = false; //set do not proceed flag
+        }
+	})
+	.on("input", function(){ //change border color to original
+		 $(this).css('border-color', border_color);
+	});
 
 
-	//if everything's ok, continue with Ajax form submit
+	// if everything's ok, continue with Ajax form submit
 
 	if(proceed){
 		var post_url = $(this).attr("action"); //get form action url
@@ -109,7 +109,6 @@ $("#contact-form").submit(function(e){
 			// }
 			$("#contact-us-response").show();
 			$("#contact-us-response").html('<div class="success">'+ res.text +"</div>");
-			$("#contact-us-response").delay(4000).hide();
             // $("#contactus-button").prop('disabled', true);
 		});
 	}

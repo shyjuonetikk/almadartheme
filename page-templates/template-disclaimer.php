@@ -15,9 +15,9 @@ get_header('new');
 				<!-- <h2 class="purple-color"></h2> -->
 				<div class="line"></div>
 				<ul class="col-lg-12 text-center text-xl-left list-inline mt-4 disc-ul float-left px-0">
-					<li class="font-weight-light purple-color float-left col-xl-12 col-lg-4 col-md-4 px-0" id="disclaimer-tab">DISCLAIMER</li>
-					<li class="font-weight-light purple-color float-left col-xl-12 col-lg-4 col-md-4 px-0" id="terms-tab">TERMS & CONDITIONS</li>
-					<li class="font-weight-light purple-color float-left col-xl-12 col-lg-4 col-md-4 px-0" id="privacy-tab">PRIVACY POLICY</li>
+					<li class="font-weight-light float-left col-xl-12 col-lg-4 col-md-4 px-0" id="disclaimer-tab">DISCLAIMER</li>
+					<li class="font-weight-light float-left col-xl-12 col-lg-4 col-md-4 px-0" id="terms-tab">TERMS & CONDITIONS</li>
+					<li class="font-weight-light float-left col-xl-12 col-lg-4 col-md-4 px-0" id="privacy-tab">PRIVACY POLICY</li>
 				</ul>
 			</div>
 			<div class="col-xl-10 col-lg-12 pl-4 pr-0 float-left">

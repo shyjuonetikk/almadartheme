@@ -922,8 +922,8 @@ div#career-table-container {
     margin-bottom: 6rem;
 }
 .shadow {
-    -webkit-box-shadow: 0px 1px 4px #01010166!important;
-    box-shadow: 0px 1px 4px #01010166!important;
+    -webkit-box-shadow: 0px 1px 4px #01010122!important;
+    box-shadow: 0px 1px 4px #01010122!important;
 }
 div#realestate-banner, div#enter-banner, div#contruct-banner {
     right: -200%;
@@ -1037,6 +1037,7 @@ ul#status-list > li {
 }
 .disc-active {
     font-weight: 600 !important;
+    color: #21145f;
 }
 #terms, #privacy {
   display: none;
@@ -1044,7 +1045,7 @@ ul#status-list > li {
 .disc-ul {
     line-height: 1.5rem;
 }
-.disc-ul:hover {
+.disc-ul:hover, button#basic-addon2 {
     cursor: pointer;
 }
 h3.disclaimer-head {

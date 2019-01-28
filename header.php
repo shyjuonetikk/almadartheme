@@ -64,30 +64,28 @@ $container = get_theme_mod('understrap_container_type');
 
 				<!-- The WordPress Menu goes here -->
 				<?php wp_nav_menu(
-						array(
-							'theme_location' => 'primary',
-							'container_class' => 'collapse navbar-collapse',
-							'container_id' => 'navbarNavDropdown',
-							'menu_class' => 'navbar-nav',
-							'fallback_cb' => '',
-							'menu_id' => 'main-menu',
-							'depth' => 2,
-							'walker' => new Understrap_WP_Bootstrap_Navwalker(),
-						)
-					);
-				?>
+	array(
+		'theme_location' => 'primary',
+		'container_class' => 'collapse navbar-collapse',
+		'container_id' => 'navbarNavDropdown',
+		'menu_class' => 'navbar-nav',
+		'fallback_cb' => '',
+		'menu_id' => 'main-menu',
+		'depth' => 2,
+		'walker' => new Understrap_WP_Bootstrap_Navwalker(),
+	)
+);
+?>
 			<?php if ('container' == $container): ?>
-				<div class="d-xl-block d-lg-none d-md-none d-sm-none d-none">
-					<a href="#" class="social-media">
-						<i class="fab fa-facebook-square fs-22 sm-icon-fb"></i>
-					</a>
-					<a href="#" class="social-media">
-						<i class="fab fa-twitter fs-22 sm-icon-tw pa-5 w-24"></i>
-					</a>
-					<a href="#" class="social-media">
-						<i class="fab fa-linkedin-in fs-22 sm-icon-fb"></i>
-					</a>
-				</div>
+				<a href="#" class="social-media d-none d-sm-none d-md-none d-lg-none d-xl-block">
+					<i class="fab fa-facebook-square fs-22 sm-icon-fb"></i>
+				</a>
+				<a href="#" class="social-media d-none d-sm-none d-md-none d-lg-none d-xl-block">
+					<i class="fab fa-twitter fs-22 sm-icon-tw pa-5 w-24"></i>
+				</a>
+				<a href="#" class="social-media d-none d-sm-none d-md-none d-lg-none d-xl-block">
+					<i class="fab fa-linkedin-in fs-22 sm-icon-fb"></i>
+				</a>
 			</div><!-- .container -->
 			<?php endif;?>
 
