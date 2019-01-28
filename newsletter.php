@@ -6,7 +6,7 @@ if (!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_RE
 	die('Sorry Request must be Ajax POST'); //exit script
 }
 
-$mailId = $_POST['newslettter-mail'];
+$mailId = $_POST['newsMail'];
 
 $message_body = "Newseletter request from the Mail ID:\t" . $mailId;
 

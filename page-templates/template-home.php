@@ -290,7 +290,7 @@ wp_reset_query();
 
 <script type="text/javascript">
 
-$("#newsletter-form").submit(function(e){
+$(".input-group-append").click(function(e){
     e.preventDefault(); //prevent default action
 	proceed = true;
 
@@ -318,12 +318,62 @@ $("#newsletter-form").submit(function(e){
 		var request_method = $(this).attr("method"); //get form GET/POST method
 		var form_data = new FormData(this); //Creates new FormData object
 		// var data = {};
-		var data = $("#newslettter-mail").val();
+		var newsMail = $("#newslettter-mail").val();
     	// data[varName] = varValue;
 		$.ajax({ //ajax form submit
 			url : post_url,
-			type: request_method,
-			data: data,
+			type: "POST",
+			data: {"newsMail":newsMail},
+			dataType : "json"
+		}).done(function(res){ //fetch server "json" messages when done
+			if(res.type == "error"){
+				$("#newsletter-response").show();
+				$("#newsletter-response").html('<div class="error">'+ res.text +"</div>");
+			}
+			if(res.type == "done"){
+				$("#newsletter-response").show();
+				$("#newsletter-response").html('<div class="success">'+ res.text +"</div>");
+				$("#newsletter-response").delay(4000).hide();
+			}
+            $("#cv-button").prop('disabled', true);
+		});
+	}
+});
+$("#newslettter-mail").click(function(e){
+    e.preventDefault(); //prevent default action
+	proceed = true;
+	alert("form submit")
+
+	//simple input validation
+	// $($(this).find("input[data-required=true], select[data-required=true]")).each(function(){
+ //            if(!$.trim($(this).val())){ //if this field is empty
+ //                $(this).css('border-color','red'); //change border color to red
+ //                proceed = false; //set do not proceed flag
+ //            }
+ //            //check invalid email
+ //            var email_reg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+ //            if($(this).attr("type")=="email" && !email_reg.test($.trim($(this).val()))){
+ //                $(this).css('border-color','red'); //change border color to red
+ //                proceed = false; //set do not proceed flag
+ //            }
+	// })
+	// .on("input", function(){ //change border color to original
+	// 	 $(this).css('border-color', border_color);
+	// });
+
+
+	//if everything's ok, continue with Ajax form submit
+	if(proceed){
+		var post_url = $(this).attr("action"); //get form action url
+		var request_method = $(this).attr("method"); //get form GET/POST method
+		var form_data = new FormData(this); //Creates new FormData object
+		// var data = {};
+		var newsMail = $("#newslettter-mail").val();
+    	// data[varName] = varValue;
+		$.ajax({ //ajax form submit
+			url : post_url,
+			type: "POST",
+			data: {"newsMail":newsMail},
 			dataType : "json"
 		}).done(function(res){ //fetch server "json" messages when done
 			if(res.type == "error"){
