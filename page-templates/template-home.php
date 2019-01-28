@@ -271,7 +271,7 @@ wp_reset_query();
 				  <div class="form-group row">
 				    <div class="col-12 col-sm-9 m-auto">
 				      	<div class="input-group mb-3 newsletter-txt-field prmy-font">
-						  <input id="newslettter-mail" name="newslettter-mail" type="text" class="form-control" placeholder="YOUR E-MAIL ADDRESS" aria-label="YOUR E-MAIL ADDRESS" aria-describedby="basic-addon2" data-required="true">
+						  <input id="newslettter-mail" name="newslettter-mail" type="email" class="form-control" placeholder="YOUR E-MAIL ADDRESS" aria-label="YOUR E-MAIL ADDRESS" aria-describedby="basic-addon2" data-required="true">
 						  <div class="input-group-append">
 						    <span class="input-group-text" id="basic-addon2">SUBMIT</span>
 						  </div>
@@ -295,21 +295,21 @@ $(".input-group-append").click(function(e){
 	proceed = true;
 
 	//simple input validation
-	$($(this).find("input[data-required=true], select[data-required=true]")).each(function(){
-            if(!$.trim($(this).val())){ //if this field is empty
-                $(this).css('border-color','red'); //change border color to red
-                proceed = false; //set do not proceed flag
-            }
-            //check invalid email
-            var email_reg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-            if($(this).attr("type")=="email" && !email_reg.test($.trim($(this).val()))){
-                $(this).css('border-color','red'); //change border color to red
-                proceed = false; //set do not proceed flag
-            }
-	})
-	.on("input", function(){ //change border color to original
-		 $(this).css('border-color', border_color);
-	});
+	// $($(this).find("input[data-required=true], select[data-required=true]")).each(function(){
+ //            if(!$.trim($(this).val())){ //if this field is empty
+ //                $(this).css('border-color','red'); //change border color to red
+ //                proceed = false; //set do not proceed flag
+ //            }
+ //            //check invalid email
+ //            var email_reg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+ //            if($(this).attr("type")=="email" && !email_reg.test($.trim($(this).val()))){
+ //                $(this).css('border-color','red'); //change border color to red
+ //                proceed = false; //set do not proceed flag
+ //            }
+	// })
+	// .on("input", function(){ //change border color to original
+	// 	 $(this).css('border-color', border_color);
+	// });
 
 
 	//if everything's ok, continue with Ajax form submit
