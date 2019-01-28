@@ -101,8 +101,7 @@ function more_post_ajax() {
 				    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
 				    <p class="card-text fs-12 purple-color"><?php echo $post_content; ?></p>
 				    <span class="purple-color float-left fs-12"><?php echo get_the_date(); ?> </span>
-				    <a href="<?php //echo $post_url; ?>" class="float-right fs-12">Read More</a>
-				    <!-- <input type="hidden" name="paged" id="paged" value="<?php echo $offset; ?>"> -->
+				    <a href="<?php echo $post_url; ?>" class="float-right fs-12">Read More</a>
 				  </div>
 				</div>
 			</div>
@@ -172,7 +171,7 @@ if ($status == 'all') {
 			    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
 			    <p class="card-text fs-12 purple-color"><?php echo $post_content; ?></p>
 			    <span class="purple-color float-left fs-12"><?php echo get_the_date(); ?> </span>
-			    <a href="<?php //echo $post_url; ?>" class="float-right fs-12">Read More</a>
+			    <a href="<?php echo $post_url; ?>" class="float-right fs-12">Read More</a>
 			  </div>
 			</div>
 		</div>
@@ -280,7 +279,7 @@ $query = new WP_Query(array(
 				    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
 				    <p class="card-text fs-12 purple-color"><?php echo $post_content; ?></p>
 				    <span class="purple-color float-left fs-12"><?php echo get_the_date(); ?> </span>
-				    <a href="<?php //echo $post_url; ?>" class="float-right fs-12">Read More</a>
+				    <a href="<?php echo $post_url; ?>" class="float-right fs-12">Read More</a>
 				  </div>
 				</div>
 			</div>
@@ -405,7 +404,7 @@ function more_news_ajax() {
 	    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
 	    <p class="card-text fs-12 purple-color"><?php echo $post_content; ?></p>
 	    <span class="purple-color float-left fs-12"><?php echo get_the_date(); ?> </span>
-	    <a href="<?php //echo $post_url; ?>" class="float-right fs-12">Read More</a>
+	    <a href="<?php echo $post_url; ?>" class="float-right fs-12">Read More</a>
 	  </div>
 	</div>
 </div>
@@ -469,7 +468,7 @@ function load_news_by_type() {
 	    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
 	    <p class="card-text fs-12 purple-color"><?php echo $post_content; ?></p>
 	    <span class="purple-color float-left fs-12"><?php echo get_the_date(); ?> </span>
-	    <a href="<?php //echo $post_url; ?>" class="float-right fs-12">Read More</a>
+	    <a href="<?php echo $post_url; ?>" class="float-right fs-12">Read More</a>
 	  </div>
 	</div>
 </div>
