@@ -18,10 +18,10 @@ if ($_POST) {
 	$message_body .= "Company: " . $contactCompany . "\n";
 	$message_body .= "Contact Mail: " . $contactMail . "\n";
 	$message_body .= "Subject: " . $contactSubject . "\n";
-	$message_body .= "Message: " . $appNation . "\n";
+	$message_body .= "Message: " . $contactMessage . "\n";
 
 	$headers = "From:" . $from_email . "\r\n" .
-	"Reply-To: " . $from_email . "\n" .
+	"Reply-To: " . $contactMail . "\n" .
 	"X-Mailer: PHP/" . phpversion();
 	$body = $message_body;
 
