@@ -313,19 +313,18 @@ $(".input-group-append").click(function(e){
 
 
 	//if everything's ok, continue with Ajax form submit
-
 	if(proceed){
 		var post_url = $(this).attr("action"); //get form action url
 		var request_method = $(this).attr("method"); //get form GET/POST method
 		var form_data = new FormData(this); //Creates new FormData object
+		// var data = {};
+		var data = $("#newslettter-mail").val();
+    	// data[varName] = varValue;
 		$.ajax({ //ajax form submit
 			url : post_url,
 			type: request_method,
-			data : form_data,
-			dataType : "json",
-			contentType: false,
-			cache: false,
-			processData:false
+			data: data,
+			dataType : "json"
 		}).done(function(res){ //fetch server "json" messages when done
 			if(res.type == "error"){
 				$("#newsletter-response").show();
