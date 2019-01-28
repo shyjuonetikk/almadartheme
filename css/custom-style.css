@@ -1160,3 +1160,8 @@ div#disclaimer > p, div#terms > p, div#privacy > p {
     overflow: hidden;
   }
 }
+@media (min-width: 1400px){
+    .container {
+        max-width: 1248px;
+    }
+}

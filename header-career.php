@@ -186,10 +186,11 @@ $container = get_theme_mod('understrap_container_type');
 
 		</nav><!-- .site-navigation -->
 	</div>
-		<div class="col-lg-8 mx-auto">
+		<div class="col-md-8 mx-auto">
 			<div class="about-page">
 				<div class="container">
-					<h1 class="slider-heading display-4 mb-3 prmy-font text-white px-3">Careers</h1>
+					<!-- <h1 class="slider-heading display-4 mb-3 px-3 prmy-font text-white"><?php the_title();?></h1> -->
+					<h1 class="slider-heading display-4 mb-3  prmy-font text-white"><?php the_title();?></h1>
 				</div>
 			</div>
 		</div>
