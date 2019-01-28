@@ -17,36 +17,40 @@ get_header('division');
 					<input type="hidden" id="place" value="qatar" />
 				</ul>
 			</div>
+			<?php
+				$query = new WP_Query(array(
+					'post_type' => array('almadarnews'),
+					'post_status' => 'publish',
+					'meta_query' => array(
+						'relation' => 'AND', //**** Use AND or OR as per your required Where Clause
+						array(
+							'key' => 'news_type',
+							'value' => 'realestate',
+						),
+						array(
+							'key' => 'news_location',
+							'value' => 'qatar',
+						),
+					),
+					'posts_per_page' => 2,
+				));
+				$maxpages = $query->max_num_pages;
+			?>
 			<div class="col-12 float-left" id="projects-container">
 				<div class="col-12 col-md-3 col-lg-2 float-left">
 					<h2 class="purple-color prmy-font font-weight-bold">News</h2>
 					<div class="line"></div>
 					<ul class="list-inline mt-4 projects-ul row" id="news-type">
-						<li class="font-weight-light col-6 col-md-12 col-sm-3 purple-color font-weight-bold" data-news_type="realestate" data-post_type="almadarnews" data-posts_per_page="1">REAL ESTATE</li>
-						<li class="font-weight-light purple-color col-6 col-md-12 col-sm-3" data-news_type="construction" data-post_type="almadarnews" data-posts_per_page="1">CONSTRUCTION</li>
-						<li class="font-weight-light purple-color col-6 col-md-12 col-sm-3" data-news_type="entertainment" data-post_type="almadarnews" data-posts_per_page="1">ENTERTAINMENT</li>
-						<li class="font-weight-light purple-color col-6 col-md-12 col-sm-3" data-news_type="all" data-post_type="almadarnews" data-posts_per_page="1">ALL UPDATES</li>
+						<li class="font-weight-light col-6 col-md-12 col-sm-3 purple-color font-weight-bold" data-news_type="realestate" data-post_type="almadarnews" data-max-pages="<?php echo $maxpages; ?>" data-posts_per_page="1">REAL ESTATE</li>
+						<li class="font-weight-light purple-color col-6 col-md-12 col-sm-3" data-news_type="construction" data-post_type="almadarnews" data-max-pages="<?php echo $maxpages; ?>" data-posts_per_page="1">CONSTRUCTION</li>
+						<li class="font-weight-light purple-color col-6 col-md-12 col-sm-3" data-news_type="entertainment" data-post_type="almadarnews" data-max-pages="<?php echo $maxpages; ?>" data-posts_per_page="1">ENTERTAINMENT</li>
+						<li class="font-weight-light purple-color col-6 col-md-12 col-sm-3" data-news_type="all" data-post_type="almadarnews" data-max-pages="<?php echo $maxpages; ?>" data-posts_per_page="1">ALL UPDATES</li>
 					</ul>
 				</div>
 				<div class="col-12 col-md-9 col-lg-10  pl-4 pr-0 float-left" id="projects-list">
 					<div class="row m-0 projects-list">
 					<?php
-$query = new WP_Query(array(
-	'post_type' => array('almadarnews'),
-	'post_status' => 'publish',
-	'meta_query' => array(
-		'relation' => 'AND', //**** Use AND or OR as per your required Where Clause
-		array(
-			'key' => 'news_type',
-			'value' => 'realestate',
-		),
-		array(
-			'key' => 'news_location',
-			'value' => 'qatar',
-		),
-	),
-	'posts_per_page' => 2,
-));
+
 
 if ($query->have_posts()) {
 	while ($query->have_posts()) {
@@ -83,7 +87,7 @@ if ($query->have_posts()) {
 								<div class="col m-auto text-center">
 								<!-- <a href="#" class="float-left">More -->
 									<i class="fas fa-spinner fa-spin" id="loading-indicator" style="display:none;"></i>
-									<a id="more_news" data-post-type="almadarnews" data-posts-per-page="1" data-news-type="realestate">More<img class="text-center font-weight-medium" src="<?php echo get_template_directory_uri(); ?>/img/arrow-down.png" /> </a>
+									<a id="more_news" data-post-type="almadarnews" data-max-pages="<?php echo $maxpages; ?>" data-posts-per-page="1" data-news-type="realestate">More<img class="text-center font-weight-medium" src="<?php echo get_template_directory_uri(); ?>/img/arrow-down.png" /> </a>
 								</div>
 							</div>
 						<?php } else { echo "<div class='row w-100 pt-4'><h4 class='purple-color m-auto'> No news found.. </h4></div>"; }?>
