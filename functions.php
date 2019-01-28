@@ -675,7 +675,6 @@ function menu_id_page($item, $args) {
 add_filter('nav_menu_item_id', 'menu_id_page', 10, 2);
 
 function ajax_mail() {
-	$email = null;
 	$email = $_POST['email'];
 	$recipient_email = "jithinvjayaprakash@gmail.com";
 	$from_email = "hr@almadar.com"; //from email using site domain.
