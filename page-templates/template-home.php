@@ -300,7 +300,7 @@ $("#newsletter-form").submit(function(e){
 		},
 		 function(data){
 			$("#newsletter-response").html(data);
-			$("#newsletter-form").reset();
+			$("#newsletter-form").reset()
 		});
 });
 

@@ -33,33 +33,34 @@ $container = get_theme_mod('understrap_container_type');
 		<div class="col-lg-6 col-md-11 col-sm-11 col-11 m-0 contact-popup-back p-5">
 			<h1 class="prmy-font font-weight-bold mb-4">GET IN TOUCH</h1>
 			<p class="fs-12 pb-3">For inquiries and feedback, please fill out the form below.</p>
-			<form class="w-75" id="contact-form">
+			<form class="w-75" id="contact-form" method="post" action="<?php echo get_template_directory_uri(); ?>/contactus-form.php">
 			  <div class="form-row">
 			    <div class="form-group col-md-6">
 			      <label for="inputName" class="prmy-font">NAME</label>
-			      <input type="text" class="form-control border-0 rounded-0" id="inputName">
+			      <input type="text" class="form-control border-0 rounded-0" id="inputName" name="inputName" data-required="true">
 			    </div>
 			    <div class="form-group col-md-6">
-			      <label for="inputCompany">COMPANY</label>
-			      <input type="text" class="form-control border-0 rounded-0" id="inputCompany">
+			      <label for="inputCompany" class="prmy-font">COMPANY</label>
+			      <input type="text" class="form-control border-0 rounded-0" id="inputCompany" name="inputCompany" data-required="true">
 			    </div>
 			  </div>
 			  <div class="form-row">
 			    <div class="form-group col-md-6">
 			      <label for="inputEmail" class="prmy-font">EMAIL</label>
-			      <input type="email" class="form-control" id="inputEmail">
+			      <input type="email" class="form-control" id="inputEmail" data-required="true">
 			    </div>
 			    <div class="form-group col-md-6">
 			      <label for="inputSubject" class="prmy-font">SUBJECT</label>
-			      <input type="text" class="form-control border-0 rounded-0" id="inputSubject">
+			      <input type="text" class="form-control border-0 rounded-0" id="inputSubject" name="inputSubject" data-required="true">
 			    </div>
 			  </div>
 			  <div class="form-group">
 			    <label for="inputAddress" class="prmy-font">YOUR MESSAGE</label>
-			    <textarea class="form-control border-0 rounded-0" id="inputAddress"></textarea>
+			    <textarea class="form-control border-0 rounded-0" id="inputMessage" name="inputMessage" data-required="true"></textarea>
 			  </div>
 			  <button type="submit" class="btn contact-btn float-right">SUBMIT</button>
 			</form>
+			<div id="contact-us-response"></div>
 		</div>
 	</div>
 </div>
