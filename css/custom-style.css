@@ -89,9 +89,6 @@ body{
 .ml-10{
 	margin-left: 8% !important;
 }
-.ml-6{
-  margin-left: 6% !important;
-}
 .social-media{
 	opacity: 1 !important;
 	padding: 10px !important;
@@ -1172,5 +1169,8 @@ div#disclaimer > p, div#terms > p, div#privacy > p {
 @media (min-width: 1600px){
     .container {
         max-width: 1486px;
+    }
+    .ml-10{
+      margin-left: 6%;
     }
 }
