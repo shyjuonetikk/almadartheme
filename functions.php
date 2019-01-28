@@ -158,6 +158,7 @@ if ($status == 'all') {
 			$post_title = get_the_title();
 			$post_content = get_the_excerpt();
 			$post_url = get_the_permalink();
+			$maxpages = $query->max_num_pages;
 			$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
 			?>
 		<input type="hidden" value="<?php echo $place; ?>" id="place">
@@ -181,7 +182,7 @@ if ($status == 'all') {
 	<div class="row">
 		<div class="col m-auto text-center">
 			<i class="fas fa-spinner fa-spin" id="loading-indicator" style="display:none;"></i>
-			<a id="more_posts" data-post-type="projects" data-posts-per-page="1" data-status-project="<?php echo $status; ?>">More<img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/arrow-down.png" /> </a>
+			<a id="more_posts" data-post-type="projects" data-posts-per-page="1" data-max-pages="<?php echo $maxpages; ?>" data-status-project="<?php echo $status; ?>">More<img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/arrow-down.png" /> </a>
 		</div>
 	</div>
 <?php } else {echo "<div class='row w-100 pt-4'><h4 class='purple-color m-auto'> No projects found.. </h4></div>";}?>
@@ -192,10 +193,11 @@ if ($status == 'all') {
 
 	$("#more_posts").on("click",function(){
 		 // When btn is pressed.
-		 var place = $("#place").val();
+		var place = $("#place").val();
 		var post_type = $(this).data('post-type');
 		var post_per_page = $(this).data('posts-per-page');
 		var status_project = $(this).data('status-project');
+		var max_pages = $(this).data('max-pages');
 		$("#more_posts").hide();
 		$("#loading-indicator").toggle();
         // $("#more_posts").attr("disabled",true); // Disable the button, temp.
@@ -215,7 +217,11 @@ if ($status == 'all') {
 				 	 page++;
 					 $(".projects-list").append(data);
 					 $("#loading-indicator").toggle();
-					 $("#more_posts").show();
+					 if(max_pages == page){
+					 	$("#more_posts").hide();
+					 }else{
+					 	$("#more_posts").show();
+					 }
 			 	}
 			});
 
@@ -267,6 +273,7 @@ $query = new WP_Query(array(
 			$post_title = get_the_title();
 			$post_content = get_the_excerpt();
 			$post_url = get_the_permalink();
+			$maxpages = $query->max_num_pages;
 			$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
 			?>
 			<div class="col-12 col-md-6 mb-3 px-4">
@@ -290,7 +297,7 @@ $query = new WP_Query(array(
 		<div class="row">
 			<div class="col m-auto text-center">
 				<i class="fas fa-spinner fa-spin" id="loading-indicator" style="display:none;"></i>
-				<a id="more_posts" data-post-type="projects" data-posts-per-page="1" data-status-project="ongoing">More<img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/arrow-down.png" /> </a>
+				<a id="more_posts" data-post-type="projects" data-posts-per-page="1" data-max-pages="<?php echo $maxpages; ?>" data-status-project="ongoing">More<img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/arrow-down.png" /> </a>
 			</div>
 		</div>
 	<?php } else {echo "<div class='row w-100 pt-4'><h4 class='purple-color m-auto'> No projects found.. </h4></div>";}?>
@@ -323,7 +330,11 @@ $query = new WP_Query(array(
 				 	 page++;
 					 $(".projects-list").append(data);
 					 $("#loading-indicator").toggle();
-					 $("#more_posts").show();
+					 if(max_pages == page){
+					 	$("#more_posts").hide();
+					 }else{
+					 	$("#more_posts").show();
+					 }
 			 	}
   			});
    });
@@ -455,6 +466,7 @@ function load_news_by_type() {
 			$post_title = get_the_title();
 			$post_content = get_the_excerpt();
 			$post_url = get_the_permalink();
+			$maxpages = $query->max_num_pages;
 			$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
 			?>
 <input type="hidden" value="<?php echo $place; ?>" id="place" />
@@ -478,7 +490,7 @@ function load_news_by_type() {
 <div class="row">
 	<div class="col m-auto text-center">
 		<i class="fas fa-spinner fa-spin" id="loading-indicator" style="display:none;"></i>
-		<a id="more_news" data-post-type="almadarnews" data-posts-per-page="1" data-news_type="<?php echo $news_type; ?>">More<img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/arrow-down.png" /> </a>
+		<a id="more_news" data-post-type="almadarnews" data-posts-per-page="1" data-max-pages="<?php echo $maxpages; ?>" data-news_type="<?php echo $news_type; ?>">More<img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/arrow-down.png" /> </a>
 	</div>
 </div>
 <?php } else {echo "<div class='row w-100 pt-4'><h4 class='purple-color m-auto'> No news found.. </h4></div>";}?>
@@ -511,7 +523,11 @@ function load_news_by_type() {
 				 	 page++;
 					 $(".projects-list").append(data);
 					 $("#loading-indicator").toggle();
-					 $("#more_news").show();
+					 if(max_pages == page){
+					 	$("#more_news").hide();
+					 }else{
+					 	$("#more_news").show();
+					 }
 			 	}
   			});
     });
@@ -561,6 +577,7 @@ function news_filter_country() {
 			$post_title = get_the_title();
 			$post_content = get_the_excerpt();
 			$post_url = get_the_permalink();
+			$maxpages = $query->max_num_pages;
 			$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
 			?>
 
@@ -581,13 +598,9 @@ function news_filter_country() {
 <?php }
 		wp_reset_query();?>
 </div>
-<div class="col m-auto text-center">
-	<i class="fas fa-spinner fa-spin" id="loading-indicator" style="display:none;"></i>
-	<a id="more_news" data-post-type="almadarnews" data-posts-per-page="1" data-news_type="realestate">More<img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/arrow-down.png" /> </a>
-</div>
 	<div class="col m-auto text-center">
 		<i class="fas fa-spinner fa-spin" id="loading-indicator" style="display:none;"></i>
-		<a id="more_news" data-post-type="almadarnews" data-posts-per-page="1" data-news_type="realestate">More<img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/arrow-down.png" /> </a>
+		<a id="more_news" data-post-type="almadarnews" data-max-pages="<?php echo $maxpages; ?>" data-posts-per-page="1" data-news_type="realestate">More<img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/arrow-down.png" /> </a>
 	</div>
 <?php } else {echo "<div class='row w-100 pt-4'><h4 class='purple-color m-auto'> No news found.. </h4></div>";}?>
 </div>
@@ -620,7 +633,11 @@ function news_filter_country() {
 				 	 page++;
 					 $(".projects-list").append(data);
 					 $("#loading-indicator").toggle();
-					 $("#more_news").show();
+					 if(max_pages == page){
+					 	$("#more_news").hide();
+					 }else{
+					 	$("#more_news").show();
+					 }
 			 	}
   			});
     });
@@ -649,6 +666,7 @@ function news_filter_country() {
 
 add_action('wp_ajax_nopriv_news_filter_country', 'news_filter_country');
 add_action('wp_ajax_news_filter_country', 'news_filter_country');
+
 function menu_id_page($item, $args) {
 	$page = get_post($args->object_id);
 	$item = $page->post_name;

@@ -76,6 +76,7 @@
 		var post_type = $(this).data('post-type');
 		var post_per_page = $(this).data('posts-per-page');
 		var status_project = $(this).data('status-project');
+		var max_pages = $(this).data('max-pages');
 		$("#more_posts").hide();
 		$("#loading-indicator").toggle();
 		$.post(ajaxUrl,{action:"more_post_ajax",
@@ -94,7 +95,11 @@
 				 	 page++;
 					 $(".projects-list").append(data);
 					 $("#loading-indicator").toggle();
-					 $("#more_posts").show();
+					 if(max_pages == page){
+					 	$("#more_posts").hide();
+					 }else{
+					 	$("#more_posts").show();
+					 }
 			 	}
   			});
    });
@@ -152,7 +157,11 @@
 				 	 page++;
 					 $(".projects-list").append(data);
 					 $("#loading-indicator").toggle();
-					 $("#more_news").show();
+					 if(max_pages == page){
+					 	$("#more_news").hide();
+					 }else{
+					 	$("#more_news").show();
+					 }
 			 	}
   			});
     });
