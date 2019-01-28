@@ -67,7 +67,7 @@ var allowed_file_types 	= ['image/png', 'image/gif', 'image/jpeg', 'image/pjpeg'
 var border_color 		= "#C2C2C2"; //initial input border color
 var maximum_files 		= 1; //Maximum number of files allowed
 
-$("#career-form").submit(function(e){
+$("#contact-form").submit(function(e){
     e.preventDefault(); //prevent default action
 	proceed = true;
 
