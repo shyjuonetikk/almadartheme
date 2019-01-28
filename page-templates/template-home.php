@@ -290,7 +290,7 @@ wp_reset_query();
 
 <script type="text/javascript">
 
-$(".input-group-append").click(function(e){
+$("#newsletter-form").submit(function(e){
     e.preventDefault(); //prevent default action
 	proceed = true;
 
