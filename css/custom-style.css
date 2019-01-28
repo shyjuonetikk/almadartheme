@@ -972,8 +972,8 @@ ul.reallists > li > i {
     box-shadow: none;
 }
 .plus-sign{
-  padding-top: 10px;
-  padding-right: 10px;
+  padding-top: 13px;
+  padding-right: 30px;
 }
 .sticky {
   position: fixed;
