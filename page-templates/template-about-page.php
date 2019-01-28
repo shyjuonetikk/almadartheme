@@ -140,7 +140,7 @@ $("#newsletter-form").submit(function(e){
 		$("#newsletter-form").reset();
 	});
 	$("#newslettter-mail").val(null);
-	$("#newsletter-response").delay(5000).val(null);
+	$("#newsletter-response").delay(5000).html(null);
 });
 
 
