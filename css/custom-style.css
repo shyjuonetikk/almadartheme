@@ -92,6 +92,7 @@ body{
 }
 .sm-icon-fb:hover{
 	color: #22115c !important;
+  cursor: pointer;
 }
 .font-w-400{
 	font-weight: 400px;
