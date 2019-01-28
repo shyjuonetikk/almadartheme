@@ -1171,6 +1171,6 @@ div#disclaimer > p, div#terms > p, div#privacy > p {
         max-width: 1486px;
     }
     .ml-10{
-      margin-left: 6%;
+      margin-left: 6% !important;
     }
 }
