@@ -299,8 +299,8 @@ $("#newsletter-form").submit(function(e){
 			email: email
 		},
 		 function(data){
-
 			$("#newsletter-response").html(data);
+			$("#newsletter-form").reset();
 		});
 });
 
