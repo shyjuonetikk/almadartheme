@@ -13,7 +13,7 @@ get_header('posts');
 ?>
 <div class="col-lg-9 mx-auto px-3 mb-5">
 	<div class="container">
-		<div class="row m-0 p-0">
+		<!-- <div class="row m-0 p-0">
 			<div class="col-lg-6 col-md-6 col-sm-12 col-12 my-2">
 				<div class="real-image-container">
 					<img class="real-image" src="<?php echo get_template_directory_uri(); ?>/img/almadarrealestate2.png" />
@@ -34,7 +34,7 @@ get_header('posts');
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<div class="row mt-5 p-5">
 			<div class="col-lg-6 col-md-12 col-sm-12 col-12 purple-color fs-12 lh-paragraph">
 				<?php
@@ -51,7 +51,7 @@ get_header('posts');
 			</div>
 		<?php endwhile; ?>
 		</div>
-		<div class="container text-center">
+		<!-- <div class="container text-center">
 			<img class="img-fluid project-head mb-5" src="<?php echo get_template_directory_uri(); ?>/img/projectsheading.png" />
 		</div>
 		<div class="container pl-5 pr-5">
@@ -91,7 +91,7 @@ get_header('posts');
 						<?php	} wp_reset_query(); ?>
 					</div>
 				</div>
-		</div>
+		</div> -->
 	</div>
 </div>
 <?php get_footer();?>

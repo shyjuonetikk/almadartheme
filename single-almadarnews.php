@@ -26,7 +26,7 @@ get_header('posts');
 			</div>
 		<?php endwhile; ?>
 		</div>
-		<div class="container text-center">
+		<!-- <div class="container text-center">
 			<h2 class="text-center purple-color mb-3"> Latest News</h2>
 		</div>
 		<div class="container pl-5 pr-5">
@@ -64,7 +64,7 @@ get_header('posts');
 						<?php	} wp_reset_query(); ?>
 					</div>
 				</div>
-		</div>
+		</div> -->
 	</div>
 </div>
 <?php get_footer();?>
