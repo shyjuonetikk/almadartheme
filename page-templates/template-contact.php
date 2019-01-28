@@ -72,15 +72,15 @@ $("#contact-form").submit(function(e){
 	proceed = true;
 
 	//simple input validation
-	$($(this).find("input[data-required=true], select[data-required=true]")).each(function(){
-        if(!$.trim($(this).val())){ //if this field is empty
-            $(this).css('border-color','red'); //change border color to red
-            proceed = false; //set do not proceed flag
-        }
-	})
-	.on("input", function(){ //change border color to original
-		 $(this).css('border-color', border_color);
-	});
+	// $($(this).find("input[data-required=true], select[data-required=true]")).each(function(){
+ //        if(!$.trim($(this).val())){ //if this field is empty
+ //            $(this).css('border-color','red'); //change border color to red
+ //            proceed = false; //set do not proceed flag
+ //        }
+	// })
+	// .on("input", function(){ //change border color to original
+	// 	 $(this).css('border-color', border_color);
+	// });
 
 
 	//if everything's ok, continue with Ajax form submit
@@ -98,19 +98,19 @@ $("#contact-form").submit(function(e){
 			cache: false,
 			processData:false
 		}).done(function(res){ //fetch server "json" messages when done
-			if(res.type == "error"){
-				$("#resume_result").show();
-				$("#resume_result").html('<div class="error">'+ res.text +"</div>");
-			}
-			if(res.type == "done"){
-				$("#resume_result").show();
-				$("#resume_result").html('<div class="success">'+ res.text +"</div>");
-				$("#resume_result").delay(4000).hide();
-			}
+			// if(res.type == "error"){
+			// 	$("#resume_result").show();
+			// 	$("#resume_result").html('<div class="error">'+ res.text +"</div>");
+			// }
+			// if(res.type == "done"){
+			// 	$("#resume_result").show();
+			// 	$("#resume_result").html('<div class="success">'+ res.text +"</div>");
+			// 	$("#resume_result").delay(4000).hide();
+			// }
 			$("#contact-us-response").show();
 			$("#contact-us-response").html('<div class="success">'+ res.text +"</div>");
 			$("#contact-us-response").delay(4000).hide();
-            $("#contactus-button").prop('disabled', true);
+            // $("#contactus-button").prop('disabled', true);
 		});
 	}
 });
