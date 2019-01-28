@@ -11,16 +11,16 @@ get_header('new');
 <div class="row m-0 p-0 mt-3 mb-5">
 	<div class="container m-auto p-0">
 		<div class="col-12 float-left">
-			<div class="col-xl-3 col-lg-12 float-left">
+			<div class="col-xl-2 col-lg-12 float-left py-4">
 				<!-- <h2 class="purple-color"></h2> -->
 				<div class="line"></div>
-				<ul class="col-lg-12 text-center text-xl-left list-inline mt-4 disc-ul float-left">
-					<li class="font-weight-light purple-color float-left col-xl-12 col-lg-4 col-md-4" id="disclaimer-tab">DISCLAIMER</li>
-					<li class="font-weight-light purple-color float-left col-xl-12 col-lg-4 col-md-4" id="terms-tab">TERMS & CONDITIONS</li>
-					<li class="font-weight-light purple-color float-left col-xl-12 col-lg-4 col-md-4" id="privacy-tab">PRIVACY POLICY</li>
+				<ul class="col-lg-12 text-center text-xl-left list-inline mt-4 disc-ul float-left px-0">
+					<li class="font-weight-light purple-color float-left col-xl-12 col-lg-4 col-md-4 px-0" id="disclaimer-tab">DISCLAIMER</li>
+					<li class="font-weight-light purple-color float-left col-xl-12 col-lg-4 col-md-4 px-0" id="terms-tab">TERMS & CONDITIONS</li>
+					<li class="font-weight-light purple-color float-left col-xl-12 col-lg-4 col-md-4 px-0" id="privacy-tab">PRIVACY POLICY</li>
 				</ul>
 			</div>
-			<div class="col-xl-9 col-lg-12 pl-4 pr-0 float-left">
+			<div class="col-xl-10 col-lg-12 pl-4 pr-0 float-left">
 				<div class="row m-0 projects-list">
 					<div class="tab-content">
 						<div id="disclaimer" class="">

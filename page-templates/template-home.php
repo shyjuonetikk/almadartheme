@@ -301,7 +301,7 @@ $("#newsletter-form").submit(function(e){
 	},
 	function(data){
 		$("#newsletter-response").html(data);
-		$("#newsletter-form").reset();
+		// $("#newsletter-form").reset();
 	});
 	$("#newslettter-mail").val(null);
 	$("#newsletter-response").delay(5000).html(null);
