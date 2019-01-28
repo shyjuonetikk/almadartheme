@@ -79,12 +79,19 @@ $( document ).ready(function(){
 	$("#click-contact").click(function(e){
 		e.preventDefault();
 		window.scrollTo("0", "0");
-		var popupHeight = $(".contact-pop-up").height();
-		var docHeight = $(document).height();
+		var popupHeight = 0;
+		var docHeight = 0;
+		popupHeight = $(".contact-pop-up").height();
+ 		popupHeight += 20;
+		var docHeight = $(window).height();
+		if(popupHeight < docHeight){
+			popupHeight = docHeight;
+		}
 		$(".contact-pop-up").show();
 		$(".site").css({"max-height":docHeight, "overflow-y": "hidden"});
 		$('body').css({"background-attachment": "scroll"});
-		$(".contact-popup-back").css({"height" : docHeight });
+		
+		$(".contact-popup-back").css({"min-height" : popupHeight });
 		$(".contact-pop-up").animate({"right": "0", "top": "0"}, 1000);
 		$("#career-cancel").css({"min-height":popupHeight});
 	});

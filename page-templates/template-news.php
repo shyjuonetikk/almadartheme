@@ -77,7 +77,7 @@ if ($query->have_posts()) {
 							</div>
 						</div>
 						<?php }
-	wp_reset_query();?>
+								wp_reset_query();?>
 					</div>
 							<div class="row">
 								<div class="col m-auto text-center">
@@ -86,7 +86,7 @@ if ($query->have_posts()) {
 									<a id="more_news" data-post-type="almadarnews" data-posts-per-page="1" data-news-type="realestate">More<img class="text-center font-weight-medium" src="<?php echo get_template_directory_uri(); ?>/img/arrow-down.png" /> </a>
 								</div>
 							</div>
-						<?php } else {echo "<div class='row w-100 pt-4'><h4 class='purple-color m-auto'> No news found.. </h4></div>";}?>
+						<?php } else { echo "<div class='row w-100 pt-4'><h4 class='purple-color m-auto'> No news found.. </h4></div>"; }?>
 					</div>
 				</div>
 			</div>

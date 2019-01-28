@@ -46,6 +46,24 @@
 			</script>
 			";
 	}
+	else if(is_singular(['almadarnews'])){
+		echo "
+			<script type='text/javascript'>
+				$( document ).ready(function(){
+					$('#news').addClass('current_page_item active');
+				});
+			</script>
+			";
+	}
+	else if(is_singular(['projects'])){
+		echo "
+			<script type='text/javascript'>
+				$( document ).ready(function(){
+					$('#our-projects').addClass('current_page_item active');
+				});
+			</script>
+			";
+	}
 ?>
 <script type="text/javascript">
 	$( document ).ready(function(){
