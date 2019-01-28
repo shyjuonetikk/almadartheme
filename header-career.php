@@ -68,11 +68,9 @@ $container = get_theme_mod('understrap_container_type');
 				<label for="Nationality" class="col-sm-4 col-form-label">Nationality<span class="text-danger">*</span></label>
 				<div class="col-sm-8">
 					<select class="form-control" id="career-nationality" name="career-nationality" data-required="true">
-						<option></option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5</option>
+						<option value="uae">UAE</option>
+						<option value="qatar">Qatar</option>
+						<option value="Oman">Oman</option>
 					</select>
 				</div>
 			</div>
@@ -81,10 +79,10 @@ $container = get_theme_mod('understrap_container_type');
 				<div class="col-sm-8">
 					<select class="form-control" id="career-function" name="career-function" data-required="true">
 						<option></option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5</option>
+						<option>Function 1</option>
+						<option>Function 2</option>
+						<option>Function 3</option>
+						<option>Function 4</option>
 					</select>
 				</div>
 			</div>
