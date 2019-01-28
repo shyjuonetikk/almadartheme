@@ -63,7 +63,7 @@ $( document ).ready(function(){
 		}
 		$("#career-overlays").show();
 		$(".site").css({"max-height":popupHeight, "overflow-y": "hidden"});
-		$(".career-form").css({"height" : popupHeight });
+		$(".career-form").css({"min-height" : popupHeight });
 		$("#career-overlays").animate({"right": "0", "top": "0"}, 1000);
 		$("#career-cancel").css({"min-height":popupHeight});
 	});

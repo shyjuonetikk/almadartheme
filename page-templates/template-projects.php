@@ -29,31 +29,32 @@ get_header('division');
 				<div class="col-12 col-md-9 col-lg-10 pl-4 pr-0 float-left" id="projects-list">
 					<div class="row m-0 projects-list">
 					<?php
-						$query = new WP_Query(array(
-							'post_type' => array('projects'),
-							'post_status' => 'publish',
-							'meta_query' => array(
-								'relation' => 'AND', //**** Use AND or OR as per your required Where Clause
-								array(
-									'key' => 'status',
-									'value' => 'ongoing',
-								),
-								array(
-									'key' => 'place',
-									'value' => 'qatar',
-								),
-							),
-							'posts_per_page' => 2,
-						));
-						if($query->have_posts()){
-						while ($query->have_posts()) {
-							$query->the_post();
-							$post_id = get_the_ID();
-							$post_title = get_the_title();
-							$post_content = get_the_excerpt();
-							$post_url = get_the_permalink();
-							$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
-							?>
+$query = new WP_Query(array(
+	'post_type' => array('projects'),
+	'post_status' => 'publish',
+	'meta_query' => array(
+		'relation' => 'AND', //**** Use AND or OR as per your required Where Clause
+		array(
+			'key' => 'status',
+			'value' => 'ongoing',
+		),
+		array(
+			'key' => 'place',
+			'value' => 'qatar',
+		),
+	),
+	'posts_per_page' => 2,
+));
+if ($query->have_posts()) {
+	while ($query->have_posts()) {
+		$query->the_post();
+		$post_id = get_the_ID();
+		$post_title = get_the_title();
+		$post_content = get_the_excerpt();
+		$post_url = get_the_permalink();
+		$featured_img_url = get_template_directory_uri() . "/img/No_image.png";
+		if (has_post_thumbnail()) {$featured_img_url = get_the_post_thumbnail_url($post_id, 'full');} else { $featured_img_url = get_template_directory_uri() . "/img/No_image.png";}
+		?>
 						<div class="col-12 col-md-6 mb-3 px-4">
 							<div class="card border-0 rounded-0 w-100">
 								<div class="image-container">
@@ -69,6 +70,7 @@ get_header('division');
 							</div>
 						</div>
 						<?php	} wp_reset_query();  ?>
+						<?php	} else {echo "<div class='row w-100 pt-4'><h4 class='purple-color m-auto'> No projects found.. </h4></div>";}?>
 					</div>
 					<div class="row">
 							<div class="col m-auto text-center">

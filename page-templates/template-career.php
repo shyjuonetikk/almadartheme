@@ -136,12 +136,18 @@ $("#career-form").submit(function(e){
 			processData:false
 		}).done(function(res){ //fetch server "json" messages when done
 			if(res.type == "error"){
+				$("#resume_result").show();
 				$("#resume_result").html('<div class="error">'+ res.text +"</div>");
 			}
 			if(res.type == "done"){
+				$("#resume_result").show();
 				$("#resume_result").html('<div class="success">'+ res.text +"</div>");
+				$("#resume_result").delay(4000).hide();
 			}
-            $("#sendMail").prop('disabled', true);
+			$("#resume_result").show();
+			$("#resume_result").html('<div class="success">'+ res.text +"</div>");
+			$("#resume_result").delay(4000).hide();
+            $("#cv-button").prop('disabled', true);
 		});
 	}
 });
