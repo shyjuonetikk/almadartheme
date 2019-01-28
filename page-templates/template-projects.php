@@ -40,9 +40,9 @@ get_header('division');
 					<h2 class="purple-color prmy-font font-weight-bold">PROJECTS</h2>
 					<div class="line"></div>
 					<ul class="list-inline mt-4 projects-ul" id="status-list">
-						<li class="font-weight-bold purple-color" data-status_list="ongoing" data-post_type="projects" data-posts_per_page="1" data-max-pages="<?php echo $maxpages; ?>">ON - GOING PROJECTS</li>
-						<li class="purple-color" data-status_list="completed" data-post_type="projects" data-posts_per_page="1" data-max-pages="<?php echo $maxpages; ?>">COMPLETED PROJECTS</li>
-						<li class="purple-color" data-status_list="all" data-post_type="projects" data-posts_per_page="1" data-max-pages="<?php echo $maxpages; ?>">ALL PROJECTS</li>
+						<li class="projects-active projects-normal" data-status_list="ongoing" data-post_type="projects" data-posts_per_page="1" data-max-pages="<?php echo $maxpages; ?>">ON - GOING PROJECTS</li>
+						<li class="projects-normal" data-status_list="completed" data-post_type="projects" data-posts_per_page="1" data-max-pages="<?php echo $maxpages; ?>">COMPLETED PROJECTS</li>
+						<li class="projects-normal" data-status_list="all" data-post_type="projects" data-posts_per_page="1" data-max-pages="<?php echo $maxpages; ?>">ALL PROJECTS</li>
 					</ul>
 				</div>
 				<div class="col-12 col-md-9 col-lg-10 pl-4 pr-0 float-left" id="projects-list">

@@ -1182,3 +1182,10 @@ div#resume_result {
 button#contactus-button:hover {
     color: #e2e2e2;
 }
+.projects-normal{
+  color: #000;
+}
+.projects-active{
+  color: #21145f !important;
+  font-weight: 600 !important;
+}

@@ -260,9 +260,9 @@ function filter_country() {
 		<h2 class="purple-color">PROJECTS</h2>
 		<div class="line"></div>
 		<ul class="list-inline mt-4 projects-ul" id="status-list">
-			<li class="font-weight-bold purple-color" data-status_list="ongoing" data-max-pages="<?php echo $maxpages; ?>" data-post_type="projects" data-posts_per_page="1">ON - GOING PROJECTS</li>
-			<li class="purple-color" data-status_list="completed" data-max-pages="<?php echo $maxpages; ?>" data-post_type="projects" data-posts_per_page="1">COMPLETED PROJECTS</li>
-			<li class="purple-color" data-status_list="all" data-max-pages="<?php echo $maxpages; ?>" data-post_type="projects" data-posts_per_page="1">ALL PROJECTS</li>
+			<li class="projects-active projects-normal" data-status_list="ongoing" data-max-pages="<?php echo $maxpages; ?>" data-post_type="projects" data-posts_per_page="1">ON - GOING PROJECTS</li>
+			<li class="projects-normal" data-status_list="completed" data-max-pages="<?php echo $maxpages; ?>" data-post_type="projects" data-posts_per_page="1">COMPLETED PROJECTS</li>
+			<li class="projects-normal" data-status_list="all" data-max-pages="<?php echo $maxpages; ?>" data-post_type="projects" data-posts_per_page="1">ALL PROJECTS</li>
 		</ul>
 		<input type="hidden" name="place" id="place" value="<?php echo $place; ?>" />
 	</div>
@@ -349,7 +349,7 @@ function filter_country() {
 			var post_per_page = $(this).data('posts_per_page');
 			var status = $(this).data('status_list');
 			var place = $("#place").val();
-			$(this).addClass('font-weight-bold').siblings().removeClass('font-weight-bold');
+			$(this).addClass('projects-active').siblings().removeClass('projects-active');
 			$.post(ajaxUrl,{action:"load_projects_status",
 				ppp: post_per_page,
 				posttype: post_type,
@@ -572,10 +572,10 @@ function news_filter_country() {
 		<h2 class="purple-color">News</h2>
 		<div class="line"></div>
 		<ul class="list-inline mt-4 projects-ul row" id="news-type">
-			<li class="font-weight-bold col-6 col-md-12 col-sm-3 purple-color" data-news_type="realestate" data-post_type="almadarnews" data-max-pages="'.$maxpages.'" data-posts_per_page="1">REAL ESTATE</li>
-			<li class="purple-color col-6 col-md-12 col-sm-3" data-news_type="construction" data-post_type="almadarnews" data-max-pages="'.$maxpages.'" data-posts_per_page="1">CONSTRUCTION</li>
-			<li class="purple-color col-6 col-md-12 col-sm-3" data-news_type="entertainment" data-post_type="almadarnews" data-max-pages="'.$maxpages.'" data-posts_per_page="1">ENTERTAINMENT</li>
-			<li class="purple-color col-6 col-md-12 col-sm-3" data-max-pages="'.$maxpages.'" data-news_type="all" data-post_type="almadarnews" data-posts_per_page="1">ALL UPDATES</li>
+			<li class="projects-active projects-normal col-6 col-md-12 col-sm-3" data-news_type="realestate" data-post_type="almadarnews" data-max-pages="'.$maxpages.'" data-posts_per_page="1">REAL ESTATE</li>
+			<li class="projects-normal col-6 col-md-12 col-sm-3" data-news_type="construction" data-post_type="almadarnews" data-max-pages="'.$maxpages.'" data-posts_per_page="1">CONSTRUCTION</li>
+			<li class="projects-normal col-6 col-md-12 col-sm-3" data-news_type="entertainment" data-post_type="almadarnews" data-max-pages="'.$maxpages.'" data-posts_per_page="1">ENTERTAINMENT</li>
+			<li class="projects-normal col-6 col-md-12 col-sm-3" data-max-pages="'.$maxpages.'" data-news_type="all" data-post_type="almadarnews" data-posts_per_page="1">ALL UPDATES</li>
 		</ul>
 	</div>
 	<div class="col-12 col-md-9 col-lg-10  pl-4 pr-0 float-left" id="projects-list">
@@ -659,7 +659,7 @@ function news_filter_country() {
 		var post_per_page = $(this).data('posts_per_page');
 		var news_type = $(this).data('news_type');
 		var place = $("#place").val();
-		$(this).addClass('font-weight-bold').siblings().removeClass('font-weight-bold');
+		$(this).addClass('projects-active').siblings().removeClass('projects-active');
 		$.post(ajaxUrl,{action: "load_news_by_type",
 			ppp: post_per_page,
 			posttype: post_type,
