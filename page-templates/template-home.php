@@ -278,7 +278,9 @@ wp_reset_query();
 						</div>
 				     </div>
 				  </div>
-				  <div id="newsletter-response"></div>
+				  <div id="newsletter-response">
+				  	<p class="text-white"></p>
+				  </div>
 				</form>
 			</div>
 		</div>
@@ -298,7 +300,8 @@ $("#newsletter-form").submit(function(e){
 			email: email
 		},
 		 function(data){
-			 $("#newsletter-response").html(data);
+		 	$("#newsletter-form").reset();
+			 $("#newsletter-response p").html(data);
 		});
 });
 

@@ -669,13 +669,13 @@ function ajax_mail() {
 	"X-Mailer: PHP/" . phpversion();
 	$body = $message_body;
 
-	$sentMail = mail($recipient_email, "Al Madar Holding WLL - Resumes", $body, $headers);
+	$sentMail = mail($recipient_email, "Al Madar Holding WLL - Newsletter", $body, $headers);
 	if ($sentMail) //output success or failure messages
 	{
-		print json_encode(array('type' => 'done', 'text' => 'You have been successfully subscribed our Newsletter'));
+		print json_encode(array('You have been successfully subscribed our Newsletter'));
 		exit;
 	} else {
-		print json_encode(array('type' => 'error', 'text' => 'Could not send mail! Please check your network connections'));
+		print json_encode(array('Could not send mail! Please check your network connections'));
 		exit;
 	}
 }
