@@ -53,12 +53,17 @@ $( document ).ready(function(){
 	$("#resume-send, .job-apply > a").click(function(e){
 		e.preventDefault();
 		window.scrollTo("0", "0");
-		var popupHeight = $("#career-overlays").height();
-		var docHeight = $(document).height();
-		// popupHeight -= "50";
+		var popupHeight = 0;
+		var docHeight = 0;
+		popupHeight = $(".career-form").height();
+		popupHeight += 50;
+		var docHeight = $(window).height();
+		if(popupHeight < docHeight){
+			popupHeight = docHeight;
+		}
 		$("#career-overlays").show();
-		$(".site").css({"max-height":docHeight, "overflow-y": "hidden"});
-		$(".career-form").css({"height" : docHeight });
+		$(".site").css({"max-height":popupHeight, "overflow-y": "hidden"});
+		$(".career-form").css({"height" : popupHeight });
 		$("#career-overlays").animate({"right": "0", "top": "0"}, 1000);
 		$("#career-cancel").css({"min-height":popupHeight});
 	});

@@ -82,7 +82,7 @@ $("#career-form").submit(function(e){
 	proceed = true;
 
 	//simple input validation
-	$($(this).find("input[data-required=true], textarea[data-required=true]")).each(function(){
+	$($(this).find("input[data-required=true], select[data-required=true]")).each(function(){
             if(!$.trim($(this).val())){ //if this field is empty
                 $(this).css('border-color','red'); //change border color to red
                 proceed = false; //set do not proceed flag
@@ -93,7 +93,8 @@ $("#career-form").submit(function(e){
                 $(this).css('border-color','red'); //change border color to red
                 proceed = false; //set do not proceed flag
             }
-	}).on("input", function(){ //change border color to original
+	})
+	.on("input", function(){ //change border color to original
 		 $(this).css('border-color', border_color);
 	});
 
@@ -120,11 +121,11 @@ $("#career-form").submit(function(e){
 	}
 
 	//if everything's ok, continue with Ajax form submit
+
 	if(proceed){
 		var post_url = $(this).attr("action"); //get form action url
 		var request_method = $(this).attr("method"); //get form GET/POST method
 		var form_data = new FormData(this); //Creates new FormData object
-		alert("proceed Working");
 		$.ajax({ //ajax form submit
 			url : post_url,
 			type: request_method,

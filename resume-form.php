@@ -2,26 +2,28 @@
 $recipient_email = "jithinvjayaprakash@gmail.com";
 $from_email = "hr@almadar.com"; //from email using site domain.
 
-// if (!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
-// 	die('Sorry Request must be Ajax POST'); //exit script
-// }
+if (!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
+ 	die('Sorry Request must be Ajax POST'); //exit script
+}
 
-// if ($_POST) {
+if ($_POST) {
 
-// $attachments = $_FILES['file_attach'];
+$attachments = $_FILES['file_attach'];
 
-// $file_count = count($attachments['name']); //count total files attached
-// $boundary = md5("sanwebe.com");
+$file_count = count($attachments['name']); //count total files attached
 
-// $ds_rate = filter_var($_POST["dsrate"], FILTER_SANITIZE_STRING);
+$applicantFirstName = $_POST['career-first-name'];
+$applicantLastName = $_POST['career-last-name'];
+$appMail = $_POST['career-email'];
+$appPhone = $_POST['career-phone'];
+$appLocation = $_POST['career-location'];
+$appNation = $_POST['career-nationality'];
+$appFunction = $_POST['career-function'];
+
 $file_count = "0";
 // //construct a message body to be sent to recipient
-$message_body = "Resume from ";
-// . $sender_name . "\n\n";
-// $message_body .= $message;
-// $message_body .= "Name:";
-// $message_body .= $sender_name;
-// $message_body .= "\nEmail:";
+$message_body = "Resume from " . $applicantFirstName . " " . $applicantLastName ."/n";
+$message_body .= ""
 
 if ($file_count > 0) {
 	//if attachment exists
@@ -81,10 +83,11 @@ if ($file_count > 0) {
 	$body = $message_body;
 }
 
-$sentMail = mail($recipient_email, "Al Madar Holding WLL - Resumes", $body, $headers);
+// $sentMail = mail($recipient_email, "Al Madar Holding WLL - Resumes", $body, $headers);
+$sentMail = true;
 if ($sentMail) //output success or failure messages
 {
-	print json_encode(array('type' => 'done', 'text' => 'Your mail has been successfully submitted'));
+	print json_encode(array('type' => 'done', 'text' => 'Your CV has been successfully submitted'));
 	exit;
 } else {
 	print json_encode(array('type' => 'error', 'text' => 'Could not send mail! Please check your network connections'));

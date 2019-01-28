@@ -35,39 +35,39 @@ $container = get_theme_mod('understrap_container_type');
 		<p class="text-right text-danger font-weight-light">* Indicates required field</p>
 		<form id="career-form" method="post" action="<?php echo get_template_directory_uri(); ?>/resume-form.php">
 			<div class="form-group row">
-				<label for="first name" class="col-sm-4 col-form-label">First Name<span class="text-danger">*</span></label>
+				<label for="career-first-name" class="col-sm-4 col-form-label">First Name<span class="text-danger">*</span></label>
 				<div class="col-sm-8">
-					<input type="text" class="form-control" id="career-first-name">
+					<input type="text" class="form-control" id="career-first-name" name="career-first-name" data-required="true">
 				</div>
 			</div>
 			<div class="form-group row">
 				<label for="last name" class="col-sm-4 col-form-label">Last Name<span class="text-danger">*</span></label>
 				<div class="col-sm-8">
-					<input type="text" class="form-control" id="career-last-name">
+					<input type="text" class="form-control" id="career-last-name" name="career-last-name" data-required="true">
 				</div>
 			</div>
 			<div class="form-group row">
 				<label for="Email Address" class="col-sm-4 col-form-label">Email address<span class="text-danger">*</span></label>
 				<div class="col-sm-8">
-					<input type="email" class="form-control" id="career-email">
+					<input type="email" class="form-control" id="career-email" name="career-email" data-required="true">
 				</div>
 			</div>
 			<div class="form-group row">
 				<label for="Phone Number" class="col-sm-4 col-form-label">Phone Number</label>
 				<div class="col-sm-8">
-					<input type="email" class="form-control" id="career-phone">
+					<input type="email" class="form-control" id="career-phone" name="career-phone">
 				</div>
 			</div>
 			<div class="form-group row">
 				<label for="Location" class="col-sm-4 col-form-label">Location<span class="text-danger">*</span></label>
 				<div class="col-sm-8">
-					<input type="text" class="form-control" id="career-location">
+					<input type="text" class="form-control" id="career-location" name="career-location" data-required="true">
 				</div>
 			</div>
 			<div class="form-group row">
 				<label for="Nationality" class="col-sm-4 col-form-label">Nationality<span class="text-danger">*</span></label>
 				<div class="col-sm-8">
-					<select class="form-control" id="career-nationality">
+					<select class="form-control" id="career-nationality" name="career-nationality" data-required="true">
 						<option></option>
 						<option>2</option>
 						<option>3</option>
@@ -79,7 +79,7 @@ $container = get_theme_mod('understrap_container_type');
 			<div class="form-group row">
 				<label for="function" class="col-sm-4 col-form-label">Function<span class="text-danger">*</span></label>
 				<div class="col-sm-8">
-					<select class="form-control" id="career-function">
+					<select class="form-control" id="career-function" name="career-function" data-required="true">
 						<option></option>
 						<option>2</option>
 						<option>3</option>
@@ -91,13 +91,13 @@ $container = get_theme_mod('understrap_container_type');
 			<div class="form-group row">
 				<label for="resume" class="col-sm-4 col-form-label">Submit Your CV<span class="text-danger">*</span></label>
 				<div class="col-sm-8">
-					<input type="file" name="file_attach[]" id="career-resume" class="form-control-file" />
+					<input type="file" name="file_attach[]" id="career-resume" class="form-control-file" name="career-resume" />
 					<label for="career-resume" class="shadow p-2 sc-font font-weight-normal">Choose a file</label>
 				</div>
 			</div>
 			<div class="form-check mb-4">
 				<div class="custom-control custom-checkbox mb-3">
-					<input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+					<input type="checkbox" class="custom-control-input" id="customCheck" name="customCheck" data-required="true" >
 					<label class="custom-control-label mt-1" for="customCheck">I accept the Al Madar <span class="career-links"><a href="<?php echo site_url(); ?>/disclaimer/?#priv" target="_blank">Privacy Policy</a></span> and <span class="career-links"><a href="<?php echo site_url(); ?>/disclaimer/?#term" target="_blank">Terms and conditions*</a></span></label>
 			    </div>
 			</div>
