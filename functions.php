@@ -133,6 +133,7 @@ if ($status == 'all') {
 			'meta_key' => 'place',
 			'meta_value' => $place,
 		));
+		$maxpages = $query->max_num_pages;
 	} else {
 		$query = new WP_Query(array(
 			'post_type' => $posttype,
@@ -150,6 +151,7 @@ if ($status == 'all') {
 			),
 			'posts_per_page' => $ppp,
 		));
+		$maxpages = $query->max_num_pages;
 	}
 	if ($query->have_posts()) {
 		while ($query->have_posts()) {
@@ -158,7 +160,6 @@ if ($status == 'all') {
 			$post_title = get_the_title();
 			$post_content = get_the_excerpt();
 			$post_url = get_the_permalink();
-			$maxpages = $query->max_num_pages;
 			$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
 			?>
 		<input type="hidden" value="<?php echo $place; ?>" id="place">
@@ -315,6 +316,7 @@ function filter_country() {
 		var post_type = $(this).data('post-type');
 		var post_per_page = $(this).data('posts-per-page');
 		var status_project = $(this).data('status-project');
+		var max_pages = $(this).data('max-pages');
         $("#more_posts").hide();
 		$("#loading-indicator").toggle();
 		$.post(ajaxUrl,{action:"more_post_ajax",
@@ -380,6 +382,7 @@ function more_news_ajax() {
 			'meta_value' => $place,
 			'paged' => $offset,
 		));
+		$maxpages = $query->max_num_pages;
 	} else {
 		$query = new WP_Query(array(
 			'post_type' => $postype,
@@ -398,6 +401,7 @@ function more_news_ajax() {
 			'posts_per_page' => $ppp,
 			'paged' => $offset,
 		));
+		$maxpages = $query->max_num_pages;
 	}
 	if ($query->have_posts()) {
 		while ($query->have_posts()) {
@@ -444,6 +448,7 @@ function load_news_by_type() {
 			'meta_key' => 'news_location',
 			'meta_value' => $place,
 		));
+		$maxpages = $query->max_num_pages;
 	} else {
 		$query = new WP_Query(array(
 			'post_type' => $posttype,
@@ -461,6 +466,7 @@ function load_news_by_type() {
 			),
 			'posts_per_page' => $ppp,
 		));
+		$maxpages = $query->max_num_pages;
 	}
 	if ($query->have_posts()) {
 		while ($query->have_posts()) {
@@ -469,7 +475,6 @@ function load_news_by_type() {
 			$post_title = get_the_title();
 			$post_content = get_the_excerpt();
 			$post_url = get_the_permalink();
-			$maxpages = $query->max_num_pages;
 			$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
 			?>
 <input type="hidden" value="<?php echo $place; ?>" id="place" />
@@ -508,6 +513,7 @@ function load_news_by_type() {
 		var post_type = $(this).data('post-type');
 		var post_per_page = $(this).data('posts-per-page');
 		var news_type = $(this).data('news_type');
+		var max_pages = $(this).data('max-pages');
         $("#more_news").hide();
 		$("#loading-indicator").toggle();
 		$.post(ajaxUrl,{action:"more_news_ajax",
@@ -618,6 +624,7 @@ function news_filter_country() {
 		var post_type = $(this).data('post-type');
 		var post_per_page = $(this).data('posts-per-page');
 		var news_type = $(this).data('news-type');
+		var maxpages =$(this).data('max-pages');
         $("#more_news").hide(); // Disable the button, temp.
 		$("#loading-indicator").toggle();
 		$.post(ajaxUrl,{action:"more_news_ajax",

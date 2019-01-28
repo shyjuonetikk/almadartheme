@@ -139,6 +139,7 @@
 		var post_type = $(this).data('post-type');
 		var post_per_page = $(this).data('posts-per-page');
 		var news_type = $(this).data('news-type');
+		var max_pages = $(this).data('max-pages');
 		$("#more_news").hide();
 		$("#loading-indicator").toggle();
 		$.post(ajaxUrl,{action:"more_news_ajax",
