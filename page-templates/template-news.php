@@ -12,7 +12,7 @@ get_header('division');
 	<div class="container m-auto p-0">
 			<div class="col-4 float-right bread-cumb mb-1">
 				<ul class="list-inline float-right" id="news-place-filter">
-					<li class="list-inline-item font-weight-bold projects-active purple-color" data-place="qatar">QATAR</li>
+					<li class="list-inline-item projects-active purple-color" data-place="qatar">QATAR</li>
 					<li class="list-inline-item purple-color" data-place="uae">UAE</li>
 					<input type="hidden" id="place" value="qatar" />
 				</ul>

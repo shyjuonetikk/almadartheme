@@ -549,6 +549,7 @@ add_action('wp_ajax_nopriv_load_news_by_type', 'load_news_by_type');
 add_action('wp_ajax_load_load_news_by_type', 'load_news_by_type');
 
 function news_filter_country() {
+	$place = $_POST['place'];
 	$query = new WP_Query(array(
 		'post_type' => array('almadarnews'),
 		'post_status' => 'publish',
@@ -566,7 +567,6 @@ function news_filter_country() {
 		'posts_per_page' => 2,
 	));
 	$maxpages = $query->max_num_pages;
-	$place = $_POST['place'];
 	echo '
 	<div class="col-12 col-md-3 col-lg-2 float-left">
 		<h2 class="purple-color">News</h2>
