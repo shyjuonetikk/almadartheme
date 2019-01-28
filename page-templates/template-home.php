@@ -299,7 +299,7 @@ $("#newsletter-form").submit(function(e){
 			email: email
 		},
 		 function(data){
-		 	$("#newsletter-form").reset();
+
 			$("#newsletter-response").html(data);
 		});
 });
