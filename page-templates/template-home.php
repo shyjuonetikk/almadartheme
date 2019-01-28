@@ -116,7 +116,7 @@ while ($query->have_posts()) {
 								<p class="mb-4 purple-color para-limit"><?php echo $content ?></p>
 								<p>
 									<span class="float-left purple-color fs-10 sc-font"><?php echo $post_date; ?></span>
-									<a href="<?php //echo get_the_permalink(); ?>#" class="float-right fs-10 second-color prmy-font">Read More</a>
+									<a href="<?php echo get_the_permalink(); ?>#" class="float-right fs-10 second-color prmy-font">Read More</a>
 								</p>
 							</div>
 						</div>
@@ -177,7 +177,7 @@ while ($query->have_posts()) {
 					<p class="mb-4 purple-color para-limit"><?php echo $content; ?></p>
 					<p>
 						<span class="float-left purple-color fs-10 sc-font"><?php echo $post_date; ?></span>
-						<a href="<?php //echo get_the_permalink(); ?>#" class="float-right fs-10 second-color prmy-font">Read More</a>
+						<a href="<?php echo get_the_permalink(); ?>#" class="float-right fs-10 second-color prmy-font">Read More</a>
 					</p>
 				</div>
 			</div>
@@ -241,7 +241,7 @@ while ($query->have_posts()) {
 					<p class="mb-4 purple-color para-limit"><?php echo $content; ?></p>
 					<p>
 						<span class="float-left purple-color fs-10 sc-font"><?php echo $post_date; ?></span>
-						<a href="<?php //echo get_the_permalink(); ?>#" class="float-right fs-10 second-color prmy-font">Read More</a>
+						<a href="<?php echo get_the_permalink(); ?>#" class="float-right fs-10 second-color prmy-font">Read More</a>
 					</p>
 				</div>
 			</div>

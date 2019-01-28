@@ -101,7 +101,8 @@ function more_post_ajax() {
 				    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
 				    <p class="card-text fs-12 purple-color"><?php echo $post_content; ?></p>
 				    <span class="purple-color float-left fs-12"><?php echo get_the_date(); ?> </span>
-				    <a href="<?php echo $post_url; ?>" class="float-right fs-12">Read More</a>
+				    <a href="<?php //echo $post_url; ?>" class="float-right fs-12">Read More</a>
+				    <!-- <input type="hidden" name="paged" id="paged" value="<?php echo $offset; ?>"> -->
 				  </div>
 				</div>
 			</div>
@@ -171,7 +172,7 @@ if ($status == 'all') {
 			    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
 			    <p class="card-text fs-12 purple-color"><?php echo $post_content; ?></p>
 			    <span class="purple-color float-left fs-12"><?php echo get_the_date(); ?> </span>
-			    <a href="<?php echo $post_url; ?>" class="float-right fs-12">Read More</a>
+			    <a href="<?php //echo $post_url; ?>" class="float-right fs-12">Read More</a>
 			  </div>
 			</div>
 		</div>
@@ -279,7 +280,7 @@ $query = new WP_Query(array(
 				    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
 				    <p class="card-text fs-12 purple-color"><?php echo $post_content; ?></p>
 				    <span class="purple-color float-left fs-12"><?php echo get_the_date(); ?> </span>
-				    <a href="<?php echo $post_url; ?>" class="float-right fs-12">Read More</a>
+				    <a href="<?php //echo $post_url; ?>" class="float-right fs-12">Read More</a>
 				  </div>
 				</div>
 			</div>
@@ -404,7 +405,7 @@ function more_news_ajax() {
 	    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
 	    <p class="card-text fs-12 purple-color"><?php echo $post_content; ?></p>
 	    <span class="purple-color float-left fs-12"><?php echo get_the_date(); ?> </span>
-	    <a href="<?php echo $post_url; ?>" class="float-right fs-12">Read More</a>
+	    <a href="<?php //echo $post_url; ?>" class="float-right fs-12">Read More</a>
 	  </div>
 	</div>
 </div>
@@ -468,7 +469,7 @@ function load_news_by_type() {
 	    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
 	    <p class="card-text fs-12 purple-color"><?php echo $post_content; ?></p>
 	    <span class="purple-color float-left fs-12"><?php echo get_the_date(); ?> </span>
-	    <a href="<?php echo $post_url; ?>" class="float-right fs-12">Read More</a>
+	    <a href="<?php //echo $post_url; ?>" class="float-right fs-12">Read More</a>
 	  </div>
 	</div>
 </div>
@@ -585,7 +586,12 @@ function news_filter_country() {
 	<i class="fas fa-spinner fa-spin" id="loading-indicator" style="display:none;"></i>
 	<a id="more_news" data-post-type="almadarnews" data-posts-per-page="1" data-news_type="realestate">More<img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/arrow-down.png" /> </a>
 </div>
-<?php } else {echo "<div class='row w-100 pt-4'><h4 class='purple-color m-auto'> No news found.. </h4></div>";}?>
+<?php } ?>
+	<div class="col m-auto text-center">
+		<i class="fas fa-spinner fa-spin" id="loading-indicator" style="display:none;"></i>
+		<a id="more_news" data-post-type="almadarnews" data-posts-per-page="1" data-news_type="realestate">More<img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/arrow-down.png" /> </a>
+	</div>
+<?php } else { echo "<div class='row w-100 pt-4'><h4 class='purple-color m-auto'> No news found.. </h4></div>"; } ?>
 </div>
 <script type="text/javascript">
 	$( document ).ready(function(){
