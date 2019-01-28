@@ -88,7 +88,7 @@ if ($_POST) {
 		$body = $message_body;
 	}
 
-	$sentMail = mail($recipient_email, "Al Madar Holding WLL - Resumes", $body, $headers);
+	$sentMail = mail($recipient_email, "Al Madar Holding WLL - Resume", $body, $headers);
 	if ($sentMail) //output success or failure messages
 	{
 		print json_encode(array('type' => 'done', 'text' => 'Your CV has been successfully submitted'));
