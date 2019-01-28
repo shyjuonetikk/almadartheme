@@ -586,12 +586,11 @@ function news_filter_country() {
 	<i class="fas fa-spinner fa-spin" id="loading-indicator" style="display:none;"></i>
 	<a id="more_news" data-post-type="almadarnews" data-posts-per-page="1" data-news_type="realestate">More<img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/arrow-down.png" /> </a>
 </div>
-<?php } ?>
 	<div class="col m-auto text-center">
 		<i class="fas fa-spinner fa-spin" id="loading-indicator" style="display:none;"></i>
 		<a id="more_news" data-post-type="almadarnews" data-posts-per-page="1" data-news_type="realestate">More<img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/arrow-down.png" /> </a>
 	</div>
-<?php } else { echo "<div class='row w-100 pt-4'><h4 class='purple-color m-auto'> No news found.. </h4></div>"; } ?>
+<?php } else {echo "<div class='row w-100 pt-4'><h4 class='purple-color m-auto'> No news found.. </h4></div>";}?>
 </div>
 <script type="text/javascript">
 	$( document ).ready(function(){
