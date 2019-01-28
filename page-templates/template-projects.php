@@ -52,11 +52,8 @@ if ($query->have_posts()) {
 		$post_title = get_the_title();
 		$post_content = get_the_excerpt();
 		$post_url = get_the_permalink();
-		if (has_post_thumbnail()) {
-			$featured_img_url = get_the_post_thumbnail_url($post_id, 'full');
-		} else {
-			$featured_img_url = get_template_directory_uri() . "/img/No_image.png";
-		}
+		$featured_img_url = get_template_directory_uri() . "/img/No_image.png";
+		if (has_post_thumbnail()) {$featured_img_url = get_the_post_thumbnail_url($post_id, 'full');} else { $featured_img_url = get_template_directory_uri() . "/img/No_image.png";}
 		?>
 						<div class="col-12 col-md-6 mb-3 px-4">
 							<div class="card border-0 rounded-0 w-100">
