@@ -3,44 +3,50 @@ $recipient_email = "jithinvjayaprakash@gmail.com";
 $from_email = "hr@almadar.com"; //from email using site domain.
 
 if (!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
- 	die('Sorry Request must be Ajax POST'); //exit script
+	die('Sorry Request must be Ajax POST'); //exit script
 }
 
 if ($_POST) {
 
-$attachments = $_FILES['file_attach'];
+	$attachments = $_FILES['file_attach'];
 
-$file_count = count($attachments['name']); //count total files attached
+	$file_count = 1; //count total files attached
 
-$applicantFirstName = $_POST['career-first-name'];
-$applicantLastName = $_POST['career-last-name'];
-$appMail = $_POST['career-email'];
-$appPhone = $_POST['career-phone'];
-$appLocation = $_POST['career-location'];
-$appNation = $_POST['career-nationality'];
-$appFunction = $_POST['career-function'];
+	$applicantFirstName = $_POST['career-first-name'];
+	$applicantLastName = $_POST['career-last-name'];
+	$appMail = $_POST['career-email'];
+	$appPhone = $_POST['career-phone'];
+	if ($appPhone == "") {
+		$appPhone = "Phone number is not available";
+	}
+	$appLocation = $_POST['career-location'];
+	$appNation = $_POST['career-nationality'];
+	$appFunction = $_POST['career-function'];
 
-$file_count = "0";
+	$file_count = "0";
 // //construct a message body to be sent to recipient
-$message_body = "Resume from " . $applicantFirstName . " " . $applicantLastName ."/n";
-$message_body .= ""
+	$message_body = "Resume from " . $applicantFirstName . " " . $applicantLastName . "\n";
+	$message_body .= "Applicant Mail ID: " . $appMail . "\n";
+	$message_body .= "Applicant Contact Number: " . $appPhone . "\n";
+	$message_body .= "Applicant Location: " . $appLocation . "\n";
+	$message_body .= "Applicant Nation: " . $appNation . "\n";
+	$message_body .= "Applicant Function: " . $appFunction . "\n";
 
-if ($file_count > 0) {
-	//if attachment exists
-	//header
-	$headers = "MIME-Version: 1.0\r\n";
-	$headers .= "From:" . $from_email . "\r\n";
-	$headers .= "Reply-To: " . $sender_email . "" . "\r\n";
-	$headers .= "Content-Type: multipart/mixed; boundary = $boundary\r\n\r\n";
+	if ($file_count > 0) {
+		//if attachment exists
+		//header
+		$headers = "MIME-Version: 1.0\r\n";
+		$headers .= "From:" . $from_email . "\r\n";
+		$headers .= "Reply-To: " . $sender_email . "" . "\r\n";
+		$headers .= "Content-Type: multipart/mixed; boundary = $boundary\r\n\r\n";
 
-	//message text
-	$body = "--$boundary\r\n";
-	$body .= "Content-Type: text/plain; charset=ISO-8859-1\r\n";
-	$body .= "Content-Transfer-Encoding: base64\r\n\r\n";
-	$body .= chunk_split(base64_encode($message_body));
+		//message text
+		$body = "--$boundary\r\n";
+		$body .= "Content-Type: text/plain; charset=ISO-8859-1\r\n";
+		$body .= "Content-Transfer-Encoding: base64\r\n\r\n";
+		$body .= chunk_split(base64_encode($message_body));
 
-	//attachments
-	for ($x = 0; $x < $file_count; $x++) {
+		//attachments
 		if (!empty($attachments['name'][$x])) {
 
 			if ($attachments['error'][$x] > 0) //exit script and output error if we encounter any
@@ -73,25 +79,23 @@ if ($file_count > 0) {
 			$body .= "X-Attachment-Id: " . rand(1000, 99999) . "\r\n\r\n";
 			$body .= $encoded_content;
 		}
+
+	} else {
+		//send plain email otherwise
+		$headers = "From:" . $from_email . "\r\n" .
+		"Reply-To: " . $sender_email . "\n" .
+		"X-Mailer: PHP/" . phpversion();
+		$body = $message_body;
 	}
 
-} else {
-	//send plain email otherwise
-	$headers = "From:" . $from_email . "\r\n" .
-	"Reply-To: " . $sender_email . "\n" .
-	"X-Mailer: PHP/" . phpversion();
-	$body = $message_body;
+	$sentMail = mail($recipient_email, "Al Madar Holding WLL - Resumes", $body, $headers);
+	if ($sentMail) //output success or failure messages
+	{
+		print json_encode(array('type' => 'done', 'text' => 'Your CV has been successfully submitted'));
+		exit;
+	} else {
+		print json_encode(array('type' => 'error', 'text' => 'Could not send mail! Please check your network connections'));
+		exit;
+	}
 }
-
-// $sentMail = mail($recipient_email, "Al Madar Holding WLL - Resumes", $body, $headers);
-$sentMail = true;
-if ($sentMail) //output success or failure messages
-{
-	print json_encode(array('type' => 'done', 'text' => 'Your CV has been successfully submitted'));
-	exit;
-} else {
-	print json_encode(array('type' => 'error', 'text' => 'Could not send mail! Please check your network connections'));
-	exit;
-}
-// }
 ?>
