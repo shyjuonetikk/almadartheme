@@ -672,10 +672,10 @@ function ajax_mail() {
 	$sentMail = mail($recipient_email, "Al Madar Holding WLL - Newsletter", $body, $headers);
 	if ($sentMail) //output success or failure messages
 	{
-		print json_encode(array('You have been successfully subscribed our Newsletter'));
+		echo 'You have been successfully subscribed our Newsletter';
 		exit;
 	} else {
-		print json_encode(array('Could not send mail! Please check your network connections'));
+		echo 'Could not send mail! Please check your network connections';
 		exit;
 	}
 }
