@@ -686,7 +686,7 @@ function ajax_mail() {
 	"X-Mailer: PHP/" . phpversion();
 	$body = $message_body;
 
-	if ($email == "") {
+	if ($email != "") {
 		$sentMail = mail($recipient_email, "Al Madar Holding WLL - Newsletter", $body, $headers);
 		if ($sentMail) //output success or failure messages
 		{
