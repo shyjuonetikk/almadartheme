@@ -33,7 +33,7 @@ $container = get_theme_mod('understrap_container_type');
 		<div class="col-lg-6 col-md-11 col-sm-11 col-11 m-0 contact-popup-back p-5">
 			<h1 class="prmy-font font-weight-bold mb-4">GET IN TOUCH</h1>
 			<p class="fs-12 pb-3">For inquiries and feedback, please fill out the form below.</p>
-			<form class="w-75" id="contact-form" method="post" action="<?php echo get_template_directory_uri(); ?>/contactus-form.php">
+			<form class="w-75 float-left" id="contact-form" method="post" action="<?php echo get_template_directory_uri(); ?>/contactus-form.php">
 			  <div class="form-row">
 			    <div class="form-group col-md-6">
 			      <label for="inputName" class="prmy-font">NAME</label>
@@ -60,7 +60,7 @@ $container = get_theme_mod('understrap_container_type');
 			  </div>
 			  <button id="contactus-button" type="submit" class="btn contact-btn float-right">SUBMIT</button>
 			</form>
-			<div id="contact-us-response"></div>
+			<div id="contact-us-response"><p class="text-white float-left d-block w-100">Thank you for your request!</p></div>
 		</div>
 	</div>
 </div>

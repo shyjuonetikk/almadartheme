@@ -1249,3 +1249,6 @@ div#fileInCheck {
     visibility: hidden;
     margin: 5px 0;
 }
+div#contact-us-response {
+    display: none;
+}
