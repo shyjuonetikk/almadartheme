@@ -346,7 +346,7 @@ function filter_country() {
    });
 
 	$("#status-list li").on("click",function(){
-		$("#projects-list").html(data).fadeToggle(1000);
+		$("#projects-list").html(data).fadeOut(800);
 			var post_type = $(this).data('post_type');
 			var post_per_page = $(this).data('posts_per_page');
 			var status = $(this).data('status_list');
@@ -359,7 +359,7 @@ function filter_country() {
 				place: place
 			},
 			 function(data){
-				 $("#projects-list").html(data).fadeToggle(1000);
+				 $("#projects-list").html(data).fadeIn(400);
 				});
 	});
 });
@@ -661,7 +661,7 @@ function news_filter_country() {
     // filter by news type
 
     $("#news-type li").on("click",function(){
-    	$("#projects-list").html(data).fadeToggle(1000);
+    	$("#projects-list").html(data).fadeOut(800);
 		var post_type = $(this).data('post_type');
 		var post_per_page = $(this).data('posts_per_page');
 		var news_type = $(this).data('news_type');
@@ -674,7 +674,7 @@ function news_filter_country() {
 			place: place
 		},
 		 function(data){
-			 $("#projects-list").html(data).fadeToggle(1000);
+			 $("#projects-list").html(data).fadeIn(400);
 			});
    });
 });

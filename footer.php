@@ -104,7 +104,7 @@
   			});
    });
 	$("#status-list li").on("click",function(){
-			$("#projects-list").fadeToggle(1000);
+			$("#projects-list").fadeOut(800);
 			var post_type = $(this).data('post_type');
 			var post_per_page = $(this).data('posts_per_page');
 			var status = $(this).data('status_list');
@@ -117,8 +117,8 @@
 				place: place
 			},
 			 function(data){
-				 $("#projects-list").html(data).fadeToggle(1000);
-				});
+				 $("#projects-list").html(data).fadeIn(400);
+			});
 	   });
 
 	$("#place-filter li").on("click",function(){
@@ -169,7 +169,7 @@
   			});
     });
     $("#news-type li").on("click",function(){
-    		$("#projects-list").fadeToggle(1000);
+    		$("#projects-list").fadeOut(800);
 			var post_type = $(this).data('post_type');
 			var post_per_page = $(this).data('posts_per_page');
 			var news_type = $(this).data('news_type');
@@ -182,7 +182,7 @@
 				place: place
 			},
 			function(data){
-				$("#projects-list").html(data).fadeToggle(1000);
+				$("#projects-list").html(data).fadeIn(400);
 			});
 	   });
     $("#news-place-filter li").on("click",function(){
