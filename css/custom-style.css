@@ -1028,6 +1028,7 @@ a.second-color:hover{
 }
 table#careers-table > tbody > tr > td:first-child {
     width: 41%;
+    vertical-align: top;
 }
 table#careers-table > tbody > tr > td:nth-child(2) {
     width: 37%;

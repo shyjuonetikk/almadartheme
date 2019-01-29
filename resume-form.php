@@ -1,5 +1,6 @@
 <?php
-$recipient_email = "jithinvjayaprakash@gmail.com";
+// $recipient_email = "jithinvjayaprakash@gmail.com";
+ $recipient_email = the_field('hr_email');
 $from_email = "hr@almadar.com"; //from email using site domain.
 
 if (!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
