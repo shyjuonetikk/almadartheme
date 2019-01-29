@@ -629,8 +629,8 @@ function news_filter_country() {
 		var place = $("#place").val();
 		var post_type = $(this).data('post-type');
 		var post_per_page = $(this).data('posts-per-page');
-		var news_type = $(this).data('news-type');
-		var maxpages =$(this).data('max-pages');
+		var news_type = $(this).data('news_type');
+		var maxpages = $(this).data('max-pages');
         $("#more_news").hide(); // Disable the button, temp.
 		$("#loading-indicator").toggle();
 		$.post(ajaxUrl,{action:"more_news_ajax",
