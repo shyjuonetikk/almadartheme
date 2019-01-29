@@ -79,7 +79,7 @@ $( document ).ready(function(){
 
 
 	// Career page - Apply button send resume
-	$("#resume-send").click(function(e){
+	$("#apply-btn").click(function(e){
 		e.preventDefault();
 		var role = $(this).attr("data-role");
 		alert(role);
