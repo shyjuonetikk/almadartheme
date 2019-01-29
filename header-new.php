@@ -84,7 +84,7 @@ $container = get_theme_mod('understrap_container_type');
 					<i class="fab fa-facebook-square fs-22 sm-icon-fb"></i>
 				</a>
 				<a href="#" class="social-media d-none d-sm-none d-md-none d-lg-none d-xl-block">
-					<i class="fab fa-twitter fs-22 sm-icon-tw pa-5 w-24"></i>
+					<i class="fab fa-twitter fs-22 sm-icon-tw-new pa-5 w-24"></i>
 				</a>
 				<a href="#" class="social-media d-none d-sm-none d-md-none d-lg-none d-xl-block">
 					<i class="fab fa-linkedin-in fs-22 sm-icon-fb"></i>
