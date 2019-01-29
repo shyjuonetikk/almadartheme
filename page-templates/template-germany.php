@@ -2,8 +2,8 @@
 
 /**
 
-Template Name: Al Madar construction Page
-Description: Template for construction page
+Template Name: Germany Page
+Description: Template for Germany page
 
  */
 get_header('posts');
@@ -36,18 +36,18 @@ get_header('posts');
 		<div class="row mt-5 p-5">
 			<div class="col-lg-6 col-md-12 col-sm-12 col-12 purple-color fs-12 lh-paragraph">
 				<?php
-						while (have_posts()): the_post();
-						the_content();
-						$title = get_the_title();
-						$post_id = get_the_ID();
-						$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
-				?>
+				while (have_posts()): the_post();
+					the_content();
+					$title = get_the_title();
+					$post_id = get_the_ID();
+					$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
+					?>
 
-				</div>
-				<div class="col-lg-6 col-md-12 col-sm-12 col-12">
-					<img class="img-fluid float-left float-md-left float-lg-right w-75" src="<?php echo $featured_img_url; ?>" />
-				</div>
-			<?php endwhile;?>
+						</div>
+						<div class="col-lg-6 col-md-12 col-sm-12 col-12">
+							<img class="img-fluid float-left float-md-left float-lg-right w-75" src="<?php echo $featured_img_url; ?>" />
+						</div>
+					<?php endwhile;?>
 		</div>
 	</div>
 	<div id="project-section">
@@ -89,11 +89,11 @@ get_header('posts');
 							</div>
 						</div>
 						<?php	}
-wp_reset_query();?>
+					wp_reset_query();?>
 					</div>
 				</div>
 		</div>
-	</div>
+		</div>
 	</div>
 </div>
 <?php get_footer();?>

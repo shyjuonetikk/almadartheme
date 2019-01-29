@@ -1049,7 +1049,7 @@ ul#status-list > li {
 .disc-ul {
     line-height: 1.5rem;
 }
-.disc-ul:hover, button#basic-addon2 {
+.disc-ul:hover, button#basic-addon2, #what-we-do:hover,#our-projects-section:hover {
     cursor: pointer;
 }
 h3.disclaimer-head {

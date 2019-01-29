@@ -37,7 +37,7 @@
 <?php wp_footer();?>
 <script  src="https://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="  crossorigin="anonymous"></script>
 <?php
-	if (is_singular(['realestate','construction','entertainment'])) {
+	if (is_singular(['realestate','construction','entertainment']) || is_page('germany')) {
 		echo "
 			<script type='text/javascript'>
 				$( document ).ready(function(){
@@ -194,6 +194,18 @@
 				 $("#loading-indicator").hide();
 				});
 	 });
+
+	    $("#what-we-do").click(function() {
+		    $('html,body').animate({
+		        scrollTop: $("#content-area").offset().top - 190},
+		        1300);
+		});
+
+		$("#our-projects-section").click(function() {
+		    $('html,body').animate({
+	        scrollTop: $("#project-section").offset().top - 160},
+	        1500);
+		});
 
 	});
 
