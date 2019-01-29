@@ -82,7 +82,7 @@ $( document ).ready(function(){
 	$("#apply-btn").click(function(e){
 		e.preventDefault();
 		var role = $(this).attr("data-role");
-		alert(role);
+		$("#career-role").val(role);
 		window.scrollTo("0", "0");
 		var popupHeight = 0;
 		var docHeight = 0;
