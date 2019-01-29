@@ -37,26 +37,26 @@ $container = get_theme_mod('understrap_container_type');
 			  <div class="form-row">
 			    <div class="form-group col-md-6">
 			      <label for="inputName" class="prmy-font">NAME</label>
-			      <input type="text" class="form-control border-0 rounded-0" id="inputName" name="inputName" data-required="true">
+			      <input type="text" class="form-control rounded-0" id="inputName" name="inputName" data-required="true">
 			    </div>
 			    <div class="form-group col-md-6">
 			      <label for="inputCompany" class="prmy-font">COMPANY</label>
-			      <input type="text" class="form-control border-0 rounded-0" id="inputCompany" name="inputCompany" data-required="true">
+			      <input type="text" class="form-control rounded-0" id="inputCompany" name="inputCompany" data-required="true">
 			    </div>
 			  </div>
 			  <div class="form-row">
 			    <div class="form-group col-md-6">
 			      <label for="inputEmail" class="prmy-font">EMAIL</label>
-			      <input type="email" class="form-control border-0 rounded-0" class="form-control" id="inputEmail" data-required="true" name="inputEmail">
+			      <input type="email" class="form-control rounded-0" id="inputEmail" data-required="true" name="inputEmail">
 			    </div>
 			    <div class="form-group col-md-6">
 			      <label for="inputSubject" class="prmy-font">SUBJECT</label>
-			      <input type="text" class="form-control border-0 rounded-0" id="inputSubject" name="inputSubject" data-required="true">
+			      <input type="text" class="form-control rounded-0" id="inputSubject" name="inputSubject" data-required="true">
 			    </div>
 			  </div>
 			  <div class="form-group">
 			    <label for="inputAddress" class="prmy-font">YOUR MESSAGE</label>
-			    <textarea class="form-control border-0 rounded-0" id="inputMessage" name="inputMessage" data-required="true"></textarea>
+			    <textarea class="form-control rounded-0" id="inputMessage" name="inputMessage" data-required="true"></textarea>
 			  </div>
 			  <button id="contactus-button" type="submit" class="btn contact-btn float-right">SUBMIT</button>
 			</form>
