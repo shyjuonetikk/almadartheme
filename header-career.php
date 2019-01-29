@@ -78,11 +78,21 @@ $container = get_theme_mod('understrap_container_type');
 				<label for="function" class="col-sm-4 col-form-label">Function<span class="text-danger">*</span></label>
 				<div class="col-sm-8">
 					<select class="form-control" id="career-function" name="career-function" data-required="true">
-						<option></option>
-						<option>Function 1</option>
-						<option>Function 2</option>
-						<option>Function 3</option>
-						<option>Function 4</option>
+					<?php
+$query = new WP_Query(array(
+	'post_type' => array('alcareers'),
+	'post_status' => 'publish',
+	'order' => 'ASC',
+));
+
+while ($query->have_posts()) {
+	$query->the_post();
+	$post_id = get_the_ID();
+	$post_url = get_the_permalink();
+	?>
+							<option value="<?php the_field('role');?>"><?php the_field('role');?></option>
+						<?php }
+wp_reset_query();?>
 					</select>
 				</div>
 			</div>
