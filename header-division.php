@@ -47,7 +47,7 @@ $container = get_theme_mod('understrap_container_type');
 			  <div class="form-row">
 			    <div class="form-group col-md-6">
 			      <label for="inputEmail" class="prmy-font">EMAIL</label>
-			      <input type="email" class="form-control" id="inputEmail" data-required="true">
+			      <input type="email" class="form-control border-0 rounded-0" class="form-control" id="inputEmail" data-required="true" name="inputEmail">
 			    </div>
 			    <div class="form-group col-md-6">
 			      <label for="inputSubject" class="prmy-font">SUBJECT</label>
