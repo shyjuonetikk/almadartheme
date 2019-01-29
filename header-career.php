@@ -73,10 +73,10 @@ $field = get_field_object('nationality');
 
 $choices = $field['choices'];
 
-foreach ($choices as $choice):
+foreach ($choices as $choice): ?>
 
-	echo '<option value="' . $choice . '">' . $choice . '</option>';
-
+	<option value="<?php echo $choice; ?>"><?php echo $choice; ?></option>
+<?php
 endforeach;
 ?>
 					</select>
