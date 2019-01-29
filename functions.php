@@ -91,7 +91,7 @@ function more_post_ajax() {
 			$post_url = get_the_permalink();
 			$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
 			?>
-			<div class="col-12 col-md-6 mb-3 px-4">
+			<div class="col-12 col-md-6 mb-3 px-4 fade-in one">
 				<div class="card border-0 rounded-0 w-100">
 					<div class="image-container">
 				  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url; ?>" alt="<?php echo $post_title; ?>">
@@ -163,7 +163,7 @@ if ($status == 'all') {
 			$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
 			?>
 		<input type="hidden" value="<?php echo $place; ?>" id="place">
-		<div class="col-12 col-md-6 mb-3 px-4">
+		<div class="col-12 col-md-6 mb-3 px-4 fade-in one">
 			<div class="card border-0 rounded-0 w-100">
 				<div class="image-container">
 			  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url; ?>" alt="<?php echo $post_title; ?>">
@@ -280,7 +280,7 @@ function filter_country() {
 			$post_url = get_the_permalink();
 			$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
 			?>
-			<div class="col-12 col-md-6 mb-3 px-4">
+			<div class="col-12 col-md-6 mb-3 px-4 fade-in one">
 				<div class="card border-0 rounded-0 w-100">
 					<div class="image-container">
 				  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url; ?>" alt="<?php echo $post_title; ?>">
@@ -413,7 +413,7 @@ function more_news_ajax() {
 			$post_url = get_the_permalink();
 			$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
 			?>
-<div class="col-12 col-md-6 mb-3 px-4">
+<div class="col-12 col-md-6 mb-3 px-4 fade-in one">
 	<div class="card border-0 rounded-0 w-100">
 		<div class="image-container">
 	  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url; ?>" alt="<?php echo $post_title; ?>">
@@ -479,7 +479,7 @@ function load_news_by_type() {
 			$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
 			?>
 <input type="hidden" value="<?php echo $place; ?>" id="place" />
-<div class="col-12 col-md-6 mb-3 px-4">
+<div class="col-12 col-md-6 mb-3 px-4 fade-in one">
 	<div class="card border-0 rounded-0 w-100">
 		<div class="image-container">
 	  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url; ?>" alt="<?php echo $post_title; ?>">
@@ -592,7 +592,7 @@ function news_filter_country() {
 			$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
 			?>
 
-<div class="col-12 col-md-6 mb-3 px-4">
+<div class="col-12 col-md-6 mb-3 px-4 fade-in one">
 	<div class="card border-0 rounded-0 w-100">
 		<div class="image-container">
 	  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url; ?>" alt="<?php echo $post_title; ?>">

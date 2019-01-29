@@ -61,7 +61,7 @@ get_header('division');
 						else { $featured_img_url = get_template_directory_uri() . "/img/No_image.png"; }
 						?>
 						<!-- <input type="hidden" name="maxpages" id="maxpage" /> -->
-						<div class="col-12 col-md-6 mb-3 px-4">
+						<div class="col-12 col-md-6 mb-3 px-4 fade-in one" id="project-thumbs">
 							<div class="card border-0 rounded-0 w-100">
 								<div class="image-container">
 							  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url; ?>" alt="<?php echo $post_title; ?>">

@@ -67,6 +67,9 @@
 ?>
 <script type="text/javascript">
 	$( document ).ready(function(){
+	// window.onload = function() {
+	//     document.getElementById("projects-list").style.opacity = 1;
+	// }
 	$('a').removeAttr('title');
 	var ajaxUrl = "<?php echo admin_url('admin-ajax.php') ?>";
     var page = 1; // What page we are on.
