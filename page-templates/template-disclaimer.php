@@ -8,8 +8,8 @@ Description: Template for displaying Disclaimer.
 get_header('new');
 ?>
 
-<div class="row m-0 p-0 mt-3 mb-5">
-	<div class="container m-auto p-0">
+<div class="row m-0 p-0 mt-3 mb-5 min-height">
+	<div class="container p-0">
 		<div class="col-12 float-left">
 			<div class="col-xl-2 col-lg-12 float-left py-5">
 				<!-- <h2 class="purple-color"></h2> -->
