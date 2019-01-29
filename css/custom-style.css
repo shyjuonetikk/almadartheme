@@ -1199,7 +1199,7 @@ button#contactus-button:hover {
     margin: 0 13px !important;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   #main-menu {
     background: #ffffff;
   }
