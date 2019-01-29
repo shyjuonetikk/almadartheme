@@ -93,7 +93,7 @@ $( document ).ready(function(){
 			popupHeight = docHeight;
 		}
 		$("#career-overlays").show();
-		$("#apply-role").css({"display","flex"});
+		$("#apply-role").css({"display":"flex"});
 		$("#apply-function").hide();
 		$(".site").css({"max-height":popupHeight, "overflow-y": "hidden"});
 		$(".career-form").css({"min-height" : popupHeight });
