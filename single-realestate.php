@@ -11,7 +11,7 @@ get_header('posts');
 <div class="col-lg-9 mx-auto px-3 mb-5">
 	<div class="container">
 		<div class="row m-0 p-0">
-			<div class="col-lg-6 col-md-6 col-sm-12 col-12 my-2">
+			<div class="col-lg-6 col-md-6 col-sm-12 col-12 my-2" id="what-we-do">
 				<div class="real-image-container">
 					<img class="real-image" src="<?php echo get_template_directory_uri(); ?>/img/almadarrealestate2.png" />
 					<div class="real-overlay">
@@ -21,7 +21,7 @@ get_header('posts');
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-6 col-md-6 col-sm-12 col-12 my-2">
+			<div class="col-lg-6 col-md-6 col-sm-12 col-12 my-2" id="our-projects-section">
 				<div class="real-image-container prmy-font">
 					<img class="real-image" src="<?php echo get_template_directory_uri(); ?>/img/almadarrealestate1.png" />
 					<div class="real-overlay">
@@ -32,6 +32,7 @@ get_header('posts');
 				</div>
 			</div>
 		</div>
+	<div id="content-area">
 		<div class="row mt-5 p-5">
 			<div class="col-lg-6 col-md-12 col-sm-12 col-12 purple-color fs-12 lh-paragraph">
 				<?php
@@ -41,13 +42,14 @@ get_header('posts');
 						$post_id = get_the_ID();
 						$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
 				?>
-				
 			</div>
 			<div class="col-lg-6 col-md-12 col-sm-12 col-12">
 				<img class="img-fluid float-left float-md-left float-lg-right w-75" src="<?php echo $featured_img_url; ?>" />
 			</div>
 		<?php endwhile; ?>
 		</div>
+	</div>
+	<div id="project-section">
 		<div class="container text-center">
 			<img class="img-fluid project-head mb-5" src="<?php echo get_template_directory_uri(); ?>/img/projectsheading.png" />
 		</div>
@@ -89,6 +91,7 @@ get_header('posts');
 					</div>
 				</div>
 		</div>
+	</div>
 	</div>
 </div>
 <?php get_footer();?>

@@ -195,6 +195,18 @@
 				});
 	 });
 
+	    $("#what-we-do").click(function() {
+		    $('html,body').animate({
+		        scrollTop: $("#content-area").offset().top - 190},
+		        1300);
+		});
+
+		$("#our-projects-section").click(function() {
+		    $('html,body').animate({
+	        scrollTop: $("#project-section").offset().top - 160},
+	        1500);
+		});
+
 	});
 
 </script>
