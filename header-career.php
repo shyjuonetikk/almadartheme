@@ -69,7 +69,7 @@ $container = get_theme_mod('understrap_container_type');
 				<div class="col-sm-8">
 					<select class="form-control" id="career-nationality" name="career-nationality">
 					<?php
-$field = get_field_object('nationality', 1);
+$field = get_field_object('nationality');
 
 $choices = $field['choices'];
 
