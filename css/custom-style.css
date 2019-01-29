@@ -1260,3 +1260,6 @@ div#apply-role{
 .min-height{
   min-height: 600px;
 }
+.extra-padding{
+  padding-bottom: 70px!important;
+}
