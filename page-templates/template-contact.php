@@ -13,7 +13,7 @@ get_header('division');
 	<div class="container">
 		<div class="row pl-5 pr-5 prmy-font">
 			<div class="col-lg-5">
-				<?php the_field('map_iframe');?>
+				<a href="<?php the_field('map_iframe'); ?>" target="_blank"><img src="<?php echo get_template_directory_uri();?>/img/contactus.png" /></a>
 			</div>
 			<div class="col-lg-7 px-4">
 				<h2 class="purple-color prmy-font font-weight-bold my-3">CONTACT US</h2>
