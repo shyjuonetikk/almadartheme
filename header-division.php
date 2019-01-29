@@ -58,7 +58,7 @@ $container = get_theme_mod('understrap_container_type');
 			    <label for="inputAddress" class="prmy-font">YOUR MESSAGE</label>
 			    <textarea class="form-control rounded-0" id="inputMessage" name="inputMessage" data-required="true"></textarea>
 			  </div>
-			  <button id="contactus-button" type="submit" class="btn contact-btn float-right">SUBMIT</button>
+			  <button id="contactus-button" type="submit" class="btn contact-btn float-right mt-1">SUBMIT</button>
 			</form>
 			<div id="contact-us-response"><p class="text-white float-left d-block w-100">Thank you for your request!</p></div>
 		</div>
