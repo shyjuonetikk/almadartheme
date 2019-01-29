@@ -67,9 +67,6 @@
 ?>
 <script type="text/javascript">
 	$( document ).ready(function(){
-	// window.onload = function() {
-	//     document.getElementById("projects-list").style.opacity = 1;
-	// }
 	$('a').removeAttr('title');
 	var ajaxUrl = "<?php echo admin_url('admin-ajax.php') ?>";
     var page = 1; // What page we are on.
@@ -107,6 +104,7 @@
   			});
    });
 	$("#status-list li").on("click",function(){
+			$("#projects-list").fadeOut(500);
 			var post_type = $(this).data('post_type');
 			var post_per_page = $(this).data('posts_per_page');
 			var status = $(this).data('status_list');
@@ -119,11 +117,12 @@
 				place: place
 			},
 			 function(data){
-				 $("#projects-list").html(data);
+				 $("#projects-list").html(data).fadeIn(500);
 				});
 	   });
 
 	$("#place-filter li").on("click",function(){
+
 		var place = $(this).data('place');
 		$(this).addClass('projects-active').siblings().removeClass('projects-active');
 		$("#place").val(place);
@@ -170,6 +169,7 @@
   			});
     });
     $("#news-type li").on("click",function(){
+    		$("#projects-list").fadeOut(500);
 			var post_type = $(this).data('post_type');
 			var post_per_page = $(this).data('posts_per_page');
 			var news_type = $(this).data('news_type');
@@ -182,7 +182,7 @@
 				place: place
 			},
 			function(data){
-				$("#projects-list").html(data);
+				$("#projects-list").html(data).fadeIn(500);
 			});
 	   });
     $("#news-place-filter li").on("click",function(){
