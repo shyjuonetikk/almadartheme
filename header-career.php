@@ -69,20 +69,12 @@ $container = get_theme_mod('understrap_container_type');
 				<div class="col-sm-8">
 					<select class="form-control" id="career-nationality" name="career-nationality">
 					<?php
-$query = new WP_Query(array(
-	'post_type' => array('alcareers'),
-	'post_status' => 'publish',
-	'order' => 'ASC',
-));
+$field = get_field_object('nationality');
 
-while ($query->have_posts()) {
-	$query->the_post();
-	$post_id = get_the_ID();
-	$post_url = get_the_permalink();
+foreach ($field['choices'] as $k => $v) {
 	?>
-							<option value="<?php the_field('nationality');?>"><?php the_field('nationality');?></option>
-						<?php }
-wp_reset_query();?>
+							<option value="<?php echo $k; ?>"><?php echo $v; ?></option>
+						<?php }?>
 					</select>
 					</select>
 				</div>
