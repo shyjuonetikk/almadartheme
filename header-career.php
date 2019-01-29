@@ -104,7 +104,7 @@ wp_reset_query();?>
 			<div class="form-group row">
 				<label for="resume" class="col-sm-4 col-form-label">Submit Your CV<span class="text-danger">*</span></label>
 				<div class="col-sm-8">
-					<input type="file" name="file_attach[]" id="career-resume" class="form-control-file" name="career-resume" />
+					<input type="file" name="file_attach[]" id="career-resume" class="form-control-file" />
 					<label for="career-resume" class="shadow p-2 sc-font font-weight-normal">Choose a file</label>
 				</div>
 			</div>
