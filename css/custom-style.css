@@ -1257,8 +1257,10 @@ div#contact-us-response {
 div#apply-role{
   display: none;
 }
-.min-height{
-  min-height: 600px;
+@media screen and (max-width: 1600px) {
+  .min-height{
+    min-height: 600px;
+  }
 }
 .extra-padding{
   padding-bottom: 70px!important;
