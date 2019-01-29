@@ -98,14 +98,14 @@ $("#career-form").submit(function(e){
 		 $(this).css('border-color', border_color);
 	});
 
-	var filesize = $('file_attach[]').val();
-	if (filesize == "") {
-		proceed = false;
-		$("#fileInCheck").css({"visibility": "visible"});
-	}
-	else {
-		$("#fileInCheck").css({"visibility": "visible"});
-	}
+	// var filesize = $('file_attach[]').val();
+	// if (filesize == "") {
+	// 	proceed = false;
+	// 	$("#fileInCheck").css({"visibility": "visible"});
+	// }
+	// else {
+	// 	$("#fileInCheck").css({"visibility": "visible"});
+	// }
 
 	//check file size and type before upload, works in modern browsers
 	if(window.File && window.FileReader && window.FileList && window.Blob){
@@ -153,8 +153,7 @@ $("#career-form").submit(function(e){
 				$("#resume_result").html('<div class="success">'+ res.text +"</div>");
 			}
 			$("#resume_result").show().delay(5000).fadeOut();
-			$("#resume_result").html('<div class="success">'+ res.text +"</div>");
-            $("#cv-button").prop('disabled', true);
+            $("#career-form").find("input[type=text], input[name=career-email]").val("");
 		});
 	}
 });

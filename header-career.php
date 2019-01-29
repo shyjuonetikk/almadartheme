@@ -30,7 +30,7 @@ $container = get_theme_mod('understrap_container_type');
 <div id="career-overlays" class="col-12 p-0 float-left">
 	<div id="career-cancel" class="col-lg-6 col-md-1 col-sm-1 col-1 float-left"></div>
 	<div class="career-form float-right w-100 px-5 py-2 bg-white col-lg-6 col-md-10 col-sm-10 col-10">
-		<h2 class="purple-color prmy-font">Submit Your CV</h2>
+		<h2 class="purple-color prmy-font text-center text-sm-left">Submit Your CV</h2>
 		<hr>
 		<p class="text-right text-danger font-weight-light">* Indicates required field</p>
 		<form id="career-form" method="post" action="<?php echo get_template_directory_uri(); ?>/resume-form.php">
@@ -55,7 +55,7 @@ $container = get_theme_mod('understrap_container_type');
 			<div class="form-group row">
 				<label for="Phone Number" class="col-sm-4 col-form-label">Phone Number</label>
 				<div class="col-sm-8">
-					<input type="email" class="form-control" id="career-phone" name="career-phone">
+					<input type="text" class="form-control" id="career-phone" name="career-phone">
 				</div>
 			</div>
 			<div class="form-group row">
@@ -67,22 +67,14 @@ $container = get_theme_mod('understrap_container_type');
 			<div class="form-group row">
 				<label for="Nationality" class="col-sm-4 col-form-label">Nationality<span class="text-danger">*</span></label>
 				<div class="col-sm-8">
-					<select class="form-control" id="career-nationality" name="career-nationality" data-required="true">
+					<select class="form-control" id="career-nationality" name="career-nationality">
 					<?php
-$query = new WP_Query(array(
-	'post_type' => array('alcareers'),
-	'post_status' => 'publish',
-	'order' => 'ASC',
-));
-
-while ($query->have_posts()) {
-	$query->the_post();
-	$post_id = get_the_ID();
-	$post_url = get_the_permalink();
+$field = get_field_object('nationality');
+$choices = $field['choices'];
+foreach ($choices['choices'] as $k => $v) {
 	?>
-							<option value="<?php the_field('location');?>"><?php the_field('location');?></option>
-						<?php }
-wp_reset_query();?>
+							<option value="<?php echo $k; ?>"><?php echo $v; ?></option>
+						<?php }?>
 					</select>
 					</select>
 				</div>
@@ -90,7 +82,7 @@ wp_reset_query();?>
 			<div class="form-group row">
 				<label for="function" class="col-sm-4 col-form-label">Function<span class="text-danger">*</span></label>
 				<div class="col-sm-8">
-					<select class="form-control" id="career-function" name="career-function" data-required="true">
+					<select class="form-control" id="career-function" name="career-function">
 					<?php
 $query = new WP_Query(array(
 	'post_type' => array('alcareers'),
@@ -112,7 +104,7 @@ wp_reset_query();?>
 			<div class="form-group row">
 				<label for="resume" class="col-sm-4 col-form-label">Submit Your CV<span class="text-danger">*</span></label>
 				<div class="col-sm-8">
-					<input type="file" name="file_attach[]" id="career-resume" class="form-control-file" name="career-resume" />
+					<input type="file" name="file_attach[]" id="career-resume" class="form-control-file" />
 					<label for="career-resume" class="shadow p-2 sc-font font-weight-normal">Choose a file</label>
 				</div>
 			</div>
