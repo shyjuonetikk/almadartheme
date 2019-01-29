@@ -55,7 +55,7 @@ $container = get_theme_mod('understrap_container_type');
 			<div class="form-group row">
 				<label for="Phone Number" class="col-sm-4 col-form-label">Phone Number</label>
 				<div class="col-sm-8">
-					<input type="email" class="form-control" id="career-phone" name="career-phone">
+					<input type="text" class="form-control" id="career-phone" name="career-phone">
 				</div>
 			</div>
 			<div class="form-group row">
