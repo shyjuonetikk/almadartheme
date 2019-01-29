@@ -153,8 +153,7 @@ $("#career-form").submit(function(e){
 				$("#resume_result").html('<div class="success">'+ res.text +"</div>");
 			}
 			$("#resume_result").show().delay(5000).fadeOut();
-			$("#resume_result").html('<div class="success">'+ res.text +"</div>");
-            $("#career-form").find("input[type=text]").val("");
+            $("#career-form").find("input[type=text], input[type=email]").val("");
 		});
 	}
 });

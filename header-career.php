@@ -70,8 +70,8 @@ $container = get_theme_mod('understrap_container_type');
 					<select class="form-control" id="career-nationality" name="career-nationality">
 					<?php
 $field = get_field_object('nationality');
-
-foreach ($field['choices'] as $k => $v) {
+$choices = $field['choices'];
+foreach ($choices['choices'] as $k => $v) {
 	?>
 							<option value="<?php echo $k; ?>"><?php echo $v; ?></option>
 						<?php }?>
