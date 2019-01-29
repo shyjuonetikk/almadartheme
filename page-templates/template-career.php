@@ -154,7 +154,7 @@ $("#career-form").submit(function(e){
 			}
 			$("#resume_result").show().delay(5000).fadeOut();
 			$("#resume_result").html('<div class="success">'+ res.text +"</div>");
-            $("#cv-button").prop('disabled', true);
+            $("#career-form").find("input[type=text]").val("");
 		});
 	}
 });
