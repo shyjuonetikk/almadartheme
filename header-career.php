@@ -67,7 +67,7 @@ $container = get_theme_mod('understrap_container_type');
 			<div class="form-group row">
 				<label for="Nationality" class="col-sm-4 col-form-label">Nationality<span class="text-danger">*</span></label>
 				<div class="col-sm-8">
-					<select class="form-control" id="career-nationality" name="career-nationality" data-required="true">
+					<select class="form-control" id="career-nationality" name="career-nationality">
 					<?php
 $query = new WP_Query(array(
 	'post_type' => array('alcareers'),
@@ -80,7 +80,7 @@ while ($query->have_posts()) {
 	$post_id = get_the_ID();
 	$post_url = get_the_permalink();
 	?>
-							<option value="<?php the_field('location');?>"><?php the_field('location');?></option>
+							<option value="<?php the_field('nationality');?>"><?php the_field('nationality');?></option>
 						<?php }
 wp_reset_query();?>
 					</select>
@@ -90,7 +90,7 @@ wp_reset_query();?>
 			<div class="form-group row">
 				<label for="function" class="col-sm-4 col-form-label">Function<span class="text-danger">*</span></label>
 				<div class="col-sm-8">
-					<select class="form-control" id="career-function" name="career-function" data-required="true">
+					<select class="form-control" id="career-function" name="career-function">
 					<?php
 $query = new WP_Query(array(
 	'post_type' => array('alcareers'),
