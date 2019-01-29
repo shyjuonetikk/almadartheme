@@ -9,7 +9,6 @@ Description: Template for displaying all divisions.
 
 get_header('division');
 ?>
-
 <div class="row p-0 m-0 float-left mt-0 pt-4 mb-5 divi-main">
 	<div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 divisions_main p-0 m-0 pt-5 shadow">
 		<h4 class="text-white text-center mt-3 pt-3 prmy-font">DIVISIONS</h4>
@@ -57,7 +56,7 @@ get_header('division');
 </div>
 
 
-<div id="realestate-banner" class="row m-0 p-0 realestate-back mb-5">
+<div id="realestate-banner" class="row mt-4 mx-0 p-0 realestate-back mb-5">
 	<div class="col-lg-6 col-md-12 p-5">
 		<div class="real-left-overlay">
 			<div class="row">
@@ -103,7 +102,7 @@ wp_reset_query();?>
 </div>
 
 
-<div id="contruct-banner" class="row m-0 p-0 construct-back mb-5">
+<div id="contruct-banner" class="row mt-4 mx-0 p-0 construct-back mb-5">
 	<div class="col-lg-6 col-md-12 p-5">
 		<div class="real-left-overlay">
 			<div class="row">
@@ -147,7 +146,7 @@ wp_reset_query();?>
 	</div>
 </div>
 
-<div id="enter-banner" class="row m-0 p-0 construct-back mb-5">
+<div id="enter-banner" class="row mt-4 mx-0  p-0 construct-back mb-5">
 	<div class="col-lg-6 col-md-12 p-5">
 		<div class="real-left-overlay">
 			<div class="row">
