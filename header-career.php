@@ -30,7 +30,7 @@ $container = get_theme_mod('understrap_container_type');
 <div id="career-overlays" class="col-12 p-0 float-left">
 	<div id="career-cancel" class="col-lg-6 col-md-1 col-sm-1 col-1 float-left"></div>
 	<div class="career-form float-right w-100 px-5 py-2 bg-white col-lg-6 col-md-10 col-sm-10 col-10">
-		<h2 class="purple-color prmy-font">Submit Your CV</h2>
+		<h2 class="purple-color prmy-font text-center text-sm-left">Submit Your CV</h2>
 		<hr>
 		<p class="text-right text-danger font-weight-light">* Indicates required field</p>
 		<form id="career-form" method="post" action="<?php echo get_template_directory_uri(); ?>/resume-form.php">
