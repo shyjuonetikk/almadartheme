@@ -46,6 +46,7 @@ if ($_POST) {
 		$body .= "Content-Transfer-Encoding: base64\r\n\r\n";
 		$body .= chunk_split(base64_encode($message_body));
 
+		var $x = "1";
 		//attachments
 		if (!empty($attachments['name'][$x])) {
 

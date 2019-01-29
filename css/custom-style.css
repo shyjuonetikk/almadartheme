@@ -1189,6 +1189,7 @@ button#contactus-button:hover {
 }
 .projects-normal{
   color: #000;
+  font-weight: 300;
 }
 .projects-active{
   color: #21145f !important;
@@ -1215,4 +1216,8 @@ button#contactus-button:hover {
 }
 .sticky > div.container > .white-toggler {
     background: url('../img/menu-toggle.png') !important;
+}
+div#fileInCheck {
+    visibility: hidden;
+    margin: 5px 0;
 }

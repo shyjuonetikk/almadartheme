@@ -68,9 +68,22 @@ $container = get_theme_mod('understrap_container_type');
 				<label for="Nationality" class="col-sm-4 col-form-label">Nationality<span class="text-danger">*</span></label>
 				<div class="col-sm-8">
 					<select class="form-control" id="career-nationality" name="career-nationality" data-required="true">
-						<option value="uae">UAE</option>
-						<option value="qatar">Qatar</option>
-						<option value="Oman">Oman</option>
+					<?php
+$query = new WP_Query(array(
+	'post_type' => array('alcareers'),
+	'post_status' => 'publish',
+	'order' => 'ASC',
+));
+
+while ($query->have_posts()) {
+	$query->the_post();
+	$post_id = get_the_ID();
+	$post_url = get_the_permalink();
+	?>
+							<option value="<?php the_field('location');?>"><?php the_field('location');?></option>
+						<?php }
+wp_reset_query();?>
+					</select>
 					</select>
 				</div>
 			</div>
@@ -102,6 +115,9 @@ wp_reset_query();?>
 					<input type="file" name="file_attach[]" id="career-resume" class="form-control-file" name="career-resume" />
 					<label for="career-resume" class="shadow p-2 sc-font font-weight-normal">Choose a file</label>
 				</div>
+			</div>
+			<div id="fileInCheck">
+				<p class="text-danger">Please attach your CV with the application.</p>
 			</div>
 			<div class="form-check mb-4">
 				<div class="custom-control custom-checkbox mb-3">
