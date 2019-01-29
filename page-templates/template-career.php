@@ -57,7 +57,7 @@ while ($query->have_posts()) {
 							</td>
 							<td>
 								<p class="job-cat"><?php the_field('divisions');?></p>
-								<p class="job-apply"><a href="#">Apply<img src="<?php echo get_template_directory_uri(); ?>/img/right-arrow-small.png"></a></p>
+								<p class="job-apply"><a href="#" id="apply-btn" data-role="<?php the_field('role');?>">Apply<img src="<?php echo get_template_directory_uri(); ?>/img/right-arrow-small.png"></a></p>
 							</td>
 						</tr>
 						<?php }
@@ -73,7 +73,7 @@ wp_reset_query();?>
 
 <script type="text/javascript">
 var allowed_file_size 	= "20971520"; //20 MB allowed file size
-var allowed_file_types 	= ['image/png', 'image/gif', 'image/jpeg', 'image/pjpeg', 'application/x-zip-compressed', 'application/pdf']; //Allowed file types
+
 var border_color 		= "#C2C2C2"; //initial input border color
 var maximum_files 		= 1; //Maximum number of files allowed
 

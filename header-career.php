@@ -69,20 +69,30 @@ $container = get_theme_mod('understrap_container_type');
 				<div class="col-sm-8">
 					<select class="form-control" id="career-nationality" name="career-nationality">
 					<?php
-$field = get_field_object('nationality');
+// $field = get_field_object('nationality');
 
-$choices = $field['choices'];
+// $choices = $field['choices'];
 
-foreach ($choices as $choice): ?>
+// foreach ($choices as $choice): ?>
 
-	<option value="<?php echo $choice; ?>"><?php echo $choice; ?></option>
-<?php
-endforeach;
+					<option value="qatar">Qatar</option>
+					<option value="uae">UAE</option>
+					<option value="oman">Oman</option>
+ <?php
+// endforeach;
 ?>
 					</select>
 				</div>
 			</div>
-			<div class="form-group row">
+
+			<div id="apply-role" class="form-group row">
+				<label for="career-role" class="col-sm-4 col-form-label">Role<span class="text-danger">*</span></label>
+				<div class="col-sm-8">
+					<input type="text" class="form-control" id="career-role" name="career-role">
+				</div>
+			</div>
+
+			<div id="apply-function" class="form-group row">
 				<label for="function" class="col-sm-4 col-form-label">Function<span class="text-danger">*</span></label>
 				<div class="col-sm-8">
 					<select class="form-control" id="career-function" name="career-function">

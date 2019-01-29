@@ -1254,3 +1254,6 @@ div#contact-us-response {
     width: 100%;
     float: left;
 }
+div#apply-role{
+  display: none;
+}

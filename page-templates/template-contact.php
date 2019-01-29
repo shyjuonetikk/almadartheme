@@ -72,7 +72,7 @@ $("#contact-form").submit(function(e){
 	proceed = true;
 
 	// simple input validation
-	$($(this).find("input[data-required=true]")).each(function(){
+	$($(this).find("input[data-required=true], input[type=textarea]")).each(function(){
         if(!$.trim($(this).val())){ //if this field is empty
             $(this).css('border-color','red'); //change border color to red
             proceed = false; //set do not proceed flag

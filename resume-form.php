@@ -17,6 +17,7 @@ if ($_POST) {
 	$applicantFirstName = $_POST['career-first-name'];
 	$applicantLastName = $_POST['career-last-name'];
 	$appMail = $_POST['career-email'];
+	$appRole = $_POST['career-role'];
 	$appPhone = $_POST['career-phone'];
 	if ($appPhone == "") {
 		$appPhone = "Phone number is not available";
@@ -24,6 +25,9 @@ if ($_POST) {
 	$appLocation = $_POST['career-location'];
 	$appNation = $_POST['career-nationality'];
 	$appFunction = $_POST['career-function'];
+	if ($appFunction == "") {
+		$appFunction = $appRole;
+	}
 
 	$file_count = "0";
 // //construct a message body to be sent to recipient

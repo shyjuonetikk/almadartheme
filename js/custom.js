@@ -49,8 +49,8 @@ $( document ).ready(function(){
 		$("#enter-banner").fadeOut();
 	});
 
-	// Career page popup
-	$("#resume-send, .job-apply > a").click(function(e){
+	// Career page popup - Send your Resume button
+	$("#resume-send").click(function(e){
 		e.preventDefault();
 		window.scrollTo("0", "0");
 		var popupHeight = 0;
@@ -61,6 +61,8 @@ $( document ).ready(function(){
 		if(popupHeight < docHeight){
 			popupHeight = docHeight;
 		}
+		$("#apply-role").hide();
+		$("#apply-function").show();
 		$("#career-overlays").show();
 		$(".site").css({"max-height":popupHeight, "overflow-y": "hidden"});
 		$(".career-form").css({"min-height" : popupHeight });
@@ -74,6 +76,38 @@ $( document ).ready(function(){
 		$(".site").css({"overflow-y": "visible", "max-height":"100%"});
 		$('body').css({"background-attachment": "fixed"});		
 	});
+
+
+	// Career page - Apply button send resume
+	$("#resume-send").click(function(e){
+		e.preventDefault();
+		var role = $(this).attr("data-role");
+		alert(role);
+		window.scrollTo("0", "0");
+		var popupHeight = 0;
+		var docHeight = 0;
+		popupHeight = $(".career-form").height();
+		popupHeight += 50;
+		var docHeight = $(window).height();
+		if(popupHeight < docHeight){
+			popupHeight = docHeight;
+		}
+		$("#career-overlays").show();
+		$("#apply-role").show();
+		$("#apply-function").hide();
+		$(".site").css({"max-height":popupHeight, "overflow-y": "hidden"});
+		$(".career-form").css({"min-height" : popupHeight });
+		$("#career-overlays").animate({"right": "0", "top": "0"}, 1000);
+		$("#career-cancel").css({"min-height":popupHeight});
+	});
+	$("#career-cancel").click(function(e){
+		e.preventDefault();
+		$("#career-overlays").animate({"right": "-200%", "top": "0"}, 1000);
+		$("#career-overlays").fadeOut();
+		$(".site").css({"overflow-y": "visible", "max-height":"100%"});
+		$('body').css({"background-attachment": "fixed"});		
+	});
+
 
 	// Contact Page Popup
 	$("#click-contact").click(function(e){
