@@ -26,7 +26,7 @@ $( document ).ready(function(){
 	});
 	// Construction popup
 	$('#const-more').click(function(e){
-		e.preventDefault(e);
+		e.preventDefault();
 		var popupHeight = $(".divi-main").height();
 		$("#contruct-banner").css({"display" : "flex"});
 		$("#contruct-banner").animate({"right": "0", "height":popupHeight}, 500);
@@ -38,7 +38,7 @@ $( document ).ready(function(){
 	});
 	// Entertainment popup
 	$('#ent-more').click(function(e){
-		e.preventDefault(e);
+		e.preventDefault();
 		var popupHeight = $(".divi-main").height();
 		$("#enter-banner").css({"display" : "flex"});
 		$("#enter-banner").animate({"right": "0", "height":popupHeight}, 500);
