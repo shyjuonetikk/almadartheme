@@ -2,10 +2,12 @@
 Theme Name: Almadar
 Theme URI: http://onetikk.org
 Author: Shyju K
-Description: Style sheet for Almadar website
-This file is just used to identify the theme in WordPress.
-The compiled CSS output can be found in /css/theme.css
-The SASS sources for it can be found in /sass/
+Description: Custom Website for Almadar website
+
+The Custom CSS file can be found on the css folder and the Custom JS file on the js folder.
+
+The Page templated are placed in the page-templates folder and the header templates on the template directory itself
+
 The dependencies can be found in /src/ after running "gulp copy-assets" terminal command
 
 ...and now go out and play!

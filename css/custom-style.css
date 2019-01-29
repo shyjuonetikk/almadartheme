@@ -192,7 +192,7 @@ body{
 }
 .h_division_title {
     position: absolute;
-    color: #FFF;
+    color: #FFFFFF;
     background: rgba(0,0,0,0.7);
     bottom: 0;
     z-index: 9;
@@ -206,11 +206,16 @@ body{
   height: 50px !important;
   width: 50px !important;
 }
-.navbar-toggler:hover {
+.white-toggler {
+    background: url('../img/menu-toggle-hover.png') no-repeat !important;
+    height: 50px !important;
+    width: 50px !important;
+}
+/*.navbar-toggler:hover {
   background: url('../img/menu-toggle-hover.png') no-repeat !important;
   height: 50px !important;
   width: 50px !important;
-}
+}*/
 .h_division_title:hover{
   background-color: rgba(34, 17, 92, 0.74);
   cursor: pointer;
@@ -1188,4 +1193,26 @@ button#contactus-button:hover {
 .projects-active{
   color: #21145f !important;
   font-weight: 600 !important;
+}
+@media screen and (max-width: 990px) and (min-width: 768px) {
+  .menu-new a, .sticky a{
+    margin: 0 13px !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  #main-menu {
+    background: #ffffff;
+  }
+  div#navbarNavDropdown {
+      z-index: 999 !important;
+  }
+  div#navbarNavDropdown > ul > li > a {
+      color: #21145f;
+  }
+  div#navbarNavDropdown > ul > li.current_page_item.active > a {
+      color: #3bc4e8;
+  }
+}
+.sticky > div.container > .white-toggler {
+    background: url('../img/menu-toggle.png') !important;
 }
