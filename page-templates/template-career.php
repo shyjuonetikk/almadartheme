@@ -109,7 +109,7 @@ debugger;
 	// 	$("input#career-resume ~ label").css({"border": "none"});
 	// }
 	var checkColor = $(".custom-control-input:checked~.custom-control-label::before").css("background-color");
-	alert(checkColor);
+	// alert(checkColor);
 
 	//check file size and type before upload, works in modern browsers
 	if(window.File && window.FileReader && window.FileList && window.Blob){
