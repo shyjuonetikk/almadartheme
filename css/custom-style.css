@@ -1424,7 +1424,7 @@ position: absolute;
 .slideshow-image:nth-child(1) {
   -webkit-animation-name: kenburns-1;
   animation-name: kenburns-1;
-  z-index: 3;
+  z-index: -3;
 }
 
 
