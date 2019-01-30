@@ -1330,6 +1330,10 @@ div#apply-role{
     width: 171px;
     height: 171px;
   }*/
+  }
+  .top-padding {
+    padding-top: 10% !important;
+  }
 }
 .extra-padding{
   padding-bottom: 70px!important;
