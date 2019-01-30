@@ -1141,7 +1141,7 @@ div#disclaimer > p, div#terms > p, div#privacy > p {
 }
 
 /* Very Large Screens */
-@media only screen (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .thumbnail {
     position: relative;
     width: 100%;
@@ -1150,7 +1150,7 @@ div#disclaimer > p, div#terms > p, div#privacy > p {
   }
 }
 /* Medium Screens*/
-@media only screen (min-width: 960px) and (max-width: 1199px) {
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
   .thumbnail {
     position: relative;
     width: 100%;
@@ -1159,7 +1159,7 @@ div#disclaimer > p, div#terms > p, div#privacy > p {
   }
 }
 /* Medium Screens*/
-@media only screen (min-width: 768px) and (max-width: 959px) {
+@media only screen and (min-width: 768px) and (max-width: 959px) {
   .thumbnail {
     position: relative;
     width: 100%;
@@ -1168,7 +1168,7 @@ div#disclaimer > p, div#terms > p, div#privacy > p {
   }
 }
 /* Medium Screens*/
-@media only screen (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) {
   .thumbnail {
     position: relative;
     width: 100%;
@@ -1268,6 +1268,11 @@ div#apply-role{
 @media screen and (max-width: 1200px) {
   .image {
     height: 200px !important;
+  }
+}
+@media screen and (max-width: 575px) {
+  .image {
+    height: 170px !important;
   }
 }
 div#content-area {
