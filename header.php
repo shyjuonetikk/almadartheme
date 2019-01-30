@@ -101,8 +101,8 @@ $container = get_theme_mod('understrap_container_type');
 
 		</nav><!-- .site-navigation -->
 	</div><!-- header box -->
-		<div class="container">
-			<div class="jumbotron bg-none text-white top-padding">
+		<div class="container top-padding">
+			<div class="jumbotron bg-none text-white">
 			  <div class="container ml-10">
 			    <h1 class="slider-heading display-4 mb-5 prmy-font"><?php echo get_post_meta(get_the_ID(), 'heading', true); ?></h1>
 
