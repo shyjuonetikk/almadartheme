@@ -12,7 +12,8 @@ body{
   overflow-x: hidden;
 }
 .header-back{
-    height: 100%;
+    height: 100vh;
+    position: relative;
     padding: 0;
     margin: 0;
 }
@@ -1192,9 +1193,9 @@ div#disclaimer > p, div#terms > p, div#privacy > p {
 .newsletter-txt-field .form-control {
     border: none;
 }
-
-=======
->>>>>>> c590faf77d96a1fff74c5f69b17e592386d10f63
+.white-back{
+  background: #fff;
+}
 /* Very Large Screens */
 @media only screen and (min-width: 1401px) {
   .thumbnail {
