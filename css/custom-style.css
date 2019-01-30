@@ -1302,7 +1302,7 @@ div#project-section {
   }
   #nav_menu-2, #custom_html-4, #custom_html-5{
       width: 66.6667% !important;
-      margin-left: 103px;
+      margin-left: 118px;
   }
   .news-section{
     padding: 1rem !important;
@@ -1320,6 +1320,6 @@ div#project-section {
 @media screen and (max-width: 410px) {
   #nav_menu-2, #custom_html-4, #custom_html-5{
       width: 66.6667% !important;
-      margin-left: 95px;
+      margin-left: 108px;
   }
 }
