@@ -1297,9 +1297,12 @@ div#project-section {
   .footer_address{
     margin-left: 15px !important;
   }
+  .footer_one {
+    padding-right: 0px !important;
+  }
   #nav_menu-2, #custom_html-4, #custom_html-5{
       width: 66.6667% !important;
-      margin-left: 95px;
+      margin-left: 103px;
   }
   .news-section{
     padding: 1rem !important;
@@ -1312,5 +1315,9 @@ div#project-section {
 @media screen and (max-width: 575px) {
   div#project-section {
     padding: 0rem !important;
+  }
+  #nav_menu-2, #custom_html-4, #custom_html-5{
+      width: 66.6667% !important;
+      margin-left: 95px;
   }
 }
