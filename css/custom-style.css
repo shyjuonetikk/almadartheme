@@ -1003,13 +1003,13 @@ ul.reallists > li > i {
   padding-right: 0px !important;
   padding-bottom: 5px !important;
 }
-.sticky .sm-icon-tw{
+/*.sticky .sm-icon-tw{
   color: #21145f !important;
 }
 .sticky .sm-icon-tw:hover{
   color: #6bc4e9 !important;
   border-bottom: 2px solid #6bc4e9;
-}
+}*/
 .sticky li:hover a{
   color: #6bc4e9;
   border-bottom: 2px solid #6bc4e9;
