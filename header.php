@@ -30,10 +30,16 @@ $container = get_theme_mod('understrap_container_type');
 
 	<!-- ******************* The Navbar Area ******************* -->
 	<!-- <div id="wrapper-navbar" class="header-back" style="background: url('<?php header_image();?>') no-repeat; background-size: 100% 100%;"> -->
+	<div id="loading">
+	  <div class="lds-ripple"><div></div><div></div></div>
+	</div>
 	<div id="wrapper-navbar" class="header-back">
-		<div class="images">
+		<!-- <div class="images">
 			<img src="<?php the_field('home_header_image1'); ?>"/>
-		</div>
+		</div> -->
+			<div class="slideshow">
+			  <div class="slideshow-image" style="background-image: url('<?php the_field('home_header_image1'); ?>"></div> 
+			</div>
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e('Skip to content', 'understrap');?></a>
 	<div id="header-box">
 		<nav class="navbar navbar-expand-md menu-new" id="myHeader">
