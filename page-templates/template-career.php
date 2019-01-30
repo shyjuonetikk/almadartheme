@@ -100,7 +100,6 @@ $("#career-form").submit(function(e){
 		 $(this).css('border-color', border_color);
 	});
 
-	// var filesize = $('file_attach').val();
 	// if (filesize == "") {
 	// 	proceed = false;
 	// 	$("input#career-resume ~ label").css({"border": "1px solid #ff0000"});
@@ -109,13 +108,20 @@ $("#career-form").submit(function(e){
 	// 	$("input#career-resume ~ label").css({"border": "none"});
 	// }
 
-
 	//check file size and type before upload, works in modern browsers
 	if(window.File && window.FileReader && window.FileList && window.Blob){
 		var total_files_size = 0;
 		if(this.elements['file_attach[]'].files.length > maximum_files){
             alert( "Can not select more than "+maximum_files+" file(s)");
             proceed = false;
+		}
+		else if(this.elements['file_attach[]'].files.length == ""){
+            $("input#career-resume ~ label").css({"border": "1px solid #ff0000"});
+            proceed = false;
+		}
+		else{
+			$("input#career-resume ~ label").css({"border": "none"});
+			proceed = true;
 		}
 		$(this.elements['file_attach[]'].files).each(function(i, ifile){
 			if(ifile.value !== ""){ //continue only if file(s) are selected
@@ -127,13 +133,10 @@ $("#career-form").submit(function(e){
 			}
 		});
        if(total_files_size > allowed_file_size){
-            alert( "Make sure total file size is less than 1 MB!");
+            alert( "Make sure total file size is less than 20 MB!");
             proceed = false;
         }
 	}
-
-
-
 
 	//if everything's ok, continue with Ajax form submit
 
@@ -144,7 +147,7 @@ $("#career-form").submit(function(e){
 		$.ajax({ //ajax form submit
 			url : post_url,
 			type: request_method,
-			data : form_data,
+			data : new FormData(this),
 			dataType : "json",
 			contentType: false,
 			cache: false,
@@ -158,8 +161,9 @@ $("#career-form").submit(function(e){
 				$("#resume_result").show();
 				$("#resume_result").html('<div class="success">'+ res.text +"</div>");
 			}
+
 			$("#resume_result").show().delay(5000).fadeOut();
-            $("#career-form").find("input[type=text], input[name=career-email]").val("");
+   			$("#career-form").find("input[type=text], input[name=career-email]").val("");
 		});
 	}
 });
