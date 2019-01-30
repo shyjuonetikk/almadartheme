@@ -8,7 +8,7 @@ get_header('division');
 ?>
 
 <div class="row m-0 p-0 mt-0 mb-5 min-height">
-	<div class="container m-auto p-0">
+	<div class="container mx-auto p-0">
 			<div class="col-6 float-right bread-cumb mb-1">
 				<ul class="list-inline float-right" id="place-filter">
 					<li class="list-inline-item projects-active purple-color" data-place="qatar">QATAR</li>

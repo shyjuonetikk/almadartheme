@@ -1330,6 +1330,9 @@ div#apply-role{
     width: 171px;
     height: 171px;
   }*/
+  .divi-main {
+      margin-bottom: 6rem !important;
+  }
   }
   .top-padding {
     padding-top: 10% !important;
