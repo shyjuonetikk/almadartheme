@@ -982,6 +982,7 @@ ul.reallists > li > i {
   height: 24px;
 }
 .sticky {
+  padding: 0.5rem;
   position: fixed;
   z-index: 9999999;
   top: 0;
@@ -1287,6 +1288,16 @@ div#project-section {
   }
   div#project-section {
     padding: 0 1rem !important;
+  }
+  #nav_menu-2, #custom_html-4, #custom_html-5{
+    padding-left: 94px !important;
+  }
+  .news-section{
+    padding: 1rem !important;
+  }
+  .thumbnail-news-section img{
+    width: 144px;
+    height: 146px;
   }
 }
 @media screen and (max-width: 575px) {
