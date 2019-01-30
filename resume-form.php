@@ -4,11 +4,11 @@ $recipient_email = "jithinvjayaprakash@gmail.com";
 // $recipient_email = the_field('hr_email');
 $from_email = "hr@almadar.com"; //from email using site domain.
 
-if (!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
-	die('Sorry Request must be Ajax POST'); //exit script
-}
+// if (!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
+// 	die('Sorry Request must be Ajax POST'); //exit script
+// }
 
-if ($_POST) {
+if (true) {
 
 	$attachments = $_FILES['file_attach'];
 
