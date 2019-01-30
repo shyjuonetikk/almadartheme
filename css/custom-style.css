@@ -99,12 +99,12 @@ body{
 .letter-spc-2{
 	letter-spacing: -2px;
 }
-.sm-icon-tw{
+/*.sm-icon-tw:hover{
 	color: #fff !important;
 	border: 2px solid #5ec3e500;
 	border-radius: 50%;
-}
-.sm-icon-tw:hover{
+}*/
+.sm-icon-tw{
 	color: #5ec3e5 !important;
 	border: 2px solid #5ec3e5;
 	border-radius: 50%;
@@ -1594,4 +1594,7 @@ kenburns-4 {  73.4375% {
   p.msg-md {
       font-size: 16px;
   }
+}
+.thumb-intl {
+    height: auto !important;
 }
