@@ -108,7 +108,8 @@ debugger;
 	// else {
 	// 	$("input#career-resume ~ label").css({"border": "none"});
 	// }
-
+	var checkColor = $(".custom-control-input:checked~.custom-control-label::before").css("background-color");
+	alert(checkColor);
 
 	//check file size and type before upload, works in modern browsers
 	if(window.File && window.FileReader && window.FileList && window.Blob){
@@ -150,18 +151,17 @@ debugger;
 			cache: false,
 			processData:false
 		}).done(function(res){ //fetch server "json" messages when done
-			// if(res.type == "error"){
-			// 	$("#resume_result").show();
-			// 	$("#resume_result").html('<div class="error">'+ res.text +"</div>");
-			// }
-			// if(res.type == "done"){
-			// 	$("#resume_result").show();
-			// 	$("#resume_result").html('<div class="success">'+ res.text +"</div>");
-			// }
-			// $("#resume_result").show().delay(5000).fadeOut();
-   //          $("#career-form").find("input[type=text], input[name=career-email]").val("");
-   	alert(res);
+			if(res.type == "error"){
+				$("#resume_result").show();
+				$("#resume_result").html('<div class="error">'+ res.text +"</div>");
+			}
+			if(res.type == "done"){
+				$("#resume_result").show();
+				$("#resume_result").html('<div class="success">'+ res.text +"</div>");
+			}
 		});
+		$("#resume_result").show().delay(5000).fadeOut();
+        $("#career-form").find("input[type=text], input[name=career-email]").val("");
 	}
 });
 </script>
