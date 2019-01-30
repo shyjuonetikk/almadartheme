@@ -1317,7 +1317,7 @@ div#project-section {
     padding: 0rem !important;
   }
 }
-@media screen and (max-width: 412px) {
+@media screen and (max-width: 410px) {
   #nav_menu-2, #custom_html-4, #custom_html-5{
       width: 66.6667% !important;
       margin-left: 95px;
