@@ -743,7 +743,7 @@ table#careers-table > tbody > tr > td {
     padding: 12px 0 0;
 }
 p.job-apply > a {
-    color: #6BC4E8;
+    color: #6BC4E8 !important;
     text-decoration: underline;
     font-family: "Montserrat";
 }

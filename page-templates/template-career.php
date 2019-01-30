@@ -82,7 +82,7 @@ var maximum_files 		= 1; //Maximum number of files allowed
 $("#career-form").submit(function(e){
     e.preventDefault(); //prevent default action
 	proceed = true;
-
+debugger;
 	//simple input validation
 	$($(this).find("input[data-required=true], select[data-required=true]")).each(function(){
             if(!$.trim($(this).val())){ //if this field is empty
@@ -150,16 +150,17 @@ $("#career-form").submit(function(e){
 			cache: false,
 			processData:false
 		}).done(function(res){ //fetch server "json" messages when done
-			if(res.type == "error"){
-				$("#resume_result").show();
-				$("#resume_result").html('<div class="error">'+ res.text +"</div>");
-			}
-			if(res.type == "done"){
-				$("#resume_result").show();
-				$("#resume_result").html('<div class="success">'+ res.text +"</div>");
-			}
-			$("#resume_result").show().delay(5000).fadeOut();
-            $("#career-form").find("input[type=text], input[name=career-email]").val("");
+			// if(res.type == "error"){
+			// 	$("#resume_result").show();
+			// 	$("#resume_result").html('<div class="error">'+ res.text +"</div>");
+			// }
+			// if(res.type == "done"){
+			// 	$("#resume_result").show();
+			// 	$("#resume_result").html('<div class="success">'+ res.text +"</div>");
+			// }
+			// $("#resume_result").show().delay(5000).fadeOut();
+   //          $("#career-form").find("input[type=text], input[name=career-email]").val("");
+   	alert(res);
 		});
 	}
 });
