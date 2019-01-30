@@ -1263,6 +1263,10 @@ div#apply-role{
   .min-height{
     min-height: 600px;
   }
+  .thumbnail-news-section img {
+    width: 171px;
+    height: 171px;
+  }
 }
 .extra-padding{
   padding-bottom: 70px!important;
