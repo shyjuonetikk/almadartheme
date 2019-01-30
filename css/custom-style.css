@@ -1100,7 +1100,7 @@ a#real-back {
   font-family: "Montserrat";
   font-weight: 500;
 }
-ul#news-place-filter > li {
+ul#news-place-filter > li, div#contact-left {
     cursor: pointer;
 }
 .custom-control-input:checked~.custom-control-label::before {

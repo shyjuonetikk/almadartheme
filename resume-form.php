@@ -12,7 +12,7 @@ if ($_POST) {
 
 	$attachments = $_FILES['file_attach'];
 
-	$file_count = 1; //count total files attached
+	$file_count = "1"; //count total files attached
 
 	$applicantFirstName = $_POST['career-first-name'];
 	$applicantLastName = $_POST['career-last-name'];
@@ -29,7 +29,6 @@ if ($_POST) {
 		$appFunction = $appRole;
 	}
 
-	$file_count = "0";
 // //construct a message body to be sent to recipient
 	$message_body = "Resume from " . $applicantFirstName . " " . $applicantLastName . "\n";
 	$message_body .= "Applicant Mail ID: " . $appMail . "\n";

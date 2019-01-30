@@ -86,7 +86,7 @@ $container = get_theme_mod('understrap_container_type');
 			</div>
 
 			<div id="apply-role" class="form-group row">
-				<label for="career-role" class="col-sm-4 col-form-label">Role<span class="text-danger">*</span></label>
+				<label for="career-role" class="col-sm-4 col-form-label">Function<span class="text-danger">*</span></label>
 				<div class="col-sm-8">
 					<input type="text" class="form-control" id="career-role" name="career-role">
 				</div>

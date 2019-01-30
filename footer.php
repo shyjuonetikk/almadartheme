@@ -37,33 +37,31 @@
 <?php wp_footer();?>
 <script  src="https://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="  crossorigin="anonymous"></script>
 <?php
-	if (is_singular(['realestate','construction','entertainment']) || is_page('germany')) {
-		echo "
+if (is_singular(['realestate', 'construction', 'entertainment']) || is_page('germany')) {
+	echo "
 			<script type='text/javascript'>
 				$( document ).ready(function(){
 					$('#divisions').addClass('current_page_item active');
 				});
 			</script>
 			";
-	}
-	else if(is_singular(['almadarnews'])){
-		echo "
+} else if (is_singular(['almadarnews'])) {
+	echo "
 			<script type='text/javascript'>
 				$( document ).ready(function(){
 					$('#news').addClass('current_page_item active');
 				});
 			</script>
 			";
-	}
-	else if(is_singular(['projects'])){
-		echo "
+} else if (is_singular(['projects'])) {
+	echo "
 			<script type='text/javascript'>
 				$( document ).ready(function(){
 					$('#our-projects').addClass('current_page_item active');
 				});
 			</script>
 			";
-	}
+}
 ?>
 <script type="text/javascript">
 	$( document ).ready(function(){
@@ -238,7 +236,7 @@
 </script>
 <?php
 
-if(is_page(['home','about-us','careers']) || is_single()){ ?>
+if (is_page(['home', 'about-us', 'careers']) || is_single()) {?>
 
 <script type="text/javascript">
 	window.onscroll = function() { stickyFunction() };
@@ -255,7 +253,7 @@ if(is_page(['home','about-us','careers']) || is_single()){ ?>
 	  }
 	}
 </script>
-<?php } else { ?>
+<?php } else {?>
 <script type="text/javascript">
 	window.onscroll = function() { stickyFunction() };
 	var header = document.getElementById("divisionHeader");
@@ -271,7 +269,7 @@ if(is_page(['home','about-us','careers']) || is_single()){ ?>
 	  }
 	}
 </script>
-<?php } ?>
+<?php }?>
 </body>
 
 </html>

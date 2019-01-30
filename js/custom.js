@@ -79,27 +79,27 @@ $( document ).ready(function(){
 
 
 	// Career page - Apply button send resume
-	$("#apply-btn").click(function(e){
-		e.preventDefault();
-		var role = $(this).attr("data-role");
-		$("#career-role").val(role);
-		window.scrollTo("0", "0");
-		var popupHeight = 0;
-		var docHeight = 0;
-		popupHeight = $(".career-form").height();
-		popupHeight += 50;
-		var docHeight = $(window).height();
-		if(popupHeight < docHeight){
-			popupHeight = docHeight;
-		}
-		$("#career-overlays").show();
-		$("#apply-role").css({"display":"flex"});
-		$("#apply-function").hide();
-		$(".site").css({"max-height":popupHeight, "overflow-y": "hidden"});
-		$(".career-form").css({"min-height" : popupHeight });
-		$("#career-overlays").animate({"right": "0", "top": "0"}, 1000);
-		$("#career-cancel").css({"min-height":popupHeight});
-	});
+	// $("#apply-btn").click(function(e){
+	// 	e.preventDefault();
+	// 	var role = $(this).attr("data-role");
+	// 	$("#career-role").val(role);
+	// 	window.scrollTo("0", "0");
+	// 	var popupHeight = 0;
+	// 	var docHeight = 0;
+	// 	popupHeight = $(".career-form").height();
+	// 	popupHeight += 50;
+	// 	var docHeight = $(window).height();
+	// 	if(popupHeight < docHeight){
+	// 		popupHeight = docHeight;
+	// 	}
+	// 	$("#career-overlays").show();
+	// 	$("#apply-role").css({"display":"flex"});
+	// 	$("#apply-function").hide();
+	// 	$(".site").css({"max-height":popupHeight, "overflow-y": "hidden"});
+	// 	$(".career-form").css({"min-height" : popupHeight });
+	// 	$("#career-overlays").animate({"right": "0", "top": "0"}, 1000);
+	// 	$("#career-cancel").css({"min-height":popupHeight});
+	// });
 	$("#career-cancel").click(function(e){
 		e.preventDefault();
 		$("#career-overlays").animate({"right": "-200%", "top": "0"}, 1000);
@@ -180,4 +180,25 @@ function showTerms(){
 	$("#disclaimer-tab, #privacy-tab").removeClass('disc-active');
 	$('#disclaimer, #privacy').hide();
 	$('#terms').show();
+}
+function careerPopup(){
+	e.preventDefault();
+	var role = $(this).attr("data-role");
+	$("#career-role").val(role);
+	window.scrollTo("0", "0");
+	var popupHeight = 0;
+	var docHeight = 0;
+	popupHeight = $(".career-form").height();
+	popupHeight += 50;
+	var docHeight = $(window).height();
+	if(popupHeight < docHeight){
+		popupHeight = docHeight;
+	}
+	$("#career-overlays").show();
+	$("#apply-role").css({"display":"flex"});
+	$("#apply-function").hide();
+	$(".site").css({"max-height":popupHeight, "overflow-y": "hidden"});
+	$(".career-form").css({"min-height" : popupHeight });
+	$("#career-overlays").animate({"right": "0", "top": "0"}, 1000);
+	$("#career-cancel").css({"min-height":popupHeight});
 }
