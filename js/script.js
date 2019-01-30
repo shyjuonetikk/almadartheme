@@ -1,32 +1,77 @@
-jQuery(function($){
+$(document).ready(function() {
+
+	/* 
+	 * Maintain Ratio & position
+	 */
+	var maintainRatio = function(){
+		// Get measurements
+		var wrapperWidth = $(window).width();
+		var wrapperHeight = $(window).height();
+		var wrapperRatio = wrapperWidth/wrapperHeight;
+		var imageWidth = $(".images img").width();
+		var imageHeight = $(".images img").height();
+		var imageRatio = imageWidth/imageHeight;
+
+		// Set CSS to center image in wrapper
+		$(".images img").css({
+			"top": "50%",
+			"left": "50%"
+		});
+
+		// Set CSS properties of current image
+		if(wrapperRatio < imageRatio){
+			$(".images img").css({
+				"height": wrapperHeight,
+				"width": wrapperHeight*imageRatio,
+				"margin-top": -(wrapperHeight/2),
+				"margin-left": -(wrapperHeight*imageRatio/2)
+			});
+		}
+		else{
+			$(".images img").css({
+				"height": wrapperWidth*(1/imageRatio),
+				"width": wrapperWidth,
+				"margin-top": -(wrapperWidth*(1/imageRatio)/2),
+				"margin-left": -(wrapperWidth/2),
+			});
+		}		
+	}
 
 	/*
-	 * Load More
+	 * Scale effect (CSS3)
 	 */
-	$('body').on('click', '#misha_loadmore', function(){
-
-		$.ajax({
-			url : misha_loadmore_params.ajaxurl, // AJAX handler
-			data : {
-				'action': 'loadmore', // the parameter for admin-ajax.php
-				'query': misha_loadmore_params.posts, // loop parameters passed by wp_localize_script()
-				'page' : misha_loadmore_params.current_page, // current page
-				'first_page' : misha_loadmore_params.first_page
-			},
-			type : 'POST',
-			beforeSend : function ( xhr ) {
-				$('#misha_loadmore').text('Loading...'); // some type of preloader
-			},
-			success : function( data ){
-
-					$('#misha_loadmore').remove();
-					$('#misha_pagination').before(data).remove();
-					misha_loadmore_params.current_page++;
+	 var scale = function(factor,time){
+	 	$(".images img").css({
+		  "-webkit-transform": "scale(" + factor + ")",  // Safari 3.1+, Chrome 
+		     "-moz-transform": "scale(" + factor + ")",  // Firefox 3.5+ 
+		      "-ms-transform": "scale(" + factor + ")",  // IE9+ 
+		       "-o-transform": "scale(" + factor + ")",  // Opera 10.50+ 
+		          "transform": "scale(" + factor + ")",
+		 "-webkit-transition": "-webkit-transform " + time + "s ease-in-out",  // Safari 3.2+, Chrome 
+		    "-moz-transition": "-webkit-transform " + time + "s ease-in-out",  // Firefox 4-15 
+		      "-o-transition": "-webkit-transform " + time + "s ease-in-out",  // Opera 10.5–12.00 
+		         "transition": "-webkit-transform " + time + "s ease-in-out"  // Firefox 16+, Opera 12.50+ 
+	 	});
+	 }
 
 
-			}
-		});
-		return false;
+	/*
+	 * After images are loaded
+	 */
+	$(window).load(function(){
+		// maximize and center image while maintaining image ratio
+		maintainRatio();
+		// scale and animate
+		scale(1.5,10);
+	})
+
+
+	/*
+	 * While window is being resize
+	 */
+	$(window).resize(function() {
+		// maximize and center image while maintaining image ratio
+		maintainRatio();
 	});
 
 });

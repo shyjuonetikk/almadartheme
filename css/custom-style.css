@@ -1335,3 +1335,14 @@ div#project-section {
       width: auto !important;
   }
 }
+
+.images {
+  width: 100%;
+  height: 573px;
+  position: absolute;
+  overflow: hidden;
+  z-index: -1;
+}
+.images img {
+  position: absolute;
+}
