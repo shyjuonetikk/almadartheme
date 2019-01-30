@@ -1068,6 +1068,7 @@ p.disclaimer-para {
 a#more_posts {
     color: #6bc4e8;
     text-decoration: underline;
+    font-size: 13px;
 }
 a#more_posts:hover {
     cursor: pointer;
@@ -1142,9 +1143,17 @@ div#disclaimer > p, div#terms > p, div#privacy > p {
   -moz-animation-delay: 0.7s;
   animation-delay: 0.7s;
 }
-
 /* Very Large Screens */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1401px) {
+  .thumbnail {
+    position: relative;
+    width: 100%;
+    height: 171px;
+    overflow: hidden;
+  }
+}
+/* Large Screens */
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
   .thumbnail {
     position: relative;
     width: 100%;
@@ -1336,7 +1345,9 @@ div#project-section {
       width: auto !important;
   }
 }
-
+.newsletter-txt-field .form-control {
+    border: none;
+}
 .images {
   width: 100%;
   height: 573px;
@@ -1346,4 +1357,9 @@ div#project-section {
 }
 .images img {
   position: absolute;
+}
+@media screen and (min-width: 1410px) {
+  p.msg-md {
+      font-size: 16px;
+  }
 }

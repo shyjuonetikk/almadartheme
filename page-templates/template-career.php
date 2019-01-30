@@ -108,13 +108,15 @@ $("#career-form").submit(function(e){
  //            }
  //        });
  //    });
-	// if (filesize == "") {
-	// 	proceed = false;
-	// 	$("input#career-resume ~ label").css({"border": "1px solid #ff0000"});
-	// }
-	// else {
-	// 	$("input#career-resume ~ label").css({"border": "none"});
-	// }
+ 	var filesize = $("input#career-resume").val();
+
+	if (filesize == "") {
+		proceed = false;
+		$("input#career-resume ~ label").css({"border": "1px solid #ff0000"});
+	}
+	else {
+		$("input#career-resume ~ label").css({"border": "none"});
+	}
 	var checkColor = $(".custom-control-input:checked~.custom-control-label::before").css("background-color");
 	// alert(checkColor);
 
