@@ -100,14 +100,14 @@ $("#career-form").submit(function(e){
 		 $(this).css('border-color', border_color);
 	});
 
-	var filesize = $('file_attach').val();
-	if (filesize == "") {
-		proceed = false;
-		$("input#career-resume ~ label").css({"border": "1px solid #ff0000"});
-	}
-	else {
-		$("input#career-resume ~ label").css({"border": "none"});
-	}
+	// var filesize = $('file_attach').val();
+	// if (filesize == "") {
+	// 	proceed = false;
+	// 	$("input#career-resume ~ label").css({"border": "1px solid #ff0000"});
+	// }
+	// else {
+	// 	$("input#career-resume ~ label").css({"border": "none"});
+	// }
 
 
 	//check file size and type before upload, works in modern browsers
