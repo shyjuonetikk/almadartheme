@@ -35,17 +35,17 @@ get_header('career');
 					</thead>
 					<tbody>
 						<?php
-$query = new WP_Query(array(
-	'post_type' => array('alcareers'),
-	'post_status' => 'publish',
-	'order' => 'ASC',
-));
+							$query = new WP_Query(array(
+								'post_type' => array('alcareers'),
+								'post_status' => 'publish',
+								'order' => 'ASC',
+							));
 
-while ($query->have_posts()) {
-	$query->the_post();
-	$post_id = get_the_ID();
-	$post_url = get_the_permalink();
-	?>
+							while ($query->have_posts()) {
+								$query->the_post();
+								$post_id = get_the_ID();
+								$post_url = get_the_permalink();
+						?>
 						<tr>
 							<td>
 								<p class="job-title"><?php the_field('role');?></p>
@@ -57,7 +57,9 @@ while ($query->have_posts()) {
 							</td>
 							<td>
 								<p class="job-cat"><?php the_field('divisions');?></p>
-								<p class="job-apply"><a href="#" id="apply-btn" data-role="<?php the_field('role');?>">Apply<img src="<?php echo get_template_directory_uri(); ?>/img/right-arrow-small.png"></a></p>
+								<p class="job-apply" id="apply-btn">
+									<a data-role="<?php the_field('role');?>">Apply<img src="<?php echo get_template_directory_uri(); ?>/img/right-arrow-small.png"></a>
+								</p>
 							</td>
 						</tr>
 						<?php }
@@ -116,15 +118,15 @@ $("#career-form").submit(function(e){
 		}
 		$(this.elements['file_attach[]'].files).each(function(i, ifile){
 			if(ifile.value !== ""){ //continue only if file(s) are selected
-                // if(allowed_file_types.indexOf(ifile.type) === -1){ //check unsupported file
-                //     alert( ifile.name + " is unsupported file type!");
-                //     proceed = false;
-                // }
+                if(allowed_file_types.indexOf(ifile.type) === -1){ //check unsupported file
+                    alert( ifile.name + " is unsupported file type!");
+                    proceed = false;
+                }
              total_files_size = total_files_size + ifile.size; //add file size to total size
 			}
 		});
        if(total_files_size > allowed_file_size){
-            alert( "Make sure total file size is less than 20 MB!");
+            alert( "Make sure total file size is less than 1 MB!");
             proceed = false;
         }
 	}
