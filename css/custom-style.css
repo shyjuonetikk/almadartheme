@@ -744,8 +744,9 @@ table#careers-table > tbody > tr > td {
 }
 p.job-apply > a {
     color: #6BC4E8 !important;
-    text-decoration: underline;
+    text-decoration: underline !important;
     font-family: "Montserrat";
+    cursor: pointer;
 }
 p.job-apply > a > img {
     width: 25px;
@@ -1067,6 +1068,7 @@ p.disclaimer-para {
 a#more_posts {
     color: #6bc4e8;
     text-decoration: underline;
+    font-size: 13px;
 }
 a#more_posts:hover {
     cursor: pointer;
@@ -1141,17 +1143,6 @@ div#disclaimer > p, div#terms > p, div#privacy > p {
   -moz-animation-delay: 0.7s;
   animation-delay: 0.7s;
 }
-
-.images {
-  width: 100%;
-  height: 573px;
-  position: absolute;
-  overflow: hidden;
-  z-index: -1;
-}
-.images img {
-  position: absolute;
-}
 #loading {
    width: 100%;
    height: 100%;
@@ -1202,8 +1193,19 @@ div#disclaimer > p, div#terms > p, div#privacy > p {
     border: none;
 }
 
+=======
+>>>>>>> c590faf77d96a1fff74c5f69b17e592386d10f63
 /* Very Large Screens */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1401px) {
+  .thumbnail {
+    position: relative;
+    width: 100%;
+    height: 171px;
+    overflow: hidden;
+  }
+}
+/* Large Screens */
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
   .thumbnail {
     position: relative;
     width: 100%;
@@ -1395,15 +1397,11 @@ div#project-section {
       width: auto !important;
   }
 }
-
-
-
 .slideshow {
-  position: absolute;
+position: absolute;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  z-index: -1;
 }
 
 .slideshow-image {
@@ -1416,7 +1414,6 @@ div#project-section {
   animation-name: kenburns;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
- 
   -webkit-animation-duration: 16s;
   animation-duration: 16s;
   opacity: 1;
@@ -1591,4 +1588,9 @@ kenburns-4 {  73.4375% {
  -webkit-transform: scale(1);
  transform: scale(1);
 }
+}
+@media screen and (min-width: 1410px) {
+  p.msg-md {
+      font-size: 16px;
+  }
 }

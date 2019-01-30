@@ -82,7 +82,6 @@ var maximum_files 		= 1; //Maximum number of files allowed
 $("#career-form").submit(function(e){
     e.preventDefault(); //prevent default action
 	proceed = true;
-
 	//simple input validation
 	$($(this).find("input[data-required=true], select[data-required=true]")).each(function(){
             if(!$.trim($(this).val())){ //if this field is empty
@@ -100,15 +99,26 @@ $("#career-form").submit(function(e){
 		 $(this).css('border-color', border_color);
 	});
 
-	// var filesize = $('file_attach').val();
-	// if (filesize == "") {
-	// 	proceed = false;
-	// 	$("input#career-resume ~ label").css({"border": "1px solid #ff0000"});
-	// }
-	// else {
-	// 	$("input#career-resume ~ label").css({"border": "none"});
-	// }
+	// $('input[type="checkbox"]').click(function(){
+ //            if($(this).prop("checked") == true){
+ //                alert("Checkbox is checked.");
+ //            }
+ //            else if($(this).prop("checked") == false){
+ //                alert("Checkbox is unchecked.");
+ //            }
+ //        });
+ //    });
+ 	var filesize = $("input#career-resume").val();
 
+	if (filesize == "") {
+		proceed = false;
+		$("input#career-resume ~ label").css({"border": "1px solid #ff0000"});
+	}
+	else {
+		$("input#career-resume ~ label").css({"border": "none"});
+	}
+	var checkColor = $(".custom-control-input:checked~.custom-control-label::before").css("background-color");
+	// alert(checkColor);
 
 	//check file size and type before upload, works in modern browsers
 	if(window.File && window.FileReader && window.FileList && window.Blob){
@@ -158,9 +168,12 @@ $("#career-form").submit(function(e){
 				$("#resume_result").show();
 				$("#resume_result").html('<div class="success">'+ res.text +"</div>");
 			}
-			$("#resume_result").show().delay(5000).fadeOut();
-            $("#career-form").find("input[type=text], input[name=career-email]").val("");
+
+			// $("#resume_result").show().delay(5000).fadeOut();
+   // 			$("#career-form").find("input[type=text], input[name=career-email]").val("");
 		});
+		$("#resume_result").show().delay(5000).fadeOut();
+        $("#career-form").find("input[type=text], input[name=career-email]").val("");
 	}
 });
 </script>

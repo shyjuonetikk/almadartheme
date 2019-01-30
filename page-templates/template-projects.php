@@ -17,24 +17,24 @@ get_header('division');
 				</ul>
 			</div>
 			<?php
-				$query = new WP_Query(array(
-					'post_type' => array('projects'),
-					'post_status' => 'publish',
-					'meta_query' => array(
-						'relation' => 'AND', //**** Use AND or OR as per your required Where Clause
-						array(
-							'key' => 'status',
-							'value' => 'ongoing',
-						),
-						array(
-							'key' => 'place',
-							'value' => 'qatar',
-						),
-					),
-					'posts_per_page' => 2,
-				));
-				$maxpages = $query->max_num_pages;
-			?>
+$query = new WP_Query(array(
+	'post_type' => array('projects'),
+	'post_status' => 'publish',
+	'meta_query' => array(
+		'relation' => 'AND', //**** Use AND or OR as per your required Where Clause
+		array(
+			'key' => 'status',
+			'value' => 'ongoing',
+		),
+		array(
+			'key' => 'place',
+			'value' => 'qatar',
+		),
+	),
+	'posts_per_page' => 2,
+));
+$maxpages = $query->max_num_pages;
+?>
 			<div class="col-12 float-left" id="projects-container">
 				<div class="col-12 col-md-3 col-lg-2 float-left">
 					<h2 class="purple-color prmy-font font-weight-bold">PROJECTS</h2>
@@ -48,18 +48,17 @@ get_header('division');
 				<div class="col-12 col-md-9 col-lg-10 pl-4 pr-0 float-left" id="projects-list">
 					<div class="row m-0 projects-list">
 					<?php
-					if ($query->have_posts()) {
-						while ($query->have_posts()) {
-							$query->the_post();
-							$post_id = get_the_ID();
-							$post_title = get_the_title();
-							$post_content = get_the_excerpt();
-							$post_url = get_the_permalink();
-							if (has_post_thumbnail()) {
-								 $featured_img_url = get_the_post_thumbnail_url($post_id, 'full');
-							} 
-						else { $featured_img_url = get_template_directory_uri() . "/img/No_image.png"; }
-						?>
+if ($query->have_posts()) {
+	while ($query->have_posts()) {
+		$query->the_post();
+		$post_id = get_the_ID();
+		$post_title = get_the_title();
+		$post_content = get_the_excerpt();
+		$post_url = get_the_permalink();
+		if (has_post_thumbnail()) {
+			$featured_img_url = get_the_post_thumbnail_url($post_id, 'full');
+		} else { $featured_img_url = get_template_directory_uri() . "/img/No_image.png";}
+		?>
 						<!-- <input type="hidden" name="maxpages" id="maxpage" /> -->
 						<div class="col-12 col-md-6 mb-3 px-4 fade-in one" id="project-thumbs">
 							<div class="card border-0 rounded-0 w-100">
@@ -75,17 +74,18 @@ get_header('division');
 							  </div>
 							</div>
 						</div>
-						<?php	} wp_reset_query();  ?>
+						<?php	}
+	wp_reset_query();?>
 					</div>
-					<?php if($maxpages > 1) { ?>
+					<?php if ($maxpages > 1) {?>
 						<div class="row">
 							<div class="col m-auto text-center">
 								<i class="fas fa-spinner fa-spin" id="loading-indicator" style="display:none;"></i>
 								<a id="more_posts" data-post-type="projects" data-posts-per-page="1" data-max-pages="<?php echo $maxpages; ?>" data-status-project="ongoing">More<img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/arrow-down.png" /> </a>
 							</div>
 						</div>
-					<?php } ?>
-				<?php } else { echo "<div class='row w-100 pt-4'><h4 class='purple-color m-auto'> No projects found.. </h4></div>"; } ?>
+					<?php }?>
+				<?php } else {echo "<div class='row w-100 pt-4'><h4 class='purple-color m-auto'> No projects found.. </h4></div>";}?>
 				</div>
 			</div> <!-- projects-container -->
 	</div>

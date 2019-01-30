@@ -10,26 +10,42 @@ if (!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_RE
 
 if ($_POST) {
 
-	$attachments = $_FILES['file_attach[]'];
+	$attachments = $_FILES['file_attach'];
 
-	$file_count = "1"; //count total files attached
+	// $file_count = "1";
+	$applicantFirstName = filter_var($_POST["career-first-name"], FILTER_SANITIZE_STRING);
+	$applicantLastName = filter_var($_POST["career-last-name"], FILTER_SANITIZE_STRING);
+	$appMail = filter_var($_POST["career-email"], FILTER_SANITIZE_STRING);
+	$appRole = filter_var($_POST["career-role"], FILTER_SANITIZE_STRING);
+	$appPhone = filter_var($_POST["career-phone"], FILTER_SANITIZE_STRING);
+	$appLocation = filter_var($_POST["career-location"], FILTER_SANITIZE_STRING);
+	$appNation = filter_var($_POST["career-nationality"], FILTER_SANITIZE_STRING);
+	$appFunction = filter_var($_POST["career-function"], FILTER_SANITIZE_STRING);
 
-	$applicantFirstName = $_POST['career-first-name'];
-	$applicantLastName = $_POST['career-last-name'];
-	$appMail = $_POST['career-email'];
-	$appRole = $_POST['career-role'];
-	$appPhone = $_POST['career-phone'];
+	// $applicantFirstName = $_POST['career-first-name'];
+	// $applicantLastName = $_POST['career-last-name'];
+	// $appMail = $_POST['career-email'];
+	// $appRole = $_POST['career-role'];
+	// $appPhone = $_POST['career-phone'];
 	if ($appPhone == "") {
 		$appPhone = "Phone number is not available";
 	}
-	$appLocation = $_POST['career-location'];
-	$appNation = $_POST['career-nationality'];
-	$appFunction = $_POST['career-function'];
+	// $appLocation = $_POST['career-location'];
+	// $appNation = $_POST['career-nationality'];
+	// $appFunction = $_POST['career-function'];
+
+	if ($appPhone == "") {
+		$appPhone = "Phone number is not available";
+	}
+
 	if ($appFunction == "") {
 		$appFunction = $appRole;
 	}
 
-// //construct a message body to be sent to recipient
+	$file_count = count($attachments['name']); //count total files attached
+	$boundary = md5("sanwebe.com");
+
+	// //construct a message body to be sent to recipient
 	$message_body = "Resume from " . $applicantFirstName . " " . $applicantLastName . "\n";
 	$message_body .= "Applicant Mail ID: " . $appMail . "\n";
 	$message_body .= "Applicant Contact Number: " . $appPhone . "\n";
@@ -37,12 +53,9 @@ if ($_POST) {
 	$message_body .= "Applicant Nation: " . $appNation . "\n";
 	$message_body .= "Applicant Function: " . $appFunction . "\n";
 
-	// if ($file_count > 0) {
-	//if attachment exists
 	//header
 	$headers = "MIME-Version: 1.0\r\n";
 	$headers .= "From:" . $from_email . "\r\n";
-	$headers .= "Reply-To: " . $sender_email . "" . "\r\n";
 	$headers .= "Content-Type: multipart/mixed; boundary = $boundary\r\n\r\n";
 
 	//message text
@@ -87,16 +100,8 @@ if ($_POST) {
 		}
 	}
 
-	// }
-	//  else {
-	// 	//send plain email otherwise
-	// 	$headers = "From:" . $from_email . "\r\n" .
-	// 	"Reply-To: " . $sender_email . "\n" .
-	// 	"X-Mailer: PHP/" . phpversion();
-	// 	$body = $message_body;
-	// }
-
 	$sentMail = mail($recipient_email, "Al Madar Holding WLL - Resume", $body, $headers);
+	print json_encode(array('type' => 'done', 'text' => 'Your CV has been successfully submitted'));
 	if ($sentMail) //output success or failure messages
 	{
 		print json_encode(array('type' => 'done', 'text' => 'Your CV has been successfully submitted'));
