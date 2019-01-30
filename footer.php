@@ -64,7 +64,14 @@ if (is_singular(['realestate', 'construction', 'entertainment']) || is_page('ger
 }
 ?>
 <script type="text/javascript">
+	var images = ['<?php the_field('home_header_image1'); ?>', '<?php the_field('home_header_image2'); ?>'];
+		    $('.slideshow-image').css('background-image','url('+images[Math.floor(Math.random() * images.length)]+')');
 	$( document ).ready(function(){
+	$(window).load(function() {
+	     $('#loading').hide();
+	     $('#wrapper-navbar').show();
+	  });
+
 	$('a').removeAttr('title');
 	var ajaxUrl = "<?php echo admin_url('admin-ajax.php') ?>";
     var page = 1; // What page we are on.

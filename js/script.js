@@ -34,7 +34,7 @@ $(document).ready(function() {
 				"margin-top": -(wrapperWidth*(1/imageRatio)/2),
 				"margin-left": -(wrapperWidth/2),
 			});
-		}		
+		}
 	}
 
 	/*

@@ -23,7 +23,7 @@ $container = get_theme_mod('understrap_container_type');
 
 	<div class="<?php echo esc_attr($container); ?>" id="content" tabindex="-1">
 
-		<div class="row float-left">
+		<div class="row">
 
 				<div class="col-12">
 					<h2 class="text-center purple-color prmy-font letter-spc-2 ptb-10">DIVISIONS</h2>
