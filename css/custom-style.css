@@ -1265,3 +1265,27 @@ div#apply-role{
 .extra-padding{
   padding-bottom: 70px!important;
 }
+@media screen and (max-width: 1200px) {
+  .image {
+    height: 200px !important;
+  }
+}
+div#content-area {
+    padding: 3rem !important;
+}
+div#project-section {
+  padding: 0 3rem !important;
+}
+@media screen and (max-width: 767px) {
+  div#content-area {
+    padding: 1rem !important;
+  }
+  div#project-section {
+    padding: 0 1rem !important;
+  }
+}
+@media screen and (max-width: 575px) {
+  div#project-section {
+    padding: 0rem !important;
+  }
+}
