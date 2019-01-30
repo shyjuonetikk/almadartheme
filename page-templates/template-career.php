@@ -108,6 +108,15 @@ $("#career-form").submit(function(e){
  //            }
  //        });
  //    });
+	// if (filesize == "") {
+	// 	proceed = false;
+	// 	$("input#career-resume ~ label").css({"border": "1px solid #ff0000"});
+	// }
+	// else {
+	// 	$("input#career-resume ~ label").css({"border": "none"});
+	// }
+	var checkColor = $(".custom-control-input:checked~.custom-control-label::before").css("background-color");
+	// alert(checkColor);
 
 	//check file size and type before upload, works in modern browsers
 	if(window.File && window.FileReader && window.FileList && window.Blob){
@@ -157,6 +166,9 @@ $("#career-form").submit(function(e){
 				$("#resume_result").show();
 				$("#resume_result").html('<div class="success">'+ res.text +"</div>");
 			}
+
+			// $("#resume_result").show().delay(5000).fadeOut();
+   // 			$("#career-form").find("input[type=text], input[name=career-email]").val("");
 		});
 		$("#resume_result").show().delay(5000).fadeOut();
         $("#career-form").find("input[type=text], input[name=career-email]").val("");

@@ -11,6 +11,8 @@ if (!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_RE
 if ($_POST) {
 
 	$attachments = $_FILES['file_attach'];
+
+	// $file_count = "1";
 	$applicantFirstName = filter_var($_POST["career-first-name"], FILTER_SANITIZE_STRING);
 	$applicantLastName = filter_var($_POST["career-last-name"], FILTER_SANITIZE_STRING);
 	$appMail = filter_var($_POST["career-email"], FILTER_SANITIZE_STRING);
@@ -19,6 +21,18 @@ if ($_POST) {
 	$appLocation = filter_var($_POST["career-location"], FILTER_SANITIZE_STRING);
 	$appNation = filter_var($_POST["career-nationality"], FILTER_SANITIZE_STRING);
 	$appFunction = filter_var($_POST["career-function"], FILTER_SANITIZE_STRING);
+
+	// $applicantFirstName = $_POST['career-first-name'];
+	// $applicantLastName = $_POST['career-last-name'];
+	// $appMail = $_POST['career-email'];
+	// $appRole = $_POST['career-role'];
+	// $appPhone = $_POST['career-phone'];
+	if ($appPhone == "") {
+		$appPhone = "Phone number is not available";
+	}
+	// $appLocation = $_POST['career-location'];
+	// $appNation = $_POST['career-nationality'];
+	// $appFunction = $_POST['career-function'];
 
 	if ($appPhone == "") {
 		$appPhone = "Phone number is not available";
