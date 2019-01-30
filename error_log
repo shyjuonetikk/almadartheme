@@ -387,3 +387,6 @@
 [30-Jan-2019 08:57:34 UTC] PHP Notice:  Undefined variable: boundary in /home/onetikk12/public_html/dev/almadar/wp-content/themes/almadar/resume-form.php on line 47
 [30-Jan-2019 08:57:34 UTC] PHP Notice:  Undefined variable: boundary in /home/onetikk12/public_html/dev/almadar/wp-content/themes/almadar/resume-form.php on line 50
 [30-Jan-2019 08:57:34 UTC] PHP Notice:  Undefined variable: file_count in /home/onetikk12/public_html/dev/almadar/wp-content/themes/almadar/resume-form.php on line 56
+[30-Jan-2019 10:03:17 UTC] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/onetikk12/public_html/dev/almadar/wp-content/themes/almadar/resume-form.php on line 14
+[30-Jan-2019 10:03:37 UTC] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/onetikk12/public_html/dev/almadar/wp-content/themes/almadar/resume-form.php on line 14
+[30-Jan-2019 10:03:50 UTC] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/onetikk12/public_html/dev/almadar/wp-content/themes/almadar/resume-form.php on line 14

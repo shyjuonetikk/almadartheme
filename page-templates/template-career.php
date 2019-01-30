@@ -82,7 +82,6 @@ var maximum_files 		= 1; //Maximum number of files allowed
 $("#career-form").submit(function(e){
     e.preventDefault(); //prevent default action
 	proceed = true;
-debugger;
 	//simple input validation
 	$($(this).find("input[data-required=true], select[data-required=true]")).each(function(){
             if(!$.trim($(this).val())){ //if this field is empty
@@ -100,18 +99,15 @@ debugger;
 		 $(this).css('border-color', border_color);
 	});
 
-	// if (filesize == "") {
-	// 	proceed = false;
-	// 	$("input#career-resume ~ label").css({"border": "1px solid #ff0000"});
-	// }
-	// else {
-	// 	$("input#career-resume ~ label").css({"border": "none"});
-	// }
-<<<<<<< HEAD
-=======
-	var checkColor = $(".custom-control-input:checked~.custom-control-label::before").css("background-color");
-	// alert(checkColor);
->>>>>>> ff0a1170806e50743416e0a73f7dd6b46c85891b
+	// $('input[type="checkbox"]').click(function(){
+ //            if($(this).prop("checked") == true){
+ //                alert("Checkbox is checked.");
+ //            }
+ //            else if($(this).prop("checked") == false){
+ //                alert("Checkbox is unchecked.");
+ //            }
+ //        });
+ //    });
 
 	//check file size and type before upload, works in modern browsers
 	if(window.File && window.FileReader && window.FileList && window.Blob){
@@ -119,14 +115,6 @@ debugger;
 		if(this.elements['file_attach[]'].files.length > maximum_files){
             alert( "Can not select more than "+maximum_files+" file(s)");
             proceed = false;
-		}
-		else if(this.elements['file_attach[]'].files.length == ""){
-            $("input#career-resume ~ label").css({"border": "1px solid #ff0000"});
-            proceed = false;
-		}
-		else{
-			$("input#career-resume ~ label").css({"border": "none"});
-			proceed = true;
 		}
 		$(this.elements['file_attach[]'].files).each(function(i, ifile){
 			if(ifile.value !== ""){ //continue only if file(s) are selected
@@ -138,10 +126,13 @@ debugger;
 			}
 		});
        if(total_files_size > allowed_file_size){
-            alert( "Make sure total file size is less than 20 MB!");
+            alert( "Make sure total file size is less than 1 MB!");
             proceed = false;
         }
 	}
+
+
+
 
 	//if everything's ok, continue with Ajax form submit
 
@@ -152,7 +143,7 @@ debugger;
 		$.ajax({ //ajax form submit
 			url : post_url,
 			type: request_method,
-			data : new FormData(this),
+			data : form_data,
 			dataType : "json",
 			contentType: false,
 			cache: false,
@@ -166,12 +157,6 @@ debugger;
 				$("#resume_result").show();
 				$("#resume_result").html('<div class="success">'+ res.text +"</div>");
 			}
-<<<<<<< HEAD
-
-			$("#resume_result").show().delay(5000).fadeOut();
-   			$("#career-form").find("input[type=text], input[name=career-email]").val("");
-=======
->>>>>>> ff0a1170806e50743416e0a73f7dd6b46c85891b
 		});
 		$("#resume_result").show().delay(5000).fadeOut();
         $("#career-form").find("input[type=text], input[name=career-email]").val("");
