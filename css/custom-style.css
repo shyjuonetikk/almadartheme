@@ -743,7 +743,7 @@ table#careers-table > tbody > tr > td {
     padding: 12px 0 0;
 }
 p.job-apply > a {
-    color: #6BC4E8;
+    color: #6BC4E8 !important;
     text-decoration: underline;
     font-family: "Montserrat";
 }
@@ -1307,19 +1307,31 @@ div#project-section {
     width: 144px;
     height: 146px;
   }
+  .current_page_item.active > a{
+    border: none !important;
+  }
+  .menu-custom li:hover a{
+    border: none !important;
+  }
+  div#about_cert{
+    margin: 0px 0 3rem 0 !important;
+  }
+  #project-thumbs, #projects-list{
+    padding: 0 0.5rem 0px !important;
+  }
 }
 @media screen and (max-width: 575px) {
   div#project-section {
     padding: 0rem !important;
   }
   #nav_menu-2, #custom_html-4, #custom_html-5{
-      width: 66.6667% !important;
-      margin-left: 118px;
+      margin-left: 31.33333% !important;
+      width: auto !important;
   }
 }
 @media screen and (max-width: 410px) {
   #nav_menu-2, #custom_html-4, #custom_html-5{
-      width: 66.6667% !important;
-      margin-left: 108px;
+      margin-left: 33.33333% !important;
+      width: auto !important;
   }
 }
