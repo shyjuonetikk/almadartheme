@@ -29,6 +29,7 @@ $( document ).ready(function(){
 		e.preventDefault();
 		var popupHeight = $(".divi-main").height();
 		$("#contruct-banner").css({"display" : "flex"});
+		window.scrollTo("0", "0");
 		$("#contruct-banner").animate({"right": "0", "height":popupHeight}, 500);
 	});
 	$('#const-back').click(function(e){
@@ -41,6 +42,7 @@ $( document ).ready(function(){
 		e.preventDefault();
 		var popupHeight = $(".divi-main").height();
 		$("#enter-banner").css({"display" : "flex"});
+		window.scrollTo("0", "0");
 		$("#enter-banner").animate({"right": "0", "height":popupHeight}, 500);
 	});
 	$('#ent-back').click(function(e){
@@ -164,41 +166,44 @@ $( document ).ready(function(){
 });
 
 function showDisclaimer(){
+	window.scrollTo("0", "0");
 	$("#disclaimer-tab").addClass('disc-active');
 	$("#terms-tab, #privacy-tab").removeClass('disc-active');
 	$('#terms, #privacy').hide();
 	$('#disclaimer').show();
 }
 function showPrivacy(){
+	window.scrollTo("0", "0");
 	$("#privacy-tab").addClass('disc-active');
 	$("#terms-tab, #disclaimer-tab").removeClass('disc-active');
 	$('#terms, #disclaimer').hide();
 	$('#privacy').show();
 }
 function showTerms(){
+	window.scrollTo("0", "0");
 	$("#terms-tab").addClass('disc-active');
 	$("#disclaimer-tab, #privacy-tab").removeClass('disc-active');
 	$('#disclaimer, #privacy').hide();
 	$('#terms').show();
 }
-function careerPopup(){
-	e.preventDefault();
-	var role = $(this).attr("data-role");
-	$("#career-role").val(role);
-	window.scrollTo("0", "0");
-	var popupHeight = 0;
-	var docHeight = 0;
-	popupHeight = $(".career-form").height();
-	popupHeight += 50;
-	var docHeight = $(window).height();
-	if(popupHeight < docHeight){
-		popupHeight = docHeight;
-	}
-	$("#career-overlays").show();
-	$("#apply-role").css({"display":"flex"});
-	$("#apply-function").hide();
-	$(".site").css({"max-height":popupHeight, "overflow-y": "hidden"});
-	$(".career-form").css({"min-height" : popupHeight });
-	$("#career-overlays").animate({"right": "0", "top": "0"}, 1000);
-	$("#career-cancel").css({"min-height":popupHeight});
-}
+// function careerPopup(){
+// 	e.preventDefault();
+// 	var role = $(this).attr("data-role");
+// 	$("#career-role").val(role);
+// 	window.scrollTo("0", "0");
+// 	var popupHeight = 0;
+// 	var docHeight = 0;
+// 	popupHeight = $(".career-form").height();
+// 	popupHeight += 50;
+// 	var docHeight = $(window).height();
+// 	if(popupHeight < docHeight){
+// 		popupHeight = docHeight;
+// 	}
+// 	$("#career-overlays").show();
+// 	$("#apply-role").css({"display":"flex"});
+// 	$("#apply-function").hide();
+// 	$(".site").css({"max-height":popupHeight, "overflow-y": "hidden"});
+// 	$(".career-form").css({"min-height" : popupHeight });
+// 	$("#career-overlays").animate({"right": "0", "top": "0"}, 1000);
+// 	$("#career-cancel").css({"min-height":popupHeight});
+// }

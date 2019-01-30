@@ -77,7 +77,7 @@ get_header('about');
 					<div class="col-lg-6 float-left text-center">
 						<img class="mission-img pt-5 mb-4" src="<?php echo get_template_directory_uri(); ?>/img/About/Our Vision.png" alt="Our Vision">
 					</div>
-					<div class="col-lg-6 d-lg-none d-md-block d-sm-block d-block float-left text-right px-0">
+					<div class="col-lg-6 d-lg-none d-md-block d-sm-block d-block float-left text-left px-0">
 						<p class="msg-md"><?php the_field('our_vision');?></p>
 					</div>
 				</div>
