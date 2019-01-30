@@ -11,9 +11,12 @@ if (!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_RE
 if ($_POST) {
 
 	$attachments = $_FILES['file_attach'];
+<<<<<<< HEAD
 
 	// $file_count = "1"; //count total files attached
 
+=======
+>>>>>>> ff0a1170806e50743416e0a73f7dd6b46c85891b
 	$applicantFirstName = filter_var($_POST["career-first-name"], FILTER_SANITIZE_STRING);
 	$applicantLastName = filter_var($_POST["career-last-name"], FILTER_SANITIZE_STRING);
 	$appMail = filter_var($_POST["career-email"], FILTER_SANITIZE_STRING);
@@ -22,6 +25,7 @@ if ($_POST) {
 	$appLocation = filter_var($_POST["career-location"], FILTER_SANITIZE_STRING);
 	$appNation = filter_var($_POST["career-nationality"], FILTER_SANITIZE_STRING);
 	$appFunction = filter_var($_POST["career-function"], FILTER_SANITIZE_STRING);
+<<<<<<< HEAD
 	// $applicantFirstName = $_POST['career-first-name'];
 	// $applicantLastName = $_POST['career-last-name'];
 	// $appMail = $_POST['career-email'];
@@ -33,6 +37,13 @@ if ($_POST) {
 	// $appLocation = $_POST['career-location'];
 	// $appNation = $_POST['career-nationality'];
 	// $appFunction = $_POST['career-function'];
+=======
+
+	if ($appPhone == "") {
+		$appPhone = "Phone number is not available";
+	}
+
+>>>>>>> ff0a1170806e50743416e0a73f7dd6b46c85891b
 	if ($appFunction == "") {
 		$appFunction = $appRole;
 	}
@@ -48,8 +59,6 @@ if ($_POST) {
 	$message_body .= "Applicant Nation: " . $appNation . "\n";
 	$message_body .= "Applicant Function: " . $appFunction . "\n";
 
-	// if ($file_count > 0) {
-	//if attachment exists
 	//header
 	$headers = "MIME-Version: 1.0\r\n";
 	$headers .= "From:" . $from_email . "\r\n";
@@ -96,15 +105,6 @@ if ($_POST) {
 			$body .= $encoded_content;
 		}
 	}
-
-	// }
-	//  else {
-	// 	//send plain email otherwise
-	// 	$headers = "From:" . $from_email . "\r\n" .
-	// 	"Reply-To: " . $sender_email . "\n" .
-	// 	"X-Mailer: PHP/" . phpversion();
-	// 	$body = $message_body;
-	// }
 
 	$sentMail = mail($recipient_email, "Al Madar Holding WLL - Resume", $body, $headers);
 	print json_encode(array('type' => 'done', 'text' => 'Your CV has been successfully submitted'));

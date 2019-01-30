@@ -82,7 +82,7 @@ var maximum_files 		= 1; //Maximum number of files allowed
 $("#career-form").submit(function(e){
     e.preventDefault(); //prevent default action
 	proceed = true;
-
+debugger;
 	//simple input validation
 	$($(this).find("input[data-required=true], select[data-required=true]")).each(function(){
             if(!$.trim($(this).val())){ //if this field is empty
@@ -107,6 +107,11 @@ $("#career-form").submit(function(e){
 	// else {
 	// 	$("input#career-resume ~ label").css({"border": "none"});
 	// }
+<<<<<<< HEAD
+=======
+	var checkColor = $(".custom-control-input:checked~.custom-control-label::before").css("background-color");
+	// alert(checkColor);
+>>>>>>> ff0a1170806e50743416e0a73f7dd6b46c85891b
 
 	//check file size and type before upload, works in modern browsers
 	if(window.File && window.FileReader && window.FileList && window.Blob){
@@ -161,10 +166,15 @@ $("#career-form").submit(function(e){
 				$("#resume_result").show();
 				$("#resume_result").html('<div class="success">'+ res.text +"</div>");
 			}
+<<<<<<< HEAD
 
 			$("#resume_result").show().delay(5000).fadeOut();
    			$("#career-form").find("input[type=text], input[name=career-email]").val("");
+=======
+>>>>>>> ff0a1170806e50743416e0a73f7dd6b46c85891b
 		});
+		$("#resume_result").show().delay(5000).fadeOut();
+        $("#career-form").find("input[type=text], input[name=career-email]").val("");
 	}
 });
 </script>

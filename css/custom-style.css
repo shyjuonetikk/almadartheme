@@ -744,8 +744,9 @@ table#careers-table > tbody > tr > td {
 }
 p.job-apply > a {
     color: #6BC4E8 !important;
-    text-decoration: underline;
+    text-decoration: underline !important;
     font-family: "Montserrat";
+    cursor: pointer;
 }
 p.job-apply > a > img {
     width: 25px;
