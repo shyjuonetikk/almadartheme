@@ -1080,6 +1080,7 @@ a#more_posts > img {
 a#more_news {
     color: #6bc4e8;
     text-decoration: underline;
+    font-size: 13px;
 }
 a#more_news:hover {
     cursor: pointer;
