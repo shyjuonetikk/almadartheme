@@ -211,7 +211,9 @@ if (is_singular(['realestate', 'construction', 'entertainment']) || is_page('ger
 	});
 
 </script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/custom.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
 <script type="text/javascript">
 	var inputs = document.querySelectorAll( '.inputfile' );
 	Array.prototype.forEach.call( inputs, function( input )
