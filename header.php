@@ -21,7 +21,6 @@ $container = get_theme_mod('understrap_container_type');
 	<?php wp_head();?>
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/custom-style.css" >
-	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/hover.css" >
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
 </head>
@@ -112,7 +111,7 @@ $container = get_theme_mod('understrap_container_type');
 				<p class="lead mt-5">
 				<p class="lead">
 				   <!-- <a class="btn btn-header btn-lg" href="<?php echo get_post_meta(get_the_ID(), 'buttonlink', true); ?>" role="button">Learn more</a> -->
-				   <a href="#" class="hvr-sweep-to-left">Learn more</a>
+				   <a href="#" class=" btn-header hvr-sweep-to-left"> Learn more</a>
 				</p>
 			  </div>
 			</div>
