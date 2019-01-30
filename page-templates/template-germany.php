@@ -61,8 +61,6 @@ get_header('posts');
 						$query = new WP_Query(array(
 							'post_type' => array('projects'),
 							'post_status' => 'publish',
-							'meta_key' => 'projectdivisions',
-							'meta_value' => $title,
 							'posts_per_page' => 2,
 						));
 
