@@ -144,12 +144,12 @@ body{
 .letter-spc-2{
 	letter-spacing: -2px;
 }
-/*.sm-icon-tw:hover{
+.sm-icon-tw{
 	color: #fff !important;
 	border: 2px solid #5ec3e500;
 	border-radius: 50%;
-}*/
-.sm-icon-tw{
+}
+.sm-icon-tw:hover{
 	color: #5ec3e5 !important;
 	border: 2px solid #5ec3e5;
 	border-radius: 50%;
@@ -1049,13 +1049,13 @@ ul.reallists > li > i {
   padding-right: 0px !important;
   padding-bottom: 5px !important;
 }
-/*.sticky .sm-icon-tw{
+.sticky .sm-icon-tw{
   color: #21145f !important;
 }
 .sticky .sm-icon-tw:hover{
   color: #6bc4e9 !important;
   border-bottom: 2px solid #6bc4e9;
-}*/
+}
 .sticky li:hover a{
   color: #6bc4e9;
   border-bottom: 2px solid #6bc4e9;
@@ -1371,9 +1371,13 @@ div#apply-role{
   .min-height{
     min-height: 600px;
   }
-  .thumbnail-news-section img {
+  /*.thumbnail-news-section img {
     width: 171px;
     height: 171px;
+  }*/
+  .divi-main {
+      margin-bottom: 6rem !important;
+  }
   }
   .top-padding {
     padding-top: 10% !important;
