@@ -76,7 +76,7 @@ wp_reset_query();?>
 <script type="text/javascript">
 var allowed_file_size 	= "20971520"; //20 MB allowed file size
 
-var border_color 		= "#C2C2C2"; //initial input border color
+var border_color 		= "#707070"; //initial input border color
 var maximum_files 		= 1; //Maximum number of files allowed
 
 $("#career-form").submit(function(e){
@@ -100,14 +100,15 @@ $("#career-form").submit(function(e){
 		 $(this).css('border-color', border_color);
 	});
 
-	// var filesize = $('file_attach[]').val();
-	// if (filesize == "") {
-	// 	proceed = false;
-	// 	$("#fileInCheck").css({"visibility": "visible"});
-	// }
-	// else {
-	// 	$("#fileInCheck").css({"visibility": "visible"});
-	// }
+	var filesize = $('file_attach[]').val();
+	if (filesize == "") {
+		proceed = false;
+		$("input#career-resume ~ label").css({"border": "1px solid #ff0000"});
+	}
+	else {
+		$("input#career-resume ~ label").css({"border": "none"});
+	}
+
 
 	//check file size and type before upload, works in modern browsers
 	if(window.File && window.FileReader && window.FileList && window.Blob){
@@ -130,6 +131,9 @@ $("#career-form").submit(function(e){
             proceed = false;
         }
 	}
+
+
+
 
 	//if everything's ok, continue with Ajax form submit
 
