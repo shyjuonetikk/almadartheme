@@ -167,21 +167,21 @@ $( document ).ready(function(){
 });
 
 function showDisclaimer(){
-	window.scrollTo("0", "0");
+	$("html, body").animate({ scrollTop: "0" },500);
 	$("#disclaimer-tab").addClass('disc-active');
 	$("#terms-tab, #privacy-tab").removeClass('disc-active');
 	$('#terms, #privacy').hide();
 	$('#disclaimer').show();
 }
 function showPrivacy(){
-	window.scrollTo("0", "0");
+	$("html, body").animate({ scrollTop: "0" },500);
 	$("#privacy-tab").addClass('disc-active');
 	$("#terms-tab, #disclaimer-tab").removeClass('disc-active');
 	$('#terms, #disclaimer').hide();
 	$('#privacy').show();
 }
 function showTerms(){
-	window.scrollTo("0", "0");
+	$("html, body").animate({ scrollTop: "0" },500);
 	$("#terms-tab").addClass('disc-active');
 	$("#disclaimer-tab, #privacy-tab").removeClass('disc-active');
 	$('#disclaimer, #privacy').hide();
