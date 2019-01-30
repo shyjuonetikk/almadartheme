@@ -58,7 +58,7 @@ $container = get_theme_mod('understrap_container_type');
 			    <label for="inputAddress" class="prmy-font">YOUR MESSAGE</label>
 			    <textarea class="form-control rounded-0" id="inputMessage" name="inputMessage" data-required="true"></textarea>
 			  </div>
-			  <button id="contactus-button" type="submit" class="btn contact-btn float-right">SUBMIT</button>
+			  <button id="contactus-button" type="submit" class="btn contact-btn float-right mt-1">SUBMIT</button>
 			</form>
 			<div id="contact-us-response"><p class="text-white float-left d-block w-100">Thank you for your request!</p></div>
 		</div>
@@ -117,15 +117,12 @@ $container = get_theme_mod('understrap_container_type');
 ?>
 			<?php if ('container' == $container): ?>
 				<a href="#" class="social-media d-none d-sm-none d-md-none d-lg-none d-xl-block">
-					<!-- <img src="<?php echo get_template_directory_uri(); ?>/img/facebook.svg" class="social-media" /> -->
 					<i class="fab fa-facebook-square fs-22 sm-icon-fb"></i>
 				</a>
 				<a href="#" class="social-media d-none d-sm-none d-md-none d-lg-none d-xl-block">
-					<!-- <img src="<?php echo get_template_directory_uri(); ?>/img/iconfinder-icon.svg" /> -->
 					<i class="fab fa-twitter fs-22 sm-icon-tw-new pa-5 w-24"></i>
 				</a>
 				<a href="#" class="social-media d-none d-sm-none d-md-none d-lg-none d-xl-block">
-					<!-- <img src="<?php echo get_template_directory_uri(); ?>/img/linkedin_blue.svg" class="social-media" />  -->
 					<i class="fab fa-linkedin-in fs-22 sm-icon-fb"></i>
 				</a>
 			</div><!-- .container -->

@@ -8,7 +8,7 @@ Description: Template for displaying news.
 get_header('division');
 ?>
 
-<div class="row m-0 p-0 mt-0 mb-5">
+<div class="row m-0 p-0 mt-0 mb-5 min-height">
 	<div class="container m-auto p-0">
 			<div class="col-4 float-right bread-cumb mb-1">
 				<ul class="list-inline float-right" id="news-place-filter">
