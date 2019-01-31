@@ -60,7 +60,7 @@ get_header('division');
 	<div class="col-lg-6 col-md-12 p-5">
 		<div class="real-left-overlay">
 			<!-- <div class="row"> -->
-				<div class="col mt-5 ml-5 pt-5">
+				<div class="col mt-5 pt-5">
 					<h1 class="text-white pt-5 pl-5 pr-5 prmy-font font-weight-bold">Real Estate</h1>
 					<p class="text-white  pl-5 pr-5 pb-3 w-75 my-4 divi-content"><?php the_field('real_estate_intro');?></p>
 					<!-- <a id="real-back" class="second-color pl-5 pr-5 pb-3" href="#">back</a> -->
@@ -106,7 +106,7 @@ wp_reset_query();?>
 	<div class="col-lg-6 col-md-12 p-5">
 		<div class="real-left-overlay">
 			<!-- <div class="row"> -->
-				<div class="col mt-5 ml-5 pt-5">
+				<div class="col mt-5 pt-5">
 					<h1 class="text-white pt-5 pl-5 pr-5 prmy-font font-weight-bold">Construction</h1>
 					<p class="text-white  pl-5 pr-5 pb-3 w-75 my-4 divi-content"><?php the_field('construction_intro');?></p>
 					<a id="const-back" class="second-color pl-5 pr-5 pb-3" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/left-arrow.png">Back</a>
@@ -150,7 +150,7 @@ wp_reset_query();?>
 	<div class="col-lg-6 col-md-12 p-5">
 		<div class="real-left-overlay">
 			<!-- <div class="row"> -->
-				<div class="col mt-5 ml-5 pt-5">
+				<div class="col mt-5 pt-5">
 					<h1 class="text-white pt-5 px-5 prmy-font font-weight-bold">Entertainment</h1>
 					<p class="text-white  px-5 pb-3 w-75 my-4 divi-content"><?php the_field('entertainment_intro');?></p>
 					<a id="ent-back" class="second-color pl-5 pr-5 pb-3" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/left-arrow.png">Back</a>
