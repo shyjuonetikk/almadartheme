@@ -30,9 +30,9 @@ $container = get_theme_mod('understrap_container_type');
 
 	<!-- ******************* The Navbar Area ******************* -->
 	<!-- <div id="wrapper-navbar" class="header-back" style="background: url('<?php header_image();?>') no-repeat; background-size: 100% 100%;"> -->
-	<div id="loading">
+	<!-- <div id="loading">
 	  <div class="lds-ripple"><div></div><div></div></div>
-	</div>
+	</div> -->
 	<div id="wrapper-navbar" class="header-back">
 		<!-- <div class="images">
 			<img src="<?php the_field('home_header_image1'); ?>"/>
