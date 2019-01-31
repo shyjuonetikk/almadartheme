@@ -60,7 +60,7 @@ $container = get_theme_mod('understrap_container_type');
 			  </div>
 			  <button id="contactus-button" type="submit" class="btn contact-btn float-right mt-1">SUBMIT</button>
 			</form>
-			<div id="contact-us-response"><p class="text-white float-left d-block w-100">Thank you for your request!</p></div>
+			<div id="contact-us-response"><p class="text-white float-left d-block w-100 p-1">Thank you for your request!</p></div>
 		</div>
 	</div>
 </div>

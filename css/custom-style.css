@@ -189,6 +189,7 @@ body{
 	background: url('../img/header-bar.png') no-repeat;
 	height: 24px;
 	background-size: 100%;
+  margin-top: -2px; 
 }
 .purple-color {
     color: #21145f;
@@ -401,6 +402,7 @@ display: flex;
 	min-height: 300px;
 	background: url('../img/newsletterback.png') no-repeat;
 	background-size: cover;
+  margin-top: -1px;
 }
 .newsletter-container h3{
 	font-weight: 500;
@@ -1647,4 +1649,8 @@ kenburns-4 {  73.4375% {
 }
 .thumb-intl {
     height: auto !important;
+}
+.jumbotron > .container > h1.slider-heading {
+    font-family: "Montserrat" !important;
+    font-weight: 500 !important;
 }

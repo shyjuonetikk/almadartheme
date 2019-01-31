@@ -138,7 +138,7 @@ wp_reset_query();?>
 					<button id="cv-button" type="submit" class="btn btn-primary text-center">Send</button>
 				</div>
 			</div>
-			<div id="resume_result" class="col-12"></div>
+			<div id="resume_result" class="col-12">Your CV has been successfully submitted</div>
 		</form>
 	</div>
 </div>
