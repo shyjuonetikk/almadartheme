@@ -43,7 +43,7 @@ body{
 }
 .menu-new a:hover{
   text-decoration: none !important;
-  transition: .3s;
+  transition: .7s;
 }
 .menu-new li:hover a{
 	color: #6bc4e9;
