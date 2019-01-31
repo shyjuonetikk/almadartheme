@@ -693,7 +693,7 @@ add_filter('nav_menu_item_id', 'menu_id_page', 10, 2);
 
 function ajax_mail() {
 	$email = $_POST['email'];
-	$recipient_email = "jithinvjayaprakash@gmail.com";
+	$recipient_email = "z.filali@a101.com";
 	$from_email = "hr@almadar.com"; //from email using site domain.
 	$message_body = "Newseletter request from the Mail ID:\t" . $email;
 

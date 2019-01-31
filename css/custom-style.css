@@ -1692,3 +1692,16 @@ and (orientation : landscape) {
   margin-top: 1rem !important;
 }
 }
+
+@media screen and (max-width: 767px) {
+  .jumbotron > .container > h1.slider-heading {
+    margin-bottom: 10 !important;
+    font-size: 30px;
+  }
+  p.slider-content {
+    width: 90% !important;
+  }
+  p.lead.mt-5 {
+    display: none;
+  }
+}
