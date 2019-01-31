@@ -1414,13 +1414,14 @@ div#project-section {
     padding: 0 0.5rem 0px !important;
   }
   .slider-heading{
-    font-size: 32px;
+    font-size: 34px;
   }
   .slider-content {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.5rem;
   }
 }
+
 @media screen and (max-width: 575px) {
   div#project-section {
     padding: 0rem !important;
