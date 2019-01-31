@@ -1639,11 +1639,10 @@ kenburns-4 {  73.4375% {
 .thumb-intl {
     height: auto !important;
 }
-<<<<<<< HEAD
 .jumbotron > .container > h1.slider-heading {
     font-family: "Montserrat" !important;
     font-weight: 500 !important;
-=======
+}
 .min-height{
   min-height: 600px;
 }
@@ -1652,5 +1651,4 @@ kenburns-4 {  73.4375% {
 }
 .more-button{
   height: 70px;
->>>>>>> 9043df649ddafd320e96692845aeefec86f9c6ac
 }
