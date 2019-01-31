@@ -870,12 +870,14 @@ div#career-cancel {
     box-shadow: 0 0.3rem 1rem rgba(0,0,0,.15)!important;
     width: 160px;
     text-align: center;
+    max-width: 50%;
 }
 #career-resume:focus + label, #career-resume + label:hover {
     background-color: #ffffff;
 }
 #career-resume + label {
 	cursor: pointer; /* "hand" cursor */
+  float: left;
 }
 #career-resume:focus + label {
 	outline: 1px dotted #000;
@@ -1337,7 +1339,6 @@ button#contactus-button:hover {
     background: url('../img/menu-toggle.png') !important;
 }
 div#fileInCheck {
-    visibility: hidden;
     margin: 5px 0;
 }
 div#contact-us-response {
@@ -1650,6 +1651,30 @@ kenburns-4 {  73.4375% {
 .more-button{
   height: 70px;
 }
+span#fileNameDisplay {
+    width: 50% !important;
+    overflow: hidden;
+    float: left;
+    height: 31px;
+    padding: 8px 12px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+@media screen and (max-width: 575px) {
+  ul.reallists {
+    padding: 10px;
+  }
+  ul.reallists > a > li {
+    padding: 0 20px;
+  }
+  .real-left-overlay > div > div {
+    margin: 0 !important;
+  }
+  .real-left-overlay > div > div > p {
+    width: 100% !important;
+  }
+}
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
@@ -1669,5 +1694,4 @@ and (orientation : landscape) {
 .lead{
   margin-top: 1rem !important;
 }
-
 }

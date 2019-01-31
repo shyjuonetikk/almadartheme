@@ -79,35 +79,49 @@ var allowed_file_size 	= "20971520"; //20 MB allowed file size
 var border_color 		= "#707070"; //initial input border color
 var maximum_files 		= 1; //Maximum number of files allowed
 
+$('input#customCheck').click(function(){
+	if($('input#customCheck').prop("checked") == true){
+		$('input#customCheck ~ label, input#customCheck ~ label > span.career-links > a').css({"color" : "#212529"});
+    }
+})
+
+.on("input#career-resume ~ label", function(){
+	$("input#career-resume ~ label").css('border', "1px solid rgb(255, 0, 0, 0)");
+});
+
+$(document).ready(function(){
+    $('input#career-resume').change(function(e){
+        var fileName = e.target.files[0].name;
+        $('#fileNameDisplay').html(fileName);
+		$("input#career-resume ~ label").css({'border':"1px solid rgb(255, 0, 0, 0)"});
+    });
+});
+
 $("#career-form").submit(function(e){
     e.preventDefault(); //prevent default action
 	proceed = true;
-	//simple input validation
 	$($(this).find("input[data-required=true], select[data-required=true]")).each(function(){
-            if(!$.trim($(this).val())){ //if this field is empty
-                $(this).css('border-color','red'); //change border color to red
-                proceed = false; //set do not proceed flag
-            }
-            //check invalid email
-            var email_reg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-            if($(this).attr("type")=="email" && !email_reg.test($.trim($(this).val()))){
-                $(this).css('border-color','red'); //change border color to red
-                proceed = false; //set do not proceed flag
-            }
+        if(!$.trim($(this).val())){ //if this field is empty
+            $(this).css('border-color','red'); //change border color to red
+            proceed = false; //set do not proceed flag
+        }
+        var email_reg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+        if($(this).attr("type")=="email" && !email_reg.test($.trim($(this).val()))){
+            $(this).css('border-color','red'); //change border color to red
+            proceed = false; //set do not proceed flag
+        }
 	})
 	.on("input", function(){ //change border color to original
 		 $(this).css('border-color', border_color);
 	});
 
-	// $('input[type="checkbox"]').click(function(){
- //            if($(this).prop("checked") == true){
- //                alert("Checkbox is checked.");
- //            }
- //            else if($(this).prop("checked") == false){
- //                alert("Checkbox is unchecked.");
- //            }
- //        });
- //    });
+
+    if($('input#customCheck').prop("checked") == false){
+        proceed = false;
+        $('input#customCheck ~ label, input#customCheck ~ label > span.career-links > a').css({"color":"#f40000"});
+    }
+
+
  	var filesize = $("input#career-resume").val();
 
 	if (filesize == "") {
@@ -117,7 +131,7 @@ $("#career-form").submit(function(e){
 	else {
 		$("input#career-resume ~ label").css({"border": "none"});
 	}
-	var checkColor = $(".custom-control-input:checked~.custom-control-label::before").css("background-color");
+	// var checkColor = $(".custom-control-input:checked~.custom-control-label::before").css("background-color");
 	// alert(checkColor);
 
 	//check file size and type before upload, works in modern browsers
@@ -128,12 +142,8 @@ $("#career-form").submit(function(e){
             proceed = false;
 		}
 		$(this.elements['file_attach[]'].files).each(function(i, ifile){
-			if(ifile.value !== ""){ //continue only if file(s) are selected
-                // if(allowed_file_types.indexOf(ifile.type) === -1){ //check unsupported file
-                //     alert( ifile.name + " is unsupported file type!");
-                //     proceed = false;
-                // }
-             total_files_size = total_files_size + ifile.size; //add file size to total size
+			if(ifile.value !== ""){
+            	total_files_size = total_files_size + ifile.size; //add file size to total size
 			}
 		});
        if(total_files_size > allowed_file_size){
