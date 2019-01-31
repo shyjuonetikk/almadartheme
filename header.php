@@ -30,9 +30,9 @@ $container = get_theme_mod('understrap_container_type');
 
 	<!-- ******************* The Navbar Area ******************* -->
 	<!-- <div id="wrapper-navbar" class="header-back" style="background: url('<?php header_image();?>') no-repeat; background-size: 100% 100%;"> -->
-	<div id="loading">
+	<!-- <div id="loading">
 	  <div class="lds-ripple"><div></div><div></div></div>
-	</div>
+	</div> -->
 	<div id="wrapper-navbar" class="header-back">
 		<!-- <div class="images">
 			<img src="<?php the_field('home_header_image1'); ?>"/>
@@ -59,7 +59,6 @@ $container = get_theme_mod('understrap_container_type');
 
 							<<a class="navbar-brand" rel="home" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" itemprop="url"><?php bloginfo('name');?></a>
 							</a>
- -->
 						<?php endif;?>
 
 
@@ -111,7 +110,7 @@ $container = get_theme_mod('understrap_container_type');
 				<p class="lead mt-5">
 				<p class="lead">
 				   <!-- <a class="btn btn-header btn-lg" href="<?php echo get_post_meta(get_the_ID(), 'buttonlink', true); ?>" role="button">Learn more</a> -->
-				   <a href="#" class=" btn-header hvr-sweep-to-left"> Learn more</a>
+				   <a href="#" class="btn-header hvr-sweep-to-left"> Learn more</a>
 				</p>
 			  </div>
 			</div>

@@ -181,7 +181,7 @@ if ($status == 'all') {
 		wp_reset_query();?>
 	</div>
 	<?php if ($maxpages > 1) {?>
-	<div class="row">
+	<div class="row more-button">
 		<div class="col m-auto text-center">
 			<i class="fas fa-spinner fa-spin" id="loading-indicator" style="display:none;"></i>
 			<a id="more_posts" data-post-type="projects" data-posts-per-page="1" data-max-pages="<?php echo $maxpages; ?>" data-status-project="<?php echo $status; ?>">More<img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/arrow-down.png" /> </a>
@@ -299,7 +299,7 @@ function filter_country() {
 		?>
 		</div>
 		<?php if ($maxpages > 1) {?>
-			<div class="row">
+			<div class="row more-button">
 				<div class="col m-auto text-center">
 					<i class="fas fa-spinner fa-spin" id="loading-indicator" style="display:none;"></i>
 					<a id="more_posts" data-post-type="projects" data-posts-per-page="1" data-max-pages="<?php echo $maxpages; ?>" data-status-project="ongoing">More<img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/arrow-down.png" /> </a>
@@ -498,7 +498,7 @@ function load_news_by_type() {
 		wp_reset_query();?>
 </div>
 <?php if ($maxpages > 1) {?>
-<div class="row">
+<div class="row more-button">
 	<div class="col m-auto text-center">
 		<i class="fas fa-spinner fa-spin" id="loading-indicator" style="display:none;"></i>
 		<a id="more_news" data-post-type="almadarnews" data-posts-per-page="1" data-max-pages="<?php echo $maxpages; ?>" data-news_type="<?php echo $news_type; ?>">More<img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/arrow-down.png" /> </a>
@@ -611,7 +611,7 @@ function news_filter_country() {
 		wp_reset_query();?>
 </div>
 <?php if ($maxpages > 1) {?>
-	<div class="row">
+	<div class="row more-button">
 		<div class="col m-auto text-center">
 			<i class="fas fa-spinner fa-spin" id="loading-indicator" style="display:none;"></i>
 			<a id="more_news" data-post-type="almadarnews" data-max-pages="<?php echo $maxpages; ?>" data-posts-per-page="1" data-news_type="realestate">More<img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/arrow-down.png" /> </a>

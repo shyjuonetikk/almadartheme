@@ -68,6 +68,33 @@ body{
 .bg-none{
 	background: none !important;
 }
+.new-button{
+  transition: none 0s ease 0s;
+  text-align: inherit;
+  line-height: 24px;
+  border-width: 1px;
+  margin: 0px;
+  padding: 15px 40px;
+  letter-spacing: 0px;
+  font-weight: 600;
+  font-size: 18px;
+  border-color: #f3b007 !important;
+  text-transform: uppercase;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 25px;
+    border: 1px solid #CCC;
+        touch-action: manipulation;
+}
+.new-button:not(.circle-button) {
+    border-radius: 4px;
+}
+.new-button:not(.btn-border) {
+    color: #FFF;
+}
 .btn-header {
   color: #ffffff !important;
   border: 1px solid #6bc4e8 !important;
@@ -1173,69 +1200,23 @@ div#disclaimer > p, div#terms > p, div#privacy > p {
 
 .fade-in {
   opacity:0;  /* make things invisible upon start */
-  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-  -moz-animation:fadeIn ease-in 1;
-  animation:fadeIn ease-in 1;
+  -webkit-animation:fadeIn ease-in 0.7s;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 0.7s;
+  animation:fadeIn ease-in 0.7s;
 
   -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
   -moz-animation-fill-mode:forwards;
   animation-fill-mode:forwards;
 
-  -webkit-animation-duration:1s;
-  -moz-animation-duration:1s;
-  animation-duration:1s;
+  -webkit-animation-duration:0.7s;
+  -moz-animation-duration:0.7s;
+  animation-duration:0.7s;
 }
 
 .fade-in.one {
-  -webkit-animation-delay: 0.7s;
-  -moz-animation-delay: 0.7s;
-  animation-delay: 0.7s;
-}
-#loading {
-   width: 100%;
-   height: 100%;
-   top: 0;
-   left: 0;
-   position: fixed;
-   display: block;
-   opacity: 1;
-   background-color: #fff;
-   z-index: 99;
-   text-align: center;
-}
-
-.lds-ripple {
-  display: inline-block;
-  position: relative;
-  width: 64px;
-  height: 64px;
-  top: 47%;
-}
-.lds-ripple div {
-  position: absolute;
-  border: 4px solid #21145f;
-  opacity: 1;
-  border-radius: 50%;
-  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-}
-.lds-ripple div:nth-child(2) {
-  animation-delay: -0.5s;
-}
-@keyframes lds-ripple {
-  0% {
-    top: 28px;
-    left: 28px;
-    width: 0;
-    height: 0;
-    opacity: 1;
-  }
-  100% {
-    top: -1px;
-    left: -1px;
-    width: 58px;
-    height: 58px;
-    opacity: 0;
-  }
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 .newsletter-txt-field .form-control {
     border: none;
@@ -1433,6 +1414,13 @@ div#project-section {
   }
   #project-thumbs, #projects-list{
     padding: 0 0.5rem 0px !important;
+  }
+  .slider-heading{
+    font-size: 32px;
+  }
+  .slider-content {
+    font-size: 16px;
+    line-height: 1.5rem;
   }
 }
 @media screen and (max-width: 575px) {
@@ -1650,7 +1638,18 @@ kenburns-4 {  73.4375% {
 .thumb-intl {
     height: auto !important;
 }
+<<<<<<< HEAD
 .jumbotron > .container > h1.slider-heading {
     font-family: "Montserrat" !important;
     font-weight: 500 !important;
+=======
+.min-height{
+  min-height: 600px;
+}
+.footer_main{
+  min-height: 185px;
+}
+.more-button{
+  height: 70px;
+>>>>>>> 9043df649ddafd320e96692845aeefec86f9c6ac
 }
