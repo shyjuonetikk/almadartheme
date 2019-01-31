@@ -95,7 +95,7 @@ function more_post_ajax() {
 				<div class="card border-0 rounded-0 w-100">
 					<div class="image-container">
 				  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url; ?>" alt="<?php echo $post_title; ?>">
-				  		<div class="overlay"></div>
+				  		<a href="<?php echo $post_url; ?>"><div class="overlay"></div></a>
 				  	</div>
 				  <div class="card-body border-0 rounded-0 pl-0 ml-0">
 				    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
@@ -167,7 +167,7 @@ if ($status == 'all') {
 			<div class="card border-0 rounded-0 w-100">
 				<div class="image-container">
 			  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url; ?>" alt="<?php echo $post_title; ?>">
-			  		<div class="overlay"></div>
+			  		<a href="<?php echo $post_url; ?>"><div class="overlay"></div></a>
 			  	</div>
 			  <div class="card-body border-0 rounded-0 pl-0 ml-0">
 			    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
@@ -284,7 +284,7 @@ function filter_country() {
 				<div class="card border-0 rounded-0 w-100">
 					<div class="image-container">
 				  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url; ?>" alt="<?php echo $post_title; ?>">
-				  		<div class="overlay"></div>
+				  		<a href="<?php echo $post_url; ?>"><div class="overlay"></div></a>
 				  	</div>
 				  <div class="card-body border-0 rounded-0 pl-0 ml-0">
 				    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
@@ -418,7 +418,7 @@ function more_news_ajax() {
 	<div class="card border-0 rounded-0 w-100">
 		<div class="image-container">
 	  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url; ?>" alt="<?php echo $post_title; ?>">
-	  		<div class="overlay"></div>
+	  		<a href="<?php echo $post_url; ?>"><div class="overlay"></div></a>
 	  	</div>
 	  <div class="card-body border-0 rounded-0 pl-0 ml-0">
 	    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
@@ -484,7 +484,7 @@ function load_news_by_type() {
 	<div class="card border-0 rounded-0 w-100">
 		<div class="image-container">
 	  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url; ?>" alt="<?php echo $post_title; ?>">
-	  		<div class="overlay"></div>
+	  		<a href="<?php echo $post_url; ?>"><div class="overlay"></div></a>
 	  	</div>
 	  <div class="card-body border-0 rounded-0 pl-0 ml-0">
 	    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
@@ -597,7 +597,7 @@ function news_filter_country() {
 	<div class="card border-0 rounded-0 w-100">
 		<div class="image-container">
 	  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url; ?>" alt="<?php echo $post_title; ?>">
-	  		<div class="overlay"></div>
+	  		<a href="<?php echo $post_url; ?>"><div class="overlay"></div></a>
 	  	</div>
 	  <div class="card-body border-0 rounded-0 pl-0 ml-0">
 	    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
