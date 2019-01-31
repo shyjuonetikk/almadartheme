@@ -79,6 +79,21 @@ body{
   font-weight: 600;
   font-size: 18px;
   border-color: #f3b007 !important;
+  text-transform: uppercase;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 25px;
+    border: 1px solid #CCC;
+        touch-action: manipulation;
+}
+.new-button:not(.circle-button) {
+    border-radius: 4px;
+}
+.new-button:not(.btn-border) {
+    color: #FFF;
 }
 .btn-header {
   color: #ffffff !important;
