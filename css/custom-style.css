@@ -72,28 +72,39 @@ body{
   transition: none 0s ease 0s;
   text-align: inherit;
   line-height: 24px;
-  border-width: 1px;
   margin: 0px;
-  padding: 15px 40px;
   letter-spacing: 0px;
   font-weight: 600;
-  font-size: 18px;
-  border-color: #f3b007 !important;
-  text-transform: uppercase;
-    font-weight: 500;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-    white-space: nowrap;
-    padding: 10px 25px;
-    border: 1px solid #CCC;
-        touch-action: manipulation;
-}
-.new-button:not(.circle-button) {
-    border-radius: 4px;
+  font-size: 16px;
+  border-color: #6bc4e8 !important;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px 20px;
+  border: 1px solid #CCC;
+  touch-action: manipulation;
 }
 .new-button:not(.btn-border) {
     color: #FFF;
+}
+.new-button:before{
+    content: "";
+    position: absolute;
+    width: calc(100% + 2px);
+    height: calc(100% + 1px);
+    top: -1px;
+    left: -1px;
+    z-index: -1;
+    transition: width .4s;
+    background-color: #6bc4e8 !important;
+}
+.new-button:hover{
+  background-color: none !important;
+}
+.btn-border:before, .new-button:not(.btn-border):hover:before {
+    width: 0%;
 }
 .btn-header {
   color: #ffffff !important;

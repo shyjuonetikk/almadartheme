@@ -110,7 +110,8 @@ $container = get_theme_mod('understrap_container_type');
 				<p class="lead mt-5">
 				<p class="lead">
 				   <!-- <a class="btn btn-header btn-lg" href="<?php echo get_post_meta(get_the_ID(), 'buttonlink', true); ?>" role="button">Learn more</a> -->
-				   <a href="#" class="btn-header hvr-sweep-to-left"> Learn more</a>
+				   <!-- <a href="#" class="btn-header hvr-sweep-to-left"> Learn more</a> -->
+				   <a href="#" class="new-button">Learn More</a>
 				</p>
 			  </div>
 			</div>
