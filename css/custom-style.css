@@ -1209,6 +1209,15 @@ div#disclaimer > p, div#terms > p, div#privacy > p {
 .white-back{
   background: #fff;
 }
+.delay-header {
+  animation-duration: 0.7s;
+  animation-delay: .5s;
+}
+.delay-header-text {
+  animation-duration: 1s;
+  animation-delay: .7s;
+}
+
 /* Very Large Screens */
 @media only screen and (min-width: 1401px) {
   .thumbnail {
@@ -1627,11 +1636,6 @@ kenburns-4 {  73.4375% {
 .jumbotron > .container > h1.slider-heading {
     font-family: "Montserrat" !important;
     font-weight: 500 !important;
-}
-
-.fadeIn {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
 }
 .min-height{
   min-height: 600px;
