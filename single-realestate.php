@@ -36,18 +36,18 @@ get_header('posts');
 		<div class="row mt-5">
 			<div class="col-lg-6 col-md-12 col-sm-12 col-12 purple-color fs-12 lh-paragraph">
 				<?php
-while (have_posts()): the_post();
-	the_content();
-	$title = get_the_title();
-	$post_id = get_the_ID();
-	$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
-	?>
+					while (have_posts()): the_post();
+					the_content();
+					$title = get_the_title();
+					$post_id = get_the_ID();
+					$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
+				?>
 
-																	</div>
-																	<div class="col-lg-6 col-md-12 col-sm-12 col-12">
-																		<img class="img-fluid float-left float-md-left float-lg-right w-75" src="<?php echo $featured_img_url; ?>" />
-																	</div>
-																<?php endwhile;?>
+				</div>
+				<div class="col-lg-6 col-md-12 col-sm-12 col-12">
+					<img class="img-fluid float-left float-md-left float-lg-right w-75" src="<?php echo $featured_img_url; ?>" />
+				</div>
+			<?php endwhile;?>
 		</div>
 	</div>
 	<div id="project-section">
@@ -74,10 +74,12 @@ while ($query->have_posts()) {
 	?>
 						<div class="col-12 col-md-6 mb-3 px-4">
 							<div class="card border-0 rounded-0 w-100">
-								<div class="image-container">
-							  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url; ?>" alt="<?php echo $post_title; ?>">
-							  		<div class="overlay"></div>
-							  	</div>
+								<a href="<?php echo $post_url; ?>">
+									<div class="image-container">
+								  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url; ?>" alt="<?php echo $post_title; ?>">
+								  		<div class="overlay"></div>
+								  	</div>
+								</a>
 							  <div class="card-body border-0 rounded-0 pl-0 ml-0">
 							    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
 							    <p class="card-text fs-12 purple-color"><?php echo $post_content; ?></p>

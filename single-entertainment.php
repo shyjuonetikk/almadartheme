@@ -74,10 +74,12 @@ while ($query->have_posts()) {
 	?>
 						<div class="col-12 col-md-6 mb-3 px-4">
 							<div class="card border-0 rounded-0 w-100">
-								<div class="image-container">
-							  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url; ?>" alt="<?php echo $post_title; ?>">
-							  		<div class="overlay"></div>
-							  	</div>
+								<a href="<?php echo $post_url; ?>">
+									<div class="image-container">
+								  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url; ?>" alt="<?php echo $post_title; ?>">
+								  		<div class="overlay"></div>
+								  	</div>
+								</a>
 							  <div class="card-body border-0 rounded-0 pl-0 ml-0">
 							    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
 							    <p class="card-text fs-12 purple-color"><?php echo $post_content; ?></p>
