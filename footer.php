@@ -64,7 +64,66 @@ if (is_singular(['realestate', 'construction', 'entertainment']) || is_page('ger
 }
 ?>
 <script type="text/javascript">
-	var images = ['<?php the_field('home_header_image1'); ?>', '<?php the_field('home_header_image2'); ?>'];
+
+	var pageId= <?php echo get_the_ID(); ?>;
+	var ongoingProjects = null;
+	var completedProjects = null;
+	var allProjects = null;
+
+	if(pageId ===7){
+		loadInitialProjects();
+	}
+
+
+	function loadInitialProjects(){
+		var ajaxUrl = "<?php echo admin_url('admin-ajax.php') ?>";
+			/*Load ongoing Projects*/
+			var post_type = 'projects';
+			var post_per_page = 1;
+			var status = 'ongoing';
+			var place = $("#place").val();
+			$.post(ajaxUrl,{action:"load_projects_status",
+				ppp: post_per_page,
+				posttype: post_type,
+				status: status,
+				place: place
+			},
+			 function(data){
+				 ongoingProjects = data;
+			});
+
+
+			var post_type = 'projects';
+			var post_per_page = 1;
+			var status = 'completed';
+			var place = $("#place").val();
+			$.post(ajaxUrl,{action:"load_projects_status",
+				ppp: post_per_page,
+				posttype: post_type,
+				status: status,
+				place: place
+			},
+			 function(data){
+				 completedProjects = data;
+			});
+
+
+			var post_type = 'projects';
+			var post_per_page = 1;
+			var status = 'all';
+			var place = $("#place").val();
+			$.post(ajaxUrl,{action:"load_projects_status",
+				ppp: post_per_page,
+				posttype: post_type,
+				status: status,
+				place: place
+			},
+			 function(data){
+				 allProjects = data;
+			});
+	}
+
+	var images = ['<?php the_field('home_header_image1');?>', '<?php the_field('home_header_image2');?>'];
 		    $('.slideshow-image').css('background-image','url('+images[Math.floor(Math.random() * images.length)]+')');
 	$( document ).ready(function(){
 	$(window).load(function() {
@@ -109,22 +168,67 @@ if (is_singular(['realestate', 'construction', 'entertainment']) || is_page('ger
   			});
    });
 	$("#status-list li").on("click",function(){
-			$("#projects-list").fadeOut(800);
+			//$("#projects-list").fadeOut(800);
+
 			var post_type = $(this).data('post_type');
 			var post_per_page = $(this).data('posts_per_page');
 			var status = $(this).data('status_list');
 			var place = $("#place").val();
 			$(this).addClass('projects-active').siblings().removeClass('projects-active');
-			$.post(ajaxUrl,{action:"load_projects_status",
-				ppp: post_per_page,
-				posttype: post_type,
-				status: status,
-				place: place
-			},
-			 function(data){
-				 $("#projects-list").html(data).fadeIn(400);
-			});
+			switch(status){
+				case 'ongoing':
+				 if(ongoingProjects != null){
+					$("#projects-list").html(ongoingProjects);
+				 }else{
+						loadProjects();
+				 }
+				 break;
+
+				 case 'completed':
+				 if(completedProjects != null){
+					$("#projects-list").html(completedProjects);
+				 }else{
+						loadProjects();
+				 }
+				 break;
+				 case 'all':
+				 if(allProjects != null){
+					$("#projects-list").html(allProjects);
+				 }else{
+						loadProjects();
+				 }
+				 break;
+
+			}
+
+			function loadProjects(){
+				$.post(ajaxUrl,{action:"load_projects_status",
+								ppp: post_per_page,
+								posttype: post_type,
+								status: status,
+								place: place
+							},
+							 function(data){
+								 $("#projects-list").html(data);
+								 switch(status){
+										case 'ongoing':
+												 ongoingProjects = data;
+												 break;
+										 case 'completed':
+												completedProjects = data;
+											 	break;
+										 case 'all':
+												 allProjects = data;
+												 break;
+									}
+							});
+
+	}
+
+
 	   });
+
+
 
 	$("#place-filter li").on("click",function(){
 
@@ -136,6 +240,7 @@ if (is_singular(['realestate', 'construction', 'entertainment']) || is_page('ger
 			},
 			 function(data){
 				 $("#projects-container").html(data);
+				 loadInitialProjects();
 				 $("#loading-indicator").hide();
 				});
 	 });
