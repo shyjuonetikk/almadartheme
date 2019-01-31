@@ -1628,6 +1628,11 @@ kenburns-4 {  73.4375% {
     font-family: "Montserrat" !important;
     font-weight: 500 !important;
 }
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
 .min-height{
   min-height: 600px;
 }

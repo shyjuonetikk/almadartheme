@@ -93,10 +93,10 @@ function more_post_ajax() {
 			?>
 			<div class="col-12 col-md-6 mb-3 px-4 fade-in one">
 				<div class="card border-0 rounded-0 w-100">
-					<div class="image-container">
+					<a href="<?php echo $post_url; ?>"><div class="image-container">
 				  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url; ?>" alt="<?php echo $post_title; ?>">
 				  		<div class="overlay"></div>
-				  	</div>
+				  	</div></a>
 				  <div class="card-body border-0 rounded-0 pl-0 ml-0">
 				    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
 				    <p class="card-text fs-12 purple-color"><?php echo $post_content; ?></p>
@@ -165,10 +165,10 @@ if ($status == 'all') {
 		<input type="hidden" value="<?php echo $place; ?>" id="place">
 		<div class="col-12 col-md-6 mb-3 px-4 fade-in one">
 			<div class="card border-0 rounded-0 w-100">
-				<div class="image-container">
+				<a href="<?php echo $post_url; ?>"><div class="image-container">
 			  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url; ?>" alt="<?php echo $post_title; ?>">
 			  		<div class="overlay"></div>
-			  	</div>
+			  	</div></a>
 			  <div class="card-body border-0 rounded-0 pl-0 ml-0">
 			    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
 			    <p class="card-text fs-12 purple-color"><?php echo $post_content; ?></p>
@@ -282,10 +282,10 @@ function filter_country() {
 			?>
 			<div class="col-12 col-md-6 mb-3 px-4 fade-in one">
 				<div class="card border-0 rounded-0 w-100">
-					<div class="image-container">
+					<a href="<?php echo $post_url; ?>"><div class="image-container">
 				  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url; ?>" alt="<?php echo $post_title; ?>">
 				  		<div class="overlay"></div>
-				  	</div>
+				  	</div></a>
 				  <div class="card-body border-0 rounded-0 pl-0 ml-0">
 				    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
 				    <p class="card-text fs-12 purple-color"><?php echo $post_content; ?></p>
@@ -416,10 +416,10 @@ function more_news_ajax() {
 			?>
 <div class="col-12 col-md-6 mb-3 px-4 fade-in one">
 	<div class="card border-0 rounded-0 w-100">
-		<div class="image-container">
+		<a href="<?php echo $post_url; ?>"><div class="image-container">
 	  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url; ?>" alt="<?php echo $post_title; ?>">
 	  		<div class="overlay"></div>
-	  	</div>
+	  	</div></a>
 	  <div class="card-body border-0 rounded-0 pl-0 ml-0">
 	    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
 	    <p class="card-text fs-12 purple-color"><?php echo $post_content; ?></p>
@@ -482,10 +482,10 @@ function load_news_by_type() {
 <input type="hidden" value="<?php echo $place; ?>" id="place" />
 <div class="col-12 col-md-6 mb-3 px-4 fade-in one">
 	<div class="card border-0 rounded-0 w-100">
-		<div class="image-container">
+		<a href="<?php echo $post_url; ?>"><div class="image-container">
 	  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url; ?>" alt="<?php echo $post_title; ?>">
 	  		<div class="overlay"></div>
-	  	</div>
+	  	</div></a>
 	  <div class="card-body border-0 rounded-0 pl-0 ml-0">
 	    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
 	    <p class="card-text fs-12 purple-color"><?php echo $post_content; ?></p>
@@ -595,10 +595,11 @@ function news_filter_country() {
 
 <div class="col-12 col-md-6 mb-3 px-4 fade-in one">
 	<div class="card border-0 rounded-0 w-100">
-		<div class="image-container">
+		<a href="<?php echo $post_url; ?>"><div class="image-container">
 	  		<img class="card-img-top project-card-image image" src="<?php echo $featured_img_url; ?>" alt="<?php echo $post_title; ?>">
 	  		<div class="overlay"></div>
 	  	</div>
+	  </a>
 	  <div class="card-body border-0 rounded-0 pl-0 ml-0">
 	    <h6 class="card-title purple-color"><?php echo $post_title; ?></h6>
 	    <p class="card-text fs-12 purple-color"><?php echo $post_content; ?></p>

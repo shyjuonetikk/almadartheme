@@ -102,7 +102,7 @@ $container = get_theme_mod('understrap_container_type');
 		<div class="container top-padding">
 			<div class="jumbotron bg-none text-white">
 			  <div class="container ml-10">
-			    <h1 class="slider-heading display-4 mb-5 prmy-font"><?php echo get_post_meta(get_the_ID(), 'heading', true); ?></h1>
+			    <h1 class="slider-heading display-4 mb-5 prmy-font fadeIn"><?php echo get_post_meta(get_the_ID(), 'heading', true); ?></h1>
 
 			    <p class="slider-content w-75">
 			    	<?php echo get_post_meta(get_the_ID(), 'bannertext', true); ?>
@@ -111,7 +111,7 @@ $container = get_theme_mod('understrap_container_type');
 				<p class="lead">
 				   <!-- <a class="btn btn-header btn-lg" href="<?php echo get_post_meta(get_the_ID(), 'buttonlink', true); ?>" role="button">Learn more</a> -->
 				   <!-- <a href="#" class="btn-header hvr-sweep-to-left"> Learn more</a> -->
-				   <a href="#" class="new-button">Learn More</a>
+				   <a href="<?php echo get_site_url(); ?>/about-us/" class="new-button">Learn More</a>
 				</p>
 			  </div>
 			</div>
