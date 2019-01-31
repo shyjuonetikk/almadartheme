@@ -1,5 +1,5 @@
 <?php
-$recipient_email = "jithinvjayaprakash@gmail.com";
+$recipient_email = "z.filali@a101.com";
 $from_email = "contact@almadar.com"; //from email using site domain.
 
 if (!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {

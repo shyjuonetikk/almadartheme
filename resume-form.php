@@ -1,5 +1,5 @@
 <?php
-$recipient_email = "jithinvjayaprakash@gmail.com";
+$recipient_email = "z.filali@a101.com";
 
 // $recipient_email = the_field('hr_email');
 $from_email = "hr@almadar.com"; //from email using site domain.
