@@ -119,11 +119,10 @@ wp_reset_query();?>
 				<div class="col-sm-8">
 					<input type="file" name="file_attach[]" id="career-resume" class="form-control-file" />
 					<label for="career-resume" class="shadow p-2 sc-font font-weight-normal">Choose a file</label>
+					<span id="fileNameDisplay"></span>
 				</div>
 			</div>
-			<div id="fileInCheck">
-				<p class="text-danger">Please attach your CV with the application.</p>
-			</div>
+			<div id="fileInCheck"></div>
 			<div class="form-check mb-4">
 				<div class="custom-control custom-checkbox mb-3">
 					<input type="checkbox" class="custom-control-input" id="customCheck" name="customCheck" data-required="true" >
