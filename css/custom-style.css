@@ -1695,3 +1695,18 @@ and (orientation : landscape) {
   margin-top: 1rem !important;
 }
 }
+
+.flexslider{
+  background: none !important;
+  border: none !important;
+  max-width: 700px;
+  font-size: 52px;
+  color: #fff;
+  margin: 0 !important;
+}
+.flexslider h1.slider-heading{
+  font-weight: 500 !important;
+}
+.flex-control-paging li a, .flex-direction-nav a{
+  display: none !important;
+}

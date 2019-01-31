@@ -36,6 +36,8 @@
 
 <?php wp_footer();?>
 <script  src="https://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="  crossorigin="anonymous"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/jquery.flexslider.js"></script>
 <?php
 if (is_singular(['realestate', 'construction', 'entertainment']) || is_page('germany')) {
 	echo "
@@ -63,6 +65,22 @@ if (is_singular(['realestate', 'construction', 'entertainment']) || is_page('ger
 			";
 }
 ?>
+<script type="text/javascript">
+	(function($){
+    $(document).ready(function(){
+         $(window).load(function(){
+	      $('.flexslider').flexslider({
+	        animation: "slide",
+	        slideshowSpeed: 2500,
+	        animationSpeed: 1500,
+	        start: function(slider){
+	          $('body').removeClass('loading');
+	        }
+	      });
+	    });
+    });
+})(jQuery);
+  </script>
 <script type="text/javascript">
 
 	var pageId= <?php echo get_the_ID(); ?>;

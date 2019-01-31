@@ -22,6 +22,7 @@ $container = get_theme_mod('understrap_container_type');
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/custom-style.css" >
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/animate.css" >
+	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/flexslider.css" >
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
 </head>
@@ -100,11 +101,31 @@ $container = get_theme_mod('understrap_container_type');
 
 		</nav><!-- .site-navigation -->
 	</div><!-- header box -->
+			<?php
+				$query = new WP_Query(array(
+					'post_type' => array('slider_titles'),
+					'post_status' => 'publish',
+					'posts_per_page' => 2,
+				));
+			?>
 		<div class="container top-padding">
 			<div class="jumbotron bg-none text-white">
 			  <div class="container ml-10">
-			    <h1 class="slider-heading display-4 mb-5 prmy-font animated fadeIn delay-header"><?php echo get_post_meta(get_the_ID(), 'heading', true); ?></h1>
-
+			    <!-- <h1 class="slider-heading display-4 mb-5 prmy-font animated fadeIn delay-header"><?php echo get_post_meta(get_the_ID(), 'heading', true); ?></h1> -->
+			    <div class="flexslider">
+		          <ul class="slides m-0 p-0">
+		          	<?php 
+		          		if ($query->have_posts()) {
+		          		while ($query->have_posts()) {
+						$query->the_post();
+						$post_title = get_the_title(); 
+					?>
+		            <li class="p-0 m-0">
+		  	    	    <h1 class="slider-heading display-4 mb-5 prmy-font animated fadeIn delay-header"><?php echo $post_title; ?></h1>
+		  	    	</li>
+		  	    	<?php } wp_reset_query(); } ?>
+		          </ul>
+		        </div>
 			    <p class="slider-content w-75 animated fadeIn delay-header-text">
 			    	<?php echo get_post_meta(get_the_ID(), 'bannertext', true); ?>
 				</p>
