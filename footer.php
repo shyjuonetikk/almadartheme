@@ -71,8 +71,8 @@ if (is_singular(['realestate', 'construction', 'entertainment']) || is_page('ger
          $(window).load(function(){
 	      $('.flexslider').flexslider({
 	        animation: "slide",
-	        slideshowSpeed: 2500,
-	        animationSpeed: 1500,
+	        slideshowSpeed: 4500,
+	        animationSpeed: 200,
 	        start: function(slider){
 	          $('body').removeClass('loading');
 	        }
