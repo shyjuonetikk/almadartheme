@@ -181,7 +181,7 @@ if ($status == 'all') {
 		wp_reset_query();?>
 	</div>
 	<?php if ($maxpages > 1) {?>
-	<div class="row">
+	<div class="row more-button">
 		<div class="col m-auto text-center">
 			<i class="fas fa-spinner fa-spin" id="loading-indicator" style="display:none;"></i>
 			<a id="more_posts" data-post-type="projects" data-posts-per-page="1" data-max-pages="<?php echo $maxpages; ?>" data-status-project="<?php echo $status; ?>">More<img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/arrow-down.png" /> </a>
@@ -299,7 +299,7 @@ function filter_country() {
 		?>
 		</div>
 		<?php if ($maxpages > 1) {?>
-			<div class="row">
+			<div class="row more-button">
 				<div class="col m-auto text-center">
 					<i class="fas fa-spinner fa-spin" id="loading-indicator" style="display:none;"></i>
 					<a id="more_posts" data-post-type="projects" data-posts-per-page="1" data-max-pages="<?php echo $maxpages; ?>" data-status-project="ongoing">More<img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/arrow-down.png" /> </a>
@@ -498,7 +498,7 @@ function load_news_by_type() {
 		wp_reset_query();?>
 </div>
 <?php if ($maxpages > 1) {?>
-<div class="row">
+<div class="row more-button">
 	<div class="col m-auto text-center">
 		<i class="fas fa-spinner fa-spin" id="loading-indicator" style="display:none;"></i>
 		<a id="more_news" data-post-type="almadarnews" data-posts-per-page="1" data-max-pages="<?php echo $maxpages; ?>" data-news_type="<?php echo $news_type; ?>">More<img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/arrow-down.png" /> </a>
@@ -583,14 +583,14 @@ function news_filter_country() {
 	</div>
 	<div class="col-12 col-md-9 col-lg-10  pl-4 pr-0 float-left" id="projects-list">
 		<div class="row m-0 projects-list">';
-	if ($query->have_posts()) {
-		while ($query->have_posts()) {
-			$query->the_post();
-			$post_id = get_the_ID();
-			$post_title = get_the_title();
-			$post_content = get_the_excerpt();
-			$post_url = get_the_permalink();
-			$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
+			if ($query->have_posts()) {
+				while ($query->have_posts()) {
+					$query->the_post();
+					$post_id = get_the_ID();
+					$post_title = get_the_title();
+					$post_content = get_the_excerpt();
+					$post_url = get_the_permalink();
+					$featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
 			?>
 
 <div class="col-12 col-md-6 mb-3 px-4 fade-in one">
@@ -610,8 +610,8 @@ function news_filter_country() {
 <?php }
 		wp_reset_query();?>
 </div>
-<?php if ($maxpages > 1) {?>
-	<div class="row">
+<?php if ($maxpages > 1) { ?>
+	<div class="row more-button">
 		<div class="col m-auto text-center">
 			<i class="fas fa-spinner fa-spin" id="loading-indicator" style="display:none;"></i>
 			<a id="more_news" data-post-type="almadarnews" data-max-pages="<?php echo $maxpages; ?>" data-posts-per-page="1" data-news_type="realestate">More<img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/arrow-down.png" /> </a>

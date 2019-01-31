@@ -9,7 +9,7 @@
 ?>
 
 <?php get_template_part('sidebar-templates/sidebar', 'footerfull');?>
-<footer class="col-sm-12 float-left p-0 m-0">
+<footer class="col-sm-12 float-left p-0 m-0 pt-3 clearfix">
 	<div class="container">
 		<div class="footer_main">
 			<?php if (is_active_sidebar('Footer1')): ?>

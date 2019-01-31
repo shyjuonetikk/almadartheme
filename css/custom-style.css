@@ -68,6 +68,18 @@ body{
 .bg-none{
 	background: none !important;
 }
+.new-button{
+  transition: none 0s ease 0s;
+  text-align: inherit;
+  line-height: 24px;
+  border-width: 1px;
+  margin: 0px;
+  padding: 15px 40px;
+  letter-spacing: 0px;
+  font-weight: 600;
+  font-size: 18px;
+  border-color: #f3b007 !important;
+}
 .btn-header {
   color: #ffffff !important;
   border: 1px solid #6bc4e8 !important;
@@ -1171,23 +1183,23 @@ div#disclaimer > p, div#terms > p, div#privacy > p {
 
 .fade-in {
   opacity:0;  /* make things invisible upon start */
-  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-  -moz-animation:fadeIn ease-in 1;
-  animation:fadeIn ease-in 1;
+  -webkit-animation:fadeIn ease-in 0.7s;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 0.7s;
+  animation:fadeIn ease-in 0.7s;
 
   -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
   -moz-animation-fill-mode:forwards;
   animation-fill-mode:forwards;
 
-  -webkit-animation-duration:1s;
-  -moz-animation-duration:1s;
-  animation-duration:1s;
+  -webkit-animation-duration:0.7s;
+  -moz-animation-duration:0.7s;
+  animation-duration:0.7s;
 }
 
 .fade-in.one {
-  -webkit-animation-delay: 0.7s;
-  -moz-animation-delay: 0.7s;
-  animation-delay: 0.7s;
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 #loading {
    width: 100%;
@@ -1647,4 +1659,13 @@ kenburns-4 {  73.4375% {
 }
 .thumb-intl {
     height: auto !important;
+}
+.min-height{
+  min-height: 600px;
+}
+.footer_main{
+  min-height: 185px;
+}
+.more-button{
+  height: 70px;
 }
