@@ -39,6 +39,7 @@ body{
   padding-left: 0px !important;
   padding-right: 0px !important;
   padding-bottom: 5px !important;
+  transition: .7s;
 }
 .menu-new a:hover{
   text-decoration: none !important;
@@ -47,7 +48,7 @@ body{
 .menu-new li:hover a{
 	color: #6bc4e9;
 	border-bottom: 2px solid #6bc4e9;
-  transition: .3s;
+  transition: .7s;
 }
 
 .menu-custom{
@@ -62,10 +63,12 @@ body{
   padding-left: 0px !important;
   padding-right: 0px !important;
   padding-bottom: 5px !important;
+  transition: .7s;
 }
 .menu-custom li:hover a{
 	color: #6bc4e9;
 	border-bottom: 2px solid #6bc4e9;
+  transition: .7s;
 }
 .bg-none{
 	background: none !important;
