@@ -1698,7 +1698,7 @@ and (orientation : landscape) {
 
 @media screen and (max-width: 767px) {
   .jumbotron > .container > h1.slider-heading {
-    margin-bottom: 10 !important;
+    margin-bottom: 10px !important;
     font-size: 30px;
   }
   p.slider-content {
@@ -1706,5 +1706,8 @@ and (orientation : landscape) {
   }
   p.lead.mt-5 {
     display: none;
+  }
+  .jumbotron {
+    padding-top: 0 !important;
   }
 }
