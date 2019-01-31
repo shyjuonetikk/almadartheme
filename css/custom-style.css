@@ -587,6 +587,16 @@ footer ul li a:hover{
   opacity: 1;
   cursor: pointer;
 }
+.image-container img {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.image-container img:hover{
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
 .realestate-back{
 	background: url('../img/realestate.svg') no-repeat;
 	background-size: cover;
@@ -1381,7 +1391,7 @@ div#project-section {
   .current_page_item.active > a{
     border: none !important;
   }
-  .menu-custom li:hover a{
+  .menu-custom li:hover a, .menu-new li:hover a{
     border: none !important;
   }
   div#about_cert{
@@ -1626,4 +1636,25 @@ kenburns-4 {  73.4375% {
 }
 .more-button{
   height: 70px;
+}
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) { 
+
+.jumbotron{
+  padding-top: 0 !important;
+}
+.slider-heading{
+  font-size: 28px !important;
+  margin-bottom: 10px !important;
+}
+.slider-content{
+  width: 100% !important;
+  font-size: 14px !important;
+}
+.lead{
+  margin-top: 1rem !important;
+}
+
 }
