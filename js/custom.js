@@ -15,7 +15,7 @@ $( document ).ready(function(){
 		e.preventDefault();
 		var popupHeight = $(".divi-main").height();
 		$("#realestate-banner").css({"display" : "flex"});
-		window.scrollTo("0", "0");
+		$("html, body").animate({ scrollTop: "0" },500);
 		$("#realestate-banner").animate({"right": "0", "height":popupHeight}, 500);
 	});
 	$('#real-back').click(function(e){
@@ -29,7 +29,7 @@ $( document ).ready(function(){
 		e.preventDefault();
 		var popupHeight = $(".divi-main").height();
 		$("#contruct-banner").css({"display" : "flex"});
-		window.scrollTo("0", "0");
+		$("html, body").animate({ scrollTop: "0" },500);
 		$("#contruct-banner").animate({"right": "0", "height":popupHeight}, 500);
 	});
 	$('#const-back').click(function(e){
@@ -42,7 +42,7 @@ $( document ).ready(function(){
 		e.preventDefault();
 		var popupHeight = $(".divi-main").height();
 		$("#enter-banner").css({"display" : "flex"});
-		window.scrollTo("0", "0");
+		$("html, body").animate({ scrollTop: "0" },500);
 		$("#enter-banner").animate({"right": "0", "height":popupHeight}, 500);
 	});
 	$('#ent-back').click(function(e){
