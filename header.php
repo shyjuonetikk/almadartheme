@@ -121,17 +121,17 @@ $container = get_theme_mod('understrap_container_type');
 						$post_title = get_the_title(); 
 					?>
 		            <li class="p-0 m-0">
-		  	    	    <h1 class="slider-heading display-4 mb-5 prmy-font animated fadeIn delay-header"><?php echo $post_title; ?></h1>
+		  	    	    <h1 class="slider-heading display-4 mb-5 prmy-font animated fadeIn delay-1s"><?php echo $post_title; ?></h1>
 		  	    	</li>
 		  	    	<?php } wp_reset_query(); } ?>
 		          </ul>
 		        </div>
-			    <p class="slider-content w-75 animated fadeIn delay-header-text">
+			    <p class="slider-content w-75 animated fadeIn delay-2s">
 			    	<?php echo get_post_meta(get_the_ID(), 'bannertext', true); ?>
 				</p>
 				<p class="lead mt-5">
 				<p class="lead">
-				   <a href="<?php echo get_site_url(); ?>/about-us/" class="new-button animated fadeIn delay-header-text">Learn More</a>
+				   <a href="<?php echo get_site_url(); ?>/about-us/" class="new-button animated fadeIn delay-2s">Learn More</a>
 				</p>
 			  </div>
 			</div>

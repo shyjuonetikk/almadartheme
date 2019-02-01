@@ -1216,12 +1216,12 @@ div#disclaimer > p, div#terms > p, div#privacy > p {
   background: #fff;
 }
 .delay-header {
-  animation-duration: 1.5s;
-  animation-delay: 1.2s;
+  animation-duration: 1.5s !important;
+  animation-delay: 1.2s !important;
 }
 .delay-header-text {
-  animation-duration: 1.5s;
-  animation-delay: 1.2s;
+  animation-duration: 2s !important;
+  animation-delay: 1.2s !important;
 }
 
 /* Very Large Screens */
