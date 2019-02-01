@@ -121,7 +121,7 @@ $container = get_theme_mod('understrap_container_type');
 						$post_title = get_the_title(); 
 					?>
 		            <li class="p-0 m-0">
-		  	    	    <h1 class="slider-heading display-4 mb-5 prmy-font animated fadeIn delay-1s"><?php echo $post_title; ?></h1>
+		  	    	    <h1 class="slider-heading display-4 mb-5 prmy-font animated fadeIn delay-header"><?php echo $post_title; ?></h1>
 		  	    	</li>
 		  	    	<?php } wp_reset_query(); } ?>
 		          </ul>

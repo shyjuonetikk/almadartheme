@@ -1217,7 +1217,7 @@ div#disclaimer > p, div#terms > p, div#privacy > p {
 }
 .delay-header {
   animation-duration: 1.5s !important;
-  animation-delay: 1.2s !important;
+  animation-delay: 1.5s !important;
 }
 .delay-header-text {
   animation-duration: 2s !important;
