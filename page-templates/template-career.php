@@ -12,7 +12,7 @@ get_header('career');
 					<h4 class="px-5 py-3 font-weight-normal">Human Resources</h4>
 				</div>
 				<div class="container">
-					<div class="col-lg-12 float-left">
+					<div class="col-lg-12 float-left msg-career">
 						<?php the_field('career_message');?>
 					</div>
 				</div>

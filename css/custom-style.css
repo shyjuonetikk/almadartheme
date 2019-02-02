@@ -340,6 +340,12 @@ div#about-page {
     color: #21145f;
     line-height: 1.5;
 }
+p.msg-md{
+  font-size: 13px;
+  font-weight: 500;
+  color: #21145f;
+  line-height: 1.5;
+}
 div#msg-chairman > div > h4, div#msg-md > div > h4 {
     font-family: 'Montserrat', sans-serif;
 }
@@ -954,7 +960,7 @@ p.job-location {
     font-family: "Roboto";
     font-weight: 300;
 }
-#msg-chairman p{
+.msg-career p{
     font-size: 13px;
     font-weight: 300;
     color: #21145f;
