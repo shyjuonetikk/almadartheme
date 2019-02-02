@@ -140,9 +140,13 @@ if (is_singular(['realestate', 'construction', 'entertainment']) || is_page('ger
 				 allProjects = data;
 			});
 	}
-
-	var images = ['<?php the_field('home_header_image1');?>', '<?php the_field('home_header_image2');?>'];
-		    $('.slideshow-image').css('background-image','url('+images[Math.floor(Math.random() * images.length)]+')');
+	var imagesNew = ['<?php  if( have_rows('banner') ):
+			 				while( have_rows('banner') ): the_row();
+			 					echo get_sub_field('banner_image');?>','<?php 
+							endwhile;
+							endif;
+					?>'];
+		    $('.slideshow-image').css('background-image','url('+imagesNew[Math.floor(Math.random() * imagesNew.length)]+')');
 	$( document ).ready(function(){
 	$('a').removeAttr('title');
 	var ajaxUrl = "<?php echo admin_url('admin-ajax.php') ?>";

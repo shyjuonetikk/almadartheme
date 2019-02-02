@@ -218,7 +218,8 @@ body{
 
 .thumbnail img{
 	width: 100%;
-    margin: 0 auto;
+  height: 100%;
+  margin: 0 auto;
 }
 .thumbnail-news-section {
   position: relative;
@@ -953,7 +954,7 @@ p.job-location {
     font-family: "Roboto";
     font-weight: 300;
 }
-p.msg-career {
+#msg-chairman p{
     font-size: 13px;
     font-weight: 300;
     color: #21145f;
@@ -1282,6 +1283,9 @@ div#disclaimer > p, div#terms > p, div#privacy > p {
 @media (min-width: 1400px){
     .container {
         max-width: 1248px;
+    }
+    .top-padding{
+      padding-top: 70px !important;
     }
 }
 

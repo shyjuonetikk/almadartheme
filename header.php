@@ -40,7 +40,14 @@ $container = get_theme_mod('understrap_container_type');
 			<img src="<?php the_field('home_header_image1'); ?>"/>
 		</div> -->
 			<div class="slideshow">
-			  <div class="slideshow-image" style="background-image: url('<?php the_field('home_header_image1'); ?>"></div> 
+				<?php
+		          		if( have_rows('banner') ):
+			 				while( have_rows('banner') ): the_row();
+			 					$image = get_sub_field('banner_image');
+			 				endwhile;
+			 			endif;
+			 	?>
+			  <div class="slideshow-image" style="background-image: url('<?php echo $image; ?>"></div> 
 			</div>
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e('Skip to content', 'understrap');?></a>
 	<div id="header-box">
@@ -101,37 +108,29 @@ $container = get_theme_mod('understrap_container_type');
 
 		</nav><!-- .site-navigation -->
 	</div><!-- header box -->
-			<?php
-				$query = new WP_Query(array(
-					'post_type' => array('slider_titles'),
-					'post_status' => 'publish',
-					'posts_per_page' => 2,
-				));
-			?>
 		<div class="container top-padding">
 			<div class="jumbotron bg-none text-white">
 			  <div class="container ml-10">
 			    <!-- <h1 class="slider-heading display-4 mb-5 prmy-font animated fadeIn delay-header"><?php echo get_post_meta(get_the_ID(), 'heading', true); ?></h1> -->
 			    <div class="flexslider">
 		          <ul class="slides m-0 p-0">
-		          	<?php 
-		          		if ($query->have_posts()) {
-		          		while ($query->have_posts()) {
-						$query->the_post();
-						$post_title = get_the_title(); 
+		          	<?php
+		          		if( have_rows('banner') ):
+			 				while( have_rows('banner') ): the_row();
+								$heading = get_sub_field('banner_heading');
 					?>
 		            <li class="p-0 m-0">
-		  	    	    <h1 class="slider-heading display-4 mb-5 prmy-font animated fadeIn delay-header"><?php echo $post_title; ?></h1>
+		  	    	    <h1 class="slider-heading display-4 mb-5 prmy-font animated fadeIn delay-header"><?php echo $heading; ?></h1>
 		  	    	</li>
-		  	    	<?php } wp_reset_query(); } ?>
+		  	    	<?php endwhile; endif; ?>
 		          </ul>
 		        </div>
 			    <p class="slider-content w-75 animated fadeIn delay-2s">
-			    	<?php echo get_post_meta(get_the_ID(), 'bannertext', true); ?>
+			    	<?php echo the_field('banner_description'); ?>
 				</p>
 				<p class="lead mt-5">
 				<p class="lead">
-				   <a href="<?php echo get_site_url(); ?>/about-us/" class="new-button animated fadeIn delay-2s">Learn More</a>
+				   <a href="<?php echo the_field('button_link'); ?>" class="new-button animated fadeIn delay-2s">Learn More</a>
 				</p>
 			  </div>
 			</div>
