@@ -333,11 +333,11 @@ div#msg-chairman, div#msg-md {
 div#about-page {
     color: #22115c;
 }
-p.msg-md {
+#our-mission p{
     font-size: 13px;
     font-weight: 300;
     color: #21145f;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 div#msg-chairman > div > h4, div#msg-md > div > h4 {
     font-family: 'Montserrat', sans-serif;
@@ -916,6 +916,7 @@ div#about_cert {
 div#our-mission {
     margin-bottom: 6rem;
 }
+
 .thumb-list-box:hover {
     background: #f0f0f0;
 }
@@ -1216,8 +1217,8 @@ div#disclaimer > p, div#terms > p, div#privacy > p {
   background: #fff;
 }
 .delay-header {
-  animation-duration: 1.5s !important;
-  animation-delay: 1.5s !important;
+  animation-duration: 1.6s !important;
+  animation-delay: 1.6s !important;
 }
 .delay-header-text {
   animation-duration: 2s !important;

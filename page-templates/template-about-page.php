@@ -59,9 +59,7 @@ get_header('about');
 						<img class="mission-img pt-5 mb-4" src="<?php echo get_template_directory_uri(); ?>/img/About/Our Mission.png" alt="Our Mission">
 					</div>
 					<div class="col-lg-6 float-left px-0">
-						<p class="msg-md">
-							<?php the_field('our_mission');?>
-						</p>
+						<?php the_field('our_mission');?>
 					</div>
 				</div>
 			</div>
