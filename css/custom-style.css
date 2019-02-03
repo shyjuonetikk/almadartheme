@@ -137,7 +137,7 @@ body{
 	padding: 10px 0;
 }
 .sm-icon-fb:hover{
-	color: #22115c !important;
+	color: #5ec3e5 !important;
   cursor: pointer;
   transition: .3s;
 }
@@ -1736,3 +1736,8 @@ and (orientation : landscape) {
     padding-top: 0 !important;
   }
 }
+
+/*.slideshow {
+    background-image: url(http://dev.onetikk.info/almadar/wp-content/uploads/2019/01/division_construction.jpg) !important;
+    z-index: -1;
+}*/

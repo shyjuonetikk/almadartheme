@@ -140,12 +140,20 @@ if (is_singular(['realestate', 'construction', 'entertainment']) || is_page('ger
 				 allProjects = data;
 			});
 	}
-	var imagesNew = ['<?php  if( have_rows('banner') ):
-			 				while( have_rows('banner') ): the_row();
-			 					echo get_sub_field('banner_image');?>','<?php 
-							endwhile;
-							endif;
+	var imagesNew = ['<?php 
+	if( have_rows('banner') ): 
+			$my_fields = get_field_object('banner');
+   			$count = (count($my_fields['value']));
+   			$i = 1;
+			while( have_rows('banner') ): the_row();
+			 	echo get_sub_field('banner_image');
+			 	if($i < $count){
+			 ?>','<?php }
+			 $i++;
+			endwhile;
+			endif;
 					?>'];
+			//alert(imagesNew);
 		    $('.slideshow-image').css('background-image','url('+imagesNew[Math.floor(Math.random() * imagesNew.length)]+')');
 	$( document ).ready(function(){
 	$('a').removeAttr('title');

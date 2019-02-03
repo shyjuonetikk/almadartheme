@@ -721,3 +721,8 @@ function ajax_mail() {
 
 add_action('wp_ajax_nopriv_ajax_mail', 'ajax_mail');
 add_action('wp_ajax_ajax_mail', 'ajax_mail');
+
+function total_posts_count() {
+    global $wp_query;
+    return $wp_query->post_count;
+}
