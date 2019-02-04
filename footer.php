@@ -156,6 +156,7 @@ if (is_singular(['realestate', 'construction', 'entertainment']) || is_page('ger
 			//alert(imagesNew);
 		    $('.slideshow-image').css('background-image','url('+imagesNew[Math.floor(Math.random() * imagesNew.length)]+')');
 	$( document ).ready(function(){
+	$('#loading-main').delay(1000).fadeOut();
 	$('a').removeAttr('title');
 	var ajaxUrl = "<?php echo admin_url('admin-ajax.php') ?>";
     var page = 1; // What page we are on.
