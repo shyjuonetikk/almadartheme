@@ -46,7 +46,7 @@ $container = get_theme_mod('understrap_container_type');
 			 			endif;
 					// $image = "http://dev.onetikk.info/almadar/wp-content/uploads/2019/01/division_construction.jpg";			 			
 			 	?>
-			  <div class="slideshow-image" style="background-image: url('<?php echo $image; ?>"></div> 
+			  <div class="slideshow-image" style="background-image: url('<?php echo $image; ?>"></div>
 			</div>
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e('Skip to content', 'understrap');?></a>
 	<div id="header-box">

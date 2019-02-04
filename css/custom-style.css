@@ -502,6 +502,16 @@ footer ul li a:hover{
 	background-size: cover;
 	width: 100%;
 }
+.divisions_main p{
+  line-height: 1.4;
+  font-size: 13px;
+  color: #fff!important;
+  font-weight: 300!important;
+  padding-left: 3rem!important;
+  padding-right: 3rem!important;
+  padding-top: 1.5rem!important;
+  margin-bottom: 1rem;
+}
 .card-holder{
 	border-radius: 0px !important;
 	height: 500px;
