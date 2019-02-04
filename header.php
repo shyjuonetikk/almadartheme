@@ -6,11 +6,9 @@
  *
  * @package understrap
  */
-
 if (!defined('ABSPATH')) {
 	exit; // Exit if accessed directly.
 }
-
 $container = get_theme_mod('understrap_container_type');
 ?>
 <!DOCTYPE html>
@@ -46,7 +44,8 @@ $container = get_theme_mod('understrap_container_type');
 			 					$image = get_sub_field('banner_image');
 			 				endwhile;
 			 			endif;
-				 	?>
+					// $image = "http://dev.onetikk.info/almadar/wp-content/uploads/2019/01/division_construction.jpg";			 			
+			 	?>
 			  <div class="slideshow-image" style="background-image: url('<?php echo $image; ?>"></div> 
 			</div>
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e('Skip to content', 'understrap');?></a>
